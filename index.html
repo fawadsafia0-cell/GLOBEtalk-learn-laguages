@@ -5786,6 +5786,978 @@
     ];
     LEVELS_BG.forEach((l, i) => { l.id = 10000 + i + 1; });
 
+    const TIERS_FR = TIERS;
+    const LEVELS_FR = [
+      /* ---------------- BEGINNER ---------------- */
+      {
+        tier: "beginner", title: "French Basics", icon: "🇫🇷", words: [
+          { kr: "bonjour", rom: "bohn-ZHOOR", en: "hello" }, { kr: "merci", rom: "mehr-SEE", en: "thank you" },
+          { kr: "oui", rom: "wee", en: "yes" }, { kr: "non", rom: "nohn", en: "no" },
+          { kr: "nom", rom: "nohm", en: "name" }, { kr: "ami", rom: "ah-MEE", en: "friend" }]
+      },
+      {
+        tier: "beginner", title: "Greetings & Manners", icon: "🙏", words: [
+          { kr: "au revoir", rom: "oh ruh-VWAHR", en: "goodbye" }, { kr: "pardon", rom: "pahr-DOHN", en: "sorry / excuse me" },
+          { kr: "s'il vous plaît", rom: "seel voo PLEH", en: "please" }, { kr: "enchanté", rom: "ahn-shahn-TAY", en: "nice to meet you" },
+          { kr: "de rien", rom: "duh ree-EHN", en: "you're welcome" }, { kr: "c'est bon", rom: "seh BOHN", en: "it's okay" }]
+      },
+      {
+        tier: "beginner", title: "Numbers 1-6", icon: "🔢", words: [
+          { kr: "un", rom: "uhn", en: "one" }, { kr: "deux", rom: "duh", en: "two" },
+          { kr: "trois", rom: "trwah", en: "three" }, { kr: "quatre", rom: "KAH-truh", en: "four" },
+          { kr: "cinq", rom: "sank", en: "five" }, { kr: "six", rom: "sees", en: "six" }]
+      },
+      {
+        tier: "beginner", title: "Days & Time", icon: "🕒", words: [
+          { kr: "aujourd'hui", rom: "oh-zhoor-DWEE", en: "today" }, { kr: "demain", rom: "duh-MAN", en: "tomorrow" },
+          { kr: "hier", rom: "ee-EHR", en: "yesterday" }, { kr: "maintenant", rom: "man-tuh-NAHN", en: "now" },
+          { kr: "temps", rom: "tahn", en: "time" }, { kr: "matin", rom: "mah-TAN", en: "morning" }]
+      },
+      {
+        tier: "beginner", title: "Family", icon: "👪", words: [
+          { kr: "famille", rom: "fah-MEE-yuh", en: "family" }, { kr: "maman", rom: "mah-MAHN", en: "mom" },
+          { kr: "papa", rom: "pah-PAH", en: "dad" }, { kr: "frère", rom: "FREHR", en: "brother" },
+          { kr: "sœur", rom: "suhr", en: "sister" }, { kr: "grand-père", rom: "grahn-PEHR", en: "grandfather" }]
+      },
+      {
+        tier: "beginner", title: "Food & Drink", icon: "🍚", words: [
+          { kr: "nourriture", rom: "noo-ree-TOOR", en: "food" }, { kr: "eau", rom: "oh", en: "water" },
+          { kr: "café", rom: "kah-FAY", en: "coffee" }, { kr: "pain", rom: "pan", en: "bread" },
+          { kr: "riz", rom: "ree", en: "rice" }, { kr: "délicieux", rom: "day-lee-see-UH", en: "delicious" }]
+      },
+      {
+        tier: "beginner", title: "Colors", icon: "🎨", words: [
+          { kr: "rouge", rom: "roozh", en: "red" }, { kr: "bleu", rom: "bluh", en: "blue" },
+          { kr: "jaune", rom: "zhohn", en: "yellow" }, { kr: "vert", rom: "vehr", en: "green" },
+          { kr: "noir", rom: "nwahr", en: "black" }, { kr: "blanc", rom: "blahn", en: "white" }]
+      },
+      {
+        tier: "beginner", title: "Body Parts", icon: "🧍", words: [
+          { kr: "tête", rom: "teht", en: "head" }, { kr: "main", rom: "man", en: "hand" },
+          { kr: "œil", rom: "uh-ee", en: "eye" }, { kr: "nez", rom: "nay", en: "nose" },
+          { kr: "bouche", rom: "boosh", en: "mouth" }, { kr: "jambe", rom: "zhahmb", en: "leg" }]
+      },
+      {
+        tier: "beginner", title: "Animals", icon: "🐾", words: [
+          { kr: "chien", rom: "shee-EHN", en: "dog" }, { kr: "chat", rom: "shah", en: "cat" },
+          { kr: "oiseau", rom: "wah-ZOH", en: "bird" }, { kr: "poisson", rom: "pwah-SOHN", en: "fish" },
+          { kr: "ours", rom: "oors", en: "bear" }, { kr: "lapin", rom: "lah-PAN", en: "rabbit" }]
+      },
+      {
+        tier: "beginner", title: "Clothing", icon: "👕", words: [
+          { kr: "vêtements", rom: "veht-MAHN", en: "clothes" }, { kr: "chaussures", rom: "shoh-SOOR", en: "shoes" },
+          { kr: "chapeau", rom: "shah-POH", en: "hat" }, { kr: "pantalon", rom: "pahn-tah-LOHN", en: "pants" },
+          { kr: "jupe", rom: "zhoop", en: "skirt" }, { kr: "sac", rom: "sahk", en: "bag" }]
+      },
+      {
+        tier: "beginner", title: "Weather", icon: "⛅", words: [
+          { kr: "météo", rom: "may-tay-OH", en: "weather" }, { kr: "pluie", rom: "plwee", en: "rain" },
+          { kr: "neige", rom: "nehzh", en: "snow" }, { kr: "vent", rom: "vahn", en: "wind" },
+          { kr: "chaud", rom: "shoh", en: "hot" }, { kr: "froid", rom: "frwah", en: "cold" }]
+      },
+      {
+        tier: "beginner", title: "House & Rooms", icon: "🏠", words: [
+          { kr: "maison", rom: "meh-ZOHN", en: "house" }, { kr: "chambre", rom: "SHAHM-bruh", en: "room" },
+          { kr: "lit", rom: "lee", en: "bed" }, { kr: "salle de bain", rom: "sahl duh ban", en: "bathroom" },
+          { kr: "cuisine", rom: "kwee-ZEEN", en: "kitchen" }, { kr: "porte", rom: "pohrt", en: "door" }]
+      },
+      {
+        tier: "beginner", title: "School & Objects", icon: "🎒", words: [
+          { kr: "école", rom: "ay-KOHL", en: "school" }, { kr: "livre", rom: "LEE-vruh", en: "book" },
+          { kr: "crayon", rom: "kray-OHN", en: "pencil" }, { kr: "sac à dos", rom: "sahk ah DOH", en: "backpack" },
+          { kr: "professeur", rom: "pro-feh-SUHR", en: "teacher" }, { kr: "étudiant", rom: "ay-tood-YAHN", en: "student" }]
+      },
+
+      /* ---------------- INTERMEDIATE ---------------- */
+      {
+        tier: "intermediate", title: "Feelings & Emotions", icon: "💗", words: [
+          { kr: "heureux", rom: "uh-RUH", en: "happy" }, { kr: "triste", rom: "treest", en: "sad" },
+          { kr: "fâché", rom: "fah-SHAY", en: "angry" }, { kr: "fatigué", rom: "fah-tee-GAY", en: "tired" },
+          { kr: "nerveux", rom: "nehr-VUH", en: "nervous" }, { kr: "enthousiaste", rom: "ahn-too-zee-AHST", en: "eager / enthusiastic" }]
+      },
+      {
+        tier: "intermediate", title: "Directions & Places", icon: "🧭", words: [
+          { kr: "gauche", rom: "gohsh", en: "left" }, { kr: "droite", rom: "drwaht", en: "right" },
+          { kr: "près", rom: "preh", en: "near" }, { kr: "loin", rom: "lwan", en: "far" },
+          { kr: "ici", rom: "ee-SEE", en: "here" }, { kr: "là", rom: "lah", en: "there" }]
+      },
+      {
+        tier: "intermediate", title: "Shopping", icon: "🛍️", words: [
+          { kr: "combien ça coûte", rom: "kohn-bee-AN sah koot", en: "how much is it" }, { kr: "cher", rom: "shehr", en: "expensive" },
+          { kr: "pas cher", rom: "pah shehr", en: "cheap" }, { kr: "payer", rom: "peh-YAY", en: "to pay" },
+          { kr: "espèces", rom: "ess-PESS", en: "cash" }, { kr: "carte", rom: "kahrt", en: "card" }]
+      },
+      {
+        tier: "intermediate", title: "Transportation", icon: "🚌", words: [
+          { kr: "bus", rom: "boos", en: "bus" }, { kr: "train", rom: "tran", en: "train" },
+          { kr: "avion", rom: "ahv-YOHN", en: "plane" }, { kr: "voiture", rom: "vwah-TOOR", en: "car" },
+          { kr: "billet", rom: "bee-YAY", en: "ticket" }, { kr: "gare", rom: "gahr", en: "station" }]
+      },
+      {
+        tier: "intermediate", title: "Hobbies", icon: "🎯", words: [
+          { kr: "lecture", rom: "lehk-TOOR", en: "reading" }, { kr: "musique", rom: "moo-ZEEK", en: "music" },
+          { kr: "film", rom: "feelm", en: "movie" }, { kr: "peinture", rom: "pan-TOOR", en: "painting" },
+          { kr: "voyage", rom: "vwah-YAHZH", en: "traveling" }, { kr: "danse", rom: "dahns", en: "dancing" }]
+      },
+      {
+        tier: "intermediate", title: "Work & Jobs", icon: "💼", words: [
+          { kr: "travail", rom: "trah-VAI", en: "work" }, { kr: "ingénieur", rom: "an-zhay-nee-UHR", en: "engineer" },
+          { kr: "bureau", rom: "boo-ROH", en: "office" }, { kr: "salaire", rom: "sah-LEHR", en: "salary" },
+          { kr: "patron", rom: "pah-TROHN", en: "boss" }, { kr: "collègue", rom: "koh-LEHG", en: "colleague" }]
+      },
+      {
+        tier: "intermediate", title: "Health & Body", icon: "🏥", words: [
+          { kr: "malade", rom: "mah-LAHD", en: "sick" }, { kr: "en bonne santé", rom: "ahn bon sahn-TAY", en: "healthy" },
+          { kr: "hôpital", rom: "oh-pee-TAHL", en: "hospital" }, { kr: "médicament", rom: "may-dee-kah-MAHN", en: "medicine" },
+          { kr: "douleur", rom: "doo-LUHR", en: "pain" }, { kr: "infirmière", rom: "an-feer-mee-EHR", en: "nurse" }]
+      },
+      {
+        tier: "intermediate", title: "Technology", icon: "💻", words: [
+          { kr: "téléphone", rom: "tay-lay-FOHN", en: "phone" }, { kr: "ordinateur", rom: "ohr-dee-nah-TUHR", en: "computer" },
+          { kr: "internet", rom: "an-tehr-NET", en: "internet" }, { kr: "application", rom: "ah-plee-kah-see-OHN", en: "app" },
+          { kr: "écran", rom: "ay-KRAHN", en: "screen" }, { kr: "mot de passe", rom: "moh duh PAHS", en: "password" }]
+      },
+      {
+        tier: "intermediate", title: "Sports", icon: "⚽", words: [
+          { kr: "football", rom: "foot-BAHL", en: "football" }, { kr: "basketball", rom: "bahs-keht-BAHL", en: "basketball" },
+          { kr: "natation", rom: "nah-tah-see-OHN", en: "swimming" }, { kr: "course", rom: "koors", en: "running" },
+          { kr: "équipe", rom: "ay-KEEP", en: "team" }, { kr: "ballon", rom: "bah-LOHN", en: "ball" }]
+      },
+      {
+        tier: "intermediate", title: "Nature", icon: "🌳", words: [
+          { kr: "arbre", rom: "AHR-bruh", en: "tree" }, { kr: "montagne", rom: "mohn-TAH-nyuh", en: "mountain" },
+          { kr: "rivière", rom: "ree-vee-EHR", en: "river" }, { kr: "mer", rom: "mehr", en: "sea" },
+          { kr: "forêt", rom: "foh-REH", en: "forest" }, { kr: "soleil", rom: "soh-LAY", en: "sun" }]
+      },
+      {
+        tier: "intermediate", title: "Numbers & Time", icon: "🔢", words: [
+          { kr: "sept", rom: "seht", en: "seven" }, { kr: "huit", rom: "weet", en: "eight" },
+          { kr: "neuf", rom: "nuhf", en: "nine" }, { kr: "dix", rom: "dees", en: "ten" },
+          { kr: "heure", rom: "uhr", en: "hour" }, { kr: "minute", rom: "mee-NOOT", en: "minute" }]
+      },
+      {
+        tier: "intermediate", title: "Making Plans", icon: "🗓️", words: [
+          { kr: "ce soir", rom: "suh swahr", en: "tonight" }, { kr: "week-end", rom: "week-END", en: "weekend" },
+          { kr: "réunion", rom: "ray-oon-YOHN", en: "meeting" }, { kr: "temps libre", rom: "tahn LEE-bruh", en: "free time" },
+          { kr: "emploi du temps", rom: "ahn-plwah doo tahn", en: "schedule" }, { kr: "inviter", rom: "an-vee-TAY", en: "to invite" }]
+      },
+      {
+        tier: "intermediate", title: "Restaurant & Ordering", icon: "🍽️", words: [
+          { kr: "menu", rom: "muh-NOO", en: "menu" }, { kr: "commande", rom: "koh-MAHND", en: "order" },
+          { kr: "serveur", rom: "sehr-VUHR", en: "waiter" }, { kr: "addition", rom: "ah-dee-see-OHN", en: "bill" },
+          { kr: "table", rom: "TAH-bluh", en: "table" }, { kr: "faim", rom: "fan", en: "hungry" }]
+      },
+
+      /* ---------------- ADVANCED ---------------- */
+      {
+        tier: "advanced", title: "Connectors & Grammar", icon: "🔗", words: [
+          { kr: "cependant", rom: "suh-pahn-DAHN", en: "however" }, { kr: "parce que", rom: "pahrs kuh", en: "because" },
+          { kr: "bien que", rom: "bee-AN kuh", en: "although" }, { kr: "donc", rom: "dohnk", en: "therefore" },
+          { kr: "de plus", rom: "duh ploos", en: "moreover" }, { kr: "également", rom: "ay-gahl-MAHN", en: "in addition" }]
+      },
+      {
+        tier: "advanced", title: "Business French", icon: "🏢", words: [
+          { kr: "entreprise", rom: "ahn-truh-PREEZ", en: "company" }, { kr: "contrat", rom: "kohn-TRAH", en: "contract" },
+          { kr: "délai", rom: "day-LEH", en: "deadline" }, { kr: "client", rom: "klee-AHN", en: "client" },
+          { kr: "budget", rom: "boo-JAY", en: "budget" }, { kr: "investissement", rom: "an-veh-stee-smahn", en: "investment" }]
+      },
+      {
+        tier: "advanced", title: "News & Media", icon: "📰", words: [
+          { kr: "actualités", rom: "ahk-too-ah-lee-TAY", en: "news" }, { kr: "journal", rom: "zhoor-NAHL", en: "newspaper" },
+          { kr: "journaliste", rom: "zhoor-nah-LEEST", en: "journalist" }, { kr: "article", rom: "ahr-TEE-kluh", en: "article" },
+          { kr: "télévision", rom: "tay-lay-vee-zee-OHN", en: "television" }, { kr: "titre", rom: "TEE-truh", en: "headline" }]
+      },
+      {
+        tier: "advanced", title: "Nuanced Emotions", icon: "💭", words: [
+          { kr: "envie", rom: "ahn-VEE", en: "envy" }, { kr: "fierté", rom: "fee-ehr-TAY", en: "pride" },
+          { kr: "culpabilité", rom: "kool-pah-bee-lee-TAY", en: "guilt" }, { kr: "soulagement", rom: "soo-lahzh-MAHN", en: "relief" },
+          { kr: "nostalgie", rom: "noh-stahl-ZHEE", en: "nostalgia / longing" }, { kr: "espoir", rom: "ess-PWAHR", en: "hope" }]
+      },
+      {
+        tier: "advanced", title: "Travel Advanced", icon: "✈️", words: [
+          { kr: "passeport", rom: "pahs-POHR", en: "passport" }, { kr: "visa", rom: "vee-ZAH", en: "visa" },
+          { kr: "bagages", rom: "bah-GAHZH", en: "luggage" }, { kr: "itinéraire", rom: "ee-tee-nay-REHR", en: "itinerary" },
+          { kr: "douane", rom: "doo-AHN", en: "customs" }, { kr: "réservation", rom: "ray-zehr-vah-see-OHN", en: "reservation" }]
+      },
+      {
+        tier: "advanced", title: "Relationships", icon: "💑", words: [
+          { kr: "mariage", rom: "mah-ree-AHZH", en: "marriage" }, { kr: "confiance", rom: "kohn-fee-AHNS", en: "trust" },
+          { kr: "rupture", rom: "roop-TOOR", en: "breakup" }, { kr: "copain", rom: "koh-PAN", en: "boyfriend" },
+          { kr: "fiançailles", rom: "fee-ahn-SIGH", en: "engagement" }, { kr: "beaux-parents", rom: "boh-pah-RAHN", en: "in-laws" }]
+      },
+      {
+        tier: "advanced", title: "Debate & Opinions", icon: "🗣️", words: [
+          { kr: "je pense", rom: "zhuh pahns", en: "I think" }, { kr: "je suis d'accord", rom: "zhuh swee dah-KOHR", en: "I agree" },
+          { kr: "je ne suis pas d'accord", rom: "zhuh nuh swee pah dah-KOHR", en: "I disagree" }, { kr: "à mon avis", rom: "ah mohn ah-VEE", en: "in my opinion" },
+          { kr: "argument", rom: "ahr-goo-MAHN", en: "argument" }, { kr: "preuve", rom: "pruhv", en: "evidence" }]
+      },
+      {
+        tier: "advanced", title: "Formal Speech", icon: "✉️", words: [
+          { kr: "cher monsieur", rom: "shehr muhs-YUH", en: "dear sir" }, { kr: "cordialement", rom: "kohr-dee-ahl-MAHN", en: "sincerely" },
+          { kr: "avec respect", rom: "ah-vek ress-PEH", en: "respectfully" }, { kr: "ci-joint", rom: "see-ZHWAN", en: "please find attached" },
+          { kr: "salutations", rom: "sah-loo-tah-see-OHN", en: "regards" }, { kr: "concernant", rom: "kohn-sehr-NAHN", en: "regarding" }]
+      },
+      {
+        tier: "advanced", title: "Culture & History", icon: "🏛️", words: [
+          { kr: "indépendance", rom: "an-day-pahn-DAHNS", en: "independence" }, { kr: "drapeau", rom: "drah-POH", en: "flag" },
+          { kr: "tradition", rom: "trah-dee-see-OHN", en: "tradition" }, { kr: "fête", rom: "feht", en: "holiday" },
+          { kr: "ancêtres", rom: "ahn-SEH-truh", en: "ancestors" }, { kr: "renaissance", rom: "ruh-neh-SAHNS", en: "revival" }]
+      },
+      {
+        tier: "advanced", title: "Advanced Verbs", icon: "🔀", words: [
+          { kr: "atteindre", rom: "ah-TAN-druh", en: "to achieve" }, { kr: "développer", rom: "day-vlop-PAY", en: "to develop" },
+          { kr: "améliorer", rom: "ah-may-lee-oh-RAY", en: "to improve" }, { kr: "réussir", rom: "ray-oo-SEER", en: "to succeed" },
+          { kr: "échouer", rom: "ay-shoo-AY", en: "to fail" }, { kr: "décider", rom: "day-see-DAY", en: "to decide" }]
+      },
+      {
+        tier: "advanced", title: "Academic French", icon: "🎓", words: [
+          { kr: "recherche", rom: "ruh-SHEHRSH", en: "research" }, { kr: "université", rom: "oo-nee-vehr-see-TAY", en: "university" },
+          { kr: "thèse", rom: "tehz", en: "thesis" }, { kr: "professeur", rom: "pro-feh-SUHR", en: "professor" },
+          { kr: "examen", rom: "eg-zah-MAN", en: "exam" }, { kr: "diplôme", rom: "dee-PLOHM", en: "degree" }]
+      },
+      {
+        tier: "advanced", title: "Professional Terms", icon: "💼", words: [
+          { kr: "CV", rom: "say-VAY", en: "resume / CV" }, { kr: "entretien", rom: "ahn-truh-tee-AN", en: "interview" },
+          { kr: "promotion", rom: "proh-moh-see-OHN", en: "promotion" }, { kr: "projet", rom: "proh-ZHAY", en: "project" },
+          { kr: "compétence", rom: "kohn-pay-TAHNS", en: "skill" }, { kr: "responsabilité", rom: "rehs-pohn-sah-bee-lee-TAY", en: "responsibility" }]
+      },
+      {
+        tier: "advanced", title: "Adjectives & Descriptions", icon: "🖌️", words: [
+          { kr: "beau", rom: "boh", en: "beautiful" }, { kr: "laid", rom: "leh", en: "ugly" },
+          { kr: "intelligent", rom: "an-teh-lee-ZHAHN", en: "smart" }, { kr: "drôle", rom: "drohl", en: "funny" },
+          { kr: "ennuyeux", rom: "ahn-nwee-YUH", en: "boring" }, { kr: "intéressant", rom: "an-tay-reh-SAHN", en: "interesting" }]
+      },
+
+      /* ---------------- FLUENT ---------------- */
+      {
+        tier: "fluent", title: "Political & Social Terms", icon: "🏛️", words: [
+          { kr: "gouvernement", rom: "goo-vehrn-MAHN", en: "government" }, { kr: "élection", rom: "ay-lek-see-OHN", en: "election" },
+          { kr: "démocratie", rom: "day-moh-krah-SEE", en: "democracy" }, { kr: "citoyen", rom: "see-twah-YAN", en: "citizen" },
+          { kr: "loi", rom: "lwah", en: "law" }, { kr: "société", rom: "soh-see-ay-TAY", en: "society" }]
+      },
+      {
+        tier: "fluent", title: "Psychology & Nuance", icon: "🧠", words: [
+          { kr: "subconscient", rom: "soob-kohn-see-AHN", en: "subconscious" }, { kr: "comportement", rom: "kohn-pohrt-MAHN", en: "behavior" },
+          { kr: "perception", rom: "pehr-sehp-see-OHN", en: "perception" }, { kr: "motivation", rom: "moh-tee-vah-see-OHN", en: "motivation" },
+          { kr: "anxiété", rom: "ahn-ksee-ay-TAY", en: "anxiety" }, { kr: "estime de soi", rom: "eh-steem duh swah", en: "self-esteem" }]
+      },
+      {
+        tier: "fluent", title: "Business Negotiation", icon: "🤝", words: [
+          { kr: "proposition", rom: "proh-poh-zee-see-OHN", en: "proposal" }, { kr: "offre", rom: "OH-fruh", en: "offer" },
+          { kr: "accord", rom: "ah-KOHR", en: "agreement" }, { kr: "compromis", rom: "kohn-proh-MEE", en: "compromise" },
+          { kr: "conditions", rom: "kohn-dee-see-OHN", en: "terms" }, { kr: "affaire", rom: "ah-FEHR", en: "deal" }]
+      },
+      {
+        tier: "fluent", title: "Literary Expressions", icon: "📖", words: [
+          { kr: "métaphore", rom: "may-tah-FOHR", en: "metaphor" }, { kr: "poème", rom: "poh-EHM", en: "poem" },
+          { kr: "roman", rom: "roh-MAHN", en: "novel" }, { kr: "vers", rom: "vehr", en: "verse" },
+          { kr: "narrateur", rom: "nah-rah-TUHR", en: "narrator" }, { kr: "chapitre", rom: "shah-PEE-truh", en: "chapter" }]
+      },
+      {
+        tier: "fluent", title: "States of Mind", icon: "🌫️", words: [
+          { kr: "confus", rom: "kohn-FOO", en: "confused" }, { kr: "débordé", rom: "day-bohr-DAY", en: "overwhelmed" },
+          { kr: "paisible", rom: "peh-ZEE-bluh", en: "at peace" }, { kr: "déterminé", rom: "day-tehr-mee-NAY", en: "determined" },
+          { kr: "indifférent", rom: "an-dee-fay-RAHN", en: "indifferent" }, { kr: "curieux", rom: "koo-ree-UH", en: "curious" }]
+      },
+      {
+        tier: "fluent", title: "Academic & Formal Writing", icon: "✍️", words: [
+          { kr: "hypothèse", rom: "ee-poh-TEHZ", en: "hypothesis" }, { kr: "conclusion", rom: "kohn-kloo-zee-OHN", en: "conclusion" },
+          { kr: "référence", rom: "ray-fay-RAHNS", en: "reference" }, { kr: "note de bas de page", rom: "noht duh bah duh pahzh", en: "footnote" },
+          { kr: "résumé", rom: "ray-zoo-MAY", en: "abstract" }, { kr: "méthodologie", rom: "may-toh-doh-loh-ZHEE", en: "methodology" }]
+      },
+      {
+        tier: "fluent", title: "Nature Advanced", icon: "🌍", words: [
+          { kr: "écosystème", rom: "ay-koh-see-STEHM", en: "ecosystem" }, { kr: "biodiversité", rom: "bee-oh-dee-vehr-see-TAY", en: "biodiversity" },
+          { kr: "climat", rom: "klee-MAH", en: "climate" }, { kr: "sécheresse", rom: "say-shuh-RESS", en: "drought" },
+          { kr: "faune sauvage", rom: "fohn soh-VAHZH", en: "wildlife" }, { kr: "pollution", rom: "poh-loo-see-OHN", en: "pollution" }]
+      },
+      {
+        tier: "fluent", title: "More Verbs", icon: "🔁", words: [
+          { kr: "imaginer", rom: "ee-mah-zhee-NAY", en: "to imagine" }, { kr: "convaincre", rom: "kohn-VANK-ruh", en: "to convince" },
+          { kr: "hésiter", rom: "ay-zee-TAY", en: "to hesitate" }, { kr: "admettre", rom: "ahd-MEH-truh", en: "to admit" },
+          { kr: "pardonner", rom: "pahr-doh-NAY", en: "to forgive" }, { kr: "apprécier", rom: "ah-pray-see-AY", en: "to appreciate" }]
+      },
+      {
+        tier: "fluent", title: "Emotions Deep Dive", icon: "💔", words: [
+          { kr: "doux-amer", rom: "doo-zah-MEHR", en: "bittersweet" }, { kr: "le cœur brisé", rom: "luh kuhr bree-ZAY", en: "heartbroken" },
+          { kr: "reconnaissant", rom: "ruh-koh-neh-SAHN", en: "grateful" }, { kr: "honteux", rom: "ohn-TUH", en: "ashamed" },
+          { kr: "nostalgique du pays", rom: "noh-stahl-ZHEEK doo pay-EE", en: "homesick" }, { kr: "content", rom: "kohn-TAHN", en: "content" }]
+      },
+      {
+        tier: "fluent", title: "Time & Sequence", icon: "⏳", words: [
+          { kr: "finalement", rom: "fee-nahl-MAHN", en: "eventually" }, { kr: "entre-temps", rom: "AHN-truh-tahn", en: "meanwhile" },
+          { kr: "au préalable", rom: "oh pray-ah-LAH-bluh", en: "beforehand" }, { kr: "ensuite", rom: "ahn-SWEET", en: "afterward" },
+          { kr: "simultanément", rom: "see-mool-tah-nay-MAHN", en: "simultaneously" }, { kr: "progressivement", rom: "proh-greh-seev-MAHN", en: "gradually" }]
+      },
+      {
+        tier: "fluent", title: "Abstract Concepts", icon: "💡", words: [
+          { kr: "liberté", rom: "lee-behr-TAY", en: "freedom" }, { kr: "justice", rom: "zhoo-STEESS", en: "justice" },
+          { kr: "vérité", rom: "vay-ree-TAY", en: "truth" }, { kr: "identité", rom: "ee-dahn-tee-TAY", en: "identity" },
+          { kr: "but", rom: "boot", en: "purpose" }, { kr: "équilibre", rom: "ay-kee-LEE-bruh", en: "balance" }]
+      },
+      {
+        tier: "fluent", title: "Professional Register", icon: "📧", words: [
+          { kr: "madame", rom: "mah-DAHM", en: "madam" }, { kr: "bien à vous", rom: "bee-AN ah voo", en: "yours sincerely" },
+          { kr: "veuillez noter", rom: "vuh-YAY noh-TAY", en: "please note" }, { kr: "gentiment", rom: "zhahn-tee-MAHN", en: "kindly" },
+          { kr: "pièce jointe", rom: "pee-ess ZHWANT", en: "enclosed / attachment" }, { kr: "dans les meilleurs délais", rom: "dahn lay meh-YUHR day-LEH", en: "at your earliest convenience" }]
+      },
+      {
+        tier: "fluent", title: "Mastery Review", icon: "🏆", words: [
+          { kr: "félicitations", rom: "fay-lee-see-tah-see-OHN", en: "congratulations" }, { kr: "à bientôt", rom: "ah bee-an-TOH", en: "see you soon" },
+          { kr: "bravo", rom: "brah-VOH", en: "well done" }, { kr: "continue", rom: "kohn-tee-NOO", en: "keep going" },
+          { kr: "maîtrise", rom: "meh-TREEZ", en: "mastery" }, { kr: "couramment", rom: "koo-rah-MAHN", en: "fluency" }]
+      },
+    ];
+    LEVELS_FR.forEach((l, i) => { l.id = 11000 + i + 1; });
+
+    const TIERS_DE = TIERS;
+    const LEVELS_DE = [
+      /* ---------------- BEGINNER ---------------- */
+      {
+        tier: "beginner", title: "German Basics", icon: "🇩🇪", words: [
+          { kr: "hallo", rom: "HAH-loh", en: "hello" }, { kr: "danke", rom: "DAHN-kuh", en: "thank you" },
+          { kr: "ja", rom: "yah", en: "yes" }, { kr: "nein", rom: "nine", en: "no" },
+          { kr: "Name", rom: "NAH-muh", en: "name" }, { kr: "Freund", rom: "froynt", en: "friend" }]
+      },
+      {
+        tier: "beginner", title: "Greetings & Manners", icon: "🙏", words: [
+          { kr: "auf Wiedersehen", rom: "owf VEE-der-zayn", en: "goodbye" }, { kr: "Entschuldigung", rom: "ent-SHOOL-dee-goong", en: "sorry / excuse me" },
+          { kr: "bitte", rom: "BIT-tuh", en: "please" }, { kr: "freut mich", rom: "froyt mikh", en: "nice to meet you" },
+          { kr: "bitte schön", rom: "BIT-tuh shurn", en: "you're welcome" }, { kr: "ist in Ordnung", rom: "ist in ORD-noong", en: "it's okay" }]
+      },
+      {
+        tier: "beginner", title: "Numbers 1-6", icon: "🔢", words: [
+          { kr: "eins", rom: "ines", en: "one" }, { kr: "zwei", rom: "tsvy", en: "two" },
+          { kr: "drei", rom: "dry", en: "three" }, { kr: "vier", rom: "feer", en: "four" },
+          { kr: "fünf", rom: "fewnf", en: "five" }, { kr: "sechs", rom: "zex", en: "six" }]
+      },
+      {
+        tier: "beginner", title: "Days & Time", icon: "🕒", words: [
+          { kr: "heute", rom: "HOY-tuh", en: "today" }, { kr: "morgen", rom: "MOR-gen", en: "tomorrow" },
+          { kr: "gestern", rom: "GES-tern", en: "yesterday" }, { kr: "jetzt", rom: "yetst", en: "now" },
+          { kr: "Zeit", rom: "tsyte", en: "time" }, { kr: "Morgen", rom: "MOR-gen", en: "morning" }]
+      },
+      {
+        tier: "beginner", title: "Family", icon: "👪", words: [
+          { kr: "Familie", rom: "fah-MEEL-yuh", en: "family" }, { kr: "Mama", rom: "MAH-mah", en: "mom" },
+          { kr: "Papa", rom: "PAH-pah", en: "dad" }, { kr: "Bruder", rom: "BROO-der", en: "brother" },
+          { kr: "Schwester", rom: "SHVES-ter", en: "sister" }, { kr: "Opa", rom: "OH-pah", en: "grandfather" }]
+      },
+      {
+        tier: "beginner", title: "Food & Drink", icon: "🍚", words: [
+          { kr: "Essen", rom: "ES-sen", en: "food" }, { kr: "Wasser", rom: "VAH-ser", en: "water" },
+          { kr: "Kaffee", rom: "kah-FAY", en: "coffee" }, { kr: "Brot", rom: "broht", en: "bread" },
+          { kr: "Reis", rom: "rice", en: "rice" }, { kr: "lecker", rom: "LEK-er", en: "delicious" }]
+      },
+      {
+        tier: "beginner", title: "Colors", icon: "🎨", words: [
+          { kr: "rot", rom: "roht", en: "red" }, { kr: "blau", rom: "blow", en: "blue" },
+          { kr: "gelb", rom: "gelp", en: "yellow" }, { kr: "grün", rom: "grewn", en: "green" },
+          { kr: "schwarz", rom: "shvarts", en: "black" }, { kr: "weiß", rom: "vice", en: "white" }]
+      },
+      {
+        tier: "beginner", title: "Body Parts", icon: "🧍", words: [
+          { kr: "Kopf", rom: "kopf", en: "head" }, { kr: "Hand", rom: "hahnt", en: "hand" },
+          { kr: "Auge", rom: "OW-guh", en: "eye" }, { kr: "Nase", rom: "NAH-zuh", en: "nose" },
+          { kr: "Mund", rom: "moont", en: "mouth" }, { kr: "Bein", rom: "bine", en: "leg" }]
+      },
+      {
+        tier: "beginner", title: "Animals", icon: "🐾", words: [
+          { kr: "Hund", rom: "hoont", en: "dog" }, { kr: "Katze", rom: "KAHT-suh", en: "cat" },
+          { kr: "Vogel", rom: "FOH-gel", en: "bird" }, { kr: "Fisch", rom: "fish", en: "fish" },
+          { kr: "Bär", rom: "bair", en: "bear" }, { kr: "Hase", rom: "HAH-zuh", en: "rabbit" }]
+      },
+      {
+        tier: "beginner", title: "Clothing", icon: "👕", words: [
+          { kr: "Kleidung", rom: "KLYE-doong", en: "clothes" }, { kr: "Schuhe", rom: "SHOO-uh", en: "shoes" },
+          { kr: "Hut", rom: "hoot", en: "hat" }, { kr: "Hose", rom: "HOH-zuh", en: "pants" },
+          { kr: "Rock", rom: "rock", en: "skirt" }, { kr: "Tasche", rom: "TAH-shuh", en: "bag" }]
+      },
+      {
+        tier: "beginner", title: "Weather", icon: "⛅", words: [
+          { kr: "Wetter", rom: "VET-ter", en: "weather" }, { kr: "Regen", rom: "RAY-gen", en: "rain" },
+          { kr: "Schnee", rom: "shnay", en: "snow" }, { kr: "Wind", rom: "vint", en: "wind" },
+          { kr: "heiß", rom: "hice", en: "hot" }, { kr: "kalt", rom: "kahlt", en: "cold" }]
+      },
+      {
+        tier: "beginner", title: "House & Rooms", icon: "🏠", words: [
+          { kr: "Haus", rom: "house", en: "house" }, { kr: "Zimmer", rom: "TSIM-mer", en: "room" },
+          { kr: "Bett", rom: "bet", en: "bed" }, { kr: "Badezimmer", rom: "BAH-duh-tsim-mer", en: "bathroom" },
+          { kr: "Küche", rom: "KEW-khuh", en: "kitchen" }, { kr: "Tür", rom: "tewr", en: "door" }]
+      },
+      {
+        tier: "beginner", title: "School & Objects", icon: "🎒", words: [
+          { kr: "Schule", rom: "SHOO-luh", en: "school" }, { kr: "Buch", rom: "bookh", en: "book" },
+          { kr: "Bleistift", rom: "BLYE-shtift", en: "pencil" }, { kr: "Rucksack", rom: "ROOK-zahk", en: "backpack" },
+          { kr: "Lehrer", rom: "LAY-rer", en: "teacher" }, { kr: "Schüler", rom: "SHEW-ler", en: "student" }]
+      },
+
+      /* ---------------- INTERMEDIATE ---------------- */
+      {
+        tier: "intermediate", title: "Feelings & Emotions", icon: "💗", words: [
+          { kr: "glücklich", rom: "GLEWK-likh", en: "happy" }, { kr: "traurig", rom: "TROW-rikh", en: "sad" },
+          { kr: "wütend", rom: "VEW-tent", en: "angry" }, { kr: "müde", rom: "MEW-duh", en: "tired" },
+          { kr: "nervös", rom: "nehr-VURSS", en: "nervous" }, { kr: "begeistert", rom: "buh-GYE-stert", en: "eager / enthusiastic" }]
+      },
+      {
+        tier: "intermediate", title: "Directions & Places", icon: "🧭", words: [
+          { kr: "links", rom: "links", en: "left" }, { kr: "rechts", rom: "rekhts", en: "right" },
+          { kr: "nah", rom: "nah", en: "near" }, { kr: "weit", rom: "vite", en: "far" },
+          { kr: "hier", rom: "heer", en: "here" }, { kr: "dort", rom: "dort", en: "there" }]
+      },
+      {
+        tier: "intermediate", title: "Shopping", icon: "🛍️", words: [
+          { kr: "wie viel kostet das", rom: "vee feel KOS-tet dahs", en: "how much is it" }, { kr: "teuer", rom: "TOY-er", en: "expensive" },
+          { kr: "billig", rom: "BIL-likh", en: "cheap" }, { kr: "bezahlen", rom: "buh-TSAH-len", en: "to pay" },
+          { kr: "Bargeld", rom: "BAHR-gelt", en: "cash" }, { kr: "Karte", rom: "KAHR-tuh", en: "card" }]
+      },
+      {
+        tier: "intermediate", title: "Transportation", icon: "🚌", words: [
+          { kr: "Bus", rom: "boos", en: "bus" }, { kr: "Zug", rom: "tsook", en: "train" },
+          { kr: "Flugzeug", rom: "FLOOK-tsoyk", en: "plane" }, { kr: "Auto", rom: "OW-toh", en: "car" },
+          { kr: "Fahrkarte", rom: "FAHR-kahr-tuh", en: "ticket" }, { kr: "Bahnhof", rom: "BAHN-hohf", en: "station" }]
+      },
+      {
+        tier: "intermediate", title: "Hobbies", icon: "🎯", words: [
+          { kr: "Lesen", rom: "LAY-zen", en: "reading" }, { kr: "Musik", rom: "moo-ZEEK", en: "music" },
+          { kr: "Film", rom: "film", en: "movie" }, { kr: "Malen", rom: "MAH-len", en: "painting" },
+          { kr: "Reisen", rom: "RYE-zen", en: "traveling" }, { kr: "Tanzen", rom: "TAHN-tsen", en: "dancing" }]
+      },
+      {
+        tier: "intermediate", title: "Work & Jobs", icon: "💼", words: [
+          { kr: "Arbeit", rom: "AHR-bite", en: "work" }, { kr: "Ingenieur", rom: "in-zhen-YUR", en: "engineer" },
+          { kr: "Büro", rom: "bew-ROH", en: "office" }, { kr: "Gehalt", rom: "guh-HAHLT", en: "salary" },
+          { kr: "Chef", rom: "shef", en: "boss" }, { kr: "Kollege", rom: "kol-LAY-guh", en: "colleague" }]
+      },
+      {
+        tier: "intermediate", title: "Health & Body", icon: "🏥", words: [
+          { kr: "krank", rom: "krahnk", en: "sick" }, { kr: "gesund", rom: "guh-ZOONT", en: "healthy" },
+          { kr: "Krankenhaus", rom: "KRAHN-ken-house", en: "hospital" }, { kr: "Medikament", rom: "meh-dee-kah-MENT", en: "medicine" },
+          { kr: "Schmerz", rom: "shmehrts", en: "pain" }, { kr: "Krankenschwester", rom: "KRAHN-ken-shves-ter", en: "nurse" }]
+      },
+      {
+        tier: "intermediate", title: "Technology", icon: "💻", words: [
+          { kr: "Telefon", rom: "teh-leh-FOHN", en: "phone" }, { kr: "Computer", rom: "kom-PYOO-ter", en: "computer" },
+          { kr: "Internet", rom: "IN-ter-net", en: "internet" }, { kr: "App", rom: "app", en: "app" },
+          { kr: "Bildschirm", rom: "BILT-sheerm", en: "screen" }, { kr: "Passwort", rom: "PAHS-vort", en: "password" }]
+      },
+      {
+        tier: "intermediate", title: "Sports", icon: "⚽", words: [
+          { kr: "Fußball", rom: "FOOSS-bahl", en: "football" }, { kr: "Basketball", rom: "BAHS-ket-bahl", en: "basketball" },
+          { kr: "Schwimmen", rom: "SHVIM-men", en: "swimming" }, { kr: "Laufen", rom: "LOW-fen", en: "running" },
+          { kr: "Mannschaft", rom: "MAHN-shahft", en: "team" }, { kr: "Ball", rom: "bahl", en: "ball" }]
+      },
+      {
+        tier: "intermediate", title: "Nature", icon: "🌳", words: [
+          { kr: "Baum", rom: "bowm", en: "tree" }, { kr: "Berg", rom: "behrk", en: "mountain" },
+          { kr: "Fluss", rom: "floos", en: "river" }, { kr: "Meer", rom: "mehr", en: "sea" },
+          { kr: "Wald", rom: "vahlt", en: "forest" }, { kr: "Sonne", rom: "ZON-nuh", en: "sun" }]
+      },
+      {
+        tier: "intermediate", title: "Numbers & Time", icon: "🔢", words: [
+          { kr: "sieben", rom: "ZEE-ben", en: "seven" }, { kr: "acht", rom: "ahkht", en: "eight" },
+          { kr: "neun", rom: "noyn", en: "nine" }, { kr: "zehn", rom: "tsayn", en: "ten" },
+          { kr: "Stunde", rom: "SHTOON-duh", en: "hour" }, { kr: "Minute", rom: "mee-NOO-tuh", en: "minute" }]
+      },
+      {
+        tier: "intermediate", title: "Making Plans", icon: "🗓️", words: [
+          { kr: "heute Abend", rom: "HOY-tuh AH-bent", en: "tonight" }, { kr: "Wochenende", rom: "VOKH-en-en-duh", en: "weekend" },
+          { kr: "Treffen", rom: "TREF-fen", en: "meeting" }, { kr: "Freizeit", rom: "FRYE-tsite", en: "free time" },
+          { kr: "Zeitplan", rom: "TSITE-plahn", en: "schedule" }, { kr: "einladen", rom: "INE-lah-den", en: "to invite" }]
+      },
+      {
+        tier: "intermediate", title: "Restaurant & Ordering", icon: "🍽️", words: [
+          { kr: "Speisekarte", rom: "SHPY-zuh-kahr-tuh", en: "menu" }, { kr: "Bestellung", rom: "buh-SHTEL-oong", en: "order" },
+          { kr: "Kellner", rom: "KELN-er", en: "waiter" }, { kr: "Rechnung", rom: "REKH-noong", en: "bill" },
+          { kr: "Tisch", rom: "tish", en: "table" }, { kr: "hungrig", rom: "HOON-grikh", en: "hungry" }]
+      },
+
+      /* ---------------- ADVANCED ---------------- */
+      {
+        tier: "advanced", title: "Connectors & Grammar", icon: "🔗", words: [
+          { kr: "jedoch", rom: "yay-DOKH", en: "however" }, { kr: "weil", rom: "vile", en: "because" },
+          { kr: "obwohl", rom: "op-VOHL", en: "although" }, { kr: "deshalb", rom: "des-HAHLP", en: "therefore" },
+          { kr: "außerdem", rom: "OW-ser-daym", en: "moreover" }, { kr: "zusätzlich", rom: "TSOO-zets-likh", en: "in addition" }]
+      },
+      {
+        tier: "advanced", title: "Business German", icon: "🏢", words: [
+          { kr: "Firma", rom: "FEER-mah", en: "company" }, { kr: "Vertrag", rom: "fer-TRAHK", en: "contract" },
+          { kr: "Frist", rom: "frist", en: "deadline" }, { kr: "Kunde", rom: "KOON-duh", en: "client" },
+          { kr: "Budget", rom: "bewd-ZHAY", en: "budget" }, { kr: "Investition", rom: "in-ves-tee-tsee-OHN", en: "investment" }]
+      },
+      {
+        tier: "advanced", title: "News & Media", icon: "📰", words: [
+          { kr: "Nachrichten", rom: "NAHKH-rikh-ten", en: "news" }, { kr: "Zeitung", rom: "TSITE-oong", en: "newspaper" },
+          { kr: "Journalist", rom: "zhoor-nah-LIST", en: "journalist" }, { kr: "Artikel", rom: "ahr-TEE-kel", en: "article" },
+          { kr: "Fernsehen", rom: "FEHRN-zay-en", en: "television" }, { kr: "Schlagzeile", rom: "SHLAHK-tsy-luh", en: "headline" }]
+      },
+      {
+        tier: "advanced", title: "Nuanced Emotions", icon: "💭", words: [
+          { kr: "Neid", rom: "nide", en: "envy" }, { kr: "Stolz", rom: "shtolts", en: "pride" },
+          { kr: "Schuldgefühl", rom: "SHOOLT-guh-fewl", en: "guilt" }, { kr: "Erleichterung", rom: "er-LYKH-ter-oong", en: "relief" },
+          { kr: "Sehnsucht", rom: "ZAYN-zookht", en: "nostalgia / longing" }, { kr: "Hoffnung", rom: "HOF-noong", en: "hope" }]
+      },
+      {
+        tier: "advanced", title: "Travel Advanced", icon: "✈️", words: [
+          { kr: "Reisepass", rom: "RYE-zuh-pahs", en: "passport" }, { kr: "Visum", rom: "VEE-zoom", en: "visa" },
+          { kr: "Gepäck", rom: "guh-PECK", en: "luggage" }, { kr: "Reiseroute", rom: "RYE-zuh-roo-tuh", en: "itinerary" },
+          { kr: "Zoll", rom: "tsol", en: "customs" }, { kr: "Reservierung", rom: "reh-zer-VEE-roong", en: "reservation" }]
+      },
+      {
+        tier: "advanced", title: "Relationships", icon: "💑", words: [
+          { kr: "Ehe", rom: "AY-uh", en: "marriage" }, { kr: "Vertrauen", rom: "fer-TROW-en", en: "trust" },
+          { kr: "Trennung", rom: "TREN-noong", en: "breakup" }, { kr: "Freund", rom: "froynt", en: "boyfriend" },
+          { kr: "Verlobung", rom: "fer-LOH-boong", en: "engagement" }, { kr: "Schwiegereltern", rom: "SHVEE-ger-el-tern", en: "in-laws" }]
+      },
+      {
+        tier: "advanced", title: "Debate & Opinions", icon: "🗣️", words: [
+          { kr: "ich denke", rom: "ikh DENG-kuh", en: "I think" }, { kr: "ich stimme zu", rom: "ikh SHTIM-muh tsoo", en: "I agree" },
+          { kr: "ich stimme nicht zu", rom: "ikh SHTIM-muh nikht tsoo", en: "I disagree" }, { kr: "meiner Meinung nach", rom: "MY-ner MY-noong nakh", en: "in my opinion" },
+          { kr: "Argument", rom: "ar-goo-MENT", en: "argument" }, { kr: "Beweis", rom: "buh-VICE", en: "evidence" }]
+      },
+      {
+        tier: "advanced", title: "Formal Speech", icon: "✉️", words: [
+          { kr: "sehr geehrter Herr", rom: "zayr guh-EHR-ter hehr", en: "dear sir" }, { kr: "mit freundlichen Grüßen", rom: "mit FROYNT-likh-en GREW-sen", en: "sincerely" },
+          { kr: "mit Respekt", rom: "mit reh-SPEKT", en: "respectfully" }, { kr: "beigefügt", rom: "BY-guh-fewkt", en: "please find attached" },
+          { kr: "Grüße", rom: "GREW-suh", en: "regards" }, { kr: "bezüglich", rom: "buh-TSEWK-likh", en: "regarding" }]
+      },
+      {
+        tier: "advanced", title: "Culture & History", icon: "🏛️", words: [
+          { kr: "Unabhängigkeit", rom: "OON-ahp-heng-ikh-kite", en: "independence" }, { kr: "Flagge", rom: "FLAH-guh", en: "flag" },
+          { kr: "Tradition", rom: "trah-dee-tsee-OHN", en: "tradition" }, { kr: "Feiertag", rom: "FY-er-tahk", en: "holiday" },
+          { kr: "Vorfahren", rom: "FOHR-fah-ren", en: "ancestors" }, { kr: "Wiederbelebung", rom: "VEE-der-buh-lay-boong", en: "revival" }]
+      },
+      {
+        tier: "advanced", title: "Advanced Verbs", icon: "🔀", words: [
+          { kr: "erreichen", rom: "er-RY-khen", en: "to achieve" }, { kr: "entwickeln", rom: "ent-VIK-eln", en: "to develop" },
+          { kr: "verbessern", rom: "fer-BES-ern", en: "to improve" }, { kr: "gelingen", rom: "guh-LING-en", en: "to succeed" },
+          { kr: "scheitern", rom: "SHY-tern", en: "to fail" }, { kr: "entscheiden", rom: "ent-SHY-den", en: "to decide" }]
+      },
+      {
+        tier: "advanced", title: "Academic German", icon: "🎓", words: [
+          { kr: "Forschung", rom: "FOR-shoong", en: "research" }, { kr: "Universität", rom: "oo-nee-ver-zee-TAYT", en: "university" },
+          { kr: "Abschlussarbeit", rom: "AHP-shloos-ar-bite", en: "thesis" }, { kr: "Professor", rom: "pro-FES-or", en: "professor" },
+          { kr: "Prüfung", rom: "PREW-foong", en: "exam" }, { kr: "Abschluss", rom: "AHP-shloos", en: "degree" }]
+      },
+      {
+        tier: "advanced", title: "Professional Terms", icon: "💼", words: [
+          { kr: "Lebenslauf", rom: "LAY-benss-lowf", en: "resume / CV" }, { kr: "Vorstellungsgespräch", rom: "FOR-shtel-oongs-guh-shprekh", en: "interview" },
+          { kr: "Beförderung", rom: "buh-FUR-der-oong", en: "promotion" }, { kr: "Projekt", rom: "proh-YEKT", en: "project" },
+          { kr: "Fähigkeit", rom: "FAY-ikh-kite", en: "skill" }, { kr: "Verantwortung", rom: "fer-AHNT-vor-toong", en: "responsibility" }]
+      },
+      {
+        tier: "advanced", title: "Adjectives & Descriptions", icon: "🖌️", words: [
+          { kr: "schön", rom: "shurn", en: "beautiful" }, { kr: "hässlich", rom: "HESS-likh", en: "ugly" },
+          { kr: "klug", rom: "klook", en: "smart" }, { kr: "lustig", rom: "LOOS-tikh", en: "funny" },
+          { kr: "langweilig", rom: "LAHNG-vy-likh", en: "boring" }, { kr: "interessant", rom: "in-teh-res-SAHNT", en: "interesting" }]
+      },
+
+      /* ---------------- FLUENT ---------------- */
+      {
+        tier: "fluent", title: "Political & Social Terms", icon: "🏛️", words: [
+          { kr: "Regierung", rom: "reh-GEE-roong", en: "government" }, { kr: "Wahl", rom: "vahl", en: "election" },
+          { kr: "Demokratie", rom: "deh-moh-krah-TEE", en: "democracy" }, { kr: "Bürger", rom: "BEWR-ger", en: "citizen" },
+          { kr: "Gesetz", rom: "guh-ZETS", en: "law" }, { kr: "Gesellschaft", rom: "guh-ZEL-shahft", en: "society" }]
+      },
+      {
+        tier: "fluent", title: "Psychology & Nuance", icon: "🧠", words: [
+          { kr: "Unterbewusstsein", rom: "OON-ter-buh-voost-zine", en: "subconscious" }, { kr: "Verhalten", rom: "fer-HAHL-ten", en: "behavior" },
+          { kr: "Wahrnehmung", rom: "VAHR-nay-moong", en: "perception" }, { kr: "Motivation", rom: "moh-tee-vah-tsee-OHN", en: "motivation" },
+          { kr: "Angst", rom: "ahngst", en: "anxiety" }, { kr: "Selbstwertgefühl", rom: "ZELPST-vehrt-guh-fewl", en: "self-esteem" }]
+      },
+      {
+        tier: "fluent", title: "Business Negotiation", icon: "🤝", words: [
+          { kr: "Vorschlag", rom: "FOR-shlahk", en: "proposal" }, { kr: "Angebot", rom: "AHN-guh-boht", en: "offer" },
+          { kr: "Vereinbarung", rom: "fer-INE-bah-roong", en: "agreement" }, { kr: "Kompromiss", rom: "kom-proh-MISS", en: "compromise" },
+          { kr: "Bedingungen", rom: "buh-DING-oong-en", en: "terms" }, { kr: "Geschäft", rom: "guh-SHEFT", en: "deal" }]
+      },
+      {
+        tier: "fluent", title: "Literary Expressions", icon: "📖", words: [
+          { kr: "Metapher", rom: "meh-TAH-fer", en: "metaphor" }, { kr: "Gedicht", rom: "guh-DIKHT", en: "poem" },
+          { kr: "Roman", rom: "roh-MAHN", en: "novel" }, { kr: "Vers", rom: "fehrs", en: "verse" },
+          { kr: "Erzähler", rom: "er-TSAY-ler", en: "narrator" }, { kr: "Kapitel", rom: "kah-PEE-tel", en: "chapter" }]
+      },
+      {
+        tier: "fluent", title: "States of Mind", icon: "🌫️", words: [
+          { kr: "verwirrt", rom: "fer-VEERT", en: "confused" }, { kr: "überfordert", rom: "EW-ber-for-dert", en: "overwhelmed" },
+          { kr: "gelassen", rom: "guh-LAHS-sen", en: "at peace" }, { kr: "entschlossen", rom: "ent-SHLOSS-en", en: "determined" },
+          { kr: "gleichgültig", rom: "GLYKH-gewl-tikh", en: "indifferent" }, { kr: "neugierig", rom: "NOY-geer-ikh", en: "curious" }]
+      },
+      {
+        tier: "fluent", title: "Academic & Formal Writing", icon: "✍️", words: [
+          { kr: "Hypothese", rom: "hew-poh-TAY-zuh", en: "hypothesis" }, { kr: "Schlussfolgerung", rom: "SHLOOSS-fol-ger-oong", en: "conclusion" },
+          { kr: "Referenz", rom: "reh-feh-RENTS", en: "reference" }, { kr: "Fußnote", rom: "FOOSS-noh-tuh", en: "footnote" },
+          { kr: "Zusammenfassung", rom: "tsoo-ZAHM-en-fahs-oong", en: "abstract" }, { kr: "Methodik", rom: "meh-TOH-dik", en: "methodology" }]
+      },
+      {
+        tier: "fluent", title: "Nature Advanced", icon: "🌍", words: [
+          { kr: "Ökosystem", rom: "UR-koh-zew-staym", en: "ecosystem" }, { kr: "Artenvielfalt", rom: "AHR-ten-feel-fahlt", en: "biodiversity" },
+          { kr: "Klima", rom: "KLEE-mah", en: "climate" }, { kr: "Dürre", rom: "DEWR-ruh", en: "drought" },
+          { kr: "Wildtiere", rom: "VILT-tee-ruh", en: "wildlife" }, { kr: "Umweltverschmutzung", rom: "OOM-velt-fer-shmoo-tsoong", en: "pollution" }]
+      },
+      {
+        tier: "fluent", title: "More Verbs", icon: "🔁", words: [
+          { kr: "sich vorstellen", rom: "zikh FOR-shtel-en", en: "to imagine" }, { kr: "überzeugen", rom: "EW-ber-tsoy-gen", en: "to convince" },
+          { kr: "zögern", rom: "TSUR-gern", en: "to hesitate" }, { kr: "zugeben", rom: "TSOO-gay-ben", en: "to admit" },
+          { kr: "vergeben", rom: "fer-GAY-ben", en: "to forgive" }, { kr: "schätzen", rom: "SHET-sen", en: "to appreciate" }]
+      },
+      {
+        tier: "fluent", title: "Emotions Deep Dive", icon: "💔", words: [
+          { kr: "bittersüß", rom: "BIT-ter-zewss", en: "bittersweet" }, { kr: "am Boden zerstört", rom: "ahm BOH-den tsehr-SHTURT", en: "heartbroken" },
+          { kr: "dankbar", rom: "DAHNK-bar", en: "grateful" }, { kr: "beschämt", rom: "buh-SHAYMT", en: "ashamed" },
+          { kr: "Heimweh haben", rom: "HIME-vay HAH-ben", en: "homesick" }, { kr: "zufrieden", rom: "tsoo-FREE-den", en: "content" }]
+      },
+      {
+        tier: "fluent", title: "Time & Sequence", icon: "⏳", words: [
+          { kr: "schließlich", rom: "SHLEESS-likh", en: "eventually" }, { kr: "inzwischen", rom: "in-TSVISH-en", en: "meanwhile" },
+          { kr: "im Voraus", rom: "im FOR-owss", en: "beforehand" }, { kr: "danach", rom: "dah-NAKH", en: "afterward" },
+          { kr: "gleichzeitig", rom: "GLYKH-tsy-tikh", en: "simultaneously" }, { kr: "allmählich", rom: "AHL-may-likh", en: "gradually" }]
+      },
+      {
+        tier: "fluent", title: "Abstract Concepts", icon: "💡", words: [
+          { kr: "Freiheit", rom: "FRY-hite", en: "freedom" }, { kr: "Gerechtigkeit", rom: "guh-REKH-tikh-kite", en: "justice" },
+          { kr: "Wahrheit", rom: "VAHR-hite", en: "truth" }, { kr: "Identität", rom: "ee-den-tee-TAYT", en: "identity" },
+          { kr: "Zweck", rom: "tsvek", en: "purpose" }, { kr: "Gleichgewicht", rom: "GLYKH-guh-vikht", en: "balance" }]
+      },
+      {
+        tier: "fluent", title: "Professional Register", icon: "📧", words: [
+          { kr: "sehr geehrte Frau", rom: "zayr guh-EHR-tuh frow", en: "Dear Madam" }, { kr: "hochachtungsvoll", rom: "HOKH-akh-toongs-fol", en: "yours sincerely" },
+          { kr: "bitte beachten Sie", rom: "BIT-tuh buh-AKH-ten zee", en: "please note" }, { kr: "freundlicherweise", rom: "FROYNT-likh-er-vy-zuh", en: "kindly" },
+          { kr: "Anhang", rom: "AHN-hahng", en: "enclosed / attachment" }, { kr: "so bald wie möglich", rom: "zoh bahlt vee MURG-likh", en: "at your earliest convenience" }]
+      },
+      {
+        tier: "fluent", title: "Mastery Review", icon: "🏆", words: [
+          { kr: "Glückwunsch", rom: "GLEWK-voonsh", en: "congratulations" }, { kr: "bis bald", rom: "biss bahlt", en: "see you soon" },
+          { kr: "gut gemacht", rom: "goot guh-MAHKHT", en: "well done" }, { kr: "mach weiter", rom: "mahkh VY-ter", en: "keep going" },
+          { kr: "Meisterschaft", rom: "MY-ster-shahft", en: "mastery" }, { kr: "fließend", rom: "FLEE-sent", en: "fluency" }]
+      },
+    ];
+    LEVELS_DE.forEach((l, i) => { l.id = 12000 + i + 1; });
+
+    const TIERS_IT = TIERS;
+    const LEVELS_IT = [
+      /* ---------------- BEGINNER ---------------- */
+      {
+        tier: "beginner", title: "Italian Basics", icon: "🇮🇹", words: [
+          { kr: "ciao", rom: "chow", en: "hello" }, { kr: "grazie", rom: "GRAH-tsee-eh", en: "thank you" },
+          { kr: "sì", rom: "see", en: "yes" }, { kr: "no", rom: "noh", en: "no" },
+          { kr: "nome", rom: "NOH-meh", en: "name" }, { kr: "amico", rom: "ah-MEE-koh", en: "friend" }]
+      },
+      {
+        tier: "beginner", title: "Greetings & Manners", icon: "🙏", words: [
+          { kr: "arrivederci", rom: "ah-ree-veh-DEHR-chee", en: "goodbye" }, { kr: "scusa", rom: "SKOO-zah", en: "sorry / excuse me" },
+          { kr: "per favore", rom: "pehr fah-VOH-reh", en: "please" }, { kr: "piacere", rom: "pyah-CHEH-reh", en: "nice to meet you" },
+          { kr: "prego", rom: "PREH-goh", en: "you're welcome" }, { kr: "va bene", rom: "vah BEH-neh", en: "it's okay" }]
+      },
+      {
+        tier: "beginner", title: "Numbers 1-6", icon: "🔢", words: [
+          { kr: "uno", rom: "OO-noh", en: "one" }, { kr: "due", rom: "DOO-eh", en: "two" },
+          { kr: "tre", rom: "treh", en: "three" }, { kr: "quattro", rom: "KWAT-troh", en: "four" },
+          { kr: "cinque", rom: "CHEEN-kweh", en: "five" }, { kr: "sei", rom: "SEH-ee", en: "six" }]
+      },
+      {
+        tier: "beginner", title: "Days & Time", icon: "🕒", words: [
+          { kr: "oggi", rom: "OH-jee", en: "today" }, { kr: "domani", rom: "doh-MAH-nee", en: "tomorrow" },
+          { kr: "ieri", rom: "YEH-ree", en: "yesterday" }, { kr: "adesso", rom: "ah-DES-soh", en: "now" },
+          { kr: "tempo", rom: "TEM-poh", en: "time" }, { kr: "mattina", rom: "maht-TEE-nah", en: "morning" }]
+      },
+      {
+        tier: "beginner", title: "Family", icon: "👪", words: [
+          { kr: "famiglia", rom: "fah-MEE-lyah", en: "family" }, { kr: "mamma", rom: "MAHM-mah", en: "mom" },
+          { kr: "papà", rom: "pah-PAH", en: "dad" }, { kr: "fratello", rom: "frah-TEL-loh", en: "brother" },
+          { kr: "sorella", rom: "soh-REL-lah", en: "sister" }, { kr: "nonno", rom: "NON-noh", en: "grandfather" }]
+      },
+      {
+        tier: "beginner", title: "Food & Drink", icon: "🍚", words: [
+          { kr: "cibo", rom: "CHEE-boh", en: "food" }, { kr: "acqua", rom: "AH-kwah", en: "water" },
+          { kr: "caffè", rom: "kahf-FEH", en: "coffee" }, { kr: "pane", rom: "PAH-neh", en: "bread" },
+          { kr: "riso", rom: "REE-zoh", en: "rice" }, { kr: "delizioso", rom: "deh-lee-tsee-OH-zoh", en: "delicious" }]
+      },
+      {
+        tier: "beginner", title: "Colors", icon: "🎨", words: [
+          { kr: "rosso", rom: "ROHS-soh", en: "red" }, { kr: "blu", rom: "bloo", en: "blue" },
+          { kr: "giallo", rom: "JAHL-loh", en: "yellow" }, { kr: "verde", rom: "VEHR-deh", en: "green" },
+          { kr: "nero", rom: "NEH-roh", en: "black" }, { kr: "bianco", rom: "bee-AHN-koh", en: "white" }]
+      },
+      {
+        tier: "beginner", title: "Body Parts", icon: "🧍", words: [
+          { kr: "testa", rom: "TES-tah", en: "head" }, { kr: "mano", rom: "MAH-noh", en: "hand" },
+          { kr: "occhio", rom: "OHK-kyoh", en: "eye" }, { kr: "naso", rom: "NAH-zoh", en: "nose" },
+          { kr: "bocca", rom: "BOHK-kah", en: "mouth" }, { kr: "gamba", rom: "GAHM-bah", en: "leg" }]
+      },
+      {
+        tier: "beginner", title: "Animals", icon: "🐾", words: [
+          { kr: "cane", rom: "KAH-neh", en: "dog" }, { kr: "gatto", rom: "GAHT-toh", en: "cat" },
+          { kr: "uccello", rom: "oo-CHEL-loh", en: "bird" }, { kr: "pesce", rom: "PEH-sheh", en: "fish" },
+          { kr: "orso", rom: "OHR-soh", en: "bear" }, { kr: "coniglio", rom: "koh-NEE-lyoh", en: "rabbit" }]
+      },
+      {
+        tier: "beginner", title: "Clothing", icon: "👕", words: [
+          { kr: "vestiti", rom: "ves-TEE-tee", en: "clothes" }, { kr: "scarpe", rom: "SKAHR-peh", en: "shoes" },
+          { kr: "cappello", rom: "kahp-PEL-loh", en: "hat" }, { kr: "pantaloni", rom: "pahn-tah-LOH-nee", en: "pants" },
+          { kr: "gonna", rom: "GON-nah", en: "skirt" }, { kr: "borsa", rom: "BOHR-sah", en: "bag" }]
+      },
+      {
+        tier: "beginner", title: "Weather", icon: "⛅", words: [
+          { kr: "tempo", rom: "TEM-poh", en: "weather" }, { kr: "pioggia", rom: "pee-OH-jah", en: "rain" },
+          { kr: "neve", rom: "NEH-veh", en: "snow" }, { kr: "vento", rom: "VEN-toh", en: "wind" },
+          { kr: "caldo", rom: "KAHL-doh", en: "hot" }, { kr: "freddo", rom: "FRED-doh", en: "cold" }]
+      },
+      {
+        tier: "beginner", title: "House & Rooms", icon: "🏠", words: [
+          { kr: "casa", rom: "KAH-zah", en: "house" }, { kr: "camera", rom: "KAH-meh-rah", en: "room" },
+          { kr: "letto", rom: "LET-toh", en: "bed" }, { kr: "bagno", rom: "BAH-nyoh", en: "bathroom" },
+          { kr: "cucina", rom: "koo-CHEE-nah", en: "kitchen" }, { kr: "porta", rom: "POHR-tah", en: "door" }]
+      },
+      {
+        tier: "beginner", title: "School & Objects", icon: "🎒", words: [
+          { kr: "scuola", rom: "SKWOH-lah", en: "school" }, { kr: "libro", rom: "LEE-broh", en: "book" },
+          { kr: "matita", rom: "mah-TEE-tah", en: "pencil" }, { kr: "zaino", rom: "TSY-noh", en: "backpack" },
+          { kr: "insegnante", rom: "in-seh-NYAHN-teh", en: "teacher" }, { kr: "studente", rom: "stoo-DEN-teh", en: "student" }]
+      },
+
+      /* ---------------- INTERMEDIATE ---------------- */
+      {
+        tier: "intermediate", title: "Feelings & Emotions", icon: "💗", words: [
+          { kr: "felice", rom: "feh-LEE-cheh", en: "happy" }, { kr: "triste", rom: "TREES-teh", en: "sad" },
+          { kr: "arrabbiato", rom: "ahr-rahb-BYAH-toh", en: "angry" }, { kr: "stanco", rom: "STAHN-koh", en: "tired" },
+          { kr: "nervoso", rom: "nehr-VOH-zoh", en: "nervous" }, { kr: "entusiasta", rom: "en-too-zee-AHS-tah", en: "eager / enthusiastic" }]
+      },
+      {
+        tier: "intermediate", title: "Directions & Places", icon: "🧭", words: [
+          { kr: "sinistra", rom: "see-NEES-trah", en: "left" }, { kr: "destra", rom: "DES-trah", en: "right" },
+          { kr: "vicino", rom: "vee-CHEE-noh", en: "near" }, { kr: "lontano", rom: "lon-TAH-noh", en: "far" },
+          { kr: "qui", rom: "kwee", en: "here" }, { kr: "là", rom: "lah", en: "there" }]
+      },
+      {
+        tier: "intermediate", title: "Shopping", icon: "🛍️", words: [
+          { kr: "quanto costa", rom: "KWAHN-toh KOHS-tah", en: "how much is it" }, { kr: "caro", rom: "KAH-roh", en: "expensive" },
+          { kr: "economico", rom: "eh-koh-NOH-mee-koh", en: "cheap" }, { kr: "pagare", rom: "pah-GAH-reh", en: "to pay" },
+          { kr: "contanti", rom: "kon-TAHN-tee", en: "cash" }, { kr: "carta", rom: "KAHR-tah", en: "card" }]
+      },
+      {
+        tier: "intermediate", title: "Transportation", icon: "🚌", words: [
+          { kr: "autobus", rom: "OW-toh-boos", en: "bus" }, { kr: "treno", rom: "TREH-noh", en: "train" },
+          { kr: "aereo", rom: "ah-EH-reh-oh", en: "plane" }, { kr: "macchina", rom: "MAHK-kee-nah", en: "car" },
+          { kr: "biglietto", rom: "bee-LYET-toh", en: "ticket" }, { kr: "stazione", rom: "stah-tsee-OH-neh", en: "station" }]
+      },
+      {
+        tier: "intermediate", title: "Hobbies", icon: "🎯", words: [
+          { kr: "lettura", rom: "let-TOO-rah", en: "reading" }, { kr: "musica", rom: "MOO-zee-kah", en: "music" },
+          { kr: "film", rom: "feelm", en: "movie" }, { kr: "pittura", rom: "peet-TOO-rah", en: "painting" },
+          { kr: "viaggiare", rom: "vee-ahd-JAH-reh", en: "traveling" }, { kr: "ballo", rom: "BAHL-loh", en: "dancing" }]
+      },
+      {
+        tier: "intermediate", title: "Work & Jobs", icon: "💼", words: [
+          { kr: "lavoro", rom: "lah-VOH-roh", en: "work" }, { kr: "ingegnere", rom: "in-jeh-NYEH-reh", en: "engineer" },
+          { kr: "ufficio", rom: "oof-FEE-choh", en: "office" }, { kr: "stipendio", rom: "stee-PEN-dyoh", en: "salary" },
+          { kr: "capo", rom: "KAH-poh", en: "boss" }, { kr: "collega", rom: "kol-LEH-gah", en: "colleague" }]
+      },
+      {
+        tier: "intermediate", title: "Health & Body", icon: "🏥", words: [
+          { kr: "malato", rom: "mah-LAH-toh", en: "sick" }, { kr: "sano", rom: "SAH-noh", en: "healthy" },
+          { kr: "ospedale", rom: "os-peh-DAH-leh", en: "hospital" }, { kr: "medicina", rom: "meh-dee-CHEE-nah", en: "medicine" },
+          { kr: "dolore", rom: "doh-LOH-reh", en: "pain" }, { kr: "infermiera", rom: "in-fehr-MYEH-rah", en: "nurse" }]
+      },
+      {
+        tier: "intermediate", title: "Technology", icon: "💻", words: [
+          { kr: "telefono", rom: "teh-LEH-foh-noh", en: "phone" }, { kr: "computer", rom: "kom-PYOO-ter", en: "computer" },
+          { kr: "internet", rom: "in-tehr-NET", en: "internet" }, { kr: "applicazione", rom: "ahp-plee-kah-tsee-OH-neh", en: "app" },
+          { kr: "schermo", rom: "SKEHR-moh", en: "screen" }, { kr: "password", rom: "PAHS-word", en: "password" }]
+      },
+      {
+        tier: "intermediate", title: "Sports", icon: "⚽", words: [
+          { kr: "calcio", rom: "KAHL-choh", en: "football" }, { kr: "pallacanestro", rom: "pahl-lah-kah-NES-troh", en: "basketball" },
+          { kr: "nuoto", rom: "NWOH-toh", en: "swimming" }, { kr: "corsa", rom: "KOHR-sah", en: "running" },
+          { kr: "squadra", rom: "SKWAH-drah", en: "team" }, { kr: "palla", rom: "PAHL-lah", en: "ball" }]
+      },
+      {
+        tier: "intermediate", title: "Nature", icon: "🌳", words: [
+          { kr: "albero", rom: "AHL-beh-roh", en: "tree" }, { kr: "montagna", rom: "mon-TAH-nyah", en: "mountain" },
+          { kr: "fiume", rom: "FYOO-meh", en: "river" }, { kr: "mare", rom: "MAH-reh", en: "sea" },
+          { kr: "foresta", rom: "foh-RES-tah", en: "forest" }, { kr: "sole", rom: "SOH-leh", en: "sun" }]
+      },
+      {
+        tier: "intermediate", title: "Numbers & Time", icon: "🔢", words: [
+          { kr: "sette", rom: "SET-teh", en: "seven" }, { kr: "otto", rom: "OHT-toh", en: "eight" },
+          { kr: "nove", rom: "NOH-veh", en: "nine" }, { kr: "dieci", rom: "dee-EH-chee", en: "ten" },
+          { kr: "ora", rom: "OH-rah", en: "hour" }, { kr: "minuto", rom: "mee-NOO-toh", en: "minute" }]
+      },
+      {
+        tier: "intermediate", title: "Making Plans", icon: "🗓️", words: [
+          { kr: "stasera", rom: "stah-SEH-rah", en: "tonight" }, { kr: "fine settimana", rom: "FEE-neh set-tee-MAH-nah", en: "weekend" },
+          { kr: "riunione", rom: "ree-oo-nee-OH-neh", en: "meeting" }, { kr: "tempo libero", rom: "TEM-poh LEE-beh-roh", en: "free time" },
+          { kr: "orario", rom: "oh-RAH-ree-oh", en: "schedule" }, { kr: "invitare", rom: "in-vee-TAH-reh", en: "to invite" }]
+      },
+      {
+        tier: "intermediate", title: "Restaurant & Ordering", icon: "🍽️", words: [
+          { kr: "menù", rom: "meh-NOO", en: "menu" }, { kr: "ordine", rom: "OHR-dee-neh", en: "order" },
+          { kr: "cameriere", rom: "kah-meh-RYEH-reh", en: "waiter" }, { kr: "conto", rom: "KON-toh", en: "bill" },
+          { kr: "tavolo", rom: "TAH-voh-loh", en: "table" }, { kr: "affamato", rom: "ahf-fah-MAH-toh", en: "hungry" }]
+      },
+
+      /* ---------------- ADVANCED ---------------- */
+      {
+        tier: "advanced", title: "Connectors & Grammar", icon: "🔗", words: [
+          { kr: "tuttavia", rom: "toot-tah-VEE-ah", en: "however" }, { kr: "perché", rom: "pehr-KEH", en: "because" },
+          { kr: "anche se", rom: "AHN-keh seh", en: "although" }, { kr: "quindi", rom: "KWEEN-dee", en: "therefore" },
+          { kr: "inoltre", rom: "ee-NOL-treh", en: "moreover" }, { kr: "anche", rom: "AHN-keh", en: "in addition" }]
+      },
+      {
+        tier: "advanced", title: "Business Italian", icon: "🏢", words: [
+          { kr: "azienda", rom: "ah-tsee-EN-dah", en: "company" }, { kr: "contratto", rom: "kon-TRAHT-toh", en: "contract" },
+          { kr: "scadenza", rom: "skah-DEN-tsah", en: "deadline" }, { kr: "cliente", rom: "klee-EN-teh", en: "client" },
+          { kr: "budget", rom: "BUD-jet", en: "budget" }, { kr: "investimento", rom: "in-ves-tee-MEN-toh", en: "investment" }]
+      },
+      {
+        tier: "advanced", title: "News & Media", icon: "📰", words: [
+          { kr: "notizie", rom: "noh-TEE-tsee-eh", en: "news" }, { kr: "giornale", rom: "jor-NAH-leh", en: "newspaper" },
+          { kr: "giornalista", rom: "jor-nah-LEES-tah", en: "journalist" }, { kr: "articolo", rom: "ahr-TEE-koh-loh", en: "article" },
+          { kr: "televisione", rom: "teh-leh-vee-zee-OH-neh", en: "television" }, { kr: "titolo", rom: "TEE-toh-loh", en: "headline" }]
+      },
+      {
+        tier: "advanced", title: "Nuanced Emotions", icon: "💭", words: [
+          { kr: "invidia", rom: "in-VEE-dee-ah", en: "envy" }, { kr: "orgoglio", rom: "or-GOH-lyoh", en: "pride" },
+          { kr: "senso di colpa", rom: "SEN-soh dee KOHL-pah", en: "guilt" }, { kr: "sollievo", rom: "sol-LYEH-voh", en: "relief" },
+          { kr: "nostalgia", rom: "nos-tahl-JEE-ah", en: "nostalgia / longing" }, { kr: "speranza", rom: "speh-RAHN-tsah", en: "hope" }]
+      },
+      {
+        tier: "advanced", title: "Travel Advanced", icon: "✈️", words: [
+          { kr: "passaporto", rom: "pahs-sah-POHR-toh", en: "passport" }, { kr: "visto", rom: "VEES-toh", en: "visa" },
+          { kr: "bagagli", rom: "bah-GAH-lyee", en: "luggage" }, { kr: "itinerario", rom: "ee-tee-neh-RAH-ree-oh", en: "itinerary" },
+          { kr: "dogana", rom: "doh-GAH-nah", en: "customs" }, { kr: "prenotazione", rom: "preh-noh-tah-tsee-OH-neh", en: "reservation" }]
+      },
+      {
+        tier: "advanced", title: "Relationships", icon: "💑", words: [
+          { kr: "matrimonio", rom: "mah-tree-MOH-nee-oh", en: "marriage" }, { kr: "fiducia", rom: "fee-DOO-chah", en: "trust" },
+          { kr: "rottura", rom: "roht-TOO-rah", en: "breakup" }, { kr: "fidanzato", rom: "fee-dahn-TSAH-toh", en: "boyfriend" },
+          { kr: "fidanzamento", rom: "fee-dahn-tsah-MEN-toh", en: "engagement" }, { kr: "suoceri", rom: "SWOH-cheh-ree", en: "in-laws" }]
+      },
+      {
+        tier: "advanced", title: "Debate & Opinions", icon: "🗣️", words: [
+          { kr: "penso", rom: "PEN-soh", en: "I think" }, { kr: "sono d'accordo", rom: "SOH-noh dahk-KOR-doh", en: "I agree" },
+          { kr: "non sono d'accordo", rom: "non SOH-noh dahk-KOR-doh", en: "I disagree" }, { kr: "secondo me", rom: "seh-KON-doh meh", en: "in my opinion" },
+          { kr: "argomento", rom: "ahr-goh-MEN-toh", en: "argument" }, { kr: "prova", rom: "PROH-vah", en: "evidence" }]
+      },
+      {
+        tier: "advanced", title: "Formal Speech", icon: "✉️", words: [
+          { kr: "gentile signore", rom: "jen-TEE-leh see-NYOH-reh", en: "dear sir" }, { kr: "cordialmente", rom: "kor-dyahl-MEN-teh", en: "sincerely" },
+          { kr: "con rispetto", rom: "kon rees-PET-toh", en: "respectfully" }, { kr: "in allegato", rom: "in ahl-leh-GAH-toh", en: "please find attached" },
+          { kr: "saluti", rom: "sah-LOO-tee", en: "regards" }, { kr: "riguardo a", rom: "ree-GWAHR-doh ah", en: "regarding" }]
+      },
+      {
+        tier: "advanced", title: "Culture & History", icon: "🏛️", words: [
+          { kr: "indipendenza", rom: "in-dee-pen-DEN-tsah", en: "independence" }, { kr: "bandiera", rom: "bahn-DYEH-rah", en: "flag" },
+          { kr: "tradizione", rom: "trah-dee-tsee-OH-neh", en: "tradition" }, { kr: "festa", rom: "FES-tah", en: "holiday" },
+          { kr: "antenati", rom: "ahn-teh-NAH-tee", en: "ancestors" }, { kr: "rinascita", rom: "ree-NAH-shee-tah", en: "revival" }]
+      },
+      {
+        tier: "advanced", title: "Advanced Verbs", icon: "🔀", words: [
+          { kr: "raggiungere", rom: "rahd-JOON-jeh-reh", en: "to achieve" }, { kr: "sviluppare", rom: "svee-loop-PAH-reh", en: "to develop" },
+          { kr: "migliorare", rom: "mee-lyoh-RAH-reh", en: "to improve" }, { kr: "riuscire", rom: "ree-oo-SHEE-reh", en: "to succeed" },
+          { kr: "fallire", rom: "fahl-LEE-reh", en: "to fail" }, { kr: "decidere", rom: "deh-CHEE-deh-reh", en: "to decide" }]
+      },
+      {
+        tier: "advanced", title: "Academic Italian", icon: "🎓", words: [
+          { kr: "ricerca", rom: "ree-CHER-kah", en: "research" }, { kr: "università", rom: "oo-nee-vehr-see-TAH", en: "university" },
+          { kr: "tesi", rom: "TEH-zee", en: "thesis" }, { kr: "professore", rom: "proh-fes-SOH-reh", en: "professor" },
+          { kr: "esame", rom: "eh-ZAH-meh", en: "exam" }, { kr: "laurea", rom: "LOW-reh-ah", en: "degree" }]
+      },
+      {
+        tier: "advanced", title: "Professional Terms", icon: "💼", words: [
+          { kr: "curriculum", rom: "koor-REE-koo-loom", en: "resume / CV" }, { kr: "colloquio", rom: "kol-LOH-kwee-oh", en: "interview" },
+          { kr: "promozione", rom: "proh-moh-tsee-OH-neh", en: "promotion" }, { kr: "progetto", rom: "proh-JET-toh", en: "project" },
+          { kr: "competenza", rom: "kom-peh-TEN-tsah", en: "skill" }, { kr: "responsabilità", rom: "res-pon-sah-bee-lee-TAH", en: "responsibility" }]
+      },
+      {
+        tier: "advanced", title: "Adjectives & Descriptions", icon: "🖌️", words: [
+          { kr: "bello", rom: "BEL-loh", en: "beautiful" }, { kr: "brutto", rom: "BROOT-toh", en: "ugly" },
+          { kr: "intelligente", rom: "in-tel-lee-JEN-teh", en: "smart" }, { kr: "divertente", rom: "dee-vehr-TEN-teh", en: "funny" },
+          { kr: "noioso", rom: "noy-OH-zoh", en: "boring" }, { kr: "interessante", rom: "in-teh-res-SAHN-teh", en: "interesting" }]
+      },
+
+      /* ---------------- FLUENT ---------------- */
+      {
+        tier: "fluent", title: "Political & Social Terms", icon: "🏛️", words: [
+          { kr: "governo", rom: "goh-VEHR-noh", en: "government" }, { kr: "elezione", rom: "eh-leh-tsee-OH-neh", en: "election" },
+          { kr: "democrazia", rom: "deh-moh-krah-TSEE-ah", en: "democracy" }, { kr: "cittadino", rom: "cheet-tah-DEE-noh", en: "citizen" },
+          { kr: "legge", rom: "LED-jeh", en: "law" }, { kr: "società", rom: "soh-cheh-TAH", en: "society" }]
+      },
+      {
+        tier: "fluent", title: "Psychology & Nuance", icon: "🧠", words: [
+          { kr: "subconscio", rom: "soob-KON-shoh", en: "subconscious" }, { kr: "comportamento", rom: "kom-por-tah-MEN-toh", en: "behavior" },
+          { kr: "percezione", rom: "pehr-cheh-tsee-OH-neh", en: "perception" }, { kr: "motivazione", rom: "moh-tee-vah-tsee-OH-neh", en: "motivation" },
+          { kr: "ansia", rom: "AHN-see-ah", en: "anxiety" }, { kr: "autostima", rom: "ow-toh-STEE-mah", en: "self-esteem" }]
+      },
+      {
+        tier: "fluent", title: "Business Negotiation", icon: "🤝", words: [
+          { kr: "proposta", rom: "proh-POS-tah", en: "proposal" }, { kr: "offerta", rom: "of-FEHR-tah", en: "offer" },
+          { kr: "accordo", rom: "ahk-KOR-doh", en: "agreement" }, { kr: "compromesso", rom: "kom-proh-MES-soh", en: "compromise" },
+          { kr: "condizioni", rom: "kon-dee-tsee-OH-nee", en: "terms" }, { kr: "affare", rom: "ahf-FAH-reh", en: "deal" }]
+      },
+      {
+        tier: "fluent", title: "Literary Expressions", icon: "📖", words: [
+          { kr: "metafora", rom: "meh-TAH-foh-rah", en: "metaphor" }, { kr: "poesia", rom: "poh-eh-ZEE-ah", en: "poem" },
+          { kr: "romanzo", rom: "roh-MAHN-tsoh", en: "novel" }, { kr: "verso", rom: "VEHR-soh", en: "verse" },
+          { kr: "narratore", rom: "nahr-rah-TOH-reh", en: "narrator" }, { kr: "capitolo", rom: "kah-PEE-toh-loh", en: "chapter" }]
+      },
+      {
+        tier: "fluent", title: "States of Mind", icon: "🌫️", words: [
+          { kr: "confuso", rom: "kon-FOO-zoh", en: "confused" }, { kr: "sopraffatto", rom: "soh-prahf-FAHT-toh", en: "overwhelmed" },
+          { kr: "sereno", rom: "seh-REH-noh", en: "at peace" }, { kr: "determinato", rom: "deh-tehr-mee-NAH-toh", en: "determined" },
+          { kr: "indifferente", rom: "in-deef-feh-REN-teh", en: "indifferent" }, { kr: "curioso", rom: "koo-ree-OH-zoh", en: "curious" }]
+      },
+      {
+        tier: "fluent", title: "Academic & Formal Writing", icon: "✍️", words: [
+          { kr: "ipotesi", rom: "ee-POH-teh-zee", en: "hypothesis" }, { kr: "conclusione", rom: "kon-kloo-zee-OH-neh", en: "conclusion" },
+          { kr: "riferimento", rom: "ree-feh-ree-MEN-toh", en: "reference" }, { kr: "nota a piè di pagina", rom: "NOH-tah ah pyeh dee PAH-jee-nah", en: "footnote" },
+          { kr: "sommario", rom: "som-MAH-ree-oh", en: "abstract" }, { kr: "metodologia", rom: "meh-toh-doh-loh-JEE-ah", en: "methodology" }]
+      },
+      {
+        tier: "fluent", title: "Nature Advanced", icon: "🌍", words: [
+          { kr: "ecosistema", rom: "eh-koh-sees-TEH-mah", en: "ecosystem" }, { kr: "biodiversità", rom: "bee-oh-dee-vehr-see-TAH", en: "biodiversity" },
+          { kr: "clima", rom: "KLEE-mah", en: "climate" }, { kr: "siccità", rom: "seet-chee-TAH", en: "drought" },
+          { kr: "fauna selvatica", rom: "FOW-nah sel-VAH-tee-kah", en: "wildlife" }, { kr: "inquinamento", rom: "in-kwee-nah-MEN-toh", en: "pollution" }]
+      },
+      {
+        tier: "fluent", title: "More Verbs", icon: "🔁", words: [
+          { kr: "immaginare", rom: "eem-mah-jee-NAH-reh", en: "to imagine" }, { kr: "convincere", rom: "kon-VEEN-cheh-reh", en: "to convince" },
+          { kr: "esitare", rom: "eh-zee-TAH-reh", en: "to hesitate" }, { kr: "ammettere", rom: "ahm-MET-teh-reh", en: "to admit" },
+          { kr: "perdonare", rom: "pehr-doh-NAH-reh", en: "to forgive" }, { kr: "apprezzare", rom: "ahp-pret-TSAH-reh", en: "to appreciate" }]
+      },
+      {
+        tier: "fluent", title: "Emotions Deep Dive", icon: "💔", words: [
+          { kr: "agrodolce", rom: "ah-groh-DOHL-cheh", en: "bittersweet" }, { kr: "con il cuore spezzato", rom: "kon eel KWOH-reh spet-TSAH-toh", en: "heartbroken" },
+          { kr: "grato", rom: "GRAH-toh", en: "grateful" }, { kr: "vergognoso", rom: "vehr-goh-NYOH-zoh", en: "ashamed" },
+          { kr: "nostalgico di casa", rom: "nos-TAHL-jee-koh dee KAH-zah", en: "homesick" }, { kr: "contento", rom: "kon-TEN-toh", en: "content" }]
+      },
+      {
+        tier: "fluent", title: "Time & Sequence", icon: "⏳", words: [
+          { kr: "alla fine", rom: "AHL-lah FEE-neh", en: "eventually" }, { kr: "nel frattempo", rom: "nel fraht-TEM-poh", en: "meanwhile" },
+          { kr: "in anticipo", rom: "in ahn-TEE-chee-poh", en: "beforehand" }, { kr: "dopo", rom: "DOH-poh", en: "afterward" },
+          { kr: "simultaneamente", rom: "see-mool-tah-neh-ah-MEN-teh", en: "simultaneously" }, { kr: "gradualmente", rom: "grah-dwahl-MEN-teh", en: "gradually" }]
+      },
+      {
+        tier: "fluent", title: "Abstract Concepts", icon: "💡", words: [
+          { kr: "libertà", rom: "lee-behr-TAH", en: "freedom" }, { kr: "giustizia", rom: "joos-TEE-tsee-ah", en: "justice" },
+          { kr: "verità", rom: "veh-ree-TAH", en: "truth" }, { kr: "identità", rom: "ee-den-tee-TAH", en: "identity" },
+          { kr: "scopo", rom: "SKOH-poh", en: "purpose" }, { kr: "equilibrio", rom: "eh-kwee-LEE-bree-oh", en: "balance" }]
+      },
+      {
+        tier: "fluent", title: "Professional Register", icon: "📧", words: [
+          { kr: "gentile signora", rom: "jen-TEE-leh see-NYOH-rah", en: "Dear Madam" }, { kr: "distinti saluti", rom: "dees-TEEN-tee sah-LOO-tee", en: "yours sincerely" },
+          { kr: "si prega di notare", rom: "see PREH-gah dee noh-TAH-reh", en: "please note" }, { kr: "gentilmente", rom: "jen-teel-MEN-teh", en: "kindly" },
+          { kr: "allegato", rom: "ahl-leh-GAH-toh", en: "enclosed / attachment" }, { kr: "al più presto possibile", rom: "ahl pyoo PRES-toh pos-SEE-bee-leh", en: "at your earliest convenience" }]
+      },
+      {
+        tier: "fluent", title: "Mastery Review", icon: "🏆", words: [
+          { kr: "congratulazioni", rom: "kon-grah-too-lah-tsee-OH-nee", en: "congratulations" }, { kr: "a presto", rom: "ah PRES-toh", en: "see you soon" },
+          { kr: "bravo", rom: "BRAH-voh", en: "well done" }, { kr: "continua così", rom: "kon-TEE-nwah koh-ZEE", en: "keep going" },
+          { kr: "maestria", rom: "mah-es-TREE-ah", en: "mastery" }, { kr: "scioltezza", rom: "shol-TET-tsah", en: "fluency" }]
+      },
+    ];
+    LEVELS_IT.forEach((l, i) => { l.id = 13000 + i + 1; });
+
     const LEVELS = [
       /* ---------------- BEGINNER ---------------- */
       {
@@ -7104,6 +8076,9 @@
     const ALL_VOCAB_EU = LEVELS_EU.flatMap(l => l.words);
     const ALL_VOCAB_BN = LEVELS_BN.flatMap(l => l.words);
     const ALL_VOCAB_BG = LEVELS_BG.flatMap(l => l.words);
+    const ALL_VOCAB_FR = LEVELS_FR.flatMap(l => l.words);
+    const ALL_VOCAB_DE = LEVELS_DE.flatMap(l => l.words);
+    const ALL_VOCAB_IT = LEVELS_IT.flatMap(l => l.words);
     function activeVocabPool() {
       const lang = (state.settings && state.settings.learningLang) || 'ko';
       if (lang === 'es') return ALL_VOCAB_ES;
@@ -7116,6 +8091,9 @@
       if (lang === 'eu') return ALL_VOCAB_EU;
       if (lang === 'bn') return ALL_VOCAB_BN;
       if (lang === 'bg') return ALL_VOCAB_BG;
+      if (lang === 'fr') return ALL_VOCAB_FR;
+      if (lang === 'de') return ALL_VOCAB_DE;
+      if (lang === 'it') return ALL_VOCAB_IT;
       return ALL_VOCAB;
     }
     function activeChatTopics() {
@@ -7130,6 +8108,9 @@
       if (lang === 'eu') return BASQUE_CHAT_TOPICS;
       if (lang === 'bn') return BENGALI_CHAT_TOPICS;
       if (lang === 'bg') return BULGARIAN_CHAT_TOPICS;
+      if (lang === 'fr') return FRENCH_CHAT_TOPICS;
+      if (lang === 'de') return GERMAN_CHAT_TOPICS;
+      if (lang === 'it') return ITALIAN_CHAT_TOPICS;
       return CHAT_TOPICS;
     }
     function escapeRegex(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
@@ -7269,6 +8250,9 @@
       if (lang === 'eu') return 'Euskara';
       if (lang === 'bn') return 'বাংলা';
       if (lang === 'bg') return 'Български';
+      if (lang === 'fr') return 'Français';
+      if (lang === 'de') return 'Deutsch';
+      if (lang === 'it') return 'Italiano';
       return '한국어';
     }
     function updateLanguageSpecificUI() {
@@ -7313,7 +8297,10 @@
         ar: ['Arabic Practice', 'Proficiency-style test questions'],
         eu: ['Basque Practice', 'Proficiency-style test questions'],
         bn: ['Bengali Practice', 'Proficiency-style test questions'],
-        bg: ['Bulgarian Practice', 'Proficiency-style test questions']
+        bg: ['Bulgarian Practice', 'Proficiency-style test questions'],
+        fr: ['DELF Practice', 'French proficiency-style test questions'],
+        de: ['Goethe Practice', 'German proficiency-style test questions'],
+        it: ['CILS Practice', 'Italian proficiency-style test questions']
       };
       const topikTitle = document.getElementById('topikCardTitle');
       if (topikTitle) {
@@ -7333,7 +8320,10 @@
         am: ['Amharic Core Characters', '20 core Ge\'ez characters + a quick quiz'],
         eu: ['Basque Alphabet', 'Vowels, distinctive letters, and digraphs + a quick quiz'],
         bn: ['Bengali Alphabet', '24 core vowels and consonants + a quick quiz'],
-        bg: ['Cyrillic Alphabet', 'All 30 letters + a quick quiz']
+        bg: ['Cyrillic Alphabet', 'All 30 letters + a quick quiz'],
+        fr: ['French Alphabet', 'Accents, nasal sounds, and tricky letters + a quick quiz'],
+        de: ['German Alphabet', 'Umlauts, ß, and tricky sounds + a quick quiz'],
+        it: ['Italian Alphabet', 'Vowels, consonants, and special sounds + a quick quiz']
       };
       const alphabetTitle = document.getElementById('alphabetCardTitle');
       if (alphabetTitle) {
@@ -7353,7 +8343,10 @@
         am: ['Number Chart', 'Core numbers + a quick quiz'],
         eu: ['Number Chart', 'Numbers 0–1,000 + a quick quiz'],
         bn: ['Number Chart', 'Numbers 0–1,000 + a quick quiz'],
-        bg: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz']
+        bg: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz'],
+        fr: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz'],
+        de: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz'],
+        it: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz']
       };
       const numberCardTitle = document.getElementById('numberCardTitle');
       const numberSub = document.getElementById('numberCardSub');
@@ -7373,7 +8366,10 @@
         ar: ['Verb Conjugation', 'Present, past, and future tense drills'],
         eu: ['Verb Conjugation', 'Present, past, and future tense drills'],
         bn: ['Verb Conjugation', 'Present, past, and future tense drills'],
-        bg: ['Verb Conjugation', 'Present, past, and future tense drills']
+        bg: ['Verb Conjugation', 'Present, past, and future tense drills'],
+        fr: ['Verb Conjugation', 'Present, past, and future tense drills'],
+        de: ['Verb Conjugation', 'Present, past, and future tense drills'],
+        it: ['Verb Conjugation', 'Present, past, and future tense drills']
       };
       const grammarTitle = document.getElementById('grammarCardTitle');
       if (grammarTitle) {
@@ -7392,7 +8388,10 @@
         am: 'Practice core characters by hand',
         eu: 'Practice the distinctive digraphs by hand',
         bn: 'Practice core vowels and consonants by hand',
-        bg: 'Practice the Cyrillic letters by hand'
+        bg: 'Practice the Cyrillic letters by hand',
+        fr: 'Practice the accented letters by hand',
+        de: 'Practice the umlauts and ß by hand',
+        it: 'Practice the special letter combinations by hand'
       };
       const drawSub = document.getElementById('drawTraceCardSub');
       if (drawSub) drawSub.textContent = drawSubText[lang] || drawSubText.ko;
@@ -7409,6 +8408,9 @@
       if (lang === 'eu') return TIERS_EU;
       if (lang === 'bn') return TIERS_BN;
       if (lang === 'bg') return TIERS_BG;
+      if (lang === 'fr') return TIERS_FR;
+      if (lang === 'de') return TIERS_DE;
+      if (lang === 'it') return TIERS_IT;
       return TIERS;
     }
     function activeLevels() {
@@ -7423,6 +8425,9 @@
       if (lang === 'eu') return LEVELS_EU;
       if (lang === 'bn') return LEVELS_BN;
       if (lang === 'bg') return LEVELS_BG;
+      if (lang === 'fr') return LEVELS_FR;
+      if (lang === 'de') return LEVELS_DE;
+      if (lang === 'it') return LEVELS_IT;
       return LEVELS;
     }
 
@@ -7936,7 +8941,7 @@
     function openHangulChart() {
       showScreen('hangul');
       const lang = (state.settings && state.settings.learningLang) || 'ko';
-      const titles = { es: '🔤 Spanish Alphabet', ja: '🔤 Hiragana Chart', en: '🔤 Irregular Verbs', zh: '🔤 Tones & Pinyin Chart', af: '🔤 Afrikaans Alphabet', ar: '🔤 Arabic Alphabet', am: '🔤 Amharic Core Characters', eu: '🔤 Basque Alphabet', bn: '🔤 Bengali Alphabet', bg: '🔤 Cyrillic Alphabet', ko: '🔤 Hangul Chart' };
+      const titles = { es: '🔤 Spanish Alphabet', ja: '🔤 Hiragana Chart', en: '🔤 Irregular Verbs', zh: '🔤 Tones & Pinyin Chart', af: '🔤 Afrikaans Alphabet', ar: '🔤 Arabic Alphabet', am: '🔤 Amharic Core Characters', eu: '🔤 Basque Alphabet', bn: '🔤 Bengali Alphabet', bg: '🔤 Cyrillic Alphabet', fr: '🔤 French Alphabet', de: '🔤 German Alphabet', it: '🔤 Italian Alphabet', ko: '🔤 Hangul Chart' };
       const subs = {
         es: 'Tap any letter to hear it. Learn all 27 letters and try the quiz below.',
         ja: 'Tap any character to hear it. Learn all 46 basic hiragana and try the quiz below.',
@@ -7948,6 +8953,9 @@
         eu: 'Basque uses the Latin alphabet, but watch for distinctive letters and digraphs like tx, tz, and ts.',
         bn: '24 core vowels and consonants — Bengali script is an abugida, where each consonant carries a built-in vowel sound.',
         bg: 'Bulgaria is where the Cyrillic alphabet was born. Tap any letter to hear it, then try the quiz below.',
+        fr: 'French uses the Latin alphabet, but watch for accents, nasal vowels, and silent letters. Tap any to hear it.',
+        de: 'German uses the Latin alphabet plus umlauts (ä, ö, ü) and ß. Tap any to hear it, then try the quiz.',
+        it: 'Italian spelling is quite phonetic, but watch for soft/hard c and g, and doubled consonants. Tap any to hear it.',
         ko: 'Tap any letter to hear it. Learn all 40 and try the quiz below.'
       };
       document.getElementById('alphabetChartTitle').textContent = titles[lang] || titles.ko;
@@ -7960,7 +8968,7 @@
       if (wrap.dataset.built === lang) return;
       wrap.dataset.built = lang;
       wrap.innerHTML = '';
-      const chart = lang === 'es' ? SPANISH_ALPHABET : lang === 'ja' ? JAPANESE_KANA : lang === 'en' ? IRREGULAR_VERBS : lang === 'zh' ? CHINESE_TONES : lang === 'af' ? AFRIKAANS_ALPHABET : lang === 'ar' ? ARABIC_ALPHABET : lang === 'am' ? AMHARIC_ALPHABET : lang === 'eu' ? BASQUE_ALPHABET : lang === 'bn' ? BENGALI_ALPHABET : lang === 'bg' ? BULGARIAN_ALPHABET : HANGUL_CHART;
+      const chart = lang === 'es' ? SPANISH_ALPHABET : lang === 'ja' ? JAPANESE_KANA : lang === 'en' ? IRREGULAR_VERBS : lang === 'zh' ? CHINESE_TONES : lang === 'af' ? AFRIKAANS_ALPHABET : lang === 'ar' ? ARABIC_ALPHABET : lang === 'am' ? AMHARIC_ALPHABET : lang === 'eu' ? BASQUE_ALPHABET : lang === 'bn' ? BENGALI_ALPHABET : lang === 'bg' ? BULGARIAN_ALPHABET : lang === 'fr' ? FRENCH_ALPHABET : lang === 'de' ? GERMAN_ALPHABET : lang === 'it' ? ITALIAN_ALPHABET : HANGUL_CHART;
       chart.forEach(section => {
         const sec = document.createElement('div');
         sec.className = 'hangul-section';
@@ -7998,6 +9006,12 @@
         lastCompletedLesson = { title: "Bengali Alphabet", words: ALL_BENGALI_ALPHABET.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
       } else if (lang === 'bg') {
         lastCompletedLesson = { title: "Cyrillic Alphabet", words: ALL_BULGARIAN_ALPHABET.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
+      } else if (lang === 'fr') {
+        lastCompletedLesson = { title: "French Alphabet", words: ALL_FRENCH_ALPHABET.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
+      } else if (lang === 'de') {
+        lastCompletedLesson = { title: "German Alphabet", words: ALL_GERMAN_ALPHABET.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
+      } else if (lang === 'it') {
+        lastCompletedLesson = { title: "Italian Alphabet", words: ALL_ITALIAN_ALPHABET.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
       } else {
         lastCompletedLesson = { title: "Hangul Chart", words: ALL_HANGUL_CHARS.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
       }
@@ -8019,6 +9033,9 @@
         eu: 'Basque numbers are partly vigesimal (base-20) — tap any number to hear it, then try the quiz.',
         bn: 'Bengali also has its own numeral digits (০-৯), still used alongside Western numerals. Tap any number to hear it.',
         bg: 'Numbers 11-19 are formed with -надесет ("on ten"). Tap any number to hear it, then try the quiz.',
+        fr: '70, 80, and 90 have famous quirks (base-20 remnants). Tap any number to hear it, then try the quiz.',
+        de: 'German says the ones place before the tens (einundzwanzig = "one-and-twenty" = 21). Tap to hear it.',
+        it: 'Italian numbers are mostly regular from 20 onward. Tap any number to hear it, then try the quiz.',
         ko: 'Korean has two number systems. Tap any number to hear it, then try the quiz.'
       };
       document.getElementById('numberChartTitle').textContent = titles[lang] || '🔢 Number Chart';
@@ -8031,7 +9048,7 @@
       if (wrap.dataset.built === lang) return;
       wrap.dataset.built = lang;
       wrap.innerHTML = '';
-      const chart = lang === 'es' ? SPANISH_NUMBER_CHART : lang === 'ja' ? JAPANESE_NUMBER_CHART : lang === 'en' ? CONFUSED_WORDS : lang === 'zh' ? CHINESE_NUMBER_CHART : lang === 'af' ? AFRIKAANS_NUMBER_CHART : lang === 'ar' ? ARABIC_NUMBER_CHART : lang === 'am' ? AMHARIC_NUMBER_CHART : lang === 'eu' ? BASQUE_NUMBER_CHART : lang === 'bn' ? BENGALI_NUMBER_CHART : lang === 'bg' ? BULGARIAN_NUMBER_CHART : NUMBER_CHART;
+      const chart = lang === 'es' ? SPANISH_NUMBER_CHART : lang === 'ja' ? JAPANESE_NUMBER_CHART : lang === 'en' ? CONFUSED_WORDS : lang === 'zh' ? CHINESE_NUMBER_CHART : lang === 'af' ? AFRIKAANS_NUMBER_CHART : lang === 'ar' ? ARABIC_NUMBER_CHART : lang === 'am' ? AMHARIC_NUMBER_CHART : lang === 'eu' ? BASQUE_NUMBER_CHART : lang === 'bn' ? BENGALI_NUMBER_CHART : lang === 'bg' ? BULGARIAN_NUMBER_CHART : lang === 'fr' ? FRENCH_NUMBER_CHART : lang === 'de' ? GERMAN_NUMBER_CHART : lang === 'it' ? ITALIAN_NUMBER_CHART : NUMBER_CHART;
       chart.forEach(section => {
         const sec = document.createElement('div');
         sec.className = 'hangul-section';
@@ -8069,6 +9086,12 @@
         lastCompletedLesson = { title: "Bengali Numbers", words: ALL_BENGALI_NUMBERS };
       } else if (lang === 'bg') {
         lastCompletedLesson = { title: "Bulgarian Numbers", words: ALL_BULGARIAN_NUMBERS };
+      } else if (lang === 'fr') {
+        lastCompletedLesson = { title: "French Numbers", words: ALL_FRENCH_NUMBERS };
+      } else if (lang === 'de') {
+        lastCompletedLesson = { title: "German Numbers", words: ALL_GERMAN_NUMBERS };
+      } else if (lang === 'it') {
+        lastCompletedLesson = { title: "Italian Numbers", words: ALL_ITALIAN_NUMBERS };
       } else {
         lastCompletedLesson = { title: "Number Chart", words: ALL_NUMBER_ITEMS };
       }
@@ -8397,9 +9420,9 @@
     let grammarTab = 'particles';
     function openGrammar() {
       const lang = (state.settings && state.settings.learningLang) || 'ko';
-      if (lang === 'es' || lang === 'af' || lang === 'ar' || lang === 'eu' || lang === 'bn' || lang === 'bg') grammarTab = 'conjugation';
+      if (lang === 'es' || lang === 'af' || lang === 'ar' || lang === 'eu' || lang === 'bn' || lang === 'bg' || lang === 'fr' || lang === 'de' || lang === 'it') grammarTab = 'conjugation';
       else if (grammarTab === 'conjugation' && !VERB_CONJUGATIONS.length) grammarTab = 'particles';
-      const titles = { es: '📖 Verb Conjugation', af: '📖 Verb Conjugation', ar: '📖 Verb Conjugation', eu: '📖 Verb Conjugation', bn: '📖 Verb Conjugation', bg: '📖 Verb Conjugation' };
+      const titles = { es: '📖 Verb Conjugation', af: '📖 Verb Conjugation', ar: '📖 Verb Conjugation', eu: '📖 Verb Conjugation', bn: '📖 Verb Conjugation', bg: '📖 Verb Conjugation', fr: '📖 Verb Conjugation', de: '📖 Verb Conjugation', it: '📖 Verb Conjugation' };
       document.getElementById('grammarScreenTitle').textContent = titles[lang] || '📖 Grammar & Particles';
       showScreen('grammar');
       renderGrammarTabs();
@@ -8408,7 +9431,7 @@
     function renderGrammarTabs() {
       const row = document.getElementById('grammarTabRow');
       const lang = (state.settings && state.settings.learningLang) || 'ko';
-      const tabs = (lang === 'es' || lang === 'af' || lang === 'ar' || lang === 'eu' || lang === 'bn' || lang === 'bg')
+      const tabs = (lang === 'es' || lang === 'af' || lang === 'ar' || lang === 'eu' || lang === 'bn' || lang === 'bg' || lang === 'fr' || lang === 'de' || lang === 'it')
         ? [{ key: 'conjugation', label: 'Verbs', emoji: '🔀' }]
         : [
           { key: 'particles', label: 'Particles', emoji: '🔤' },
@@ -8443,7 +9466,7 @@
           wrap.appendChild(card);
         });
       } else if (grammarTab === 'conjugation') {
-        const verbs = lang === 'es' ? VERB_CONJUGATIONS_ES : lang === 'af' ? VERB_CONJUGATIONS_AF : lang === 'ar' ? VERB_CONJUGATIONS_AR : lang === 'eu' ? VERB_CONJUGATIONS_EU : lang === 'bn' ? VERB_CONJUGATIONS_BN : lang === 'bg' ? VERB_CONJUGATIONS_BG : VERB_CONJUGATIONS;
+        const verbs = lang === 'es' ? VERB_CONJUGATIONS_ES : lang === 'af' ? VERB_CONJUGATIONS_AF : lang === 'ar' ? VERB_CONJUGATIONS_AR : lang === 'eu' ? VERB_CONJUGATIONS_EU : lang === 'bn' ? VERB_CONJUGATIONS_BN : lang === 'bg' ? VERB_CONJUGATIONS_BG : lang === 'fr' ? VERB_CONJUGATIONS_FR : lang === 'de' ? VERB_CONJUGATIONS_DE : lang === 'it' ? VERB_CONJUGATIONS_IT : VERB_CONJUGATIONS;
         verbs.forEach(v => {
           const card = document.createElement('div');
           card.className = 'scene-card';
@@ -8511,6 +9534,9 @@
       if (lang === 'eu') return STROKE_ORDER_EU;
       if (lang === 'bn') return STROKE_ORDER_BN;
       if (lang === 'bg') return STROKE_ORDER_BG;
+      if (lang === 'fr') return STROKE_ORDER_FR;
+      if (lang === 'de') return STROKE_ORDER_DE;
+      if (lang === 'it') return STROKE_ORDER_IT;
       return STROKE_ORDER;
     }
     function activeAlphabetChars() {
@@ -8524,6 +9550,9 @@
       if (lang === 'eu') return ALL_BASQUE_ALPHABET;
       if (lang === 'bn') return ALL_BENGALI_ALPHABET;
       if (lang === 'bg') return ALL_BULGARIAN_ALPHABET;
+      if (lang === 'fr') return ALL_FRENCH_ALPHABET;
+      if (lang === 'de') return ALL_GERMAN_ALPHABET;
+      if (lang === 'it') return ALL_ITALIAN_ALPHABET;
       return ALL_HANGUL_CHARS;
     }
     function openDrawTrace() {
@@ -9568,6 +10597,246 @@
       { k: ["difficult", "hard", "struggling", "stuck", "confus"], a: "Няма проблем! (NYA-ma pro-BLEM — no problem!) A new script and grammar both take real practice. Try replaying lessons or retaking a quiz — repetition is what makes it click." },
     ];
 
+    const FRENCH_ALPHABET = [
+      {
+        title: "Vowels", chars: [
+          { ch: "a", rom: "ah", sample: "ami", hint: "like 'a' in father" }, { ch: "e", rom: "uh", sample: "le", hint: "a soft, neutral 'uh' sound" },
+          { ch: "i", rom: "ee", sample: "il", hint: "like 'ee' in see" }, { ch: "o", rom: "oh", sample: "moto", hint: "like 'o' in go" },
+          { ch: "u", rom: "ew", sample: "tu", hint: "round your lips like 'oo', but say 'ee' — no English equivalent" }]
+      },
+      {
+        title: "Consonants (tricky ones)", chars: [
+          { ch: "r", rom: "guttural r", sample: "rouge", hint: "made in the throat, unlike the English 'r'" }, { ch: "j", rom: "zh", sample: "jour", hint: "like 's' in pleasure" },
+          { ch: "c", rom: "s / k", sample: "ça / carte", hint: "soft 's' before e/i/y, hard 'k' before a/o/u" }, { ch: "g", rom: "zh / g", sample: "gentil / grand", hint: "soft like 'zh' before e/i, hard like 'g' before a/o/u" },
+          { ch: "h", rom: "silent", sample: "heure", hint: "always silent in French" }, { ch: "ch", rom: "sh", sample: "chat", hint: "like 'sh' in shoe" }]
+      },
+      {
+        title: "Accents & Nasal Sounds", chars: [
+          { ch: "é", rom: "ay", sample: "café", hint: "a closed 'e', like 'ay' in day" }, { ch: "è / ê", rom: "eh", sample: "père / tête", hint: "an open 'e', like 'e' in bed" },
+          { ch: "ç", rom: "s", sample: "français", hint: "always a soft 's' sound, even before a/o/u" }, { ch: "an / en", rom: "nasal ah", sample: "France", hint: "a vowel pushed through the nose — no final 'n' sound" },
+          { ch: "in / ain", rom: "nasal eh", sample: "pain", hint: "another nasal vowel, no final 'n' sound" }, { ch: "on", rom: "nasal oh", sample: "bon", hint: "a nasal 'oh' — no final 'n' sound" }]
+      },
+    ];
+    const ALL_FRENCH_ALPHABET = FRENCH_ALPHABET.flatMap(s => s.chars);
+
+    const FRENCH_NUMBER_CHART = [
+      {
+        title: "Numbers 0–10", note: "The building blocks — every other number is formed from these.", chars: [
+          { ch: "zéro", rom: "0 · zay-ROH", en: "0" }, { ch: "un", rom: "1 · uhn", en: "1" }, { ch: "deux", rom: "2 · duh", en: "2" },
+          { ch: "trois", rom: "3 · trwah", en: "3" }, { ch: "quatre", rom: "4 · KAH-truh", en: "4" }, { ch: "cinq", rom: "5 · sank", en: "5" },
+          { ch: "six", rom: "6 · sees", en: "6" }, { ch: "sept", rom: "7 · seht", en: "7" }, { ch: "huit", rom: "8 · weet", en: "8" },
+          { ch: "neuf", rom: "9 · nuhf", en: "9" }, { ch: "dix", rom: "10 · dees", en: "10" }]
+      },
+      {
+        title: "Tens", note: "70, 80, and 90 are the famous quirks — 70 is literally '60+10', 80 is '4×20', 90 is '4×20+10'.", chars: [
+          { ch: "vingt", rom: "20 · van", en: "20" }, { ch: "trente", rom: "30 · trahnt", en: "30" }, { ch: "quarante", rom: "40 · kah-RAHNT", en: "40" },
+          { ch: "cinquante", rom: "50 · san-KAHNT", en: "50" }, { ch: "soixante", rom: "60 · swah-SAHNT", en: "60" }, { ch: "soixante-dix", rom: "70 · swah-sahnt-DEES", en: "70" },
+          { ch: "quatre-vingts", rom: "80 · kah-truh-VAN", en: "80" }, { ch: "quatre-vingt-dix", rom: "90 · kah-truh-van-DEES", en: "90" }]
+      },
+      {
+        title: "Big Units", note: "Everything above 100 is built from these + 0-99.", chars: [
+          { ch: "cent", rom: "100 · sahn", en: "100" }, { ch: "mille", rom: "1,000 · meel", en: "1,000" }, { ch: "million", rom: "1,000,000 · meel-YOHN", en: "1,000,000" }]
+      },
+    ];
+    const ALL_FRENCH_NUMBERS = FRENCH_NUMBER_CHART.flatMap(s => s.chars.map(c => ({ kr: c.ch, en: c.en, rom: c.rom })));
+
+    const VERB_CONJUGATIONS_FR = [
+      { dict: "être", rom: "EH-truh", en: "to be", present: "est", presentRom: "eh", past: "était", pastRom: "ay-TEH", future: "sera", futureRom: "suh-RAH" },
+      { dict: "avoir", rom: "ah-VWAHR", en: "to have", present: "a", presentRom: "ah", past: "avait", pastRom: "ah-VEH", future: "aura", futureRom: "oh-RAH" },
+      { dict: "aller", rom: "ah-LAY", en: "to go", present: "va", presentRom: "vah", past: "allait", pastRom: "ah-LEH", future: "ira", futureRom: "ee-RAH" },
+      { dict: "venir", rom: "vuh-NEER", en: "to come", present: "vient", presentRom: "vee-EHN", past: "venait", pastRom: "vuh-NEH", future: "viendra", futureRom: "vee-EHN-drah" },
+      { dict: "manger", rom: "mahn-ZHAY", en: "to eat", present: "mange", presentRom: "mahnzh", past: "mangeait", pastRom: "mahn-ZHEH", future: "mangera", futureRom: "mahnzh-RAH" },
+      { dict: "boire", rom: "bwahr", en: "to drink", present: "boit", presentRom: "bwah", past: "buvait", pastRom: "boo-VEH", future: "boira", futureRom: "bwah-RAH" },
+      { dict: "voir", rom: "vwahr", en: "to see", present: "voit", presentRom: "vwah", past: "voyait", pastRom: "vwah-YEH", future: "verra", futureRom: "veh-RAH" },
+      { dict: "écrire", rom: "ay-KREER", en: "to write", present: "écrit", presentRom: "ay-KREE", past: "écrivait", pastRom: "ay-kree-VEH", future: "écrira", futureRom: "ay-kree-RAH" },
+      { dict: "travailler", rom: "trah-vye-YAY", en: "to work", present: "travaille", presentRom: "trah-VYE", past: "travaillait", pastRom: "trah-vye-YEH", future: "travaillera", futureRom: "trah-vye-RAH" },
+      { dict: "parler", rom: "pahr-LAY", en: "to speak", present: "parle", presentRom: "pahrl", past: "parlait", pastRom: "pahr-LEH", future: "parlera", futureRom: "pahr-luh-RAH" },
+    ];
+
+    const STROKE_ORDER_FR = [
+      { ch: "é", strokes: ["Write a lowercase e.", "Add an acute accent (´) above it — a closed 'ay' sound, as in café."] },
+      { ch: "è", strokes: ["Write a lowercase e.", "Add a grave accent (`) above it — an open 'eh' sound, as in père."] },
+      { ch: "ê", strokes: ["Write a lowercase e.", "Add a circumflex (ˆ) above it — usually marks a letter that dropped out of the word over time (often an old 's')."] },
+      { ch: "ç", strokes: ["Write a lowercase c.", "Add a cedilla (¸) below it — keeps the 's' sound even before a, o, or u, as in français."] },
+      { ch: "ë / ï", strokes: ["Write the base vowel.", "Add a diaeresis (¨) above it — signals the vowel is pronounced separately from the one before it, not blended."] },
+    ];
+
+    const FRENCH_CHAT_TOPICS = [
+      { k: ["bonjour", "hello", "hi "], a: "Bonjour (bohn-ZHOOR) means 'hello' — used any time before evening. After dark, bonsoir (bohn-SWAHR) takes over." },
+      { k: ["au revoir", "bye", "goodbye"], a: "Au revoir (oh ruh-VWAHR) means 'goodbye.' Casually, salut (sah-LOO) works for both hi and bye among friends." },
+      { k: ["merci", "thank"], a: "Merci (mehr-SEE) means 'thank you.' For extra emphasis, merci beaucoup (mehr-see boh-KOO) means 'thank you very much.'" },
+      { k: ["pardon", "excusez", "sorry"], a: "Pardon (pahr-DOHN) covers both 'sorry' and 'excuse me.' The more formal excusez-moi (ex-kew-zay MWAH) works too." },
+      { k: ["tu", "vous", "formal", "informal"], a: "French distinguishes tu (informal 'you', for friends and family) from vous (formal/polite 'you', also used for plural 'you all') — using tu with a stranger can come across as too familiar." },
+      { k: ["gender", "masculine", "feminine", "le", "la"], a: "Every French noun has a gender — masculine (le) or feminine (la) — which isn't always predictable from meaning, so it's worth learning each noun with its article." },
+      { k: ["liaison", "silent letters"], a: "Many French word-final consonants are silent, but often 're-appear' as a linking sound (liaison) when the next word starts with a vowel — e.g. 'les amis' sounds like 'lay-zah-MEE'." },
+      { k: ["heart", "hearts", "lose"], a: "You lose a heart for each wrong answer in a lesson. Run out and the lesson ends — but hearts refill over time, or go Pro for unlimited hearts." },
+      { k: ["streak", "fire"], a: "Your streak counts consecutive days you complete at least one lesson. Miss a day and it resets — try a quick lesson daily! Allez, courage!" },
+      { k: ["xp", "level", "points"], a: "XP is earned by finishing lessons and quizzes. It builds your Level on your Profile page — the more you practice, the higher you climb!" },
+      { k: ["pro", "premium", "upgrade", "subscription", "price", "cost"], a: "Hangul Pro unlocks unlimited hearts, every unit instantly, advanced speaking drills, deeper stats, and unlimited tutor chats. Check the Pro tab for pricing and plans!" },
+      { k: ["speak", "pronounce", "mic", "pronunciation"], a: "For speaking exercises, tap the mic and say the word naturally — the app compares what it hears to the target word. If your browser blocks the mic, check your site permissions." },
+      { k: ["difficult", "hard", "struggling", "stuck", "confus"], a: "Ce n'est pas grave! (It's okay!) Nasal vowels and gendered nouns both take real practice. Try replaying lessons or retaking a quiz — repetition is what makes it click. Petit à petit! (Little by little!)" },
+    ];
+
+    const GERMAN_ALPHABET = [
+      {
+        title: "Vowels", chars: [
+          { ch: "a", rom: "ah", sample: "Vater", hint: "like 'a' in father" }, { ch: "e", rom: "eh", sample: "Bett", hint: "like 'e' in bed" },
+          { ch: "i", rom: "ih", sample: "ich", hint: "like 'i' in bit" }, { ch: "o", rom: "oh", sample: "Ohr", hint: "like 'o' in go" },
+          { ch: "u", rom: "oo", sample: "gut", hint: "like 'oo' in food" }]
+      },
+      {
+        title: "Consonants (tricky ones)", chars: [
+          { ch: "w", rom: "v", sample: "Wasser", hint: "pronounced like an English 'v'" }, { ch: "v", rom: "f", sample: "Vater", hint: "usually pronounced like an English 'f'" },
+          { ch: "z", rom: "ts", sample: "Zeit", hint: "always pronounced 'ts', never like an English 'z'" }, { ch: "j", rom: "y", sample: "ja", hint: "pronounced like an English 'y'" },
+          { ch: "ch", rom: "kh", sample: "ich / Bach", hint: "a soft or guttural rasp in the throat, no English equivalent" }, { ch: "r", rom: "guttural r", sample: "rot", hint: "often made in the back of the throat" }]
+      },
+      {
+        title: "Umlauts & ß", chars: [
+          { ch: "ä", rom: "eh", sample: "Männer", hint: "like 'e' in bed — an 'a' pronounced with fronted lips" }, { ch: "ö", rom: "ur", sample: "schön", hint: "round your lips for 'o' but say 'e' — like French 'eu'" },
+          { ch: "ü", rom: "ew", sample: "über", hint: "round your lips for 'oo' but say 'ee' — like French 'u'" }, { ch: "ß", rom: "s", sample: "Straße", hint: "the 'eszett' — always a sharp 's' sound, used after long vowels" }]
+      },
+    ];
+    const ALL_GERMAN_ALPHABET = GERMAN_ALPHABET.flatMap(s => s.chars);
+
+    const GERMAN_NUMBER_CHART = [
+      {
+        title: "Numbers 0–10", note: "The building blocks — every other number is formed from these.", chars: [
+          { ch: "null", rom: "0 · nool", en: "0" }, { ch: "eins", rom: "1 · ines", en: "1" }, { ch: "zwei", rom: "2 · tsvy", en: "2" },
+          { ch: "drei", rom: "3 · dry", en: "3" }, { ch: "vier", rom: "4 · feer", en: "4" }, { ch: "fünf", rom: "5 · fewnf", en: "5" },
+          { ch: "sechs", rom: "6 · zex", en: "6" }, { ch: "sieben", rom: "7 · ZEE-ben", en: "7" }, { ch: "acht", rom: "8 · ahkht", en: "8" },
+          { ch: "neun", rom: "9 · noyn", en: "9" }, { ch: "zehn", rom: "10 · tsayn", en: "10" }]
+      },
+      {
+        title: "Tens", note: "German says the ones place before the tens — einundzwanzig (21) is literally 'one-and-twenty'.", chars: [
+          { ch: "zwanzig", rom: "20 · TSVAHN-tsikh", en: "20" }, { ch: "dreißig", rom: "30 · DRY-sikh", en: "30" }, { ch: "vierzig", rom: "40 · FEER-tsikh", en: "40" },
+          { ch: "fünfzig", rom: "50 · FEWNF-tsikh", en: "50" }, { ch: "sechzig", rom: "60 · ZEKH-tsikh", en: "60" }, { ch: "siebzig", rom: "70 · ZEEP-tsikh", en: "70" },
+          { ch: "achtzig", rom: "80 · AHKHT-tsikh", en: "80" }, { ch: "neunzig", rom: "90 · NOYN-tsikh", en: "90" }]
+      },
+      {
+        title: "Big Units", note: "Everything above 100 is built from these + 0-99.", chars: [
+          { ch: "hundert", rom: "100 · HOON-dert", en: "100" }, { ch: "tausend", rom: "1,000 · TOW-zent", en: "1,000" }, { ch: "Million", rom: "1,000,000 · mil-YOHN", en: "1,000,000" }]
+      },
+    ];
+    const ALL_GERMAN_NUMBERS = GERMAN_NUMBER_CHART.flatMap(s => s.chars.map(c => ({ kr: c.ch, en: c.en, rom: c.rom })));
+
+    const VERB_CONJUGATIONS_DE = [
+      { dict: "sein", rom: "zine", en: "to be", present: "ist", presentRom: "ist", past: "war", pastRom: "vahr", future: "wird sein", futureRom: "veert zine" },
+      { dict: "haben", rom: "HAH-ben", en: "to have", present: "hat", presentRom: "haht", past: "hatte", pastRom: "HAHT-tuh", future: "wird haben", futureRom: "veert HAH-ben" },
+      { dict: "gehen", rom: "GAY-en", en: "to go", present: "geht", presentRom: "gayt", past: "ging", pastRom: "ging", future: "wird gehen", futureRom: "veert GAY-en" },
+      { dict: "kommen", rom: "KOM-men", en: "to come", present: "kommt", presentRom: "komt", past: "kam", pastRom: "kahm", future: "wird kommen", futureRom: "veert KOM-men" },
+      { dict: "essen", rom: "ES-sen", en: "to eat", present: "isst", presentRom: "ist", past: "aß", pastRom: "ahss", future: "wird essen", futureRom: "veert ES-sen" },
+      { dict: "trinken", rom: "TRINK-en", en: "to drink", present: "trinkt", presentRom: "trinkt", past: "trank", pastRom: "trahnk", future: "wird trinken", futureRom: "veert TRINK-en" },
+      { dict: "sehen", rom: "ZAY-en", en: "to see", present: "sieht", presentRom: "zeet", past: "sah", pastRom: "zah", future: "wird sehen", futureRom: "veert ZAY-en" },
+      { dict: "schreiben", rom: "SHRY-ben", en: "to write", present: "schreibt", presentRom: "shrypt", past: "schrieb", pastRom: "shreep", future: "wird schreiben", futureRom: "veert SHRY-ben" },
+      { dict: "arbeiten", rom: "AHR-by-ten", en: "to work", present: "arbeitet", presentRom: "AHR-by-tet", past: "arbeitete", pastRom: "AHR-by-teh-tuh", future: "wird arbeiten", futureRom: "veert AHR-by-ten" },
+      { dict: "sprechen", rom: "SHPREKH-en", en: "to speak", present: "spricht", presentRom: "shprikht", past: "sprach", pastRom: "shprahkh", future: "wird sprechen", futureRom: "veert SHPREKH-en" },
+    ];
+
+    const STROKE_ORDER_DE = [
+      { ch: "ä", strokes: ["Write a lowercase a.", "Add two dots (umlaut) above it — shifts the sound toward 'e', as in Männer."] },
+      { ch: "ö", strokes: ["Write a lowercase o.", "Add two dots (umlaut) above it — round your lips for 'o' but say 'e', as in schön."] },
+      { ch: "ü", strokes: ["Write a lowercase u.", "Add two dots (umlaut) above it — round your lips for 'oo' but say 'ee', as in über."] },
+      { ch: "ß", strokes: ["Draw a tall looping stroke resembling a fancy 'B' or 'ss' fused together.", "This 'eszett' letter always represents a sharp 's' sound and only appears after long vowels or diphthongs."] },
+    ];
+
+    const GERMAN_CHAT_TOPICS = [
+      { k: ["hallo", "hello", "hi "], a: "Hallo (HAH-loh) means 'hi' — casual and works any time. Guten Tag (GOO-ten tahk, 'good day') is the more formal everyday greeting." },
+      { k: ["auf wiedersehen", "tschüss", "bye", "goodbye"], a: "Auf Wiedersehen (owf VEE-der-zayn) is the formal 'goodbye.' Casually, tschüss (chewss) is what most people actually say." },
+      { k: ["danke", "thank"], a: "Danke (DAHN-kuh) means 'thank you.' For extra emphasis, danke schön or vielen Dank both mean 'thank you very much.'" },
+      { k: ["entschuldigung", "sorry"], a: "Entschuldigung (ent-SHOOL-dee-goong) covers both 'sorry' and 'excuse me' — a mouthful, so many people just say 'Schuldigung' casually." },
+      { k: ["du", "sie", "formal", "informal"], a: "German distinguishes du (informal 'you', for friends, family, and children) from Sie (formal 'you', capitalized, used with strangers and in business) — picking the wrong one can feel rude or overly stiff." },
+      { k: ["gender", "der", "die", "das"], a: "Every German noun has one of three genders — der (masculine), die (feminine), or das (neuter) — and it's not always predictable, so it's best learned together with each noun." },
+      { k: ["compound", "long words", "word order"], a: "German famously builds long compound nouns by stringing words together (e.g. Handschuh, 'hand-shoe', means glove) — and verbs often get pushed to the very end of a sentence." },
+      { k: ["heart", "hearts", "lose"], a: "You lose a heart for each wrong answer in a lesson. Run out and the lesson ends — but hearts refill over time, or go Pro for unlimited hearts." },
+      { k: ["streak", "fire"], a: "Your streak counts consecutive days you complete at least one lesson. Miss a day and it resets — try a quick lesson daily! Weiter so!" },
+      { k: ["xp", "level", "points"], a: "XP is earned by finishing lessons and quizzes. It builds your Level on your Profile page — the more you practice, the higher you climb!" },
+      { k: ["pro", "premium", "upgrade", "subscription", "price", "cost"], a: "Hangul Pro unlocks unlimited hearts, every unit instantly, advanced speaking drills, deeper stats, and unlimited tutor chats. Check the Pro tab for pricing and plans!" },
+      { k: ["speak", "pronounce", "mic", "pronunciation"], a: "For speaking exercises, tap the mic and say the word naturally — the app compares what it hears to the target word. If your browser blocks the mic, check your site permissions." },
+      { k: ["difficult", "hard", "struggling", "stuck", "confus"], a: "Kein Problem! (No problem!) Noun genders and long compound words both take real practice. Try replaying lessons or retaking a quiz — repetition is what makes it click. Schritt für Schritt! (Step by step!)" },
+    ];
+
+    const ITALIAN_ALPHABET = [
+      {
+        title: "Vowels", chars: [
+          { ch: "a", rom: "ah", sample: "casa", hint: "like 'a' in father" }, { ch: "e", rom: "eh", sample: "bene", hint: "like 'e' in bed" },
+          { ch: "i", rom: "ee", sample: "vino", hint: "like 'ee' in see" }, { ch: "o", rom: "oh", sample: "sole", hint: "like 'o' in go" },
+          { ch: "u", rom: "oo", sample: "luna", hint: "like 'oo' in food" }]
+      },
+      {
+        title: "Consonants (regular sounds)", chars: [
+          { ch: "b", rom: "beh", sample: "bello", hint: "like 'b' in boy" }, { ch: "d", rom: "deh", sample: "dove", hint: "like 'd' in dog" },
+          { ch: "f", rom: "EF-feh", sample: "forte", hint: "like 'f' in fun" }, { ch: "l", rom: "EL-leh", sample: "luce", hint: "like 'l' in law" },
+          { ch: "m", rom: "EM-meh", sample: "mano", hint: "like 'm' in mom" }, { ch: "n", rom: "EN-neh", sample: "notte", hint: "like 'n' in no" },
+          { ch: "p", rom: "peh", sample: "pane", hint: "like 'p' in pie" }, { ch: "t", rom: "teh", sample: "tempo", hint: "like 't' in top" }]
+      },
+      {
+        title: "Special Italian sounds", chars: [
+          { ch: "c (+e/i)", rom: "ch", sample: "ciao", hint: "soft, like 'ch' in chip before e/i" }, { ch: "c (+a/o/u)", rom: "k", sample: "casa", hint: "hard, like 'k' before a/o/u" },
+          { ch: "g (+e/i)", rom: "j", sample: "gelato", hint: "soft, like 'j' in jelly before e/i" }, { ch: "g (+a/o/u)", rom: "g", sample: "gatto", hint: "hard, like 'g' in go before a/o/u" },
+          { ch: "gn", rom: "ny", sample: "gnocchi", hint: "like 'ny' in canyon" }, { ch: "gli", rom: "ly", sample: "famiglia", hint: "like 'lli' in million" },
+          { ch: "sc (+e/i)", rom: "sh", sample: "pesce", hint: "like 'sh' in shoe before e/i" }, { ch: "z", rom: "ts / dz", sample: "pizza", hint: "usually 'ts', sometimes 'dz'" },
+          { ch: "r", rom: "tapped r", sample: "Roma", hint: "a light, rolled tap, unlike the English 'r'" }, { ch: "double consonants", rom: "held longer", sample: "penna vs pena", hint: "double letters are held longer — they can change a word's meaning" }]
+      },
+    ];
+    const ALL_ITALIAN_ALPHABET = ITALIAN_ALPHABET.flatMap(s => s.chars);
+
+    const ITALIAN_NUMBER_CHART = [
+      {
+        title: "Numbers 0–10", note: "The building blocks — every other number is formed from these.", chars: [
+          { ch: "zero", rom: "0 · DZEH-roh", en: "0" }, { ch: "uno", rom: "1 · OO-noh", en: "1" }, { ch: "due", rom: "2 · DOO-eh", en: "2" },
+          { ch: "tre", rom: "3 · treh", en: "3" }, { ch: "quattro", rom: "4 · KWAT-troh", en: "4" }, { ch: "cinque", rom: "5 · CHEEN-kweh", en: "5" },
+          { ch: "sei", rom: "6 · SEH-ee", en: "6" }, { ch: "sette", rom: "7 · SET-teh", en: "7" }, { ch: "otto", rom: "8 · OHT-toh", en: "8" },
+          { ch: "nove", rom: "9 · NOH-veh", en: "9" }, { ch: "dieci", rom: "10 · dee-EH-chee", en: "10" }]
+      },
+      {
+        title: "Tens", note: "Formed regularly from 'venti' (20) onward — venti, trenta, quaranta...", chars: [
+          { ch: "venti", rom: "20 · VEN-tee", en: "20" }, { ch: "trenta", rom: "30 · TREN-tah", en: "30" }, { ch: "quaranta", rom: "40 · kwah-RAHN-tah", en: "40" },
+          { ch: "cinquanta", rom: "50 · cheen-KWAHN-tah", en: "50" }, { ch: "sessanta", rom: "60 · ses-SAHN-tah", en: "60" }, { ch: "settanta", rom: "70 · set-TAHN-tah", en: "70" },
+          { ch: "ottanta", rom: "80 · oht-TAHN-tah", en: "80" }, { ch: "novanta", rom: "90 · noh-VAHN-tah", en: "90" }]
+      },
+      {
+        title: "Big Units", note: "Everything above 100 is built from these + 0-99.", chars: [
+          { ch: "cento", rom: "100 · CHEN-toh", en: "100" }, { ch: "mille", rom: "1,000 · MEEL-leh", en: "1,000" }, { ch: "milione", rom: "1,000,000 · mee-lee-OH-neh", en: "1,000,000" }]
+      },
+    ];
+    const ALL_ITALIAN_NUMBERS = ITALIAN_NUMBER_CHART.flatMap(s => s.chars.map(c => ({ kr: c.ch, en: c.en, rom: c.rom })));
+
+    const VERB_CONJUGATIONS_IT = [
+      { dict: "essere", rom: "ES-seh-reh", en: "to be", present: "è", presentRom: "eh", past: "era", pastRom: "EH-rah", future: "sarà", futureRom: "sah-RAH" },
+      { dict: "avere", rom: "ah-VEH-reh", en: "to have", present: "ha", presentRom: "ah", past: "aveva", pastRom: "ah-VEH-vah", future: "avrà", futureRom: "ah-VRAH" },
+      { dict: "andare", rom: "ahn-DAH-reh", en: "to go", present: "va", presentRom: "vah", past: "andava", pastRom: "ahn-DAH-vah", future: "andrà", futureRom: "ahn-DRAH" },
+      { dict: "venire", rom: "veh-NEE-reh", en: "to come", present: "viene", presentRom: "VYEH-neh", past: "veniva", pastRom: "veh-NEE-vah", future: "verrà", futureRom: "vehr-RAH" },
+      { dict: "mangiare", rom: "mahn-JAH-reh", en: "to eat", present: "mangia", presentRom: "MAHN-jah", past: "mangiava", pastRom: "mahn-JAH-vah", future: "mangerà", futureRom: "mahn-jeh-RAH" },
+      { dict: "bere", rom: "BEH-reh", en: "to drink", present: "beve", presentRom: "BEH-veh", past: "beveva", pastRom: "beh-VEH-vah", future: "berrà", futureRom: "behr-RAH" },
+      { dict: "vedere", rom: "veh-DEH-reh", en: "to see", present: "vede", presentRom: "VEH-deh", past: "vedeva", pastRom: "veh-DEH-vah", future: "vedrà", futureRom: "veh-DRAH" },
+      { dict: "scrivere", rom: "SKREE-veh-reh", en: "to write", present: "scrive", presentRom: "SKREE-veh", past: "scriveva", pastRom: "skree-VEH-vah", future: "scriverà", futureRom: "skree-veh-RAH" },
+      { dict: "lavorare", rom: "lah-voh-RAH-reh", en: "to work", present: "lavora", presentRom: "lah-VOH-rah", past: "lavorava", pastRom: "lah-voh-RAH-vah", future: "lavorerà", futureRom: "lah-voh-reh-RAH" },
+      { dict: "parlare", rom: "pahr-LAH-reh", en: "to speak", present: "parla", presentRom: "PAHR-lah", past: "parlava", pastRom: "pahr-LAH-vah", future: "parlerà", futureRom: "pahr-leh-RAH" },
+    ];
+
+    const STROKE_ORDER_IT = [
+      { ch: "à", strokes: ["Write a lowercase a.", "Add a grave accent (`) above it — marks stress on the final syllable, as in città."] },
+      { ch: "è / é", strokes: ["Write a lowercase e.", "Add a grave (`, open 'eh') or acute (´, closed 'ay') accent — both mark stress on a final e, as in perché."] },
+      { ch: "gli", strokes: ["Write g, l, i together.", "Pronounced as one soft sound like 'lli' in million — not 'g' + 'l' + 'i' separately."] },
+      { ch: "gn", strokes: ["Write g and n together.", "Pronounced as one soft sound like 'ny' in canyon — not 'g' + 'n' separately."] },
+    ];
+
+    const ITALIAN_CHAT_TOPICS = [
+      { k: ["ciao", "hello", "hi "], a: "Ciao (chow) means both 'hi' and 'bye' — casual and used with people you know well. For strangers or formal settings, buongiorno (bwohn-JOR-noh, 'good day') is better." },
+      { k: ["arrivederci", "bye", "goodbye"], a: "Arrivederci (ah-ree-veh-DEHR-chee) is the standard 'goodbye.' Casually, ciao also works perfectly for parting." },
+      { k: ["grazie", "thank"], a: "Grazie (GRAH-tsee-eh) means 'thank you.' For extra emphasis, grazie mille (a thousand thanks) or grazie infinite are common." },
+      { k: ["scusa", "scusi", "sorry"], a: "Scusa (SKOO-zah) is the informal 'sorry / excuse me'; scusi (SKOO-zee) is the polite/formal version, used with strangers or elders." },
+      { k: ["tu", "lei", "formal", "informal"], a: "Italian distinguishes tu (informal 'you', for friends and family) from Lei (formal 'you', capitalized, used with strangers, elders, or in business) — mixing them up can sound either rude or overly stiff." },
+      { k: ["gender", "masculine", "feminine", "il", "la"], a: "Every Italian noun has a gender — masculine (il/lo) or feminine (la) — and adjectives change their endings to match, so nouns and their articles are best learned together." },
+      { k: ["double consonants", "gemination"], a: "Italian double consonants (like the two n's in 'nonno') are actually held longer in pronunciation, and can completely change a word's meaning — e.g. 'pena' (pain) vs 'penna' (pen)." },
+      { k: ["heart", "hearts", "lose"], a: "You lose a heart for each wrong answer in a lesson. Run out and the lesson ends — but hearts refill over time, or go Pro for unlimited hearts." },
+      { k: ["streak", "fire"], a: "Your streak counts consecutive days you complete at least one lesson. Miss a day and it resets — try a quick lesson daily! Forza, continua così!" },
+      { k: ["xp", "level", "points"], a: "XP is earned by finishing lessons and quizzes. It builds your Level on your Profile page — the more you practice, the higher you climb!" },
+      { k: ["pro", "premium", "upgrade", "subscription", "price", "cost"], a: "Hangul Pro unlocks unlimited hearts, every unit instantly, advanced speaking drills, deeper stats, and unlimited tutor chats. Check the Pro tab for pricing and plans!" },
+      { k: ["speak", "pronounce", "mic", "pronunciation"], a: "For speaking exercises, tap the mic and say the word naturally — the app compares what it hears to the target word. If your browser blocks the mic, check your site permissions." },
+      { k: ["difficult", "hard", "struggling", "stuck", "confus"], a: "Non ti preoccupare! (Don't worry!) Double consonants and noun genders both take real practice. Try replaying lessons or retaking a quiz — repetition is what makes it click. Piano piano! (Little by little!)" },
+    ];
+
     const AMHARIC_NUMBER_CHART = [
       {
         title: "Numbers 0–10", note: "The building blocks — every other number is formed from these.", chars: [
@@ -10086,6 +11355,9 @@
           eu: "You are Han, a warm, encouraging Basque (Euskara) tutor inside a learning app called Hello Hangul (currently teaching Basque to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Basque and English together — give the Basque phrase, a simple pronunciation guide, and an English translation whenever relevant. Basque is a language isolate unrelated to Spanish or French despite being spoken alongside them, and it has an ergative-absolutive grammar system quite different from English. You can discuss ANY Basque word, phrase, grammar point, or cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
           bn: "You are Han, a warm, encouraging Bengali (Bangla) tutor inside a learning app called Hello Hangul (currently teaching Bengali to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Bengali and English together — give the Bengali script, a transliteration, and an English translation whenever relevant, so the learner sees all three. Bengali has three levels of 'you' (আপনি formal, তুমি informal, তুই intimate) and its own script and numeral system distinct from Devanagari or Western numerals. You can discuss ANY Bengali word, phrase, grammar point, or cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
           bg: "You are Han, a warm, encouraging Bulgarian tutor inside a learning app called Hello Hangul (currently teaching Bulgarian to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Bulgarian and English together — give the Cyrillic phrase, a simple pronunciation guide, and an English translation whenever relevant, so the learner sees all three. Bulgaria is where the Cyrillic alphabet originated, and Bulgarian is unusual among Slavic languages for having dropped noun cases while keeping a rich verb aspect (perfective/imperfective) system — mention the ти vs Вие formality distinction when relevant. You can discuss ANY Bulgarian word, phrase, grammar point, or cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
+          fr: "You are Han, a warm, encouraging French tutor inside a learning app called Hello Hangul (currently teaching French to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in French and English together — give the French phrase, a simple pronunciation guide, and an English translation whenever relevant, so the learner sees all three. You can discuss ANY French word, phrase, grammar point (including tu vs vous formality, gendered nouns, nasal vowels), or cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
+          de: "You are Han, a warm, encouraging German tutor inside a learning app called Hello Hangul (currently teaching German to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in German and English together — give the German phrase, a simple pronunciation guide, and an English translation whenever relevant, so the learner sees all three. You can discuss ANY German word, phrase, grammar point (including du vs Sie formality, noun genders, compound words, verb-final word order), or cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
+          it: "You are Han, a warm, encouraging Italian tutor inside a learning app called Hello Hangul (currently teaching Italian to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Italian and English together — give the Italian phrase, a simple pronunciation guide, and an English translation whenever relevant, so the learner sees all three. You can discuss ANY Italian word, phrase, grammar point (including tu vs Lei formality, gendered nouns, doubled consonants), or cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
           ko: "You are Han, a warm, encouraging Korean-language tutor inside a learning app called Hello Hangul. You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Korean and English together — give the Korean phrase, its romanization, and an English translation whenever relevant, so the learner sees all three. You can discuss ANY Korean word, phrase, grammar point, or cultural topic, not just app mechanics. When asked about a number, remember Korean has two number systems (Sino-Korean, used for money/dates/phone numbers/math, and Native Korean, used for counting objects/age, which only goes up to 99) — explain both systems for that number when the learner doesn't specify one. Keep answers short (2-5 sentences), warm, and beginner-friendly."
         };
         const systemPrompt = systemPrompts[activeLang] || systemPrompts.ko;
@@ -10275,6 +11547,9 @@
         eu: "Kaixo! I'm Han — let's warm up first, then I'll quiz you in Basque.",
         bn: "নমস্কার! I'm Han — let's warm up first, then I'll quiz you in Bengali.",
         bg: "Здравей! I'm Han — let's warm up first, then I'll quiz you in Bulgarian.",
+        fr: "Bonjour! I'm Han — let's warm up first, then I'll quiz you in French.",
+        de: "Hallo! I'm Han — let's warm up first, then I'll quiz you in German.",
+        it: "Ciao! I'm Han — let's warm up first, then I'll quiz you in Italian.",
         ko: "Hi! I'm Han — let's warm up first, then I'll quiz you."
       };
       document.getElementById('videocallCaption').textContent = greetings[lang] || greetings.ko;
@@ -10546,8 +11821,8 @@
       { code: 'eo', name: 'Esperanto', flag: '🌐', available: false },
       { code: 'tl', name: 'Filipino (Tagalog)', flag: '🇵🇭', available: false },
       { code: 'fi', name: 'Finnish', flag: '🇫🇮', available: false },
-      { code: 'fr', name: 'French', flag: '🇫🇷', available: false },
-      { code: 'de', name: 'German', flag: '🇩🇪', available: false },
+      { code: 'fr', name: 'French', flag: '🇫🇷', available: true },
+      { code: 'de', name: 'German', flag: '🇩🇪', available: true },
       { code: 'el', name: 'Greek', flag: '🇬🇷', available: false },
       { code: 'gu', name: 'Gujarati', flag: '🇮🇳', available: false },
       { code: 'haw', name: 'Hawaiian', flag: '🌺', available: false },
@@ -10558,7 +11833,7 @@
       { code: 'is', name: 'Icelandic', flag: '🇮🇸', available: false },
       { code: 'id', name: 'Indonesian', flag: '🇮🇩', available: false },
       { code: 'ga', name: 'Irish (Gaelic)', flag: '🇮🇪', available: false },
-      { code: 'it', name: 'Italian', flag: '🇮🇹', available: false },
+      { code: 'it', name: 'Italian', flag: '🇮🇹', available: true },
       { code: 'ja', name: 'Japanese', flag: '🇯🇵', available: true },
       { code: 'km', name: 'Khmer', flag: '🇰🇭', available: false },
       { code: 'tlh', name: 'Klingon', flag: '🖖', available: false },
