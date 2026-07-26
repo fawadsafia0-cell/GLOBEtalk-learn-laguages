@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14917,7 +14917,10 @@
       document.querySelectorAll('.navbtn').forEach(b => b.classList.toggle('active', b.dataset.tab === name));
       if (name === 'kdrama') renderKdramaList();
       if (name === 'chat') {
-        if (document.getElementById('chatMessages').children.length === 0) botSay("안녕하세요! I'm Han, your GlobeTalk tutor 👋 Ask me about any word, grammar point, or how streaks/hearts/XP work — in Korean or English!");
+        if (document.getElementById('chatMessages').children.length === 0) {
+          const chatLang = (state.settings && state.settings.learningLang) || 'ko';
+          botSay(`${tutorHelloFor(chatLang)}! I'm Han, your GlobeTalk tutor 👋 Ask me about any word, grammar point, or how streaks/hearts/XP work — in ${langDisplayName(chatLang)} or English!`);
+        }
         updateChatHint();
       }
       if (name === 'profile') renderProfile();
@@ -19454,7 +19457,8 @@
     function askDoubtFromComplete() {
       showScreen('chat');
       if (document.getElementById('chatMessages').children.length === 0) {
-        botSay("안녕하세요! I'm Han, your GlobeTalk tutor 👋 Ask me about any word, grammar point, or how streaks/hearts/XP work.");
+        const doubtLang = (state.settings && state.settings.learningLang) || 'ko';
+        botSay(`${tutorHelloFor(doubtLang)}! I'm Han, your GlobeTalk tutor 👋 Ask me about any word, grammar point, or how streaks/hearts/XP work.`);
       }
       botSay("Just finished a lesson — what would you like explained?");
     }
@@ -19782,6 +19786,22 @@
     /* =========================================================
        LANGUAGE TO LEARN (which language the lessons teach)
        ========================================================= */
+    const TUTOR_HELLO = {
+      ko: "안녕하세요", es: "¡Hola", ja: "こんにちは", en: "Hi", zh: "你好",
+      af: "Hallo", ar: "مرحبا", am: "ሰላም", eu: "Kaixo", bn: "নমস্কার",
+      bg: "Здравей", fr: "Bonjour", de: "Hallo", it: "Ciao", ca: "Hola",
+      yue: "你好", my: "မင်္ဂလာပါ", hr: "Bok", cs: "Ahoj", da: "Hej",
+      nl: "Hallo", eo: "Saluton", tl: "Kumusta", fi: "Hei", pt: "Olá",
+      pl: "Cześć", sv: "Hej", ru: "Привет", hi: "नमस्ते", vi: "Xin chào",
+      tr: "Merhaba", uk: "Привіт", ro: "Salut"
+    };
+    function tutorHelloFor(lang) {
+      return TUTOR_HELLO[lang] || TUTOR_HELLO.ko;
+    }
+    function langDisplayName(lang) {
+      const entry = LANGUAGES_TO_LEARN.find(l => l.code === lang);
+      return (entry && entry.name) || 'Korean';
+    }
     const LANGUAGES_TO_LEARN = [
       { code: 'af', name: 'Afrikaans', flag: '🇿🇦', available: true },
       { code: 'am', name: 'Amharic', flag: '🇪🇹', available: true },
