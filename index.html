@@ -7730,6 +7730,1302 @@
     ];
     LEVELS_MY.forEach((l, i) => { l.id = 16000 + i + 1; });
 
+    const TIERS_HR = TIERS;
+    const LEVELS_HR = [
+      /* ---------------- BEGINNER ---------------- */
+      {
+        tier: "beginner", title: "Croatian Basics", icon: "🇭🇷", words: [
+          { kr: "bok", rom: "bohk", en: "hello" }, { kr: "hvala", rom: "HVAH-lah", en: "thank you" },
+          { kr: "da", rom: "dah", en: "yes" }, { kr: "ne", rom: "neh", en: "no" },
+          { kr: "ime", rom: "EE-meh", en: "name" }, { kr: "prijatelj", rom: "pree-YAH-tel", en: "friend" }]
+      },
+      {
+        tier: "beginner", title: "Greetings & Manners", icon: "🙏", words: [
+          { kr: "doviđenja", rom: "doh-vee-JEN-yah", en: "goodbye" }, { kr: "oprostite", rom: "oh-PROH-stee-teh", en: "sorry / excuse me" },
+          { kr: "molim", rom: "MOH-leem", en: "please" }, { kr: "drago mi je", rom: "DRAH-goh mee yeh", en: "nice to meet you" },
+          { kr: "nema na čemu", rom: "NEH-mah nah CHEH-moo", en: "you're welcome" }, { kr: "u redu je", rom: "oo REH-doo yeh", en: "it's okay" }]
+      },
+      {
+        tier: "beginner", title: "Numbers 1-6", icon: "🔢", words: [
+          { kr: "jedan", rom: "YEH-dahn", en: "one" }, { kr: "dva", rom: "dvah", en: "two" },
+          { kr: "tri", rom: "tree", en: "three" }, { kr: "četiri", rom: "CHEH-tee-ree", en: "four" },
+          { kr: "pet", rom: "peht", en: "five" }, { kr: "šest", rom: "shehst", en: "six" }]
+      },
+      {
+        tier: "beginner", title: "Days & Time", icon: "🕒", words: [
+          { kr: "danas", rom: "DAH-nahs", en: "today" }, { kr: "sutra", rom: "SOO-trah", en: "tomorrow" },
+          { kr: "jučer", rom: "YOO-cher", en: "yesterday" }, { kr: "sada", rom: "SAH-dah", en: "now" },
+          { kr: "vrijeme", rom: "VREE-yeh-meh", en: "time" }, { kr: "jutro", rom: "YOO-troh", en: "morning" }]
+      },
+      {
+        tier: "beginner", title: "Family", icon: "👪", words: [
+          { kr: "obitelj", rom: "oh-BEE-tel", en: "family" }, { kr: "mama", rom: "MAH-mah", en: "mom" },
+          { kr: "tata", rom: "TAH-tah", en: "dad" }, { kr: "brat", rom: "braht", en: "brother" },
+          { kr: "sestra", rom: "SEH-strah", en: "sister" }, { kr: "djed", rom: "dyed", en: "grandfather" }]
+      },
+      {
+        tier: "beginner", title: "Food & Drink", icon: "🍚", words: [
+          { kr: "hrana", rom: "HRAH-nah", en: "food" }, { kr: "voda", rom: "VOH-dah", en: "water" },
+          { kr: "kava", rom: "KAH-vah", en: "coffee" }, { kr: "kruh", rom: "krooh", en: "bread" },
+          { kr: "riža", rom: "REE-zhah", en: "rice" }, { kr: "ukusno", rom: "oo-KOOS-noh", en: "delicious" }]
+      },
+      {
+        tier: "beginner", title: "Colors", icon: "🎨", words: [
+          { kr: "crveno", rom: "TSER-veh-noh", en: "red" }, { kr: "plavo", rom: "PLAH-voh", en: "blue" },
+          { kr: "žuto", rom: "ZHOO-toh", en: "yellow" }, { kr: "zeleno", rom: "zeh-LEH-noh", en: "green" },
+          { kr: "crno", rom: "TSER-noh", en: "black" }, { kr: "bijelo", rom: "bee-YEH-loh", en: "white" }]
+      },
+      {
+        tier: "beginner", title: "Body Parts", icon: "🧍", words: [
+          { kr: "glava", rom: "GLAH-vah", en: "head" }, { kr: "ruka", rom: "ROO-kah", en: "hand" },
+          { kr: "oko", rom: "OH-koh", en: "eye" }, { kr: "nos", rom: "nohs", en: "nose" },
+          { kr: "usta", rom: "OO-stah", en: "mouth" }, { kr: "noga", rom: "NOH-gah", en: "leg" }]
+      },
+      {
+        tier: "beginner", title: "Animals", icon: "🐾", words: [
+          { kr: "pas", rom: "pahs", en: "dog" }, { kr: "mačka", rom: "MACH-kah", en: "cat" },
+          { kr: "ptica", rom: "PTEE-tsah", en: "bird" }, { kr: "riba", rom: "REE-bah", en: "fish" },
+          { kr: "medvjed", rom: "MED-vyed", en: "bear" }, { kr: "zec", rom: "zets", en: "rabbit" }]
+      },
+      {
+        tier: "beginner", title: "Clothing", icon: "👕", words: [
+          { kr: "odjeća", rom: "oh-DYE-chah", en: "clothes" }, { kr: "cipele", rom: "TSEE-peh-leh", en: "shoes" },
+          { kr: "šešir", rom: "SHEH-sheer", en: "hat" }, { kr: "hlače", rom: "HLAH-cheh", en: "pants" },
+          { kr: "suknja", rom: "SOOK-nyah", en: "skirt" }, { kr: "torba", rom: "TOR-bah", en: "bag" }]
+      },
+      {
+        tier: "beginner", title: "Weather", icon: "⛅", words: [
+          { kr: "vrijeme", rom: "VREE-yeh-meh", en: "weather" }, { kr: "kiša", rom: "KEE-shah", en: "rain" },
+          { kr: "snijeg", rom: "SNYEG", en: "snow" }, { kr: "vjetar", rom: "VYEH-tar", en: "wind" },
+          { kr: "vruće", rom: "VROO-cheh", en: "hot" }, { kr: "hladno", rom: "HLAHD-noh", en: "cold" }]
+      },
+      {
+        tier: "beginner", title: "House & Rooms", icon: "🏠", words: [
+          { kr: "kuća", rom: "KOO-chah", en: "house" }, { kr: "soba", rom: "SOH-bah", en: "room" },
+          { kr: "krevet", rom: "KREH-veht", en: "bed" }, { kr: "kupaonica", rom: "koo-pah-OH-nee-tsah", en: "bathroom" },
+          { kr: "kuhinja", rom: "koo-HEE-nyah", en: "kitchen" }, { kr: "vrata", rom: "VRAH-tah", en: "door" }]
+      },
+      {
+        tier: "beginner", title: "School & Objects", icon: "🎒", words: [
+          { kr: "škola", rom: "SHKOH-lah", en: "school" }, { kr: "knjiga", rom: "KNYEE-gah", en: "book" },
+          { kr: "olovka", rom: "oh-LOHV-kah", en: "pencil" }, { kr: "ruksak", rom: "ROOK-sahk", en: "backpack" },
+          { kr: "učitelj", rom: "oo-CHEE-tel", en: "teacher" }, { kr: "učenik", rom: "oo-CHEH-neek", en: "student" }]
+      },
+
+      /* ---------------- INTERMEDIATE ---------------- */
+      {
+        tier: "intermediate", title: "Feelings & Emotions", icon: "💗", words: [
+          { kr: "sretan", rom: "SREH-tahn", en: "happy" }, { kr: "tužan", rom: "TOO-zhahn", en: "sad" },
+          { kr: "ljut", rom: "lyoot", en: "angry" }, { kr: "umoran", rom: "OO-moh-rahn", en: "tired" },
+          { kr: "nervozan", rom: "ner-VOH-zahn", en: "nervous" }, { kr: "oduševljen", rom: "oh-doo-SHEV-lyen", en: "eager / enthusiastic" }]
+      },
+      {
+        tier: "intermediate", title: "Directions & Places", icon: "🧭", words: [
+          { kr: "lijevo", rom: "LYEH-voh", en: "left" }, { kr: "desno", rom: "DEHS-noh", en: "right" },
+          { kr: "blizu", rom: "BLEE-zoo", en: "near" }, { kr: "daleko", rom: "dah-LEH-koh", en: "far" },
+          { kr: "ovdje", rom: "OHV-dyeh", en: "here" }, { kr: "ondje", rom: "OHN-dyeh", en: "there" }]
+      },
+      {
+        tier: "intermediate", title: "Shopping", icon: "🛍️", words: [
+          { kr: "koliko košta", rom: "KOH-lee-koh KOSH-tah", en: "how much is it" }, { kr: "skupo", rom: "SKOO-poh", en: "expensive" },
+          { kr: "jeftino", rom: "yef-TEE-noh", en: "cheap" }, { kr: "platiti", rom: "plah-TEE-tee", en: "to pay" },
+          { kr: "gotovina", rom: "goh-toh-VEE-nah", en: "cash" }, { kr: "kartica", rom: "KAR-tee-tsah", en: "card" }]
+      },
+      {
+        tier: "intermediate", title: "Transportation", icon: "🚌", words: [
+          { kr: "autobus", rom: "OW-toh-boos", en: "bus" }, { kr: "vlak", rom: "vlahk", en: "train" },
+          { kr: "avion", rom: "AH-vee-ohn", en: "plane" }, { kr: "auto", rom: "OW-toh", en: "car" },
+          { kr: "karta", rom: "KAR-tah", en: "ticket" }, { kr: "kolodvor", rom: "koh-LOHD-vor", en: "station" }]
+      },
+      {
+        tier: "intermediate", title: "Hobbies", icon: "🎯", words: [
+          { kr: "čitanje", rom: "CHEE-tahn-yeh", en: "reading" }, { kr: "glazba", rom: "GLAHZ-bah", en: "music" },
+          { kr: "film", rom: "feelm", en: "movie" }, { kr: "slikanje", rom: "SLEE-kahn-yeh", en: "painting" },
+          { kr: "putovanje", rom: "poo-toh-VAHN-yeh", en: "traveling" }, { kr: "ples", rom: "plehs", en: "dancing" }]
+      },
+      {
+        tier: "intermediate", title: "Work & Jobs", icon: "💼", words: [
+          { kr: "posao", rom: "POH-sah-oh", en: "work" }, { kr: "inženjer", rom: "een-zheh-NYEHR", en: "engineer" },
+          { kr: "ured", rom: "OO-red", en: "office" }, { kr: "plaća", rom: "PLAH-chah", en: "salary" },
+          { kr: "šef", rom: "shef", en: "boss" }, { kr: "kolega", rom: "koh-LEH-gah", en: "colleague" }]
+      },
+      {
+        tier: "intermediate", title: "Health & Body", icon: "🏥", words: [
+          { kr: "bolestan", rom: "BOH-leh-stahn", en: "sick" }, { kr: "zdrav", rom: "zdrahv", en: "healthy" },
+          { kr: "bolnica", rom: "BOHL-nee-tsah", en: "hospital" }, { kr: "lijek", rom: "LYEK", en: "medicine" },
+          { kr: "bol", rom: "bohl", en: "pain" }, { kr: "medicinska sestra", rom: "meh-dee-TSEEN-skah SEH-strah", en: "nurse" }]
+      },
+      {
+        tier: "intermediate", title: "Technology", icon: "💻", words: [
+          { kr: "telefon", rom: "teh-LEH-fohn", en: "phone" }, { kr: "računalo", rom: "rah-CHOO-nah-loh", en: "computer" },
+          { kr: "internet", rom: "EEN-ter-net", en: "internet" }, { kr: "aplikacija", rom: "ah-plee-KAH-tsee-yah", en: "app" },
+          { kr: "ekran", rom: "EH-krahn", en: "screen" }, { kr: "lozinka", rom: "loh-ZEEN-kah", en: "password" }]
+      },
+      {
+        tier: "intermediate", title: "Sports", icon: "⚽", words: [
+          { kr: "nogomet", rom: "NOH-goh-met", en: "football" }, { kr: "košarka", rom: "KOH-shar-kah", en: "basketball" },
+          { kr: "plivanje", rom: "plee-VAHN-yeh", en: "swimming" }, { kr: "trčanje", rom: "TR-chahn-yeh", en: "running" },
+          { kr: "tim", rom: "teem", en: "team" }, { kr: "lopta", rom: "LOHP-tah", en: "ball" }]
+      },
+      {
+        tier: "intermediate", title: "Nature", icon: "🌳", words: [
+          { kr: "drvo", rom: "DR-voh", en: "tree" }, { kr: "planina", rom: "plah-NEE-nah", en: "mountain" },
+          { kr: "rijeka", rom: "RYEH-kah", en: "river" }, { kr: "more", rom: "MOH-reh", en: "sea" },
+          { kr: "šuma", rom: "SHOO-mah", en: "forest" }, { kr: "sunce", rom: "SOON-tseh", en: "sun" }]
+      },
+      {
+        tier: "intermediate", title: "Numbers & Time", icon: "🔢", words: [
+          { kr: "sedam", rom: "SEH-dahm", en: "seven" }, { kr: "osam", rom: "OH-sahm", en: "eight" },
+          { kr: "devet", rom: "DEH-vet", en: "nine" }, { kr: "deset", rom: "DEH-set", en: "ten" },
+          { kr: "sat", rom: "saht", en: "hour" }, { kr: "minuta", rom: "mee-NOO-tah", en: "minute" }]
+      },
+      {
+        tier: "intermediate", title: "Making Plans", icon: "🗓️", words: [
+          { kr: "večeras", rom: "veh-CHEH-rahs", en: "tonight" }, { kr: "vikend", rom: "VEE-kend", en: "weekend" },
+          { kr: "sastanak", rom: "SAH-stah-nahk", en: "meeting" }, { kr: "slobodno vrijeme", rom: "SLOH-bohd-noh VREE-yeh-meh", en: "free time" },
+          { kr: "raspored", rom: "RAHS-poh-red", en: "schedule" }, { kr: "pozvati", rom: "POHZ-vah-tee", en: "to invite" }]
+      },
+      {
+        tier: "intermediate", title: "Restaurant & Ordering", icon: "🍽️", words: [
+          { kr: "jelovnik", rom: "YEH-lohv-neek", en: "menu" }, { kr: "narudžba", rom: "nah-ROOD-zhbah", en: "order" },
+          { kr: "konobar", rom: "KOH-noh-bar", en: "waiter" }, { kr: "račun", rom: "RAH-choon", en: "bill" },
+          { kr: "stol", rom: "stohl", en: "table" }, { kr: "gladan", rom: "GLAH-dahn", en: "hungry" }]
+      },
+
+      /* ---------------- ADVANCED ---------------- */
+      {
+        tier: "advanced", title: "Connectors & Grammar", icon: "🔗", words: [
+          { kr: "međutim", rom: "MEH-joo-teem", en: "however" }, { kr: "jer", rom: "yer", en: "because" },
+          { kr: "iako", rom: "ee-AH-koh", en: "although" }, { kr: "stoga", rom: "STOH-gah", en: "therefore" },
+          { kr: "osim toga", rom: "OH-seem TOH-gah", en: "moreover" }, { kr: "također", rom: "TAH-koh-jer", en: "in addition" }]
+      },
+      {
+        tier: "advanced", title: "Business Croatian", icon: "🏢", words: [
+          { kr: "tvrtka", rom: "TVRT-kah", en: "company" }, { kr: "ugovor", rom: "OO-goh-vor", en: "contract" },
+          { kr: "rok", rom: "rohk", en: "deadline" }, { kr: "klijent", rom: "KLEE-yent", en: "client" },
+          { kr: "proračun", rom: "proh-RAH-choon", en: "budget" }, { kr: "ulaganje", rom: "oo-LAH-gahn-yeh", en: "investment" }]
+      },
+      {
+        tier: "advanced", title: "News & Media", icon: "📰", words: [
+          { kr: "vijesti", rom: "VYEH-stee", en: "news" }, { kr: "novine", rom: "NOH-vee-neh", en: "newspaper" },
+          { kr: "novinar", rom: "noh-VEE-nar", en: "journalist" }, { kr: "članak", rom: "CHLAH-nahk", en: "article" },
+          { kr: "televizija", rom: "teh-leh-VEE-zee-yah", en: "television" }, { kr: "naslov", rom: "NAHS-lohv", en: "headline" }]
+      },
+      {
+        tier: "advanced", title: "Nuanced Emotions", icon: "💭", words: [
+          { kr: "zavist", rom: "ZAH-veest", en: "envy" }, { kr: "ponos", rom: "POH-nohs", en: "pride" },
+          { kr: "krivnja", rom: "KREEV-nyah", en: "guilt" }, { kr: "olakšanje", rom: "oh-LAHK-shahn-yeh", en: "relief" },
+          { kr: "nostalgija", rom: "nohs-TAHL-gee-yah", en: "nostalgia / longing" }, { kr: "nada", rom: "NAH-dah", en: "hope" }]
+      },
+      {
+        tier: "advanced", title: "Travel Advanced", icon: "✈️", words: [
+          { kr: "putovnica", rom: "poo-TOHV-nee-tsah", en: "passport" }, { kr: "viza", rom: "VEE-zah", en: "visa" },
+          { kr: "prtljaga", rom: "PRT-lyah-gah", en: "luggage" }, { kr: "itinerar", rom: "ee-tee-NEH-rar", en: "itinerary" },
+          { kr: "carina", rom: "TSAH-ree-nah", en: "customs" }, { kr: "rezervacija", rom: "reh-zer-VAH-tsee-yah", en: "reservation" }]
+      },
+      {
+        tier: "advanced", title: "Relationships", icon: "💑", words: [
+          { kr: "brak", rom: "brahk", en: "marriage" }, { kr: "povjerenje", rom: "poh-VYEH-ren-yeh", en: "trust" },
+          { kr: "prekid", rom: "PREH-keed", en: "breakup" }, { kr: "dečko", rom: "DECH-koh", en: "boyfriend" },
+          { kr: "zaruke", rom: "ZAH-roo-keh", en: "engagement" }, { kr: "rodbina", rom: "ROHD-bee-nah", en: "in-laws" }]
+      },
+      {
+        tier: "advanced", title: "Debate & Opinions", icon: "🗣️", words: [
+          { kr: "mislim", rom: "MEE-sleem", en: "I think" }, { kr: "slažem se", rom: "SLAH-zhem seh", en: "I agree" },
+          { kr: "ne slažem se", rom: "neh SLAH-zhem seh", en: "I disagree" }, { kr: "po mom mišljenju", rom: "poh mohm MEESH-lyen-yoo", en: "in my opinion" },
+          { kr: "argument", rom: "ar-GOO-ment", en: "argument" }, { kr: "dokaz", rom: "DOH-kahz", en: "evidence" }]
+      },
+      {
+        tier: "advanced", title: "Formal Speech", icon: "✉️", words: [
+          { kr: "poštovani gospodine", rom: "POH-shtoh-vah-nee GOHS-poh-dee-neh", en: "dear sir" }, { kr: "s poštovanjem", rom: "s POH-shtoh-vahn-yem", en: "sincerely" },
+          { kr: "uz dužno poštovanje", rom: "ooz DOOZH-noh POH-shtoh-vahn-yeh", en: "respectfully" }, { kr: "u prilogu", rom: "oo PREE-loh-goo", en: "please find attached" },
+          { kr: "pozdravi", rom: "POHZ-drah-vee", en: "regards" }, { kr: "u vezi s", rom: "oo VEH-zee s", en: "regarding" }]
+      },
+      {
+        tier: "advanced", title: "Culture & History", icon: "🏛️", words: [
+          { kr: "neovisnost", rom: "neh-oh-VEE-snost", en: "independence" }, { kr: "zastava", rom: "ZAH-stah-vah", en: "flag" },
+          { kr: "tradicija", rom: "trah-DEE-tsee-yah", en: "tradition" }, { kr: "praznik", rom: "PRAHZ-neek", en: "holiday" },
+          { kr: "preci", rom: "PREH-tsee", en: "ancestors" }, { kr: "preporod", rom: "preh-POH-rohd", en: "revival" }]
+      },
+      {
+        tier: "advanced", title: "Advanced Verbs", icon: "🔀", words: [
+          { kr: "postići", rom: "POH-stee-chee", en: "to achieve" }, { kr: "razviti", rom: "RAHZ-vee-tee", en: "to develop" },
+          { kr: "poboljšati", rom: "poh-BOHLY-shah-tee", en: "to improve" }, { kr: "uspjeti", rom: "OO-spye-tee", en: "to succeed" },
+          { kr: "propasti", rom: "PROH-pah-stee", en: "to fail" }, { kr: "odlučiti", rom: "ohd-LOO-chee-tee", en: "to decide" }]
+      },
+      {
+        tier: "advanced", title: "Academic Croatian", icon: "🎓", words: [
+          { kr: "istraživanje", rom: "ee-strah-ZHEE-vahn-yeh", en: "research" }, { kr: "sveučilište", rom: "sveh-oo-CHEE-leesh-teh", en: "university" },
+          { kr: "diplomski rad", rom: "DEE-plohm-skee rahd", en: "thesis" }, { kr: "profesor", rom: "proh-FEH-sor", en: "professor" },
+          { kr: "ispit", rom: "EE-speet", en: "exam" }, { kr: "diploma", rom: "dee-PLOH-mah", en: "degree" }]
+      },
+      {
+        tier: "advanced", title: "Professional Terms", icon: "💼", words: [
+          { kr: "životopis", rom: "ZHEE-voh-toh-pees", en: "resume / CV" }, { kr: "razgovor za posao", rom: "RAHZ-goh-vor zah POH-sah-oh", en: "interview" },
+          { kr: "promaknuće", rom: "proh-MAHK-noo-cheh", en: "promotion" }, { kr: "projekt", rom: "PROH-yekt", en: "project" },
+          { kr: "vještina", rom: "VYESH-tee-nah", en: "skill" }, { kr: "odgovornost", rom: "ohd-GOH-vor-nost", en: "responsibility" }]
+      },
+      {
+        tier: "advanced", title: "Adjectives & Descriptions", icon: "🖌️", words: [
+          { kr: "lijep", rom: "lyep", en: "beautiful" }, { kr: "ružan", rom: "ROO-zhahn", en: "ugly" },
+          { kr: "pametan", rom: "PAH-meh-tahn", en: "smart" }, { kr: "smiješan", rom: "SMYEH-shahn", en: "funny" },
+          { kr: "dosadan", rom: "DOH-sah-dahn", en: "boring" }, { kr: "zanimljiv", rom: "zah-neem-LYEEV", en: "interesting" }]
+      },
+
+      /* ---------------- FLUENT ---------------- */
+      {
+        tier: "fluent", title: "Political & Social Terms", icon: "🏛️", words: [
+          { kr: "vlada", rom: "VLAH-dah", en: "government" }, { kr: "izbori", rom: "EEZ-boh-ree", en: "election" },
+          { kr: "demokracija", rom: "deh-moh-KRAH-tsee-yah", en: "democracy" }, { kr: "građanin", rom: "GRAH-jah-neen", en: "citizen" },
+          { kr: "zakon", rom: "ZAH-kohn", en: "law" }, { kr: "društvo", rom: "DROOSH-tvoh", en: "society" }]
+      },
+      {
+        tier: "fluent", title: "Psychology & Nuance", icon: "🧠", words: [
+          { kr: "podsvijest", rom: "POHD-svyest", en: "subconscious" }, { kr: "ponašanje", rom: "poh-NAH-shahn-yeh", en: "behavior" },
+          { kr: "percepcija", rom: "per-TSEP-tsee-yah", en: "perception" }, { kr: "motivacija", rom: "moh-tee-VAH-tsee-yah", en: "motivation" },
+          { kr: "tjeskoba", rom: "tyes-KOH-bah", en: "anxiety" }, { kr: "samopouzdanje", rom: "SAH-moh-poh-oo-zdahn-yeh", en: "self-esteem" }]
+      },
+      {
+        tier: "fluent", title: "Business Negotiation", icon: "🤝", words: [
+          { kr: "prijedlog", rom: "PREE-yed-lohg", en: "proposal" }, { kr: "ponuda", rom: "poh-NOO-dah", en: "offer" },
+          { kr: "dogovor", rom: "DOH-goh-vor", en: "agreement" }, { kr: "kompromis", rom: "kohm-proh-MEES", en: "compromise" },
+          { kr: "uvjeti", rom: "OOV-yeh-tee", en: "terms" }, { kr: "pogodba", rom: "poh-GOHD-bah", en: "deal" }]
+      },
+      {
+        tier: "fluent", title: "Literary Expressions", icon: "📖", words: [
+          { kr: "metafora", rom: "meh-TAH-foh-rah", en: "metaphor" }, { kr: "pjesma", rom: "PYES-mah", en: "poem" },
+          { kr: "roman", rom: "ROH-mahn", en: "novel" }, { kr: "stih", rom: "steeh", en: "verse" },
+          { kr: "pripovjedač", rom: "pree-poh-VYEH-dach", en: "narrator" }, { kr: "poglavlje", rom: "poh-GLAHV-lyeh", en: "chapter" }]
+      },
+      {
+        tier: "fluent", title: "States of Mind", icon: "🌫️", words: [
+          { kr: "zbunjen", rom: "ZBOO-nyen", en: "confused" }, { kr: "preplavljen", rom: "preh-PLAHV-lyen", en: "overwhelmed" },
+          { kr: "miran", rom: "MEE-rahn", en: "at peace" }, { kr: "odlučan", rom: "OHD-loo-chahn", en: "determined" },
+          { kr: "ravnodušan", rom: "rahv-noh-DOO-shahn", en: "indifferent" }, { kr: "znatiželjan", rom: "znah-tee-ZHEH-lyahn", en: "curious" }]
+      },
+      {
+        tier: "fluent", title: "Academic & Formal Writing", icon: "✍️", words: [
+          { kr: "hipoteza", rom: "hee-POH-teh-zah", en: "hypothesis" }, { kr: "zaključak", rom: "ZAH-klyoo-chahk", en: "conclusion" },
+          { kr: "referenca", rom: "reh-feh-REN-tsah", en: "reference" }, { kr: "fusnota", rom: "FOOS-noh-tah", en: "footnote" },
+          { kr: "sažetak", rom: "SAH-zheh-tahk", en: "abstract" }, { kr: "metodologija", rom: "meh-toh-doh-LOH-gee-yah", en: "methodology" }]
+      },
+      {
+        tier: "fluent", title: "Nature Advanced", icon: "🌍", words: [
+          { kr: "ekosustav", rom: "eh-koh-SOO-stahv", en: "ecosystem" }, { kr: "bioraznolikost", rom: "bee-oh-RAHZ-noh-lee-kost", en: "biodiversity" },
+          { kr: "klima", rom: "KLEE-mah", en: "climate" }, { kr: "suša", rom: "SOO-shah", en: "drought" },
+          { kr: "divlje životinje", rom: "DEEV-lyeh zhee-VOH-tee-nyeh", en: "wildlife" }, { kr: "onečišćenje", rom: "oh-neh-CHEESH-cheh-nyeh", en: "pollution" }]
+      },
+      {
+        tier: "fluent", title: "More Verbs", icon: "🔁", words: [
+          { kr: "zamisliti", rom: "zah-MEE-slee-tee", en: "to imagine" }, { kr: "uvjeriti", rom: "oov-YEH-ree-tee", en: "to convince" },
+          { kr: "oklijevati", rom: "oh-klee-YEH-vah-tee", en: "to hesitate" }, { kr: "priznati", rom: "PREEZ-nah-tee", en: "to admit" },
+          { kr: "oprostiti", rom: "oh-PROH-stee-tee", en: "to forgive" }, { kr: "cijeniti", rom: "TSYEH-nee-tee", en: "to appreciate" }]
+      },
+      {
+        tier: "fluent", title: "Emotions Deep Dive", icon: "💔", words: [
+          { kr: "gorko-slatko", rom: "GOHR-koh SLAHT-koh", en: "bittersweet" }, { kr: "slomljena srca", rom: "SLOHM-lyeh-nah SR-tsah", en: "heartbroken" },
+          { kr: "zahvalan", rom: "zah-HVAH-lahn", en: "grateful" }, { kr: "postiđen", rom: "POH-stee-jen", en: "ashamed" },
+          { kr: "čežnja za domom", rom: "CHEZH-nyah zah DOH-mohm", en: "homesick" }, { kr: "zadovoljan", rom: "zah-DOH-voh-lyahn", en: "content" }]
+      },
+      {
+        tier: "fluent", title: "Time & Sequence", icon: "⏳", words: [
+          { kr: "na kraju", rom: "nah KRAH-yoo", en: "eventually" }, { kr: "u međuvremenu", rom: "oo MEH-joo-vreh-meh-noo", en: "meanwhile" },
+          { kr: "unaprijed", rom: "OO-nah-pryed", en: "beforehand" }, { kr: "nakon toga", rom: "NAH-kohn TOH-gah", en: "afterward" },
+          { kr: "istovremeno", rom: "ee-stoh-VREH-meh-noh", en: "simultaneously" }, { kr: "postupno", rom: "POH-stoop-noh", en: "gradually" }]
+      },
+      {
+        tier: "fluent", title: "Abstract Concepts", icon: "💡", words: [
+          { kr: "sloboda", rom: "SLOH-boh-dah", en: "freedom" }, { kr: "pravda", rom: "PRAHV-dah", en: "justice" },
+          { kr: "istina", rom: "EE-stee-nah", en: "truth" }, { kr: "identitet", rom: "ee-den-tee-TET", en: "identity" },
+          { kr: "svrha", rom: "SVR-hah", en: "purpose" }, { kr: "ravnoteža", rom: "rahv-noh-TEH-zhah", en: "balance" }]
+      },
+      {
+        tier: "fluent", title: "Professional Register", icon: "📧", words: [
+          { kr: "poštovana gospođo", rom: "POH-shtoh-vah-nah gohs-POH-joh", en: "Dear Madam" }, { kr: "s poštovanjem", rom: "s POH-shtoh-vahn-yem", en: "yours sincerely" },
+          { kr: "molimo uzeti u obzir", rom: "MOH-lee-moh oo-ZEH-tee oo OHB-zeer", en: "please note" }, { kr: "ljubazno", rom: "LYOO-bahz-noh", en: "kindly" },
+          { kr: "privitak", rom: "pree-VEE-tahk", en: "enclosed / attachment" }, { kr: "u najkraćem roku", rom: "oo NIGH-krah-chem ROH-koo", en: "at your earliest convenience" }]
+      },
+      {
+        tier: "fluent", title: "Mastery Review", icon: "🏆", words: [
+          { kr: "čestitke", rom: "CHEH-steet-keh", en: "congratulations" }, { kr: "vidimo se", rom: "VEE-dee-moh seh", en: "see you soon" },
+          { kr: "bravo", rom: "BRAH-voh", en: "well done" }, { kr: "nastavi tako", rom: "NAH-stah-vee TAH-koh", en: "keep going" },
+          { kr: "majstorstvo", rom: "MY-stor-stvoh", en: "mastery" }, { kr: "tečnost", rom: "TECH-nohst", en: "fluency" }]
+      },
+    ];
+    LEVELS_HR.forEach((l, i) => { l.id = 17000 + i + 1; });
+
+    const TIERS_CS = TIERS;
+    const LEVELS_CS = [
+      /* ---------------- BEGINNER ---------------- */
+      {
+        tier: "beginner", title: "Czech Basics", icon: "🇨🇿", words: [
+          { kr: "ahoj", rom: "AH-hoy", en: "hello" }, { kr: "děkuji", rom: "DYEH-koo-yee", en: "thank you" },
+          { kr: "ano", rom: "AH-noh", en: "yes" }, { kr: "ne", rom: "neh", en: "no" },
+          { kr: "jméno", rom: "YMEH-noh", en: "name" }, { kr: "přítel", rom: "PRZHEE-tel", en: "friend" }]
+      },
+      {
+        tier: "beginner", title: "Greetings & Manners", icon: "🙏", words: [
+          { kr: "na shledanou", rom: "nah SKHLEH-dah-noh", en: "goodbye" }, { kr: "promiňte", rom: "PROH-meen-teh", en: "sorry / excuse me" },
+          { kr: "prosím", rom: "PROH-seem", en: "please" }, { kr: "těší mě", rom: "TYEH-shee myeh", en: "nice to meet you" },
+          { kr: "není zač", rom: "NEH-nee zach", en: "you're welcome" }, { kr: "to je v pořádku", rom: "toh yeh v poh-RZHAHD-koo", en: "it's okay" }]
+      },
+      {
+        tier: "beginner", title: "Numbers 1-6", icon: "🔢", words: [
+          { kr: "jedna", rom: "YED-nah", en: "one" }, { kr: "dva", rom: "dvah", en: "two" },
+          { kr: "tři", rom: "trzhee", en: "three" }, { kr: "čtyři", rom: "CHTIH-rzhee", en: "four" },
+          { kr: "pět", rom: "pyet", en: "five" }, { kr: "šest", rom: "shest", en: "six" }]
+      },
+      {
+        tier: "beginner", title: "Days & Time", icon: "🕒", words: [
+          { kr: "dnes", rom: "dnes", en: "today" }, { kr: "zítra", rom: "ZEE-trah", en: "tomorrow" },
+          { kr: "včera", rom: "VCHEH-rah", en: "yesterday" }, { kr: "teď", rom: "tedy", en: "now" },
+          { kr: "čas", rom: "chahs", en: "time" }, { kr: "ráno", rom: "RAH-noh", en: "morning" }]
+      },
+      {
+        tier: "beginner", title: "Family", icon: "👪", words: [
+          { kr: "rodina", rom: "ROH-dee-nah", en: "family" }, { kr: "máma", rom: "MAH-mah", en: "mom" },
+          { kr: "táta", rom: "TAH-tah", en: "dad" }, { kr: "bratr", rom: "BRAH-tr", en: "brother" },
+          { kr: "sestra", rom: "SEH-strah", en: "sister" }, { kr: "dědeček", rom: "DYEH-deh-chek", en: "grandfather" }]
+      },
+      {
+        tier: "beginner", title: "Food & Drink", icon: "🍚", words: [
+          { kr: "jídlo", rom: "YEED-loh", en: "food" }, { kr: "voda", rom: "VOH-dah", en: "water" },
+          { kr: "káva", rom: "KAH-vah", en: "coffee" }, { kr: "chléb", rom: "khlehb", en: "bread" },
+          { kr: "rýže", rom: "RIH-zheh", en: "rice" }, { kr: "lahodné", rom: "LAH-hohd-neh", en: "delicious" }]
+      },
+      {
+        tier: "beginner", title: "Colors", icon: "🎨", words: [
+          { kr: "červená", rom: "CHER-veh-nah", en: "red" }, { kr: "modrá", rom: "MOH-drah", en: "blue" },
+          { kr: "žlutá", rom: "ZHLOO-tah", en: "yellow" }, { kr: "zelená", rom: "ZEH-leh-nah", en: "green" },
+          { kr: "černá", rom: "CHER-nah", en: "black" }, { kr: "bílá", rom: "BEE-lah", en: "white" }]
+      },
+      {
+        tier: "beginner", title: "Body Parts", icon: "🧍", words: [
+          { kr: "hlava", rom: "HLAH-vah", en: "head" }, { kr: "ruka", rom: "ROO-kah", en: "hand" },
+          { kr: "oko", rom: "OH-koh", en: "eye" }, { kr: "nos", rom: "nohs", en: "nose" },
+          { kr: "ústa", rom: "OO-stah", en: "mouth" }, { kr: "noha", rom: "NOH-hah", en: "leg" }]
+      },
+      {
+        tier: "beginner", title: "Animals", icon: "🐾", words: [
+          { kr: "pes", rom: "pes", en: "dog" }, { kr: "kočka", rom: "KOCH-kah", en: "cat" },
+          { kr: "pták", rom: "ptahk", en: "bird" }, { kr: "ryba", rom: "RIH-bah", en: "fish" },
+          { kr: "medvěd", rom: "MED-vyed", en: "bear" }, { kr: "králík", rom: "KRAH-leek", en: "rabbit" }]
+      },
+      {
+        tier: "beginner", title: "Clothing", icon: "👕", words: [
+          { kr: "oblečení", rom: "oh-BLEH-cheh-nee", en: "clothes" }, { kr: "boty", rom: "BOH-tih", en: "shoes" },
+          { kr: "klobouk", rom: "KLOH-boh-ook", en: "hat" }, { kr: "kalhoty", rom: "KAHL-hoh-tih", en: "pants" },
+          { kr: "sukně", rom: "SOOK-nyeh", en: "skirt" }, { kr: "taška", rom: "TASH-kah", en: "bag" }]
+      },
+      {
+        tier: "beginner", title: "Weather", icon: "⛅", words: [
+          { kr: "počasí", rom: "POH-chah-see", en: "weather" }, { kr: "déšť", rom: "dehshty", en: "rain" },
+          { kr: "sníh", rom: "sneekh", en: "snow" }, { kr: "vítr", rom: "VEE-tr", en: "wind" },
+          { kr: "horko", rom: "HOR-koh", en: "hot" }, { kr: "zima", rom: "ZEE-mah", en: "cold" }]
+      },
+      {
+        tier: "beginner", title: "House & Rooms", icon: "🏠", words: [
+          { kr: "dům", rom: "doom", en: "house" }, { kr: "pokoj", rom: "POH-koy", en: "room" },
+          { kr: "postel", rom: "POH-stel", en: "bed" }, { kr: "koupelna", rom: "KOH-oo-pel-nah", en: "bathroom" },
+          { kr: "kuchyně", rom: "KOO-khee-nyeh", en: "kitchen" }, { kr: "dveře", rom: "DVEH-rzheh", en: "door" }]
+      },
+      {
+        tier: "beginner", title: "School & Objects", icon: "🎒", words: [
+          { kr: "škola", rom: "SHKOH-lah", en: "school" }, { kr: "kniha", rom: "KNEE-hah", en: "book" },
+          { kr: "tužka", rom: "TOOZH-kah", en: "pencil" }, { kr: "batoh", rom: "BAH-toh", en: "backpack" },
+          { kr: "učitel", rom: "OO-chee-tel", en: "teacher" }, { kr: "student", rom: "STOO-dent", en: "student" }]
+      },
+
+      /* ---------------- INTERMEDIATE ---------------- */
+      {
+        tier: "intermediate", title: "Feelings & Emotions", icon: "💗", words: [
+          { kr: "šťastný", rom: "SHTYAST-nee", en: "happy" }, { kr: "smutný", rom: "SMOOT-nee", en: "sad" },
+          { kr: "naštvaný", rom: "NAHSHT-vah-nee", en: "angry" }, { kr: "unavený", rom: "OO-nah-veh-nee", en: "tired" },
+          { kr: "nervózní", rom: "NER-vohz-nee", en: "nervous" }, { kr: "nadšený", rom: "NAHD-sheh-nee", en: "eager / enthusiastic" }]
+      },
+      {
+        tier: "intermediate", title: "Directions & Places", icon: "🧭", words: [
+          { kr: "vlevo", rom: "VLEH-voh", en: "left" }, { kr: "vpravo", rom: "VPRAH-voh", en: "right" },
+          { kr: "blízko", rom: "BLEEZ-koh", en: "near" }, { kr: "daleko", rom: "DAH-leh-koh", en: "far" },
+          { kr: "tady", rom: "TAH-dih", en: "here" }, { kr: "tam", rom: "tahm", en: "there" }]
+      },
+      {
+        tier: "intermediate", title: "Shopping", icon: "🛍️", words: [
+          { kr: "kolik to stojí", rom: "KOH-leek toh STOH-yee", en: "how much is it" }, { kr: "drahé", rom: "DRAH-heh", en: "expensive" },
+          { kr: "levné", rom: "LEV-neh", en: "cheap" }, { kr: "platit", rom: "PLAH-teet", en: "to pay" },
+          { kr: "hotovost", rom: "HOH-toh-vohst", en: "cash" }, { kr: "karta", rom: "KAR-tah", en: "card" }]
+      },
+      {
+        tier: "intermediate", title: "Transportation", icon: "🚌", words: [
+          { kr: "autobus", rom: "OW-toh-boos", en: "bus" }, { kr: "vlak", rom: "vlahk", en: "train" },
+          { kr: "letadlo", rom: "LEH-tahd-loh", en: "plane" }, { kr: "auto", rom: "OW-toh", en: "car" },
+          { kr: "jízdenka", rom: "YEEZ-den-kah", en: "ticket" }, { kr: "nádraží", rom: "NAH-drah-zhee", en: "station" }]
+      },
+      {
+        tier: "intermediate", title: "Hobbies", icon: "🎯", words: [
+          { kr: "čtení", rom: "CHTEH-nee", en: "reading" }, { kr: "hudba", rom: "HOOD-bah", en: "music" },
+          { kr: "film", rom: "feelm", en: "movie" }, { kr: "malování", rom: "MAH-loh-vah-nee", en: "painting" },
+          { kr: "cestování", rom: "TSES-toh-vah-nee", en: "traveling" }, { kr: "tanec", rom: "TAH-nets", en: "dancing" }]
+      },
+      {
+        tier: "intermediate", title: "Work & Jobs", icon: "💼", words: [
+          { kr: "práce", rom: "PRAH-tseh", en: "work" }, { kr: "inženýr", rom: "EEN-zheh-neer", en: "engineer" },
+          { kr: "kancelář", rom: "KAHN-tseh-lahrzh", en: "office" }, { kr: "plat", rom: "plaht", en: "salary" },
+          { kr: "šéf", rom: "shehf", en: "boss" }, { kr: "kolega", rom: "KOH-leh-gah", en: "colleague" }]
+      },
+      {
+        tier: "intermediate", title: "Health & Body", icon: "🏥", words: [
+          { kr: "nemocný", rom: "NEH-mots-nee", en: "sick" }, { kr: "zdravý", rom: "ZDRAH-vee", en: "healthy" },
+          { kr: "nemocnice", rom: "NEH-mots-nee-tseh", en: "hospital" }, { kr: "lék", rom: "lehk", en: "medicine" },
+          { kr: "bolest", rom: "BOH-lest", en: "pain" }, { kr: "zdravotní sestra", rom: "ZDRAH-vot-nee SES-trah", en: "nurse" }]
+      },
+      {
+        tier: "intermediate", title: "Technology", icon: "💻", words: [
+          { kr: "telefon", rom: "TEH-leh-fohn", en: "phone" }, { kr: "počítač", rom: "POH-chee-tach", en: "computer" },
+          { kr: "internet", rom: "EEN-ter-net", en: "internet" }, { kr: "aplikace", rom: "AH-plee-kah-tseh", en: "app" },
+          { kr: "obrazovka", rom: "OH-brah-zohv-kah", en: "screen" }, { kr: "heslo", rom: "HES-loh", en: "password" }]
+      },
+      {
+        tier: "intermediate", title: "Sports", icon: "⚽", words: [
+          { kr: "fotbal", rom: "FOHT-bahl", en: "football" }, { kr: "basketbal", rom: "BAHS-ket-bahl", en: "basketball" },
+          { kr: "plavání", rom: "PLAH-vah-nee", en: "swimming" }, { kr: "běhání", rom: "BYEH-hah-nee", en: "running" },
+          { kr: "tým", rom: "teem", en: "team" }, { kr: "míč", rom: "meech", en: "ball" }]
+      },
+      {
+        tier: "intermediate", title: "Nature", icon: "🌳", words: [
+          { kr: "strom", rom: "strohm", en: "tree" }, { kr: "hora", rom: "HOH-rah", en: "mountain" },
+          { kr: "řeka", rom: "RZHEH-kah", en: "river" }, { kr: "moře", rom: "MOH-rzheh", en: "sea" },
+          { kr: "les", rom: "les", en: "forest" }, { kr: "slunce", rom: "SLOON-tseh", en: "sun" }]
+      },
+      {
+        tier: "intermediate", title: "Numbers & Time", icon: "🔢", words: [
+          { kr: "sedm", rom: "SEH-dm", en: "seven" }, { kr: "osm", rom: "OH-sm", en: "eight" },
+          { kr: "devět", rom: "DEH-vyet", en: "nine" }, { kr: "deset", rom: "DEH-set", en: "ten" },
+          { kr: "hodina", rom: "HOH-dee-nah", en: "hour" }, { kr: "minuta", rom: "MEE-noo-tah", en: "minute" }]
+      },
+      {
+        tier: "intermediate", title: "Making Plans", icon: "🗓️", words: [
+          { kr: "dnes večer", rom: "dnes VEH-cher", en: "tonight" }, { kr: "víkend", rom: "VEE-kend", en: "weekend" },
+          { kr: "schůzka", rom: "SKHOOZ-kah", en: "meeting" }, { kr: "volný čas", rom: "VOL-nee chahs", en: "free time" },
+          { kr: "rozvrh", rom: "ROHZ-vrh", en: "schedule" }, { kr: "pozvat", rom: "POHZ-vaht", en: "to invite" }]
+      },
+      {
+        tier: "intermediate", title: "Restaurant & Ordering", icon: "🍽️", words: [
+          { kr: "jídelní lístek", rom: "YEE-del-nee LEES-tek", en: "menu" }, { kr: "objednávka", rom: "OHB-yed-nahv-kah", en: "order" },
+          { kr: "číšník", rom: "CHEESH-neek", en: "waiter" }, { kr: "účet", rom: "OO-chet", en: "bill" },
+          { kr: "stůl", rom: "stool", en: "table" }, { kr: "hladový", rom: "HLAH-doh-vee", en: "hungry" }]
+      },
+
+      /* ---------------- ADVANCED ---------------- */
+      {
+        tier: "advanced", title: "Connectors & Grammar", icon: "🔗", words: [
+          { kr: "ale", rom: "AH-leh", en: "however" }, { kr: "protože", rom: "PROH-toh-zheh", en: "because" },
+          { kr: "ačkoli", rom: "ACH-koh-lee", en: "although" }, { kr: "proto", rom: "PROH-toh", en: "therefore" },
+          { kr: "navíc", rom: "NAH-veets", en: "moreover" }, { kr: "také", rom: "TAH-keh", en: "in addition" }]
+      },
+      {
+        tier: "advanced", title: "Business Czech", icon: "🏢", words: [
+          { kr: "firma", rom: "FEER-mah", en: "company" }, { kr: "smlouva", rom: "SMLOH-oo-vah", en: "contract" },
+          { kr: "termín", rom: "TER-meen", en: "deadline" }, { kr: "klient", rom: "KLEE-yent", en: "client" },
+          { kr: "rozpočet", rom: "ROHZ-poh-chet", en: "budget" }, { kr: "investice", rom: "EEN-ves-tee-tseh", en: "investment" }]
+      },
+      {
+        tier: "advanced", title: "News & Media", icon: "📰", words: [
+          { kr: "zprávy", rom: "ZPRAH-vih", en: "news" }, { kr: "noviny", rom: "NOH-vee-nih", en: "newspaper" },
+          { kr: "novinář", rom: "NOH-vee-nahrzh", en: "journalist" }, { kr: "článek", rom: "CHLAH-nek", en: "article" },
+          { kr: "televize", rom: "TEH-leh-vee-zeh", en: "television" }, { kr: "titulek", rom: "TEE-too-lek", en: "headline" }]
+      },
+      {
+        tier: "advanced", title: "Nuanced Emotions", icon: "💭", words: [
+          { kr: "závist", rom: "ZAH-veest", en: "envy" }, { kr: "hrdost", rom: "HR-dost", en: "pride" },
+          { kr: "vina", rom: "VEE-nah", en: "guilt" }, { kr: "úleva", rom: "OO-leh-vah", en: "relief" },
+          { kr: "nostalgie", rom: "NOS-tahl-gee-eh", en: "nostalgia / longing" }, { kr: "naděje", rom: "NAH-dyeh-yeh", en: "hope" }]
+      },
+      {
+        tier: "advanced", title: "Travel Advanced", icon: "✈️", words: [
+          { kr: "pas", rom: "pahs", en: "passport" }, { kr: "vízum", rom: "VEE-zoom", en: "visa" },
+          { kr: "zavazadlo", rom: "ZAH-vah-zahd-loh", en: "luggage" }, { kr: "itinerář", rom: "EE-tee-neh-rahrzh", en: "itinerary" },
+          { kr: "celnice", rom: "TSEL-nee-tseh", en: "customs" }, { kr: "rezervace", rom: "REH-zer-vah-tseh", en: "reservation" }]
+      },
+      {
+        tier: "advanced", title: "Relationships", icon: "💑", words: [
+          { kr: "manželství", rom: "MAHN-zhel-stvee", en: "marriage" }, { kr: "důvěra", rom: "DOO-vyeh-rah", en: "trust" },
+          { kr: "rozchod", rom: "ROHZ-khod", en: "breakup" }, { kr: "přítel", rom: "PRZHEE-tel", en: "boyfriend" },
+          { kr: "zásnuby", rom: "ZAHS-noo-bih", en: "engagement" }, { kr: "tchán a tchýně", rom: "tkhahn ah TKHEE-nyeh", en: "in-laws" }]
+      },
+      {
+        tier: "advanced", title: "Debate & Opinions", icon: "🗣️", words: [
+          { kr: "myslím", rom: "MIS-leem", en: "I think" }, { kr: "souhlasím", rom: "SOH-oo-hlah-seem", en: "I agree" },
+          { kr: "nesouhlasím", rom: "NEH-soh-oo-hlah-seem", en: "I disagree" }, { kr: "podle mého názoru", rom: "POHD-leh MEH-hoh NAH-zoh-roo", en: "in my opinion" },
+          { kr: "argument", rom: "AR-goo-ment", en: "argument" }, { kr: "důkaz", rom: "DOO-kahz", en: "evidence" }]
+      },
+      {
+        tier: "advanced", title: "Formal Speech", icon: "✉️", words: [
+          { kr: "vážený pane", rom: "VAH-zheh-nee PAH-neh", en: "dear sir" }, { kr: "s pozdravem", rom: "s POHZ-drah-vem", en: "sincerely" },
+          { kr: "s úctou", rom: "s OOTS-toh-oo", en: "respectfully" }, { kr: "v příloze", rom: "v PRZHEE-loh-zeh", en: "please find attached" },
+          { kr: "pozdravy", rom: "POHZ-drah-vih", en: "regards" }, { kr: "ohledně", rom: "OH-hled-nyeh", en: "regarding" }]
+      },
+      {
+        tier: "advanced", title: "Culture & History", icon: "🏛️", words: [
+          { kr: "nezávislost", rom: "NEH-zah-vees-lohst", en: "independence" }, { kr: "vlajka", rom: "VLIGH-kah", en: "flag" },
+          { kr: "tradice", rom: "TRAH-dee-tseh", en: "tradition" }, { kr: "svátek", rom: "SVAH-tek", en: "holiday" },
+          { kr: "předkové", rom: "PRZHED-koh-veh", en: "ancestors" }, { kr: "obrození", rom: "OH-broh-zeh-nee", en: "revival" }]
+      },
+      {
+        tier: "advanced", title: "Advanced Verbs", icon: "🔀", words: [
+          { kr: "dosáhnout", rom: "DOH-sah-hnoht", en: "to achieve" }, { kr: "rozvíjet", rom: "ROHZ-vee-yet", en: "to develop" },
+          { kr: "zlepšit", rom: "ZLEP-sheet", en: "to improve" }, { kr: "uspět", rom: "OO-spyet", en: "to succeed" },
+          { kr: "selhat", rom: "SEL-haht", en: "to fail" }, { kr: "rozhodnout", rom: "ROHZ-hohd-noht", en: "to decide" }]
+      },
+      {
+        tier: "advanced", title: "Academic Czech", icon: "🎓", words: [
+          { kr: "výzkum", rom: "VEE-zkoom", en: "research" }, { kr: "univerzita", rom: "OO-nee-ver-zee-tah", en: "university" },
+          { kr: "diplomová práce", rom: "DEE-ploh-moh-vah PRAH-tseh", en: "thesis" }, { kr: "profesor", rom: "PROH-feh-sor", en: "professor" },
+          { kr: "zkouška", rom: "ZKOH-oosh-kah", en: "exam" }, { kr: "titul", rom: "TEE-tool", en: "degree" }]
+      },
+      {
+        tier: "advanced", title: "Professional Terms", icon: "💼", words: [
+          { kr: "životopis", rom: "ZHEE-voh-toh-pees", en: "resume / CV" }, { kr: "pohovor", rom: "POH-hoh-vor", en: "interview" },
+          { kr: "povýšení", rom: "POH-vee-sheh-nee", en: "promotion" }, { kr: "projekt", rom: "PROH-yekt", en: "project" },
+          { kr: "dovednost", rom: "DOH-ved-nost", en: "skill" }, { kr: "odpovědnost", rom: "OHD-poh-vyed-nost", en: "responsibility" }]
+      },
+      {
+        tier: "advanced", title: "Adjectives & Descriptions", icon: "🖌️", words: [
+          { kr: "krásný", rom: "KRAH-snee", en: "beautiful" }, { kr: "ošklivý", rom: "OSH-klee-vee", en: "ugly" },
+          { kr: "chytrý", rom: "KHIT-ree", en: "smart" }, { kr: "vtipný", rom: "VTIP-nee", en: "funny" },
+          { kr: "nudný", rom: "NOOD-nee", en: "boring" }, { kr: "zajímavý", rom: "ZAH-yee-mah-vee", en: "interesting" }]
+      },
+
+      /* ---------------- FLUENT ---------------- */
+      {
+        tier: "fluent", title: "Political & Social Terms", icon: "🏛️", words: [
+          { kr: "vláda", rom: "VLAH-dah", en: "government" }, { kr: "volby", rom: "VOL-bih", en: "election" },
+          { kr: "demokracie", rom: "DEH-moh-krah-tsee-eh", en: "democracy" }, { kr: "občan", rom: "OHB-chahn", en: "citizen" },
+          { kr: "zákon", rom: "ZAH-kohn", en: "law" }, { kr: "společnost", rom: "SPOH-lech-nohst", en: "society" }]
+      },
+      {
+        tier: "fluent", title: "Psychology & Nuance", icon: "🧠", words: [
+          { kr: "podvědomí", rom: "POHD-vyeh-doh-mee", en: "subconscious" }, { kr: "chování", rom: "KHOH-vah-nee", en: "behavior" },
+          { kr: "vnímání", rom: "VNEE-mah-nee", en: "perception" }, { kr: "motivace", rom: "MOH-tee-vah-tseh", en: "motivation" },
+          { kr: "úzkost", rom: "OOZ-kohst", en: "anxiety" }, { kr: "sebevědomí", rom: "SEH-beh-vyeh-doh-mee", en: "self-esteem" }]
+      },
+      {
+        tier: "fluent", title: "Business Negotiation", icon: "🤝", words: [
+          { kr: "návrh", rom: "NAH-vrh", en: "proposal" }, { kr: "nabídka", rom: "NAH-beed-kah", en: "offer" },
+          { kr: "dohoda", rom: "DOH-hoh-dah", en: "agreement" }, { kr: "kompromis", rom: "KOHM-proh-mees", en: "compromise" },
+          { kr: "podmínky", rom: "POHD-meen-kih", en: "terms" }, { kr: "obchod", rom: "OHB-khod", en: "deal" }]
+      },
+      {
+        tier: "fluent", title: "Literary Expressions", icon: "📖", words: [
+          { kr: "metafora", rom: "MEH-tah-foh-rah", en: "metaphor" }, { kr: "báseň", rom: "BAH-sen", en: "poem" },
+          { kr: "román", rom: "ROH-mahn", en: "novel" }, { kr: "verš", rom: "versh", en: "verse" },
+          { kr: "vypravěč", rom: "VIH-prah-vyech", en: "narrator" }, { kr: "kapitola", rom: "KAH-pee-toh-lah", en: "chapter" }]
+      },
+      {
+        tier: "fluent", title: "States of Mind", icon: "🌫️", words: [
+          { kr: "zmatený", rom: "ZMAH-teh-nee", en: "confused" }, { kr: "zahlcený", rom: "ZAH-hl-tseh-nee", en: "overwhelmed" },
+          { kr: "klidný", rom: "KLEED-nee", en: "at peace" }, { kr: "odhodlaný", rom: "OHD-hohd-lah-nee", en: "determined" },
+          { kr: "lhostejný", rom: "LHOS-tey-nee", en: "indifferent" }, { kr: "zvědavý", rom: "ZVYEH-dah-vee", en: "curious" }]
+      },
+      {
+        tier: "fluent", title: "Academic & Formal Writing", icon: "✍️", words: [
+          { kr: "hypotéza", rom: "HEE-poh-teh-zah", en: "hypothesis" }, { kr: "závěr", rom: "ZAH-vyer", en: "conclusion" },
+          { kr: "reference", rom: "REH-feh-ren-tseh", en: "reference" }, { kr: "poznámka pod čarou", rom: "POHZ-nahm-kah pod CHAH-roh-oo", en: "footnote" },
+          { kr: "shrnutí", rom: "SHR-noo-tee", en: "abstract" }, { kr: "metodologie", rom: "MEH-toh-doh-loh-gee-eh", en: "methodology" }]
+      },
+      {
+        tier: "fluent", title: "Nature Advanced", icon: "🌍", words: [
+          { kr: "ekosystém", rom: "EH-koh-sees-tehm", en: "ecosystem" }, { kr: "biodiverzita", rom: "BEE-oh-dee-ver-zee-tah", en: "biodiversity" },
+          { kr: "klima", rom: "KLEE-mah", en: "climate" }, { kr: "sucho", rom: "SOO-khoh", en: "drought" },
+          { kr: "divoká zvířata", rom: "DEE-voh-kah ZVEE-rzhah-tah", en: "wildlife" }, { kr: "znečištění", rom: "ZNEH-chish-tyeh-nee", en: "pollution" }]
+      },
+      {
+        tier: "fluent", title: "More Verbs", icon: "🔁", words: [
+          { kr: "představit si", rom: "PRZHED-stah-veet see", en: "to imagine" }, { kr: "přesvědčit", rom: "PRZHES-vyed-cheet", en: "to convince" },
+          { kr: "váhat", rom: "VAH-haht", en: "to hesitate" }, { kr: "přiznat", rom: "PRZHEEZ-naht", en: "to admit" },
+          { kr: "odpustit", rom: "OHD-poo-steet", en: "to forgive" }, { kr: "ocenit", rom: "OH-tseh-neet", en: "to appreciate" }]
+      },
+      {
+        tier: "fluent", title: "Emotions Deep Dive", icon: "💔", words: [
+          { kr: "hořkosladký", rom: "HOR-zhkoh-slaht-kee", en: "bittersweet" }, { kr: "zlomené srdce", rom: "ZLOH-meh-neh SRD-tseh", en: "heartbroken" },
+          { kr: "vděčný", rom: "VDYECH-nee", en: "grateful" }, { kr: "zahanbený", rom: "ZAH-hahn-beh-nee", en: "ashamed" },
+          { kr: "stesk po domově", rom: "stesk poh DOH-moh-vyeh", en: "homesick" }, { kr: "spokojený", rom: "SPOH-koh-yeh-nee", en: "content" }]
+      },
+      {
+        tier: "fluent", title: "Time & Sequence", icon: "⏳", words: [
+          { kr: "nakonec", rom: "NAH-koh-nets", en: "eventually" }, { kr: "mezitím", rom: "MEH-zee-teem", en: "meanwhile" },
+          { kr: "předem", rom: "PRZHEH-dem", en: "beforehand" }, { kr: "poté", rom: "POH-teh", en: "afterward" },
+          { kr: "současně", rom: "SOH-oo-chahs-nyeh", en: "simultaneously" }, { kr: "postupně", rom: "POH-stoop-nyeh", en: "gradually" }]
+      },
+      {
+        tier: "fluent", title: "Abstract Concepts", icon: "💡", words: [
+          { kr: "svoboda", rom: "SVOH-boh-dah", en: "freedom" }, { kr: "spravedlnost", rom: "SPRAH-ved-l-nost", en: "justice" },
+          { kr: "pravda", rom: "PRAHV-dah", en: "truth" }, { kr: "identita", rom: "EE-den-tee-tah", en: "identity" },
+          { kr: "účel", rom: "OO-chel", en: "purpose" }, { kr: "rovnováha", rom: "ROHV-noh-vah-hah", en: "balance" }]
+      },
+      {
+        tier: "fluent", title: "Professional Register", icon: "📧", words: [
+          { kr: "vážená paní", rom: "VAH-zheh-nah PAH-nee", en: "Dear Madam" }, { kr: "s úctou", rom: "s OOTS-toh-oo", en: "yours sincerely" },
+          { kr: "vezměte prosím na vědomí", rom: "VEZ-myeh-teh PROH-seem nah VYEH-doh-mee", en: "please note" }, { kr: "laskavě", rom: "LAHS-kah-vyeh", en: "kindly" },
+          { kr: "příloha", rom: "PRZHEE-loh-hah", en: "enclosed / attachment" }, { kr: "co nejdříve", rom: "tsoh NAY-drzhee-veh", en: "at your earliest convenience" }]
+      },
+      {
+        tier: "fluent", title: "Mastery Review", icon: "🏆", words: [
+          { kr: "gratuluji", rom: "GRAH-too-loo-yee", en: "congratulations" }, { kr: "brzy na shledanou", rom: "BR-zih nah SKHLEH-dah-noh", en: "see you soon" },
+          { kr: "výborně", rom: "VEE-bor-nyeh", en: "well done" }, { kr: "pokračuj", rom: "POH-krah-choo-y", en: "keep going" },
+          { kr: "mistrovství", rom: "MEE-strohv-stvee", en: "mastery" }, { kr: "plynulost", rom: "PLEE-noo-lohst", en: "fluency" }]
+      },
+    ];
+    LEVELS_CS.forEach((l, i) => { l.id = 18000 + i + 1; });
+
+    const TIERS_DA = TIERS;
+    const LEVELS_DA = [
+      /* ---------------- BEGINNER ---------------- */
+      {
+        tier: "beginner", title: "Danish Basics", icon: "🇩🇰", words: [
+          { kr: "hej", rom: "high", en: "hello" }, { kr: "tak", rom: "tahk", en: "thank you" },
+          { kr: "ja", rom: "yah", en: "yes" }, { kr: "nej", rom: "nigh", en: "no" },
+          { kr: "navn", rom: "nown", en: "name" }, { kr: "ven", rom: "ven", en: "friend" }]
+      },
+      {
+        tier: "beginner", title: "Greetings & Manners", icon: "🙏", words: [
+          { kr: "farvel", rom: "fahr-VEL", en: "goodbye" }, { kr: "undskyld", rom: "OON-skewl", en: "sorry / excuse me" },
+          { kr: "vær venlig", rom: "vair VEN-lee", en: "please" }, { kr: "rart at møde dig", rom: "rahrt at MUR-the dye", en: "nice to meet you" },
+          { kr: "selv tak", rom: "sel tahk", en: "you're welcome" }, { kr: "det er okay", rom: "deh air oh-KAY", en: "it's okay" }]
+      },
+      {
+        tier: "beginner", title: "Numbers 1-6", icon: "🔢", words: [
+          { kr: "en", rom: "ehn", en: "one" }, { kr: "to", rom: "toh", en: "two" },
+          { kr: "tre", rom: "treh", en: "three" }, { kr: "fire", rom: "FEE-uh", en: "four" },
+          { kr: "fem", rom: "fem", en: "five" }, { kr: "seks", rom: "seks", en: "six" }]
+      },
+      {
+        tier: "beginner", title: "Days & Time", icon: "🕒", words: [
+          { kr: "i dag", rom: "ee dai", en: "today" }, { kr: "i morgen", rom: "ee MOH-un", en: "tomorrow" },
+          { kr: "i går", rom: "ee gaw", en: "yesterday" }, { kr: "nu", rom: "noo", en: "now" },
+          { kr: "tid", rom: "teeth", en: "time" }, { kr: "morgen", rom: "MOH-un", en: "morning" }]
+      },
+      {
+        tier: "beginner", title: "Family", icon: "👪", words: [
+          { kr: "familie", rom: "fah-MEE-lyeh", en: "family" }, { kr: "mor", rom: "mor", en: "mom" },
+          { kr: "far", rom: "far", en: "dad" }, { kr: "bror", rom: "bror", en: "brother" },
+          { kr: "søster", rom: "SUR-stuh", en: "sister" }, { kr: "bedstefar", rom: "BEH-steh-far", en: "grandfather" }]
+      },
+      {
+        tier: "beginner", title: "Food & Drink", icon: "🍚", words: [
+          { kr: "mad", rom: "mahth", en: "food" }, { kr: "vand", rom: "van", en: "water" },
+          { kr: "kaffe", rom: "KAH-feh", en: "coffee" }, { kr: "brød", rom: "brurth", en: "bread" },
+          { kr: "ris", rom: "rees", en: "rice" }, { kr: "lækkert", rom: "LAY-kurt", en: "delicious" }]
+      },
+      {
+        tier: "beginner", title: "Colors", icon: "🎨", words: [
+          { kr: "rød", rom: "rurth", en: "red" }, { kr: "blå", rom: "blaw", en: "blue" },
+          { kr: "gul", rom: "gool", en: "yellow" }, { kr: "grøn", rom: "grurn", en: "green" },
+          { kr: "sort", rom: "sort", en: "black" }, { kr: "hvid", rom: "veeth", en: "white" }]
+      },
+      {
+        tier: "beginner", title: "Body Parts", icon: "🧍", words: [
+          { kr: "hoved", rom: "HOH-veth", en: "head" }, { kr: "hånd", rom: "hawn", en: "hand" },
+          { kr: "øje", rom: "OY-eh", en: "eye" }, { kr: "næse", rom: "NAY-seh", en: "nose" },
+          { kr: "mund", rom: "moon", en: "mouth" }, { kr: "ben", rom: "bayn", en: "leg" }]
+      },
+      {
+        tier: "beginner", title: "Animals", icon: "🐾", words: [
+          { kr: "hund", rom: "hoon", en: "dog" }, { kr: "kat", rom: "kaht", en: "cat" },
+          { kr: "fugl", rom: "fool", en: "bird" }, { kr: "fisk", rom: "fisk", en: "fish" },
+          { kr: "bjørn", rom: "byurn", en: "bear" }, { kr: "kanin", rom: "kah-NEEN", en: "rabbit" }]
+      },
+      {
+        tier: "beginner", title: "Clothing", icon: "👕", words: [
+          { kr: "tøj", rom: "toy", en: "clothes" }, { kr: "sko", rom: "skoh", en: "shoes" },
+          { kr: "hat", rom: "haht", en: "hat" }, { kr: "bukser", rom: "BOOK-suh", en: "pants" },
+          { kr: "nederdel", rom: "NAY-thur-dayl", en: "skirt" }, { kr: "taske", rom: "TAH-skeh", en: "bag" }]
+      },
+      {
+        tier: "beginner", title: "Weather", icon: "⛅", words: [
+          { kr: "vejr", rom: "vire", en: "weather" }, { kr: "regn", rom: "rine", en: "rain" },
+          { kr: "sne", rom: "snay", en: "snow" }, { kr: "vind", rom: "vin", en: "wind" },
+          { kr: "varmt", rom: "vahrmt", en: "hot" }, { kr: "koldt", rom: "kolt", en: "cold" }]
+      },
+      {
+        tier: "beginner", title: "House & Rooms", icon: "🏠", words: [
+          { kr: "hus", rom: "hoos", en: "house" }, { kr: "værelse", rom: "VAY-ul-seh", en: "room" },
+          { kr: "seng", rom: "seng", en: "bed" }, { kr: "badeværelse", rom: "BAH-theh-vay-ul-seh", en: "bathroom" },
+          { kr: "køkken", rom: "KUR-ken", en: "kitchen" }, { kr: "dør", rom: "dur", en: "door" }]
+      },
+      {
+        tier: "beginner", title: "School & Objects", icon: "🎒", words: [
+          { kr: "skole", rom: "SKOH-leh", en: "school" }, { kr: "bog", rom: "boh", en: "book" },
+          { kr: "blyant", rom: "BLEW-ant", en: "pencil" }, { kr: "rygsæk", rom: "REW-sayk", en: "backpack" },
+          { kr: "lærer", rom: "LAY-uh", en: "teacher" }, { kr: "studerende", rom: "stoo-DEH-reh-neh", en: "student" }]
+      },
+
+      /* ---------------- INTERMEDIATE ---------------- */
+      {
+        tier: "intermediate", title: "Feelings & Emotions", icon: "💗", words: [
+          { kr: "glad", rom: "glath", en: "happy" }, { kr: "ked af det", rom: "kayth ah day", en: "sad" },
+          { kr: "vred", rom: "vrayth", en: "angry" }, { kr: "træt", rom: "trat", en: "tired" },
+          { kr: "nervøs", rom: "nur-VURS", en: "nervous" }, { kr: "ivrig", rom: "EE-vree", en: "eager / enthusiastic" }]
+      },
+      {
+        tier: "intermediate", title: "Directions & Places", icon: "🧭", words: [
+          { kr: "venstre", rom: "VEN-struh", en: "left" }, { kr: "højre", rom: "HOY-ruh", en: "right" },
+          { kr: "tæt på", rom: "tat paw", en: "near" }, { kr: "langt væk", rom: "lawngt vayk", en: "far" },
+          { kr: "her", rom: "hair", en: "here" }, { kr: "der", rom: "dair", en: "there" }]
+      },
+      {
+        tier: "intermediate", title: "Shopping", icon: "🛍️", words: [
+          { kr: "hvor meget koster det", rom: "vor MY-eth KOS-tuh day", en: "how much is it" }, { kr: "dyrt", rom: "doort", en: "expensive" },
+          { kr: "billigt", rom: "BEE-leet", en: "cheap" }, { kr: "betale", rom: "beh-TAH-leh", en: "to pay" },
+          { kr: "kontanter", rom: "kon-TAN-tuh", en: "cash" }, { kr: "kort", rom: "kort", en: "card" }]
+      },
+      {
+        tier: "intermediate", title: "Transportation", icon: "🚌", words: [
+          { kr: "bus", rom: "boos", en: "bus" }, { kr: "tog", rom: "toh", en: "train" },
+          { kr: "fly", rom: "flew", en: "plane" }, { kr: "bil", rom: "beel", en: "car" },
+          { kr: "billet", rom: "bee-LET", en: "ticket" }, { kr: "station", rom: "stah-SHOHN", en: "station" }]
+      },
+      {
+        tier: "intermediate", title: "Hobbies", icon: "🎯", words: [
+          { kr: "læsning", rom: "LAYS-ning", en: "reading" }, { kr: "musik", rom: "moo-SEEK", en: "music" },
+          { kr: "film", rom: "film", en: "movie" }, { kr: "maleri", rom: "mah-luh-REE", en: "painting" },
+          { kr: "rejse", rom: "RYE-seh", en: "traveling" }, { kr: "dans", rom: "dans", en: "dancing" }]
+      },
+      {
+        tier: "intermediate", title: "Work & Jobs", icon: "💼", words: [
+          { kr: "arbejde", rom: "AHR-buy-th", en: "work" }, { kr: "ingeniør", rom: "in-shen-YUR", en: "engineer" },
+          { kr: "kontor", rom: "kon-TOR", en: "office" }, { kr: "løn", rom: "lurn", en: "salary" },
+          { kr: "chef", rom: "shef", en: "boss" }, { kr: "kollega", rom: "koh-LAY-gah", en: "colleague" }]
+      },
+      {
+        tier: "intermediate", title: "Health & Body", icon: "🏥", words: [
+          { kr: "syg", rom: "sew", en: "sick" }, { kr: "sund", rom: "soon", en: "healthy" },
+          { kr: "hospital", rom: "hos-pee-TAL", en: "hospital" }, { kr: "medicin", rom: "meh-dee-SEEN", en: "medicine" },
+          { kr: "smerte", rom: "SMAIR-teh", en: "pain" }, { kr: "sygeplejerske", rom: "SEW-eh-plye-uh-skeh", en: "nurse" }]
+      },
+      {
+        tier: "intermediate", title: "Technology", icon: "💻", words: [
+          { kr: "telefon", rom: "teh-leh-FOHN", en: "phone" }, { kr: "computer", rom: "kom-PYOO-tuh", en: "computer" },
+          { kr: "internet", rom: "IN-tuh-net", en: "internet" }, { kr: "app", rom: "ahp", en: "app" },
+          { kr: "skærm", rom: "skairm", en: "screen" }, { kr: "kodeord", rom: "KOH-theh-or", en: "password" }]
+      },
+      {
+        tier: "intermediate", title: "Sports", icon: "⚽", words: [
+          { kr: "fodbold", rom: "FOHTH-bol", en: "football" }, { kr: "basketball", rom: "BAS-ket-bawl", en: "basketball" },
+          { kr: "svømning", rom: "SVURM-ning", en: "swimming" }, { kr: "løb", rom: "lurb", en: "running" },
+          { kr: "hold", rom: "hol", en: "team" }, { kr: "bold", rom: "bol", en: "ball" }]
+      },
+      {
+        tier: "intermediate", title: "Nature", icon: "🌳", words: [
+          { kr: "træ", rom: "trai", en: "tree" }, { kr: "bjerg", rom: "byair", en: "mountain" },
+          { kr: "flod", rom: "floth", en: "river" }, { kr: "hav", rom: "how", en: "sea" },
+          { kr: "skov", rom: "skoh", en: "forest" }, { kr: "sol", rom: "sol", en: "sun" }]
+      },
+      {
+        tier: "intermediate", title: "Numbers & Time", icon: "🔢", words: [
+          { kr: "syv", rom: "sew", en: "seven" }, { kr: "otte", rom: "OH-teh", en: "eight" },
+          { kr: "ni", rom: "nee", en: "nine" }, { kr: "ti", rom: "tee", en: "ten" },
+          { kr: "time", rom: "TEE-meh", en: "hour" }, { kr: "minut", rom: "mee-NOOT", en: "minute" }]
+      },
+      {
+        tier: "intermediate", title: "Making Plans", icon: "🗓️", words: [
+          { kr: "i aften", rom: "ee AHF-ten", en: "tonight" }, { kr: "weekend", rom: "WEE-kend", en: "weekend" },
+          { kr: "møde", rom: "MUR-theh", en: "meeting" }, { kr: "fritid", rom: "FREE-teeth", en: "free time" },
+          { kr: "tidsplan", rom: "TEETHS-plan", en: "schedule" }, { kr: "invitere", rom: "in-vee-TEH-reh", en: "to invite" }]
+      },
+      {
+        tier: "intermediate", title: "Restaurant & Ordering", icon: "🍽️", words: [
+          { kr: "menu", rom: "meh-NEW", en: "menu" }, { kr: "bestilling", rom: "beh-STEE-ling", en: "order" },
+          { kr: "tjener", rom: "TYEH-nuh", en: "waiter" }, { kr: "regning", rom: "RINE-ing", en: "bill" },
+          { kr: "bord", rom: "bor", en: "table" }, { kr: "sulten", rom: "SOOL-ten", en: "hungry" }]
+      },
+
+      /* ---------------- ADVANCED ---------------- */
+      {
+        tier: "advanced", title: "Connectors & Grammar", icon: "🔗", words: [
+          { kr: "men", rom: "men", en: "however" }, { kr: "fordi", rom: "for-DEE", en: "because" },
+          { kr: "selvom", rom: "sel-VOM", en: "although" }, { kr: "derfor", rom: "DAIR-for", en: "therefore" },
+          { kr: "desuden", rom: "dess-OO-then", en: "moreover" }, { kr: "også", rom: "OH-suh", en: "in addition" }]
+      },
+      {
+        tier: "advanced", title: "Business Danish", icon: "🏢", words: [
+          { kr: "virksomhed", rom: "VEERK-som-heth", en: "company" }, { kr: "kontrakt", rom: "kon-TRAKT", en: "contract" },
+          { kr: "frist", rom: "frist", en: "deadline" }, { kr: "klient", rom: "klee-ENT", en: "client" },
+          { kr: "budget", rom: "bewd-SHET", en: "budget" }, { kr: "investering", rom: "in-ves-TAY-ring", en: "investment" }]
+      },
+      {
+        tier: "advanced", title: "News & Media", icon: "📰", words: [
+          { kr: "nyheder", rom: "NEW-hay-thuh", en: "news" }, { kr: "avis", rom: "ah-VEES", en: "newspaper" },
+          { kr: "journalist", rom: "shor-nah-LIST", en: "journalist" }, { kr: "artikel", rom: "ar-TEE-kel", en: "article" },
+          { kr: "fjernsyn", rom: "FYAIRN-sewn", en: "television" }, { kr: "overskrift", rom: "OH-uh-skreeft", en: "headline" }]
+      },
+      {
+        tier: "advanced", title: "Nuanced Emotions", icon: "💭", words: [
+          { kr: "misundelse", rom: "mis-OON-el-seh", en: "envy" }, { kr: "stolthed", rom: "STOLT-hayth", en: "pride" },
+          { kr: "skyld", rom: "skewl", en: "guilt" }, { kr: "lettelse", rom: "LET-el-seh", en: "relief" },
+          { kr: "nostalgi", rom: "nos-tal-GEE", en: "nostalgia / longing" }, { kr: "håb", rom: "hawb", en: "hope" }]
+      },
+      {
+        tier: "advanced", title: "Travel Advanced", icon: "✈️", words: [
+          { kr: "pas", rom: "pas", en: "passport" }, { kr: "visum", rom: "VEE-som", en: "visa" },
+          { kr: "bagage", rom: "bah-GAH-sheh", en: "luggage" }, { kr: "rejseplan", rom: "RYE-seh-plan", en: "itinerary" },
+          { kr: "told", rom: "tol", en: "customs" }, { kr: "reservation", rom: "reh-sur-vah-SHOHN", en: "reservation" }]
+      },
+      {
+        tier: "advanced", title: "Relationships", icon: "💑", words: [
+          { kr: "ægteskab", rom: "AYG-teh-skab", en: "marriage" }, { kr: "tillid", rom: "TIL-leeth", en: "trust" },
+          { kr: "brud", rom: "brooth", en: "breakup" }, { kr: "kæreste", rom: "KAY-uh-steh", en: "boyfriend" },
+          { kr: "forlovelse", rom: "for-LOH-vel-seh", en: "engagement" }, { kr: "svigerforældre", rom: "SVEE-uh-for-el-druh", en: "in-laws" }]
+      },
+      {
+        tier: "advanced", title: "Debate & Opinions", icon: "🗣️", words: [
+          { kr: "jeg synes", rom: "high SEW-nes", en: "I think" }, { kr: "jeg er enig", rom: "high air EH-nee", en: "I agree" },
+          { kr: "jeg er ikke enig", rom: "high air EE-keh EH-nee", en: "I disagree" }, { kr: "efter min mening", rom: "EF-tuh meen MAY-ning", en: "in my opinion" },
+          { kr: "argument", rom: "ar-goo-MENT", en: "argument" }, { kr: "bevis", rom: "beh-VEES", en: "evidence" }]
+      },
+      {
+        tier: "advanced", title: "Formal Speech", icon: "✉️", words: [
+          { kr: "kære hr.", rom: "KAY-uh hair", en: "dear sir" }, { kr: "med venlig hilsen", rom: "meth VEN-lee HIL-sen", en: "sincerely" },
+          { kr: "med respekt", rom: "meth reh-SPEKT", en: "respectfully" }, { kr: "vedhæftet", rom: "veth-HEF-tet", en: "please find attached" },
+          { kr: "hilsener", rom: "HIL-seh-nuh", en: "regards" }, { kr: "angående", rom: "AN-gaw-eh-neh", en: "regarding" }]
+      },
+      {
+        tier: "advanced", title: "Culture & History", icon: "🏛️", words: [
+          { kr: "uafhængighed", rom: "OO-ahf-heng-ee-heth", en: "independence" }, { kr: "flag", rom: "flay", en: "flag" },
+          { kr: "tradition", rom: "trah-dee-SHOHN", en: "tradition" }, { kr: "helligdag", rom: "HEL-ee-day", en: "holiday" },
+          { kr: "forfædre", rom: "for-FED-ruh", en: "ancestors" }, { kr: "genoplivning", rom: "GEN-op-liv-ning", en: "revival" }]
+      },
+      {
+        tier: "advanced", title: "Advanced Verbs", icon: "🔀", words: [
+          { kr: "opnå", rom: "OP-naw", en: "to achieve" }, { kr: "udvikle", rom: "OOTH-veek-leh", en: "to develop" },
+          { kr: "forbedre", rom: "for-BETH-ruh", en: "to improve" }, { kr: "lykkes", rom: "LOO-kes", en: "to succeed" },
+          { kr: "mislykkes", rom: "mis-LOO-kes", en: "to fail" }, { kr: "beslutte", rom: "beh-SLOO-teh", en: "to decide" }]
+      },
+      {
+        tier: "advanced", title: "Academic Danish", icon: "🎓", words: [
+          { kr: "forskning", rom: "FORSK-ning", en: "research" }, { kr: "universitet", rom: "oo-ni-vur-see-TAYT", en: "university" },
+          { kr: "speciale", rom: "speh-see-AH-leh", en: "thesis" }, { kr: "professor", rom: "pro-FES-sor", en: "professor" },
+          { kr: "eksamen", rom: "eks-AH-men", en: "exam" }, { kr: "grad", rom: "grath", en: "degree" }]
+      },
+      {
+        tier: "advanced", title: "Professional Terms", icon: "💼", words: [
+          { kr: "cv", rom: "say-VAY", en: "resume / CV" }, { kr: "jobsamtale", rom: "YOB-sam-tah-leh", en: "interview" },
+          { kr: "forfremmelse", rom: "for-FREM-el-seh", en: "promotion" }, { kr: "projekt", rom: "proh-YEKT", en: "project" },
+          { kr: "færdighed", rom: "FAIR-dee-heth", en: "skill" }, { kr: "ansvar", rom: "AN-svar", en: "responsibility" }]
+      },
+      {
+        tier: "advanced", title: "Adjectives & Descriptions", icon: "🖌️", words: [
+          { kr: "smuk", rom: "smook", en: "beautiful" }, { kr: "grim", rom: "greem", en: "ugly" },
+          { kr: "klog", rom: "kloh", en: "smart" }, { kr: "sjov", rom: "show", en: "funny" },
+          { kr: "kedelig", rom: "KAY-thuh-lee", en: "boring" }, { kr: "interessant", rom: "in-truh-SANT", en: "interesting" }]
+      },
+
+      /* ---------------- FLUENT ---------------- */
+      {
+        tier: "fluent", title: "Political & Social Terms", icon: "🏛️", words: [
+          { kr: "regering", rom: "reh-GAY-ring", en: "government" }, { kr: "valg", rom: "vahl", en: "election" },
+          { kr: "demokrati", rom: "deh-moh-krah-TEE", en: "democracy" }, { kr: "borger", rom: "BOR-uh", en: "citizen" },
+          { kr: "lov", rom: "low", en: "law" }, { kr: "samfund", rom: "SAM-foon", en: "society" }]
+      },
+      {
+        tier: "fluent", title: "Psychology & Nuance", icon: "🧠", words: [
+          { kr: "underbevidsthed", rom: "OON-uh-beh-vist-heth", en: "subconscious" }, { kr: "adfærd", rom: "ATH-fair", en: "behavior" },
+          { kr: "opfattelse", rom: "OP-fah-tel-seh", en: "perception" }, { kr: "motivation", rom: "moh-tee-vah-SHOHN", en: "motivation" },
+          { kr: "angst", rom: "angst", en: "anxiety" }, { kr: "selvværd", rom: "SEL-vair", en: "self-esteem" }]
+      },
+      {
+        tier: "fluent", title: "Business Negotiation", icon: "🤝", words: [
+          { kr: "forslag", rom: "for-SLAY", en: "proposal" }, { kr: "tilbud", rom: "TIL-booth", en: "offer" },
+          { kr: "aftale", rom: "OW-tah-leh", en: "agreement" }, { kr: "kompromis", rom: "kom-proh-MEES", en: "compromise" },
+          { kr: "betingelser", rom: "beh-TING-el-suh", en: "terms" }, { kr: "handel", rom: "HAN-el", en: "deal" }]
+      },
+      {
+        tier: "fluent", title: "Literary Expressions", icon: "📖", words: [
+          { kr: "metafor", rom: "meh-tah-FOR", en: "metaphor" }, { kr: "digt", rom: "dikt", en: "poem" },
+          { kr: "roman", rom: "roh-MAHN", en: "novel" }, { kr: "vers", rom: "vairs", en: "verse" },
+          { kr: "fortæller", rom: "for-TEL-uh", en: "narrator" }, { kr: "kapitel", rom: "kah-pee-TEL", en: "chapter" }]
+      },
+      {
+        tier: "fluent", title: "States of Mind", icon: "🌫️", words: [
+          { kr: "forvirret", rom: "for-VEER-et", en: "confused" }, { kr: "overvældet", rom: "OH-uh-vel-et", en: "overwhelmed" },
+          { kr: "fredfyldt", rom: "FRETH-fewlt", en: "at peace" }, { kr: "fast besluttet", rom: "fast beh-SLOO-tet", en: "determined" },
+          { kr: "ligeglad", rom: "LEE-eh-glath", en: "indifferent" }, { kr: "nysgerrig", rom: "NEWS-gair-ee", en: "curious" }]
+      },
+      {
+        tier: "fluent", title: "Academic & Formal Writing", icon: "✍️", words: [
+          { kr: "hypotese", rom: "hew-poh-TAY-seh", en: "hypothesis" }, { kr: "konklusion", rom: "kon-kloo-see-OHN", en: "conclusion" },
+          { kr: "reference", rom: "reh-fuh-RAHNG-seh", en: "reference" }, { kr: "fodnote", rom: "FOTH-noh-teh", en: "footnote" },
+          { kr: "resumé", rom: "reh-sew-MAY", en: "abstract" }, { kr: "metode", rom: "meh-TOH-theh", en: "methodology" }]
+      },
+      {
+        tier: "fluent", title: "Nature Advanced", icon: "🌍", words: [
+          { kr: "økosystem", rom: "UR-koh-sew-stem", en: "ecosystem" }, { kr: "biodiversitet", rom: "bee-oh-dee-vur-see-TAYT", en: "biodiversity" },
+          { kr: "klima", rom: "KLEE-mah", en: "climate" }, { kr: "tørke", rom: "TUR-keh", en: "drought" },
+          { kr: "dyreliv", rom: "DEW-uh-liv", en: "wildlife" }, { kr: "forurening", rom: "for-OO-reh-ning", en: "pollution" }]
+      },
+      {
+        tier: "fluent", title: "More Verbs", icon: "🔁", words: [
+          { kr: "forestille sig", rom: "FOR-eh-stil-eh sigh", en: "to imagine" }, { kr: "overbevise", rom: "OH-uh-beh-vee-seh", en: "to convince" },
+          { kr: "tøve", rom: "TUR-veh", en: "to hesitate" }, { kr: "indrømme", rom: "IN-drur-meh", en: "to admit" },
+          { kr: "tilgive", rom: "TIL-gee-veh", en: "to forgive" }, { kr: "værdsætte", rom: "VAIR-set-eh", en: "to appreciate" }]
+      },
+      {
+        tier: "fluent", title: "Emotions Deep Dive", icon: "💔", words: [
+          { kr: "bittersød", rom: "BIT-uh-surth", en: "bittersweet" }, { kr: "knust hjerte", rom: "knoost YAIR-teh", en: "heartbroken" },
+          { kr: "taknemmelig", rom: "tahk-NEM-eh-lee", en: "grateful" }, { kr: "flov", rom: "flow", en: "ashamed" },
+          { kr: "hjemve", rom: "YEM-veh", en: "homesick" }, { kr: "tilfreds", rom: "til-FRESS", en: "content" }]
+      },
+      {
+        tier: "fluent", title: "Time & Sequence", icon: "⏳", words: [
+          { kr: "til sidst", rom: "til seest", en: "eventually" }, { kr: "i mellemtiden", rom: "ee MEL-em-tee-then", en: "meanwhile" },
+          { kr: "på forhånd", rom: "paw for-HAWN", en: "beforehand" }, { kr: "bagefter", rom: "BAY-ef-tuh", en: "afterward" },
+          { kr: "samtidig", rom: "sam-TEE-dee", en: "simultaneously" }, { kr: "gradvist", rom: "GRATH-vist", en: "gradually" }]
+      },
+      {
+        tier: "fluent", title: "Abstract Concepts", icon: "💡", words: [
+          { kr: "frihed", rom: "FREE-heth", en: "freedom" }, { kr: "retfærdighed", rom: "RET-fair-dee-heth", en: "justice" },
+          { kr: "sandhed", rom: "SAN-heth", en: "truth" }, { kr: "identitet", rom: "ee-den-tee-TAYT", en: "identity" },
+          { kr: "formål", rom: "FOR-mawl", en: "purpose" }, { kr: "balance", rom: "bah-LANG-seh", en: "balance" }]
+      },
+      {
+        tier: "fluent", title: "Professional Register", icon: "📧", words: [
+          { kr: "kære fru", rom: "KAY-uh froo", en: "Dear Madam" }, { kr: "med venlig hilsen", rom: "meth VEN-lee HIL-sen", en: "yours sincerely" },
+          { kr: "bemærk venligst", rom: "beh-MAIRK VEN-list", en: "please note" }, { kr: "venligst", rom: "VEN-list", en: "kindly" },
+          { kr: "vedhæftet fil", rom: "veth-HEF-tet feel", en: "enclosed / attachment" }, { kr: "hurtigst muligt", rom: "HOOR-teest MOO-leet", en: "at your earliest convenience" }]
+      },
+      {
+        tier: "fluent", title: "Mastery Review", icon: "🏆", words: [
+          { kr: "tillykke", rom: "til-LOO-keh", en: "congratulations" }, { kr: "vi ses snart", rom: "vee says snart", en: "see you soon" },
+          { kr: "flot klaret", rom: "flot KLAH-ret", en: "well done" }, { kr: "bliv ved", rom: "blee veth", en: "keep going" },
+          { kr: "mesterskab", rom: "MES-tuh-skab", en: "mastery" }, { kr: "flydende", rom: "FLEW-theh-neh", en: "fluency" }]
+      },
+    ];
+    LEVELS_DA.forEach((l, i) => { l.id = 19000 + i + 1; });
+
+    const TIERS_NL = TIERS;
+    const LEVELS_NL = [
+      /* ---------------- BEGINNER ---------------- */
+      {
+        tier: "beginner", title: "Dutch Basics", icon: "🇳🇱", words: [
+          { kr: "hallo", rom: "HAH-loh", en: "hello" }, { kr: "dank je", rom: "dahnk yuh", en: "thank you" },
+          { kr: "ja", rom: "yah", en: "yes" }, { kr: "nee", rom: "nay", en: "no" },
+          { kr: "naam", rom: "nahm", en: "name" }, { kr: "vriend", rom: "vreent", en: "friend" }]
+      },
+      {
+        tier: "beginner", title: "Greetings & Manners", icon: "🙏", words: [
+          { kr: "tot ziens", rom: "tot zeens", en: "goodbye" }, { kr: "sorry", rom: "SO-ree", en: "sorry / excuse me" },
+          { kr: "alsjeblieft", rom: "ahls-yuh-BLEEFT", en: "please" }, { kr: "aangenaam", rom: "AHN-guh-nahm", en: "nice to meet you" },
+          { kr: "graag gedaan", rom: "khrahkh khuh-DAHN", en: "you're welcome" }, { kr: "het is oké", rom: "huht is oh-KAY", en: "it's okay" }]
+      },
+      {
+        tier: "beginner", title: "Numbers 1-6", icon: "🔢", words: [
+          { kr: "een", rom: "ayn", en: "one" }, { kr: "twee", rom: "tvay", en: "two" },
+          { kr: "drie", rom: "dree", en: "three" }, { kr: "vier", rom: "veer", en: "four" },
+          { kr: "vijf", rom: "fife", en: "five" }, { kr: "zes", rom: "zes", en: "six" }]
+      },
+      {
+        tier: "beginner", title: "Days & Time", icon: "🕒", words: [
+          { kr: "vandaag", rom: "vahn-DAHKH", en: "today" }, { kr: "morgen", rom: "MOR-khun", en: "tomorrow" },
+          { kr: "gisteren", rom: "KHIS-tuh-run", en: "yesterday" }, { kr: "nu", rom: "new", en: "now" },
+          { kr: "tijd", rom: "tite", en: "time" }, { kr: "ochtend", rom: "OKH-tent", en: "morning" }]
+      },
+      {
+        tier: "beginner", title: "Family", icon: "👪", words: [
+          { kr: "familie", rom: "fah-MEE-lee", en: "family" }, { kr: "mama", rom: "mah-MAH", en: "mom" },
+          { kr: "papa", rom: "pah-PAH", en: "dad" }, { kr: "broer", rom: "broor", en: "brother" },
+          { kr: "zus", rom: "zuss", en: "sister" }, { kr: "opa", rom: "OH-pah", en: "grandfather" }]
+      },
+      {
+        tier: "beginner", title: "Food & Drink", icon: "🍚", words: [
+          { kr: "eten", rom: "AY-tun", en: "food" }, { kr: "water", rom: "VAH-tur", en: "water" },
+          { kr: "koffie", rom: "KOF-ee", en: "coffee" }, { kr: "brood", rom: "broht", en: "bread" },
+          { kr: "rijst", rom: "ryst", en: "rice" }, { kr: "lekker", rom: "LEK-ur", en: "delicious" }]
+      },
+      {
+        tier: "beginner", title: "Colors", icon: "🎨", words: [
+          { kr: "rood", rom: "roht", en: "red" }, { kr: "blauw", rom: "blow", en: "blue" },
+          { kr: "geel", rom: "khayl", en: "yellow" }, { kr: "groen", rom: "khroon", en: "green" },
+          { kr: "zwart", rom: "zvart", en: "black" }, { kr: "wit", rom: "vit", en: "white" }]
+      },
+      {
+        tier: "beginner", title: "Body Parts", icon: "🧍", words: [
+          { kr: "hoofd", rom: "hohft", en: "head" }, { kr: "hand", rom: "hahnt", en: "hand" },
+          { kr: "oog", rom: "ohkh", en: "eye" }, { kr: "neus", rom: "nurs", en: "nose" },
+          { kr: "mond", rom: "mont", en: "mouth" }, { kr: "been", rom: "bayn", en: "leg" }]
+      },
+      {
+        tier: "beginner", title: "Animals", icon: "🐾", words: [
+          { kr: "hond", rom: "hont", en: "dog" }, { kr: "kat", rom: "kaht", en: "cat" },
+          { kr: "vogel", rom: "FOH-khul", en: "bird" }, { kr: "vis", rom: "viss", en: "fish" },
+          { kr: "beer", rom: "bayr", en: "bear" }, { kr: "konijn", rom: "koh-NINE", en: "rabbit" }]
+      },
+      {
+        tier: "beginner", title: "Clothing", icon: "👕", words: [
+          { kr: "kleren", rom: "KLAY-run", en: "clothes" }, { kr: "schoenen", rom: "SKHOO-nun", en: "shoes" },
+          { kr: "hoed", rom: "hoot", en: "hat" }, { kr: "broek", rom: "brook", en: "pants" },
+          { kr: "rok", rom: "rok", en: "skirt" }, { kr: "tas", rom: "tahs", en: "bag" }]
+      },
+      {
+        tier: "beginner", title: "Weather", icon: "⛅", words: [
+          { kr: "weer", rom: "vayr", en: "weather" }, { kr: "regen", rom: "RAY-khun", en: "rain" },
+          { kr: "sneeuw", rom: "snay-oo", en: "snow" }, { kr: "wind", rom: "vint", en: "wind" },
+          { kr: "warm", rom: "vahrm", en: "hot" }, { kr: "koud", rom: "kowt", en: "cold" }]
+      },
+      {
+        tier: "beginner", title: "House & Rooms", icon: "🏠", words: [
+          { kr: "huis", rom: "house", en: "house" }, { kr: "kamer", rom: "KAH-mur", en: "room" },
+          { kr: "bed", rom: "bet", en: "bed" }, { kr: "badkamer", rom: "BAHT-kah-mur", en: "bathroom" },
+          { kr: "keuken", rom: "KUR-kun", en: "kitchen" }, { kr: "deur", rom: "dur", en: "door" }]
+      },
+      {
+        tier: "beginner", title: "School & Objects", icon: "🎒", words: [
+          { kr: "school", rom: "skhohl", en: "school" }, { kr: "boek", rom: "book", en: "book" },
+          { kr: "potlood", rom: "POT-loht", en: "pencil" }, { kr: "rugzak", rom: "RUKH-zahk", en: "backpack" },
+          { kr: "leraar", rom: "LAY-rahr", en: "teacher" }, { kr: "student", rom: "stoo-DENT", en: "student" }]
+      },
+
+      /* ---------------- INTERMEDIATE ---------------- */
+      {
+        tier: "intermediate", title: "Feelings & Emotions", icon: "💗", words: [
+          { kr: "blij", rom: "bly", en: "happy" }, { kr: "verdrietig", rom: "vur-DREE-tikh", en: "sad" },
+          { kr: "boos", rom: "bohs", en: "angry" }, { kr: "moe", rom: "moo", en: "tired" },
+          { kr: "nerveus", rom: "nur-VURS", en: "nervous" }, { kr: "enthousiast", rom: "en-too-see-AHST", en: "eager / enthusiastic" }]
+      },
+      {
+        tier: "intermediate", title: "Directions & Places", icon: "🧭", words: [
+          { kr: "links", rom: "links", en: "left" }, { kr: "rechts", rom: "rekhts", en: "right" },
+          { kr: "dichtbij", rom: "DIKHT-by", en: "near" }, { kr: "ver", rom: "vayr", en: "far" },
+          { kr: "hier", rom: "heer", en: "here" }, { kr: "daar", rom: "dahr", en: "there" }]
+      },
+      {
+        tier: "intermediate", title: "Shopping", icon: "🛍️", words: [
+          { kr: "hoeveel kost het", rom: "HOO-vayl kost huht", en: "how much is it" }, { kr: "duur", rom: "dewr", en: "expensive" },
+          { kr: "goedkoop", rom: "khoot-KOHP", en: "cheap" }, { kr: "betalen", rom: "buh-TAH-lun", en: "to pay" },
+          { kr: "contant", rom: "kon-TAHNT", en: "cash" }, { kr: "kaart", rom: "kahrt", en: "card" }]
+      },
+      {
+        tier: "intermediate", title: "Transportation", icon: "🚌", words: [
+          { kr: "bus", rom: "booss", en: "bus" }, { kr: "trein", rom: "trine", en: "train" },
+          { kr: "vliegtuig", rom: "VLEEKH-toykh", en: "plane" }, { kr: "auto", rom: "OW-toh", en: "car" },
+          { kr: "kaartje", rom: "KAHRT-yuh", en: "ticket" }, { kr: "station", rom: "stah-SHOHN", en: "station" }]
+      },
+      {
+        tier: "intermediate", title: "Hobbies", icon: "🎯", words: [
+          { kr: "lezen", rom: "LAY-zun", en: "reading" }, { kr: "muziek", rom: "mew-ZEEK", en: "music" },
+          { kr: "film", rom: "film", en: "movie" }, { kr: "schilderen", rom: "SKHIL-duh-run", en: "painting" },
+          { kr: "reizen", rom: "RYE-zun", en: "traveling" }, { kr: "dansen", rom: "DAHN-sun", en: "dancing" }]
+      },
+      {
+        tier: "intermediate", title: "Work & Jobs", icon: "💼", words: [
+          { kr: "werk", rom: "vairk", en: "work" }, { kr: "ingenieur", rom: "in-shen-YUR", en: "engineer" },
+          { kr: "kantoor", rom: "kahn-TOHR", en: "office" }, { kr: "salaris", rom: "sah-LAH-riss", en: "salary" },
+          { kr: "baas", rom: "bahs", en: "boss" }, { kr: "collega", rom: "koh-LAY-khah", en: "colleague" }]
+      },
+      {
+        tier: "intermediate", title: "Health & Body", icon: "🏥", words: [
+          { kr: "ziek", rom: "zeek", en: "sick" }, { kr: "gezond", rom: "khuh-ZONT", en: "healthy" },
+          { kr: "ziekenhuis", rom: "ZEE-kun-house", en: "hospital" }, { kr: "medicijn", rom: "may-dee-SINE", en: "medicine" },
+          { kr: "pijn", rom: "pine", en: "pain" }, { kr: "verpleegster", rom: "vur-PLAYKH-stur", en: "nurse" }]
+      },
+      {
+        tier: "intermediate", title: "Technology", icon: "💻", words: [
+          { kr: "telefoon", rom: "teh-luh-FOHN", en: "phone" }, { kr: "computer", rom: "kom-PYOO-tur", en: "computer" },
+          { kr: "internet", rom: "IN-tur-net", en: "internet" }, { kr: "app", rom: "ahp", en: "app" },
+          { kr: "scherm", rom: "skhairm", en: "screen" }, { kr: "wachtwoord", rom: "VAHKHT-vohrt", en: "password" }]
+      },
+      {
+        tier: "intermediate", title: "Sports", icon: "⚽", words: [
+          { kr: "voetbal", rom: "VOOT-bahl", en: "football" }, { kr: "basketbal", rom: "BAHS-ket-bahl", en: "basketball" },
+          { kr: "zwemmen", rom: "ZVEM-un", en: "swimming" }, { kr: "rennen", rom: "REN-un", en: "running" },
+          { kr: "team", rom: "teem", en: "team" }, { kr: "bal", rom: "bahl", en: "ball" }]
+      },
+      {
+        tier: "intermediate", title: "Nature", icon: "🌳", words: [
+          { kr: "boom", rom: "bohm", en: "tree" }, { kr: "berg", rom: "bairkh", en: "mountain" },
+          { kr: "rivier", rom: "ree-VEER", en: "river" }, { kr: "zee", rom: "zay", en: "sea" },
+          { kr: "bos", rom: "boss", en: "forest" }, { kr: "zon", rom: "zon", en: "sun" }]
+      },
+      {
+        tier: "intermediate", title: "Numbers & Time", icon: "🔢", words: [
+          { kr: "zeven", rom: "ZAY-vun", en: "seven" }, { kr: "acht", rom: "ahkht", en: "eight" },
+          { kr: "negen", rom: "NAY-khun", en: "nine" }, { kr: "tien", rom: "teen", en: "ten" },
+          { kr: "uur", rom: "ewr", en: "hour" }, { kr: "minuut", rom: "mee-NEWT", en: "minute" }]
+      },
+      {
+        tier: "intermediate", title: "Making Plans", icon: "🗓️", words: [
+          { kr: "vanavond", rom: "vahn-AH-vont", en: "tonight" }, { kr: "weekend", rom: "VEE-kent", en: "weekend" },
+          { kr: "vergadering", rom: "vur-KHAH-duh-ring", en: "meeting" }, { kr: "vrije tijd", rom: "VRY-uh tite", en: "free time" },
+          { kr: "schema", rom: "SKHAY-mah", en: "schedule" }, { kr: "uitnodigen", rom: "OWT-noh-duh-khun", en: "to invite" }]
+      },
+      {
+        tier: "intermediate", title: "Restaurant & Ordering", icon: "🍽️", words: [
+          { kr: "menu", rom: "muh-NEW", en: "menu" }, { kr: "bestelling", rom: "buh-STEL-ing", en: "order" },
+          { kr: "ober", rom: "OH-bur", en: "waiter" }, { kr: "rekening", rom: "RAY-kuh-ning", en: "bill" },
+          { kr: "tafel", rom: "TAH-ful", en: "table" }, { kr: "hongerig", rom: "HON-guh-rikh", en: "hungry" }]
+      },
+
+      /* ---------------- ADVANCED ---------------- */
+      {
+        tier: "advanced", title: "Connectors & Grammar", icon: "🔗", words: [
+          { kr: "echter", rom: "EKH-tur", en: "however" }, { kr: "omdat", rom: "OM-daht", en: "because" },
+          { kr: "hoewel", rom: "hoo-VEL", en: "although" }, { kr: "daarom", rom: "DAHR-om", en: "therefore" },
+          { kr: "bovendien", rom: "boh-vun-DEEN", en: "moreover" }, { kr: "ook", rom: "ohk", en: "in addition" }]
+      },
+      {
+        tier: "advanced", title: "Business Dutch", icon: "🏢", words: [
+          { kr: "bedrijf", rom: "buh-DRIFE", en: "company" }, { kr: "contract", rom: "kon-TRAHKT", en: "contract" },
+          { kr: "deadline", rom: "DED-line", en: "deadline" }, { kr: "klant", rom: "klahnt", en: "client" },
+          { kr: "budget", rom: "bew-JET", en: "budget" }, { kr: "investering", rom: "in-ves-TAY-ring", en: "investment" }]
+      },
+      {
+        tier: "advanced", title: "News & Media", icon: "📰", words: [
+          { kr: "nieuws", rom: "nee-ooss", en: "news" }, { kr: "krant", rom: "krahnt", en: "newspaper" },
+          { kr: "journalist", rom: "zhur-nah-LIST", en: "journalist" }, { kr: "artikel", rom: "ar-TEE-kul", en: "article" },
+          { kr: "televisie", rom: "tay-luh-VEE-zee", en: "television" }, { kr: "kop", rom: "kop", en: "headline" }]
+      },
+      {
+        tier: "advanced", title: "Nuanced Emotions", icon: "💭", words: [
+          { kr: "afgunst", rom: "AHF-khunst", en: "envy" }, { kr: "trots", rom: "trots", en: "pride" },
+          { kr: "schuldgevoel", rom: "SKHULT-khuh-vool", en: "guilt" }, { kr: "opluchting", rom: "OP-lukh-ting", en: "relief" },
+          { kr: "nostalgie", rom: "nos-tal-GEE", en: "nostalgia / longing" }, { kr: "hoop", rom: "hohp", en: "hope" }]
+      },
+      {
+        tier: "advanced", title: "Travel Advanced", icon: "✈️", words: [
+          { kr: "paspoort", rom: "PAHS-pohrt", en: "passport" }, { kr: "visum", rom: "VEE-zum", en: "visa" },
+          { kr: "bagage", rom: "bah-KHAH-zhuh", en: "luggage" }, { kr: "reisplan", rom: "RICE-plahn", en: "itinerary" },
+          { kr: "douane", rom: "doo-AH-nuh", en: "customs" }, { kr: "reservering", rom: "ray-zur-VAY-ring", en: "reservation" }]
+      },
+      {
+        tier: "advanced", title: "Relationships", icon: "💑", words: [
+          { kr: "huwelijk", rom: "HEW-vuh-lick", en: "marriage" }, { kr: "vertrouwen", rom: "vur-TROW-un", en: "trust" },
+          { kr: "breuk", rom: "brurk", en: "breakup" }, { kr: "vriendje", rom: "VREENT-yuh", en: "boyfriend" },
+          { kr: "verloving", rom: "vur-LOH-ving", en: "engagement" }, { kr: "schoonouders", rom: "SKHOHN-ow-durs", en: "in-laws" }]
+      },
+      {
+        tier: "advanced", title: "Debate & Opinions", icon: "🗣️", words: [
+          { kr: "ik denk", rom: "ik denk", en: "I think" }, { kr: "ik ben het eens", rom: "ik ben huht ayns", en: "I agree" },
+          { kr: "ik ben het niet eens", rom: "ik ben huht neet ayns", en: "I disagree" }, { kr: "naar mijn mening", rom: "nahr mine MAY-ning", en: "in my opinion" },
+          { kr: "argument", rom: "ar-khew-MENT", en: "argument" }, { kr: "bewijs", rom: "buh-VICE", en: "evidence" }]
+      },
+      {
+        tier: "advanced", title: "Formal Speech", icon: "✉️", words: [
+          { kr: "geachte heer", rom: "khuh-AHKH-tuh hayr", en: "dear sir" }, { kr: "met vriendelijke groet", rom: "met VREEN-duh-luh-kuh khroot", en: "sincerely" },
+          { kr: "met respect", rom: "met ruh-SPEKT", en: "respectfully" }, { kr: "bijgevoegd", rom: "BY-khuh-voogt", en: "please find attached" },
+          { kr: "groeten", rom: "KHROO-tun", en: "regards" }, { kr: "betreffende", rom: "buh-TREF-un-duh", en: "regarding" }]
+      },
+      {
+        tier: "advanced", title: "Culture & History", icon: "🏛️", words: [
+          { kr: "onafhankelijkheid", rom: "on-ahf-HAHN-kuh-lik-hite", en: "independence" }, { kr: "vlag", rom: "vlahkh", en: "flag" },
+          { kr: "traditie", rom: "trah-DEE-tsee", en: "tradition" }, { kr: "feestdag", rom: "FAYST-dahkh", en: "holiday" },
+          { kr: "voorouders", rom: "VOHR-ow-durs", en: "ancestors" }, { kr: "heropleving", rom: "HAYR-op-lay-ving", en: "revival" }]
+      },
+      {
+        tier: "advanced", title: "Advanced Verbs", icon: "🔀", words: [
+          { kr: "bereiken", rom: "buh-RYE-kun", en: "to achieve" }, { kr: "ontwikkelen", rom: "ont-VIK-uh-lun", en: "to develop" },
+          { kr: "verbeteren", rom: "vur-buh-TAY-run", en: "to improve" }, { kr: "slagen", rom: "SLAH-khun", en: "to succeed" },
+          { kr: "falen", rom: "FAH-lun", en: "to fail" }, { kr: "beslissen", rom: "buh-SLIS-un", en: "to decide" }]
+      },
+      {
+        tier: "advanced", title: "Academic Dutch", icon: "🎓", words: [
+          { kr: "onderzoek", rom: "ON-dur-zook", en: "research" }, { kr: "universiteit", rom: "ew-nee-vur-see-TITE", en: "university" },
+          { kr: "scriptie", rom: "SKRIP-see", en: "thesis" }, { kr: "professor", rom: "pruh-FES-sor", en: "professor" },
+          { kr: "examen", rom: "ek-SAH-mun", en: "exam" }, { kr: "diploma", rom: "dee-PLOH-mah", en: "degree" }]
+      },
+      {
+        tier: "advanced", title: "Professional Terms", icon: "💼", words: [
+          { kr: "cv", rom: "say-VAY", en: "resume / CV" }, { kr: "sollicitatiegesprek", rom: "soh-lee-see-TAH-see-khuh-sprek", en: "interview" },
+          { kr: "promotie", rom: "proh-MOH-see", en: "promotion" }, { kr: "project", rom: "proh-YEKT", en: "project" },
+          { kr: "vaardigheid", rom: "VAHR-dikh-hite", en: "skill" }, { kr: "verantwoordelijkheid", rom: "vur-ahnt-VOHR-duh-lick-hite", en: "responsibility" }]
+      },
+      {
+        tier: "advanced", title: "Adjectives & Descriptions", icon: "🖌️", words: [
+          { kr: "mooi", rom: "moy", en: "beautiful" }, { kr: "lelijk", rom: "LAY-lick", en: "ugly" },
+          { kr: "slim", rom: "slim", en: "smart" }, { kr: "grappig", rom: "KHRAH-pikh", en: "funny" },
+          { kr: "saai", rom: "sigh", en: "boring" }, { kr: "interessant", rom: "in-tur-uh-SAHNT", en: "interesting" }]
+      },
+
+      /* ---------------- FLUENT ---------------- */
+      {
+        tier: "fluent", title: "Political & Social Terms", icon: "🏛️", words: [
+          { kr: "regering", rom: "ruh-KHAY-ring", en: "government" }, { kr: "verkiezing", rom: "vur-KEE-zing", en: "election" },
+          { kr: "democratie", rom: "day-moh-krah-TSEE", en: "democracy" }, { kr: "burger", rom: "BUR-khur", en: "citizen" },
+          { kr: "wet", rom: "vet", en: "law" }, { kr: "samenleving", rom: "SAH-mun-lay-ving", en: "society" }]
+      },
+      {
+        tier: "fluent", title: "Psychology & Nuance", icon: "🧠", words: [
+          { kr: "onderbewustzijn", rom: "ON-dur-buh-vust-zine", en: "subconscious" }, { kr: "gedrag", rom: "khuh-DRAHKH", en: "behavior" },
+          { kr: "perceptie", rom: "pur-SEP-see", en: "perception" }, { kr: "motivatie", rom: "moh-tee-VAH-see", en: "motivation" },
+          { kr: "angst", rom: "ahngst", en: "anxiety" }, { kr: "zelfvertrouwen", rom: "ZELF-vur-trow-un", en: "self-esteem" }]
+      },
+      {
+        tier: "fluent", title: "Business Negotiation", icon: "🤝", words: [
+          { kr: "voorstel", rom: "VOHR-stel", en: "proposal" }, { kr: "aanbod", rom: "AHN-bot", en: "offer" },
+          { kr: "overeenkomst", rom: "OH-vur-ayn-komst", en: "agreement" }, { kr: "compromis", rom: "kom-proh-MEE", en: "compromise" },
+          { kr: "voorwaarden", rom: "VOHR-vahr-dun", en: "terms" }, { kr: "deal", rom: "deel", en: "deal" }]
+      },
+      {
+        tier: "fluent", title: "Literary Expressions", icon: "📖", words: [
+          { kr: "metafoor", rom: "meh-tah-FOHR", en: "metaphor" }, { kr: "gedicht", rom: "khuh-DIKHT", en: "poem" },
+          { kr: "roman", rom: "roh-MAHN", en: "novel" }, { kr: "vers", rom: "vairs", en: "verse" },
+          { kr: "verteller", rom: "vur-TEL-ur", en: "narrator" }, { kr: "hoofdstuk", rom: "HOHFT-stuk", en: "chapter" }]
+      },
+      {
+        tier: "fluent", title: "States of Mind", icon: "🌫️", words: [
+          { kr: "verward", rom: "vur-VART", en: "confused" }, { kr: "overweldigd", rom: "OH-vur-vel-dikht", en: "overwhelmed" },
+          { kr: "vredig", rom: "VRAY-dikh", en: "at peace" }, { kr: "vastberaden", rom: "VAHST-buh-rah-dun", en: "determined" },
+          { kr: "onverschillig", rom: "ON-vur-skhil-ikh", en: "indifferent" }, { kr: "nieuwsgierig", rom: "NEE-oos-khee-rikh", en: "curious" }]
+      },
+      {
+        tier: "fluent", title: "Academic & Formal Writing", icon: "✍️", words: [
+          { kr: "hypothese", rom: "hee-poh-TAY-zuh", en: "hypothesis" }, { kr: "conclusie", rom: "kon-KLEW-zee", en: "conclusion" },
+          { kr: "referentie", rom: "ray-fuh-REN-tsee", en: "reference" }, { kr: "voetnoot", rom: "VOOT-noht", en: "footnote" },
+          { kr: "samenvatting", rom: "SAH-mun-vaht-ing", en: "abstract" }, { kr: "methodologie", rom: "may-toh-doh-loh-KHEE", en: "methodology" }]
+      },
+      {
+        tier: "fluent", title: "Nature Advanced", icon: "🌍", words: [
+          { kr: "ecosysteem", rom: "AY-koh-sis-taym", en: "ecosystem" }, { kr: "biodiversiteit", rom: "bee-oh-dee-vur-see-TITE", en: "biodiversity" },
+          { kr: "klimaat", rom: "klee-MAHT", en: "climate" }, { kr: "droogte", rom: "DROHKH-tuh", en: "drought" },
+          { kr: "wilde dieren", rom: "VIL-duh DEE-run", en: "wildlife" }, { kr: "vervuiling", rom: "vur-VOY-ling", en: "pollution" }]
+      },
+      {
+        tier: "fluent", title: "More Verbs", icon: "🔁", words: [
+          { kr: "zich voorstellen", rom: "zikh VOHR-stel-un", en: "to imagine" }, { kr: "overtuigen", rom: "OH-vur-toy-khun", en: "to convince" },
+          { kr: "aarzelen", rom: "AHR-zuh-lun", en: "to hesitate" }, { kr: "toegeven", rom: "TOO-khay-vun", en: "to admit" },
+          { kr: "vergeven", rom: "vur-KHAY-vun", en: "to forgive" }, { kr: "waarderen", rom: "vahr-DAY-run", en: "to appreciate" }]
+      },
+      {
+        tier: "fluent", title: "Emotions Deep Dive", icon: "💔", words: [
+          { kr: "bitterzoet", rom: "BIT-ur-zoot", en: "bittersweet" }, { kr: "gebroken hart", rom: "khuh-BROH-kun hahrt", en: "heartbroken" },
+          { kr: "dankbaar", rom: "DAHNK-bahr", en: "grateful" }, { kr: "beschaamd", rom: "buh-SKHAHMT", en: "ashamed" },
+          { kr: "heimwee", rom: "HIME-vay", en: "homesick" }, { kr: "tevreden", rom: "tuh-VRAY-dun", en: "content" }]
+      },
+      {
+        tier: "fluent", title: "Time & Sequence", icon: "⏳", words: [
+          { kr: "uiteindelijk", rom: "OYT-ine-duh-lick", en: "eventually" }, { kr: "ondertussen", rom: "ON-dur-tus-un", en: "meanwhile" },
+          { kr: "van tevoren", rom: "vahn tuh-VOH-run", en: "beforehand" }, { kr: "daarna", rom: "dahr-NAH", en: "afterward" },
+          { kr: "gelijktijdig", rom: "khuh-LIKE-tie-dikh", en: "simultaneously" }, { kr: "geleidelijk", rom: "khuh-LY-duh-lick", en: "gradually" }]
+      },
+      {
+        tier: "fluent", title: "Abstract Concepts", icon: "💡", words: [
+          { kr: "vrijheid", rom: "VRY-hite", en: "freedom" }, { kr: "rechtvaardigheid", rom: "REKHT-vahr-dikh-hite", en: "justice" },
+          { kr: "waarheid", rom: "VAHR-hite", en: "truth" }, { kr: "identiteit", rom: "ee-den-tee-TITE", en: "identity" },
+          { kr: "doel", rom: "dool", en: "purpose" }, { kr: "balans", rom: "bah-LAHNS", en: "balance" }]
+      },
+      {
+        tier: "fluent", title: "Professional Register", icon: "📧", words: [
+          { kr: "geachte mevrouw", rom: "khuh-AHKH-tuh muh-VROW", en: "Dear Madam" }, { kr: "hoogachtend", rom: "HOHKH-ahkh-tunt", en: "yours sincerely" },
+          { kr: "gelieve te noteren", rom: "khuh-LEE-vuh tuh noh-TAY-run", en: "please note" }, { kr: "vriendelijk", rom: "VREEN-duh-lick", en: "kindly" },
+          { kr: "bijlage", rom: "BY-lah-khuh", en: "enclosed / attachment" }, { kr: "zo spoedig mogelijk", rom: "zoh SPOO-dikh MOH-khuh-lick", en: "at your earliest convenience" }]
+      },
+      {
+        tier: "fluent", title: "Mastery Review", icon: "🏆", words: [
+          { kr: "gefeliciteerd", rom: "khuh-fay-lee-see-TAYRT", en: "congratulations" }, { kr: "tot snel", rom: "tot snel", en: "see you soon" },
+          { kr: "goed gedaan", rom: "khoot khuh-DAHN", en: "well done" }, { kr: "ga zo door", rom: "khah zoh dohr", en: "keep going" },
+          { kr: "meesterschap", rom: "MAY-stur-skhahp", en: "mastery" }, { kr: "vloeiend", rom: "VLOO-yunt", en: "fluency" }]
+      },
+    ];
+    LEVELS_NL.forEach((l, i) => { l.id = 20000 + i + 1; });
+
     const LEVELS = [
       /* ---------------- BEGINNER ---------------- */
       {
@@ -9054,6 +10350,10 @@
     const ALL_VOCAB_CA = LEVELS_CA.flatMap(l => l.words);
     const ALL_VOCAB_YUE = LEVELS_YUE.flatMap(l => l.words);
     const ALL_VOCAB_MY = LEVELS_MY.flatMap(l => l.words);
+    const ALL_VOCAB_HR = LEVELS_HR.flatMap(l => l.words);
+    const ALL_VOCAB_CS = LEVELS_CS.flatMap(l => l.words);
+    const ALL_VOCAB_DA = LEVELS_DA.flatMap(l => l.words);
+    const ALL_VOCAB_NL = LEVELS_NL.flatMap(l => l.words);
     function activeVocabPool() {
       const lang = (state.settings && state.settings.learningLang) || 'ko';
       if (lang === 'es') return ALL_VOCAB_ES;
@@ -9072,6 +10372,10 @@
       if (lang === 'ca') return ALL_VOCAB_CA;
       if (lang === 'yue') return ALL_VOCAB_YUE;
       if (lang === 'my') return ALL_VOCAB_MY;
+      if (lang === 'hr') return ALL_VOCAB_HR;
+      if (lang === 'cs') return ALL_VOCAB_CS;
+      if (lang === 'da') return ALL_VOCAB_DA;
+      if (lang === 'nl') return ALL_VOCAB_NL;
       return ALL_VOCAB;
     }
     function activeChatTopics() {
@@ -9092,6 +10396,10 @@
       if (lang === 'ca') return CATALAN_CHAT_TOPICS;
       if (lang === 'yue') return CANTONESE_CHAT_TOPICS;
       if (lang === 'my') return BURMESE_CHAT_TOPICS;
+      if (lang === 'hr') return CROATIAN_CHAT_TOPICS;
+      if (lang === 'cs') return CZECH_CHAT_TOPICS;
+      if (lang === 'da') return DANISH_CHAT_TOPICS;
+      if (lang === 'nl') return DUTCH_CHAT_TOPICS;
       return CHAT_TOPICS;
     }
     function escapeRegex(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
@@ -9237,6 +10545,10 @@
       if (lang === 'ca') return 'Català';
       if (lang === 'yue') return '廣東話';
       if (lang === 'my') return 'မြန်မာဘာသာ';
+      if (lang === 'hr') return 'Hrvatski';
+      if (lang === 'cs') return 'Čeština';
+      if (lang === 'da') return 'Dansk';
+      if (lang === 'nl') return 'Nederlands';
       return '한국어';
     }
     function updateLanguageSpecificUI() {
@@ -9287,7 +10599,11 @@
         it: ['CILS Practice', 'Italian proficiency-style test questions'],
         ca: ['Catalan Practice', 'Proficiency-style test questions'],
         yue: ['Cantonese Practice', 'Proficiency-style test questions'],
-        my: ['Burmese Practice', 'Proficiency-style test questions']
+        my: ['Burmese Practice', 'Proficiency-style test questions'],
+        hr: ['Croatian Practice', 'Proficiency-style test questions'],
+        cs: ['Czech Practice', 'Proficiency-style test questions'],
+        da: ['Danish Practice', 'Proficiency-style test questions'],
+        nl: ['Dutch Practice', 'Proficiency-style test questions']
       };
       const topikTitle = document.getElementById('topikCardTitle');
       if (topikTitle) {
@@ -9313,7 +10629,11 @@
         it: ['Italian Alphabet', 'Vowels, consonants, and special sounds + a quick quiz'],
         ca: ['Catalan Alphabet', 'Accents, digraphs, and special letters + a quick quiz'],
         yue: ['Jyutping & Tones', 'The 6 tones + common Jyutping finals'],
-        my: ['Myanmar Script', 'Core consonants, vowel signs, and tone marks + a quick quiz']
+        my: ['Myanmar Script', 'Core consonants, vowel signs, and tone marks + a quick quiz'],
+        hr: ['Croatian Alphabet', 'Special letters like č, ć, đ, š, ž + a quick quiz'],
+        cs: ['Czech Alphabet', 'Accents, the unique ř sound, and special letters + a quick quiz'],
+        da: ['Danish Alphabet', 'The letters æ, ø, å, and the stød + a quick quiz'],
+        nl: ['Dutch Alphabet', 'Diphthongs and the guttural g/ch sound + a quick quiz']
       };
       const alphabetTitle = document.getElementById('alphabetCardTitle');
       if (alphabetTitle) {
@@ -9339,7 +10659,11 @@
         it: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz'],
         ca: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz'],
         yue: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz'],
-        my: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz']
+        my: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz'],
+        hr: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz'],
+        cs: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz'],
+        da: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz'],
+        nl: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz']
       };
       const numberCardTitle = document.getElementById('numberCardTitle');
       const numberSub = document.getElementById('numberCardSub');
@@ -9364,7 +10688,11 @@
         de: ['Verb Conjugation', 'Present, past, and future tense drills'],
         it: ['Verb Conjugation', 'Present, past, and future tense drills'],
         ca: ['Verb Conjugation', 'Present, past, and future tense drills'],
-        my: ['Verb Conjugation', 'Present, past, and future tense particles']
+        my: ['Verb Conjugation', 'Present, past, and future tense particles'],
+        hr: ['Verb Conjugation', 'Present, past, and future tense drills'],
+        cs: ['Verb Conjugation', 'Present, past, and future tense drills'],
+        da: ['Verb Conjugation', 'Present, past, and future tense drills'],
+        nl: ['Verb Conjugation', 'Present, past, and future tense drills']
       };
       const grammarTitle = document.getElementById('grammarCardTitle');
       if (grammarTitle) {
@@ -9389,7 +10717,11 @@
         it: 'Practice the special letter combinations by hand',
         ca: 'Practice the accented letters by hand',
         yue: 'Practice writing basic Chinese characters by hand',
-        my: 'Practice the Myanmar script by hand'
+        my: 'Practice the Myanmar script by hand',
+        hr: 'Practice the special letters by hand',
+        cs: 'Practice the accented letters by hand',
+        da: 'Practice writing æ, ø, and å by hand',
+        nl: 'Practice writing Dutch diphthongs by hand'
       };
       const drawSub = document.getElementById('drawTraceCardSub');
       if (drawSub) drawSub.textContent = drawSubText[lang] || drawSubText.ko;
@@ -9412,6 +10744,10 @@
       if (lang === 'ca') return TIERS_CA;
       if (lang === 'yue') return TIERS_YUE;
       if (lang === 'my') return TIERS_MY;
+      if (lang === 'hr') return TIERS_HR;
+      if (lang === 'cs') return TIERS_CS;
+      if (lang === 'da') return TIERS_DA;
+      if (lang === 'nl') return TIERS_NL;
       return TIERS;
     }
     function activeLevels() {
@@ -9432,6 +10768,10 @@
       if (lang === 'ca') return LEVELS_CA;
       if (lang === 'yue') return LEVELS_YUE;
       if (lang === 'my') return LEVELS_MY;
+      if (lang === 'hr') return LEVELS_HR;
+      if (lang === 'cs') return LEVELS_CS;
+      if (lang === 'da') return LEVELS_DA;
+      if (lang === 'nl') return LEVELS_NL;
       return LEVELS;
     }
 
@@ -9945,7 +11285,7 @@
     function openHangulChart() {
       showScreen('hangul');
       const lang = (state.settings && state.settings.learningLang) || 'ko';
-      const titles = { es: '🔤 Spanish Alphabet', ja: '🔤 Hiragana Chart', en: '🔤 Irregular Verbs', zh: '🔤 Tones & Pinyin Chart', af: '🔤 Afrikaans Alphabet', ar: '🔤 Arabic Alphabet', am: '🔤 Amharic Core Characters', eu: '🔤 Basque Alphabet', bn: '🔤 Bengali Alphabet', bg: '🔤 Cyrillic Alphabet', fr: '🔤 French Alphabet', de: '🔤 German Alphabet', it: '🔤 Italian Alphabet', ca: '🔤 Catalan Alphabet', yue: '🔤 Jyutping & Tones', my: '🔤 Myanmar Script', ko: '🔤 Hangul Chart' };
+      const titles = { es: '🔤 Spanish Alphabet', ja: '🔤 Hiragana Chart', en: '🔤 Irregular Verbs', zh: '🔤 Tones & Pinyin Chart', af: '🔤 Afrikaans Alphabet', ar: '🔤 Arabic Alphabet', am: '🔤 Amharic Core Characters', eu: '🔤 Basque Alphabet', bn: '🔤 Bengali Alphabet', bg: '🔤 Cyrillic Alphabet', fr: '🔤 French Alphabet', de: '🔤 German Alphabet', it: '🔤 Italian Alphabet', ca: '🔤 Catalan Alphabet', yue: '🔤 Jyutping & Tones', my: '🔤 Myanmar Script', hr: '🔤 Croatian Alphabet', cs: '🔤 Czech Alphabet', da: '🔤 Danish Alphabet', nl: '🔤 Dutch Alphabet', ko: '🔤 Hangul Chart' };
       const subs = {
         es: 'Tap any letter to hear it. Learn all 27 letters and try the quiz below.',
         ja: 'Tap any character to hear it. Learn all 46 basic hiragana and try the quiz below.',
@@ -9963,6 +11303,10 @@
         ca: 'Catalan uses the Latin alphabet, but watch for l·l, ll, ny, and unstressed vowel reduction. Tap any to hear it.',
         yue: "Cantonese has 6 tones (compared to Mandarin's 4) — the same syllable can mean different things! Tap to hear each one.",
         my: 'Myanmar script is an abugida — each consonant carries a built-in vowel that changes with added signs. Tap any to hear it.',
+        hr: 'Croatian uses the Latin alphabet plus letters like č, ć, đ, š, ž. Tap any to hear it, then try the quiz.',
+        cs: 'Czech uses accents to mark vowel length and consonant softness — plus the famously tricky ř. Tap any to hear it.',
+        da: 'Danish adds three extra letters (æ, ø, å) and a distinctive throat-catch called the stød. Tap any to hear it.',
+        nl: 'Dutch has some tricky diphthongs (ij, ui) and a guttural g/ch sound. Tap any to hear it, then try the quiz.',
         ko: 'Tap any letter to hear it. Learn all 40 and try the quiz below.'
       };
       document.getElementById('alphabetChartTitle').textContent = titles[lang] || titles.ko;
@@ -9975,7 +11319,7 @@
       if (wrap.dataset.built === lang) return;
       wrap.dataset.built = lang;
       wrap.innerHTML = '';
-      const chart = lang === 'es' ? SPANISH_ALPHABET : lang === 'ja' ? JAPANESE_KANA : lang === 'en' ? IRREGULAR_VERBS : lang === 'zh' ? CHINESE_TONES : lang === 'af' ? AFRIKAANS_ALPHABET : lang === 'ar' ? ARABIC_ALPHABET : lang === 'am' ? AMHARIC_ALPHABET : lang === 'eu' ? BASQUE_ALPHABET : lang === 'bn' ? BENGALI_ALPHABET : lang === 'bg' ? BULGARIAN_ALPHABET : lang === 'fr' ? FRENCH_ALPHABET : lang === 'de' ? GERMAN_ALPHABET : lang === 'it' ? ITALIAN_ALPHABET : lang === 'ca' ? CATALAN_ALPHABET : lang === 'yue' ? CANTONESE_TONES : lang === 'my' ? BURMESE_ALPHABET : HANGUL_CHART;
+      const chart = lang === 'es' ? SPANISH_ALPHABET : lang === 'ja' ? JAPANESE_KANA : lang === 'en' ? IRREGULAR_VERBS : lang === 'zh' ? CHINESE_TONES : lang === 'af' ? AFRIKAANS_ALPHABET : lang === 'ar' ? ARABIC_ALPHABET : lang === 'am' ? AMHARIC_ALPHABET : lang === 'eu' ? BASQUE_ALPHABET : lang === 'bn' ? BENGALI_ALPHABET : lang === 'bg' ? BULGARIAN_ALPHABET : lang === 'fr' ? FRENCH_ALPHABET : lang === 'de' ? GERMAN_ALPHABET : lang === 'it' ? ITALIAN_ALPHABET : lang === 'ca' ? CATALAN_ALPHABET : lang === 'yue' ? CANTONESE_TONES : lang === 'my' ? BURMESE_ALPHABET : lang === 'hr' ? CROATIAN_ALPHABET : lang === 'cs' ? CZECH_ALPHABET : lang === 'da' ? DANISH_ALPHABET : lang === 'nl' ? DUTCH_ALPHABET : HANGUL_CHART;
       chart.forEach(section => {
         const sec = document.createElement('div');
         sec.className = 'hangul-section';
@@ -10025,6 +11369,14 @@
         lastCompletedLesson = { title: "Jyutping & Tones", words: ALL_CANTONESE_TONES.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
       } else if (lang === 'my') {
         lastCompletedLesson = { title: "Myanmar Script", words: ALL_BURMESE_ALPHABET.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
+      } else if (lang === 'hr') {
+        lastCompletedLesson = { title: "Croatian Alphabet", words: ALL_CROATIAN_ALPHABET.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
+      } else if (lang === 'cs') {
+        lastCompletedLesson = { title: "Czech Alphabet", words: ALL_CZECH_ALPHABET.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
+      } else if (lang === 'da') {
+        lastCompletedLesson = { title: "Danish Alphabet", words: ALL_DANISH_ALPHABET.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
+      } else if (lang === 'nl') {
+        lastCompletedLesson = { title: "Dutch Alphabet", words: ALL_DUTCH_ALPHABET.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
       } else {
         lastCompletedLesson = { title: "Hangul Chart", words: ALL_HANGUL_CHARS.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
       }
@@ -10052,6 +11404,10 @@
         ca: 'Catalan numbers are mostly regular from 20 onward. Tap any number to hear it, then try the quiz.',
         yue: 'Cantonese numbers follow a regular base-10 pattern. Tap any number to hear it, then try the quiz.',
         my: 'Myanmar numbers combine regularly with ဆယ် ("ten"). Tap any number to hear it, then try the quiz.',
+        hr: 'Croatian numbers combine regularly with -deset ("tens"). Tap any number to hear it, then try the quiz.',
+        cs: 'Czech numbers combine regularly with -cet/-desát ("tens"). Tap any number to hear it, then try the quiz.',
+        da: 'Danish tens above 50 come from an old base-20 system — halvtreds (50) is a famous quirk. Tap to hear each one.',
+        nl: 'Dutch says the ones place before the tens, just like German. Tap any number to hear it, then try the quiz.',
         ko: 'Korean has two number systems. Tap any number to hear it, then try the quiz.'
       };
       document.getElementById('numberChartTitle').textContent = titles[lang] || '🔢 Number Chart';
@@ -10064,7 +11420,7 @@
       if (wrap.dataset.built === lang) return;
       wrap.dataset.built = lang;
       wrap.innerHTML = '';
-      const chart = lang === 'es' ? SPANISH_NUMBER_CHART : lang === 'ja' ? JAPANESE_NUMBER_CHART : lang === 'en' ? CONFUSED_WORDS : lang === 'zh' ? CHINESE_NUMBER_CHART : lang === 'af' ? AFRIKAANS_NUMBER_CHART : lang === 'ar' ? ARABIC_NUMBER_CHART : lang === 'am' ? AMHARIC_NUMBER_CHART : lang === 'eu' ? BASQUE_NUMBER_CHART : lang === 'bn' ? BENGALI_NUMBER_CHART : lang === 'bg' ? BULGARIAN_NUMBER_CHART : lang === 'fr' ? FRENCH_NUMBER_CHART : lang === 'de' ? GERMAN_NUMBER_CHART : lang === 'it' ? ITALIAN_NUMBER_CHART : lang === 'ca' ? CATALAN_NUMBER_CHART : lang === 'yue' ? CANTONESE_NUMBER_CHART : lang === 'my' ? BURMESE_NUMBER_CHART : NUMBER_CHART;
+      const chart = lang === 'es' ? SPANISH_NUMBER_CHART : lang === 'ja' ? JAPANESE_NUMBER_CHART : lang === 'en' ? CONFUSED_WORDS : lang === 'zh' ? CHINESE_NUMBER_CHART : lang === 'af' ? AFRIKAANS_NUMBER_CHART : lang === 'ar' ? ARABIC_NUMBER_CHART : lang === 'am' ? AMHARIC_NUMBER_CHART : lang === 'eu' ? BASQUE_NUMBER_CHART : lang === 'bn' ? BENGALI_NUMBER_CHART : lang === 'bg' ? BULGARIAN_NUMBER_CHART : lang === 'fr' ? FRENCH_NUMBER_CHART : lang === 'de' ? GERMAN_NUMBER_CHART : lang === 'it' ? ITALIAN_NUMBER_CHART : lang === 'ca' ? CATALAN_NUMBER_CHART : lang === 'yue' ? CANTONESE_NUMBER_CHART : lang === 'my' ? BURMESE_NUMBER_CHART : lang === 'hr' ? CROATIAN_NUMBER_CHART : lang === 'cs' ? CZECH_NUMBER_CHART : lang === 'da' ? DANISH_NUMBER_CHART : lang === 'nl' ? DUTCH_NUMBER_CHART : NUMBER_CHART;
       chart.forEach(section => {
         const sec = document.createElement('div');
         sec.className = 'hangul-section';
@@ -10114,6 +11470,14 @@
         lastCompletedLesson = { title: "Cantonese Numbers", words: ALL_CANTONESE_NUMBERS };
       } else if (lang === 'my') {
         lastCompletedLesson = { title: "Burmese Numbers", words: ALL_BURMESE_NUMBERS };
+      } else if (lang === 'hr') {
+        lastCompletedLesson = { title: "Croatian Numbers", words: ALL_CROATIAN_NUMBERS };
+      } else if (lang === 'cs') {
+        lastCompletedLesson = { title: "Czech Numbers", words: ALL_CZECH_NUMBERS };
+      } else if (lang === 'da') {
+        lastCompletedLesson = { title: "Danish Numbers", words: ALL_DANISH_NUMBERS };
+      } else if (lang === 'nl') {
+        lastCompletedLesson = { title: "Dutch Numbers", words: ALL_DUTCH_NUMBERS };
       } else {
         lastCompletedLesson = { title: "Number Chart", words: ALL_NUMBER_ITEMS };
       }
@@ -10442,9 +11806,9 @@
     let grammarTab = 'particles';
     function openGrammar() {
       const lang = (state.settings && state.settings.learningLang) || 'ko';
-      if (lang === 'es' || lang === 'af' || lang === 'ar' || lang === 'eu' || lang === 'bn' || lang === 'bg' || lang === 'fr' || lang === 'de' || lang === 'it' || lang === 'ca' || lang === 'my') grammarTab = 'conjugation';
+      if (lang === 'es' || lang === 'af' || lang === 'ar' || lang === 'eu' || lang === 'bn' || lang === 'bg' || lang === 'fr' || lang === 'de' || lang === 'it' || lang === 'ca' || lang === 'my' || lang === 'hr' || lang === 'cs' || lang === 'da' || lang === 'nl') grammarTab = 'conjugation';
       else if (grammarTab === 'conjugation' && !VERB_CONJUGATIONS.length) grammarTab = 'particles';
-      const titles = { es: '📖 Verb Conjugation', af: '📖 Verb Conjugation', ar: '📖 Verb Conjugation', eu: '📖 Verb Conjugation', bn: '📖 Verb Conjugation', bg: '📖 Verb Conjugation', fr: '📖 Verb Conjugation', de: '📖 Verb Conjugation', it: '📖 Verb Conjugation', ca: '📖 Verb Conjugation', my: '📖 Verb Conjugation' };
+      const titles = { es: '📖 Verb Conjugation', af: '📖 Verb Conjugation', ar: '📖 Verb Conjugation', eu: '📖 Verb Conjugation', bn: '📖 Verb Conjugation', bg: '📖 Verb Conjugation', fr: '📖 Verb Conjugation', de: '📖 Verb Conjugation', it: '📖 Verb Conjugation', ca: '📖 Verb Conjugation', my: '📖 Verb Conjugation', hr: '📖 Verb Conjugation', cs: '📖 Verb Conjugation', da: '📖 Verb Conjugation', nl: '📖 Verb Conjugation' };
       document.getElementById('grammarScreenTitle').textContent = titles[lang] || '📖 Grammar & Particles';
       showScreen('grammar');
       renderGrammarTabs();
@@ -10453,7 +11817,7 @@
     function renderGrammarTabs() {
       const row = document.getElementById('grammarTabRow');
       const lang = (state.settings && state.settings.learningLang) || 'ko';
-      const tabs = (lang === 'es' || lang === 'af' || lang === 'ar' || lang === 'eu' || lang === 'bn' || lang === 'bg' || lang === 'fr' || lang === 'de' || lang === 'it' || lang === 'ca' || lang === 'my')
+      const tabs = (lang === 'es' || lang === 'af' || lang === 'ar' || lang === 'eu' || lang === 'bn' || lang === 'bg' || lang === 'fr' || lang === 'de' || lang === 'it' || lang === 'ca' || lang === 'my' || lang === 'hr' || lang === 'cs' || lang === 'da' || lang === 'nl')
         ? [{ key: 'conjugation', label: 'Verbs', emoji: '🔀' }]
         : [
           { key: 'particles', label: 'Particles', emoji: '🔤' },
@@ -10488,7 +11852,7 @@
           wrap.appendChild(card);
         });
       } else if (grammarTab === 'conjugation') {
-        const verbs = lang === 'es' ? VERB_CONJUGATIONS_ES : lang === 'af' ? VERB_CONJUGATIONS_AF : lang === 'ar' ? VERB_CONJUGATIONS_AR : lang === 'eu' ? VERB_CONJUGATIONS_EU : lang === 'bn' ? VERB_CONJUGATIONS_BN : lang === 'bg' ? VERB_CONJUGATIONS_BG : lang === 'fr' ? VERB_CONJUGATIONS_FR : lang === 'de' ? VERB_CONJUGATIONS_DE : lang === 'it' ? VERB_CONJUGATIONS_IT : lang === 'ca' ? VERB_CONJUGATIONS_CA : lang === 'my' ? VERB_CONJUGATIONS_MY : VERB_CONJUGATIONS;
+        const verbs = lang === 'es' ? VERB_CONJUGATIONS_ES : lang === 'af' ? VERB_CONJUGATIONS_AF : lang === 'ar' ? VERB_CONJUGATIONS_AR : lang === 'eu' ? VERB_CONJUGATIONS_EU : lang === 'bn' ? VERB_CONJUGATIONS_BN : lang === 'bg' ? VERB_CONJUGATIONS_BG : lang === 'fr' ? VERB_CONJUGATIONS_FR : lang === 'de' ? VERB_CONJUGATIONS_DE : lang === 'it' ? VERB_CONJUGATIONS_IT : lang === 'ca' ? VERB_CONJUGATIONS_CA : lang === 'my' ? VERB_CONJUGATIONS_MY : lang === 'hr' ? VERB_CONJUGATIONS_HR : lang === 'cs' ? VERB_CONJUGATIONS_CS : lang === 'da' ? VERB_CONJUGATIONS_DA : lang === 'nl' ? VERB_CONJUGATIONS_NL : VERB_CONJUGATIONS;
         verbs.forEach(v => {
           const card = document.createElement('div');
           card.className = 'scene-card';
@@ -10562,6 +11926,10 @@
       if (lang === 'it') return STROKE_ORDER_IT;
       if (lang === 'ca') return STROKE_ORDER_CA;
       if (lang === 'my') return STROKE_ORDER_MY;
+      if (lang === 'hr') return STROKE_ORDER_HR;
+      if (lang === 'cs') return STROKE_ORDER_CS;
+      if (lang === 'da') return STROKE_ORDER_DA;
+      if (lang === 'nl') return STROKE_ORDER_NL;
       return STROKE_ORDER;
     }
     function activeAlphabetChars() {
@@ -10581,6 +11949,10 @@
       if (lang === 'ca') return ALL_CATALAN_ALPHABET;
       if (lang === 'yue') return CHINESE_TRACE_INFO;
       if (lang === 'my') return ALL_BURMESE_ALPHABET;
+      if (lang === 'hr') return ALL_CROATIAN_ALPHABET;
+      if (lang === 'cs') return ALL_CZECH_ALPHABET;
+      if (lang === 'da') return ALL_DANISH_ALPHABET;
+      if (lang === 'nl') return ALL_DUTCH_ALPHABET;
       return ALL_HANGUL_CHARS;
     }
     function openDrawTrace() {
@@ -12086,6 +13458,297 @@
       { k: ["speak", "pronounce", "mic", "pronunciation"], a: "For speaking exercises, tap the mic and say the word naturally — the app compares what it hears to the target word. If your browser blocks the mic, check your site permissions." },
       { k: ["difficult", "hard", "struggling", "stuck", "confus"], a: "ကိစ္စမရှိပါဘူး! (It's okay!) A new script and tone system both take real practice. Try replaying lessons or retaking a quiz — repetition is what makes it click." },
     ];
+
+    const CROATIAN_ALPHABET = [
+      {
+        title: "Vowels", chars: [
+          { ch: "a", rom: "ah", sample: "mama", hint: "like 'a' in father" }, { ch: "e", rom: "eh", sample: "sestra", hint: "like 'e' in bed" },
+          { ch: "i", rom: "ee", sample: "ime", hint: "like 'ee' in see" }, { ch: "o", rom: "oh", sample: "oko", hint: "like 'o' in go" },
+          { ch: "u", rom: "oo", sample: "kuća", hint: "like 'oo' in food" }]
+      },
+      {
+        title: "Special Consonants", chars: [
+          { ch: "č", rom: "ch (hard)", sample: "čaj", hint: "a hard 'ch' as in chip — as in čaj (tea)" }, { ch: "ć", rom: "ch (soft)", sample: "kći", hint: "a softer 'ch', tongue further forward — subtly different from č" },
+          { ch: "đ", rom: "j (soft)", sample: "đak", hint: "like 'j' in jeep, softer than dž" }, { ch: "dž", rom: "j (hard)", sample: "džep", hint: "like 'j' in jungle, harder than đ" },
+          { ch: "š", rom: "sh", sample: "šuma", hint: "as in šuma (forest)" }, { ch: "ž", rom: "zh", sample: "žena", hint: "like 's' in pleasure — as in žena (woman)" },
+          { ch: "lj", rom: "ly", sample: "ljubav", hint: "like 'lli' in million — as in ljubav (love)" }, { ch: "nj", rom: "ny", sample: "konj", hint: "like 'ny' in canyon — as in konj (horse)" }]
+      },
+    ];
+    const ALL_CROATIAN_ALPHABET = CROATIAN_ALPHABET.flatMap(s => s.chars);
+
+    const CROATIAN_NUMBER_CHART = [
+      {
+        title: "Numbers 0–10", note: "The building blocks — every other number is formed from these.", chars: [
+          { ch: "nula", rom: "0 · NOO-lah", en: "0" }, { ch: "jedan", rom: "1 · YEH-dahn", en: "1" }, { ch: "dva", rom: "2 · dvah", en: "2" },
+          { ch: "tri", rom: "3 · tree", en: "3" }, { ch: "četiri", rom: "4 · CHEH-tee-ree", en: "4" }, { ch: "pet", rom: "5 · peht", en: "5" },
+          { ch: "šest", rom: "6 · shehst", en: "6" }, { ch: "sedam", rom: "7 · SEH-dahm", en: "7" }, { ch: "osam", rom: "8 · OH-sahm", en: "8" },
+          { ch: "devet", rom: "9 · DEH-vet", en: "9" }, { ch: "deset", rom: "10 · DEH-set", en: "10" }]
+      },
+      {
+        title: "Tens", note: "Formed with [digit] + -deset. Example: dvadeset = 2 + 10s = 20.", chars: [
+          { ch: "dvadeset", rom: "20 · dvah-DEH-set", en: "20" }, { ch: "trideset", rom: "30 · TREE-deh-set", en: "30" }, { ch: "četrdeset", rom: "40 · che-tr-DEH-set", en: "40" },
+          { ch: "pedeset", rom: "50 · peh-DEH-set", en: "50" }, { ch: "šezdeset", rom: "60 · shez-DEH-set", en: "60" }, { ch: "sedamdeset", rom: "70 · seh-dahm-DEH-set", en: "70" },
+          { ch: "osamdeset", rom: "80 · oh-sahm-DEH-set", en: "80" }, { ch: "devedeset", rom: "90 · deh-veh-DEH-set", en: "90" }]
+      },
+      {
+        title: "Big Units", note: "Everything above 100 is built from these + 0-99.", chars: [
+          { ch: "sto", rom: "100 · stoh", en: "100" }, { ch: "tisuću", rom: "1,000 · TEE-soo-choo", en: "1,000" }, { ch: "milijun", rom: "1,000,000 · mee-lee-YOON", en: "1,000,000" }]
+      },
+    ];
+    const ALL_CROATIAN_NUMBERS = CROATIAN_NUMBER_CHART.flatMap(s => s.chars.map(c => ({ kr: c.ch, en: c.en, rom: c.rom })));
+
+    const VERB_CONJUGATIONS_HR = [
+      { dict: "biti", rom: "BEE-tee", en: "to be", present: "je", presentRom: "yeh", past: "bio je", pastRom: "BEE-oh yeh", future: "bit će", futureRom: "beet cheh" },
+      { dict: "imati", rom: "EE-mah-tee", en: "to have", present: "ima", presentRom: "EE-mah", past: "imao je", pastRom: "EE-mah-oh yeh", future: "imat će", futureRom: "EE-maht cheh" },
+      { dict: "ići", rom: "EE-chee", en: "to go", present: "ide", presentRom: "EE-deh", past: "išao je", pastRom: "EE-shah-oh yeh", future: "ići će", futureRom: "EE-chee cheh" },
+      { dict: "doći", rom: "DOH-chee", en: "to come", present: "dođe", presentRom: "DOH-jeh", past: "došao je", pastRom: "DOH-shah-oh yeh", future: "doći će", futureRom: "DOH-chee cheh" },
+      { dict: "jesti", rom: "YES-tee", en: "to eat", present: "jede", presentRom: "YEH-deh", past: "jeo je", pastRom: "YEH-oh yeh", future: "jest će", futureRom: "yehst cheh" },
+      { dict: "piti", rom: "PEE-tee", en: "to drink", present: "pije", presentRom: "PEE-yeh", past: "pio je", pastRom: "PEE-oh yeh", future: "pit će", futureRom: "peet cheh" },
+      { dict: "vidjeti", rom: "VEED-yeh-tee", en: "to see", present: "vidi", presentRom: "VEE-dee", past: "vidio je", pastRom: "VEE-dee-oh yeh", future: "vidjet će", futureRom: "VEED-yeht cheh" },
+      { dict: "pisati", rom: "PEE-sah-tee", en: "to write", present: "piše", presentRom: "PEE-sheh", past: "pisao je", pastRom: "PEE-sah-oh yeh", future: "pisat će", futureRom: "PEE-saht cheh" },
+      { dict: "raditi", rom: "RAH-dee-tee", en: "to work", present: "radi", presentRom: "RAH-dee", past: "radio je", pastRom: "RAH-dee-oh yeh", future: "radit će", futureRom: "RAH-deet cheh" },
+      { dict: "govoriti", rom: "goh-VOH-ree-tee", en: "to speak", present: "govori", presentRom: "goh-VOH-ree", past: "govorio je", pastRom: "goh-VOH-ree-oh yeh", future: "govorit će", futureRom: "goh-VOH-reet cheh" },
+    ];
+
+    const STROKE_ORDER_HR = [
+      { ch: "č / ć", strokes: ["Write a lowercase c.", "Add a caron (ˇ) for č (hard 'ch'), or an acute accent (´) for ć (softer 'ch') — the two are distinct sounds, not variants."] },
+      { ch: "š", strokes: ["Write a lowercase s.", "Add a caron (ˇ) above it — a 'sh' sound, as in šuma."] },
+      { ch: "ž", strokes: ["Write a lowercase z.", "Add a caron (ˇ) above it — like 's' in pleasure, as in žena."] },
+      { ch: "đ", strokes: ["Write a lowercase d with a crossbar through the ascender.", "Represents a soft 'j' sound, as in đak — distinct from the harder dž."] },
+    ];
+
+    const CROATIAN_CHAT_TOPICS = [
+      { k: ["bok", "hello", "hi "], a: "Bok (bohk) is the all-purpose casual greeting — used for both 'hi' and 'bye.' For formal situations, dobar dan (DOH-bar dahn, 'good day') is more appropriate." },
+      { k: ["doviđenja", "bye", "goodbye"], a: "Doviđenja (doh-vee-JEN-yah) is the formal 'goodbye.' Casually, bok also works for parting, just like it does for greeting." },
+      { k: ["hvala", "thank"], a: "Hvala (HVAH-lah) means 'thank you.' For extra emphasis, hvala lijepa (thank you kindly) or hvala puno (thanks a lot) are both common." },
+      { k: ["oprostite", "sorry"], a: "Oprostite (oh-PROH-stee-teh) is the polite form of 'sorry / excuse me.' Among friends, the shorter oprosti works too." },
+      { k: ["croatian", "serbian", "bosnian", "difference"], a: "Croatian, Serbian, Bosnian, and Montenegrin are extremely close and largely mutually intelligible — historically considered dialects of one language, they're now treated as distinct standard languages, with Croatian written exclusively in the Latin alphabet." },
+      { k: ["ti", "vi", "formal", "informal"], a: "Croatian distinguishes ti (informal 'you') from Vi (formal 'you', capitalized, used with strangers, elders, or in business) — similar to the tu/vous distinction in French." },
+      { k: ["case", "cases", "declension"], a: "Croatian has seven grammatical cases that change noun endings depending on their role in the sentence — this is one of the trickier parts of the grammar for English speakers, since English lost most of its case system." },
+      { k: ["heart", "hearts", "lose"], a: "You lose a heart for each wrong answer in a lesson. Run out and the lesson ends — but hearts refill over time, or go Pro for unlimited hearts." },
+      { k: ["streak", "fire"], a: "Your streak counts consecutive days you complete at least one lesson. Miss a day and it resets — try a quick lesson daily! Samo naprijed! (Keep going!)" },
+      { k: ["xp", "level", "points"], a: "XP is earned by finishing lessons and quizzes. It builds your Level on your Profile page — the more you practice, the higher you climb!" },
+      { k: ["pro", "premium", "upgrade", "subscription", "price", "cost"], a: "Hangul Pro unlocks unlimited hearts, every unit instantly, advanced speaking drills, deeper stats, and unlimited tutor chats. Check the Pro tab for pricing and plans!" },
+      { k: ["speak", "pronounce", "mic", "pronunciation"], a: "For speaking exercises, tap the mic and say the word naturally — the app compares what it hears to the target word. If your browser blocks the mic, check your site permissions." },
+      { k: ["difficult", "hard", "struggling", "stuck", "confus"], a: "Nema problema! (No problem!) Grammatical cases and the č/ć distinction both take real practice. Try replaying lessons or retaking a quiz — repetition is what makes it click. Korak po korak! (Step by step!)" },
+    ];
+
+    const CZECH_ALPHABET = [
+      {
+        title: "Vowels (short & long)", chars: [
+          { ch: "a / á", rom: "ah / ah (long)", sample: "auto / máma", hint: "the acute accent (čárka) doubles the vowel's length, not its quality" }, { ch: "e / é", rom: "eh / eh (long)", sample: "pes / mléko", hint: "as in pes (dog) vs mléko (milk)" },
+          { ch: "i / í", rom: "ih / ee (long)", sample: "pivo / bílý", hint: "as in pivo (beer) vs bílý (white)" }, { ch: "o / ó", rom: "oh / oh (long)", sample: "oko / gól", hint: "the long ó is rare, mostly in loanwords" },
+          { ch: "u / ú / ů", rom: "oo / oo (long)", sample: "ruka / úsměv / dům", hint: "ú appears at the start of a word, ů elsewhere — both are the same long 'oo' sound" }]
+      },
+      {
+        title: "Special Consonants", chars: [
+          { ch: "č", rom: "ch", sample: "čaj", hint: "as in čaj (tea) — like 'ch' in chip" }, { ch: "ř", rom: "rzh (unique)", sample: "řeka", hint: "a rolled 'r' fused with 'zh' — famously unique to Czech, no real English equivalent" },
+          { ch: "š", rom: "sh", sample: "škola", hint: "as in škola (school)" }, { ch: "ž", rom: "zh", sample: "žena", hint: "like 's' in pleasure — as in žena (woman)" },
+          { ch: "ě", rom: "yeh", sample: "děti", hint: "softens the preceding consonant — as in děti (children)" }, { ch: "ď / ť / ň", rom: "soft d/t/n", sample: "loď", hint: "palatalized consonants — the tongue touches further forward than in English" }]
+      },
+    ];
+    const ALL_CZECH_ALPHABET = CZECH_ALPHABET.flatMap(s => s.chars);
+
+    const CZECH_NUMBER_CHART = [
+      {
+        title: "Numbers 0–10", note: "The building blocks — every other number is formed from these.", chars: [
+          { ch: "nula", rom: "0 · NOO-lah", en: "0" }, { ch: "jedna", rom: "1 · YED-nah", en: "1" }, { ch: "dva", rom: "2 · dvah", en: "2" },
+          { ch: "tři", rom: "3 · trzhee", en: "3" }, { ch: "čtyři", rom: "4 · CHTIH-rzhee", en: "4" }, { ch: "pět", rom: "5 · pyet", en: "5" },
+          { ch: "šest", rom: "6 · shest", en: "6" }, { ch: "sedm", rom: "7 · SEH-dm", en: "7" }, { ch: "osm", rom: "8 · OH-sm", en: "8" },
+          { ch: "devět", rom: "9 · DEH-vyet", en: "9" }, { ch: "deset", rom: "10 · DEH-set", en: "10" }]
+      },
+      {
+        title: "Tens", note: "Formed with [digit] + -cet/-desát. Example: dvacet = 20.", chars: [
+          { ch: "dvacet", rom: "20 · DVAH-tset", en: "20" }, { ch: "třicet", rom: "30 · TRZHEE-tset", en: "30" }, { ch: "čtyřicet", rom: "40 · CHTIH-rzhee-tset", en: "40" },
+          { ch: "padesát", rom: "50 · PAH-deh-saht", en: "50" }, { ch: "šedesát", rom: "60 · SHEH-deh-saht", en: "60" }, { ch: "sedmdesát", rom: "70 · SEH-dm-deh-saht", en: "70" },
+          { ch: "osmdesát", rom: "80 · OH-sm-deh-saht", en: "80" }, { ch: "devadesát", rom: "90 · DEH-vah-deh-saht", en: "90" }]
+      },
+      {
+        title: "Big Units", note: "Everything above 100 is built from these + 0-99.", chars: [
+          { ch: "sto", rom: "100 · stoh", en: "100" }, { ch: "tisíc", rom: "1,000 · TEE-seets", en: "1,000" }, { ch: "milion", rom: "1,000,000 · MEE-lee-ohn", en: "1,000,000" }]
+      },
+    ];
+    const ALL_CZECH_NUMBERS = CZECH_NUMBER_CHART.flatMap(s => s.chars.map(c => ({ kr: c.ch, en: c.en, rom: c.rom })));
+
+    const VERB_CONJUGATIONS_CS = [
+      { dict: "být", rom: "beet", en: "to be", present: "je", presentRom: "yeh", past: "byl", pastRom: "beel", future: "bude", futureRom: "BOO-deh" },
+      { dict: "mít", rom: "meet", en: "to have", present: "má", presentRom: "mah", past: "měl", pastRom: "myel", future: "bude mít", futureRom: "BOO-deh meet" },
+      { dict: "jít", rom: "yeet", en: "to go", present: "jde", presentRom: "dyeh", past: "šel", pastRom: "shel", future: "půjde", futureRom: "POO-dyeh" },
+      { dict: "přijít", rom: "PRZHEE-yeet", en: "to come", present: "přijde", presentRom: "PRZHEE-dyeh", past: "přišel", pastRom: "PRZHEE-shel", future: "přijde", futureRom: "PRZHEE-dyeh" },
+      { dict: "jíst", rom: "yeest", en: "to eat", present: "jí", presentRom: "yee", past: "jedl", pastRom: "yedl", future: "bude jíst", futureRom: "BOO-deh yeest" },
+      { dict: "pít", rom: "peet", en: "to drink", present: "pije", presentRom: "PEE-yeh", past: "pil", pastRom: "peel", future: "bude pít", futureRom: "BOO-deh peet" },
+      { dict: "vidět", rom: "VEE-dyet", en: "to see", present: "vidí", presentRom: "VEE-dee", past: "viděl", pastRom: "VEE-dyel", future: "uvidí", futureRom: "OO-vee-dee" },
+      { dict: "psát", rom: "psaht", en: "to write", present: "píše", presentRom: "PEE-sheh", past: "psal", pastRom: "psahl", future: "bude psát", futureRom: "BOO-deh psaht" },
+      { dict: "pracovat", rom: "PRAH-tsoh-vaht", en: "to work", present: "pracuje", presentRom: "PRAH-tsoo-yeh", past: "pracoval", pastRom: "PRAH-tsoh-vahl", future: "bude pracovat", futureRom: "BOO-deh PRAH-tsoh-vaht" },
+      { dict: "mluvit", rom: "MLOO-veet", en: "to speak", present: "mluví", presentRom: "MLOO-vee", past: "mluvil", pastRom: "MLOO-veel", future: "bude mluvit", futureRom: "BOO-deh MLOO-veet" },
+    ];
+
+    const STROKE_ORDER_CS = [
+      { ch: "ř", strokes: ["Write a lowercase r.", "Add a caron (ˇ) above it — a rolled 'r' fused with a buzzing 'zh' sound, made simultaneously. This is famously the hardest sound in Czech, even for many native learners."] },
+      { ch: "ě", strokes: ["Write a lowercase e.", "Add a caron (ˇ) above it — softens the consonant right before it, as in děti."] },
+      { ch: "ů", strokes: ["Write a lowercase u.", "Add a small circle (kroužek) above it — a long 'oo' sound, historically evolved from an older 'uo' diphthong."] },
+      { ch: "ď / ť / ň", strokes: ["Write the base consonant d, t, or n.", "Add a caron (ˇ) — or for ť, sometimes a small apostrophe-like mark — to show the consonant is palatalized (softened)."] },
+    ];
+
+    const CZECH_CHAT_TOPICS = [
+      { k: ["ahoj", "hello", "hi "], a: "Ahoj (AH-hoy) is the all-purpose casual greeting — used for both 'hi' and 'bye,' much like the Croatian bok. For formal situations, dobrý den (DOH-bree den, 'good day') is more appropriate." },
+      { k: ["na shledanou", "bye", "goodbye"], a: "Na shledanou (nah SKHLEH-dah-noh) is the formal 'goodbye.' Casually, ahoj or čau (chow, borrowed from Italian ciao) both work." },
+      { k: ["děkuji", "thank"], a: "Děkuji (DYEH-koo-yee) means 'thank you.' Casually, díky (DEE-kih) is the shorter, everyday version." },
+      { k: ["promiňte", "sorry"], a: "Promiňte (PROH-meen-teh) is the polite form of 'sorry / excuse me.' Among friends, promiň works too." },
+      { k: ["ř", "rzh", "difficult sound"], a: "Ř is considered one of the hardest sounds in any European language — it's a rolled 'r' and a buzzing 'zh' made at the same time, and even some native Czech children take years to master it." },
+      { k: ["ty", "vy", "formal", "informal"], a: "Czech distinguishes ty (informal 'you') from vy (formal 'you', used with strangers, elders, or in business) — similar to the tu/vous distinction in French." },
+      { k: ["case", "cases", "declension"], a: "Czech has seven grammatical cases that change noun, adjective, and pronoun endings depending on their role in the sentence — a major feature carried over from its Slavic roots." },
+      { k: ["heart", "hearts", "lose"], a: "You lose a heart for each wrong answer in a lesson. Run out and the lesson ends — but hearts refill over time, or go Pro for unlimited hearts." },
+      { k: ["streak", "fire"], a: "Your streak counts consecutive days you complete at least one lesson. Miss a day and it resets — try a quick lesson daily!" },
+      { k: ["xp", "level", "points"], a: "XP is earned by finishing lessons and quizzes. It builds your Level on your Profile page — the more you practice, the higher you climb!" },
+      { k: ["pro", "premium", "upgrade", "subscription", "price", "cost"], a: "Hangul Pro unlocks unlimited hearts, every unit instantly, advanced speaking drills, deeper stats, and unlimited tutor chats. Check the Pro tab for pricing and plans!" },
+      { k: ["speak", "pronounce", "mic", "pronunciation"], a: "For speaking exercises, tap the mic and say the word naturally — the app compares what it hears to the target word. If your browser blocks the mic, check your site permissions." },
+      { k: ["difficult", "hard", "struggling", "stuck", "confus"], a: "To nevadí! (No worries!) The ř sound and grammatical cases both take real practice — even native speakers had to learn them once. Try replaying lessons or retaking a quiz — repetition is what makes it click." },
+    ];
+
+    const DANISH_ALPHABET = [
+      {
+        title: "Vowels", chars: [
+          { ch: "a", rom: "ah", sample: "far", hint: "like 'a' in father" }, { ch: "e", rom: "eh/uh", sample: "hej", hint: "varies — sometimes like 'e' in bed, sometimes a soft 'uh'" },
+          { ch: "i", rom: "ee", sample: "tid", hint: "like 'ee' in see" }, { ch: "o", rom: "oh", sample: "sol", hint: "like 'o' in go" },
+          { ch: "u", rom: "oo", sample: "hus", hint: "like 'oo' in food" }]
+      },
+      {
+        title: "Special Letters", chars: [
+          { ch: "æ", rom: "a (bed)", sample: "læse", hint: "like 'a' in cat/bed — as in læse (to read)" }, { ch: "ø", rom: "ur", sample: "søster", hint: "round your lips for 'o', say 'e' — like German ö or French eu, as in søster (sister)" },
+          { ch: "å", rom: "aw", sample: "gå", hint: "like 'aw' in saw — as in gå (to walk/go)" }, { ch: "d (soft)", rom: "th (voiced)", sample: "mad", hint: "at the end of words, 'd' often softens to a sound like 'th' in 'the'" },
+          { ch: "stød", rom: "glottal stop", sample: "hund", hint: "a creaky catch in the throat that changes a word's meaning — one of Danish's most distinctive features" }]
+      },
+    ];
+    const ALL_DANISH_ALPHABET = DANISH_ALPHABET.flatMap(s => s.chars);
+
+    const DANISH_NUMBER_CHART = [
+      {
+        title: "Numbers 0–10", note: "The building blocks — every other number is formed from these.", chars: [
+          { ch: "nul", rom: "0 · nool", en: "0" }, { ch: "en", rom: "1 · ehn", en: "1" }, { ch: "to", rom: "2 · toh", en: "2" },
+          { ch: "tre", rom: "3 · treh", en: "3" }, { ch: "fire", rom: "4 · FEE-uh", en: "4" }, { ch: "fem", rom: "5 · fem", en: "5" },
+          { ch: "seks", rom: "6 · seks", en: "6" }, { ch: "syv", rom: "7 · sew", en: "7" }, { ch: "otte", rom: "8 · OH-teh", en: "8" },
+          { ch: "ni", rom: "9 · nee", en: "9" }, { ch: "ti", rom: "10 · tee", en: "10" }]
+      },
+      {
+        title: "Tens", note: "Danish tens above 50 are famously irregular, based on an old vigesimal (base-20) counting system — halvtreds (50) literally comes from 'half-third-times-twenty'.", chars: [
+          { ch: "tyve", rom: "20 · TEW-veh", en: "20" }, { ch: "tredive", rom: "30 · TRETH-veh", en: "30" }, { ch: "fyrre", rom: "40 · FUR-uh", en: "40" },
+          { ch: "halvtreds", rom: "50 · hahl-TRESS", en: "50" }, { ch: "tres", rom: "60 · tress", en: "60" }, { ch: "halvfjerds", rom: "70 · hahl-FYAIRS", en: "70" },
+          { ch: "firs", rom: "80 · feers", en: "80" }, { ch: "halvfems", rom: "90 · hahl-FEMS", en: "90" }]
+      },
+      {
+        title: "Big Units", note: "Everything above 100 is built from these + 0-99.", chars: [
+          { ch: "hundrede", rom: "100 · HOON-reh-theh", en: "100" }, { ch: "tusind", rom: "1,000 · TOO-sin", en: "1,000" }, { ch: "million", rom: "1,000,000 · mee-lee-OHN", en: "1,000,000" }]
+      },
+    ];
+    const ALL_DANISH_NUMBERS = DANISH_NUMBER_CHART.flatMap(s => s.chars.map(c => ({ kr: c.ch, en: c.en, rom: c.rom })));
+
+    const VERB_CONJUGATIONS_DA = [
+      { dict: "være", rom: "VAY-uh", en: "to be", present: "er", presentRom: "air", past: "var", pastRom: "vahr", future: "vil være", futureRom: "vil VAY-uh" },
+      { dict: "have", rom: "HAH-veh", en: "to have", present: "har", presentRom: "hah", past: "havde", pastRom: "HOW-theh", future: "vil have", futureRom: "vil HAH-veh" },
+      { dict: "gå", rom: "gaw", en: "to go", present: "går", presentRom: "gawr", past: "gik", pastRom: "geek", future: "vil gå", futureRom: "vil gaw" },
+      { dict: "komme", rom: "KOM-eh", en: "to come", present: "kommer", presentRom: "KOM-uh", past: "kom", pastRom: "kom", future: "vil komme", futureRom: "vil KOM-eh" },
+      { dict: "spise", rom: "SPEE-seh", en: "to eat", present: "spiser", presentRom: "SPEE-suh", past: "spiste", pastRom: "SPEES-teh", future: "vil spise", futureRom: "vil SPEE-seh" },
+      { dict: "drikke", rom: "DREEK-eh", en: "to drink", present: "drikker", presentRom: "DREEK-uh", past: "drak", pastRom: "drahk", future: "vil drikke", futureRom: "vil DREEK-eh" },
+      { dict: "se", rom: "say", en: "to see", present: "ser", presentRom: "sayr", past: "så", pastRom: "saw", future: "vil se", futureRom: "vil say" },
+      { dict: "skrive", rom: "SKREE-veh", en: "to write", present: "skriver", presentRom: "SKREE-vuh", past: "skrev", pastRom: "skrehv", future: "vil skrive", futureRom: "vil SKREE-veh" },
+      { dict: "arbejde", rom: "AHR-buy-th", en: "to work", present: "arbejder", presentRom: "AHR-buy-thuh", past: "arbejdede", pastRom: "AHR-buy-theh-theh", future: "vil arbejde", futureRom: "vil AHR-buy-th" },
+      { dict: "tale", rom: "TAH-leh", en: "to speak", present: "taler", presentRom: "TAH-luh", past: "talte", pastRom: "TAHL-teh", future: "vil tale", futureRom: "vil TAH-leh" },
+    ];
+
+    const STROKE_ORDER_DA = [
+      { ch: "æ", strokes: ["Write a lowercase a fused with a lowercase e.", "Represents a single vowel sound, like 'a' in cat — not two separate sounds."] },
+      { ch: "ø", strokes: ["Write a lowercase o.", "Add a diagonal stroke through it — round your lips for 'o' but say 'e', similar to German ö."] },
+      { ch: "å", strokes: ["Write a lowercase a.", "Add a small circle above it — pronounced like 'aw' in saw. This letter replaced the older spelling 'aa' in 1948, though 'aa' still appears in some names."] },
+    ];
+
+    const DANISH_CHAT_TOPICS = [
+      { k: ["hej", "hello", "hi "], a: "Hej (high) is the all-purpose casual greeting for both 'hi' and 'bye.' For a more formal greeting, goddag (goh-DAI, 'good day') is used, though it's fairly old-fashioned now." },
+      { k: ["farvel", "bye", "goodbye"], a: "Farvel (fahr-VEL) is the standard 'goodbye.' Casually, hej hej (repeated) or vi ses (see you) are both common too." },
+      { k: ["tak", "thank"], a: "Tak (tahk) means 'thank you' — short and used constantly in Danish, even more often than 'thanks' in English. Mange tak means 'thanks a lot.'" },
+      { k: ["undskyld", "sorry"], a: "Undskyld (OON-skewl) covers both 'sorry' and 'excuse me' — very versatile, used to apologize or get someone's attention." },
+      { k: ["stød", "glottal stop", "pronunciation"], a: "The stød is a distinctive creaky catch in the throat found in many Danish words — it's not written but changes a word's meaning, and is one of the trickiest parts of Danish pronunciation for learners." },
+      { k: ["du", "de", "formal", "informal"], a: "Modern Danish mostly uses du ('you') for everyone — the formal De has become quite rare and old-fashioned, mainly seen in very formal writing or with elderly people." },
+      { k: ["danish", "swedish", "norwegian", "difference"], a: "Danish, Swedish, and Norwegian are closely related and largely mutually intelligible in writing, though Danish pronunciation (especially the soft, swallowed consonants) makes spoken Danish noticeably harder for Swedes and Norwegians to follow than the reverse." },
+      { k: ["heart", "hearts", "lose"], a: "You lose a heart for each wrong answer in a lesson. Run out and the lesson ends — but hearts refill over time, or go Pro for unlimited hearts." },
+      { k: ["streak", "fire"], a: "Your streak counts consecutive days you complete at least one lesson. Miss a day and it resets — try a quick lesson daily!" },
+      { k: ["xp", "level", "points"], a: "XP is earned by finishing lessons and quizzes. It builds your Level on your Profile page — the more you practice, the higher you climb!" },
+      { k: ["pro", "premium", "upgrade", "subscription", "price", "cost"], a: "Hangul Pro unlocks unlimited hearts, every unit instantly, advanced speaking drills, deeper stats, and unlimited tutor chats. Check the Pro tab for pricing and plans!" },
+      { k: ["speak", "pronounce", "mic", "pronunciation"], a: "For speaking exercises, tap the mic and say the word naturally — the app compares what it hears to the target word. If your browser blocks the mic, check your site permissions." },
+      { k: ["difficult", "hard", "struggling", "stuck", "confus"], a: "Det er okay! (It's okay!) The stød and soft, swallowed consonants both take real practice — Danish is famously tricky even for other Scandinavians to hear clearly. Try replaying lessons or retaking a quiz — repetition is what makes it click." },
+    ];
+
+    const DUTCH_ALPHABET = [
+      {
+        title: "Vowels", chars: [
+          { ch: "a", rom: "ah", sample: "man", hint: "like 'a' in father" }, { ch: "e", rom: "eh", sample: "bed", hint: "like 'e' in bed" },
+          { ch: "i", rom: "ih", sample: "wit", hint: "like 'i' in bit" }, { ch: "o", rom: "oh", sample: "zon", hint: "like 'o' in more" },
+          { ch: "u", rom: "eu-ish", sample: "bus", hint: "round lips, say a short 'e' — close to French 'eu'" }]
+      },
+      {
+        title: "Dutch Diphthongs & Sounds", chars: [
+          { ch: "ij / ei", rom: "eye", sample: "wijn / trein", hint: "both spellings make the same sound, like 'y' in 'my' — as in wijn (wine) and trein (train)" }, { ch: "ui", rom: "uh-oy", sample: "huis", hint: "a rounded diphthong with no real English equivalent — as in huis (house)" },
+          { ch: "oe", rom: "oo", sample: "boek", hint: "like 'oo' in food — as in boek (book)" }, { ch: "g / ch", rom: "guttural", sample: "gaan", hint: "a raspy sound from the back of the throat, like Scottish 'loch' but often harsher" },
+          { ch: "sch", rom: "skh", sample: "school", hint: "the 's' and guttural 'g/ch' sound combined — as in school" }]
+      },
+    ];
+    const ALL_DUTCH_ALPHABET = DUTCH_ALPHABET.flatMap(s => s.chars);
+
+    const DUTCH_NUMBER_CHART = [
+      {
+        title: "Numbers 0–10", note: "The building blocks — every other number is formed from these.", chars: [
+          { ch: "nul", rom: "0 · nul", en: "0" }, { ch: "een", rom: "1 · ayn", en: "1" }, { ch: "twee", rom: "2 · tvay", en: "2" },
+          { ch: "drie", rom: "3 · dree", en: "3" }, { ch: "vier", rom: "4 · veer", en: "4" }, { ch: "vijf", rom: "5 · fife", en: "5" },
+          { ch: "zes", rom: "6 · zes", en: "6" }, { ch: "zeven", rom: "7 · ZAY-vun", en: "7" }, { ch: "acht", rom: "8 · ahkht", en: "8" },
+          { ch: "negen", rom: "9 · NAY-khun", en: "9" }, { ch: "tien", rom: "10 · teen", en: "10" }]
+      },
+      {
+        title: "Tens", note: "Dutch says the ones place before the tens — eenentwintig (21) is literally 'one-and-twenty', just like German.", chars: [
+          { ch: "twintig", rom: "20 · TVIN-tikh", en: "20" }, { ch: "dertig", rom: "30 · DAIR-tikh", en: "30" }, { ch: "veertig", rom: "40 · VAYR-tikh", en: "40" },
+          { ch: "vijftig", rom: "50 · FIFE-tikh", en: "50" }, { ch: "zestig", rom: "60 · ZES-tikh", en: "60" }, { ch: "zeventig", rom: "70 · ZAY-vun-tikh", en: "70" },
+          { ch: "tachtig", rom: "80 · TAHKH-tikh", en: "80" }, { ch: "negentig", rom: "90 · NAY-khun-tikh", en: "90" }]
+      },
+      {
+        title: "Big Units", note: "Everything above 100 is built from these + 0-99.", chars: [
+          { ch: "honderd", rom: "100 · HON-dert", en: "100" }, { ch: "duizend", rom: "1,000 · DOY-zent", en: "1,000" }, { ch: "miljoen", rom: "1,000,000 · mil-YOON", en: "1,000,000" }]
+      },
+    ];
+    const ALL_DUTCH_NUMBERS = DUTCH_NUMBER_CHART.flatMap(s => s.chars.map(c => ({ kr: c.ch, en: c.en, rom: c.rom })));
+
+    const VERB_CONJUGATIONS_NL = [
+      { dict: "zijn", rom: "zine", en: "to be", present: "is", presentRom: "iss", past: "was", pastRom: "vahs", future: "zal zijn", futureRom: "zahl zine" },
+      { dict: "hebben", rom: "HEB-un", en: "to have", present: "heeft", presentRom: "hayft", past: "had", pastRom: "haht", future: "zal hebben", futureRom: "zahl HEB-un" },
+      { dict: "gaan", rom: "khahn", en: "to go", present: "gaat", presentRom: "khaht", past: "ging", pastRom: "kheeng", future: "zal gaan", futureRom: "zahl khahn" },
+      { dict: "komen", rom: "KOH-mun", en: "to come", present: "komt", presentRom: "komt", past: "kwam", pastRom: "kvahm", future: "zal komen", futureRom: "zahl KOH-mun" },
+      { dict: "eten", rom: "AY-tun", en: "to eat", present: "eet", presentRom: "ayt", past: "at", pastRom: "aht", future: "zal eten", futureRom: "zahl AY-tun" },
+      { dict: "drinken", rom: "DRINK-un", en: "to drink", present: "drinkt", presentRom: "drinkt", past: "dronk", pastRom: "dronk", future: "zal drinken", futureRom: "zahl DRINK-un" },
+      { dict: "zien", rom: "zeen", en: "to see", present: "ziet", presentRom: "zeet", past: "zag", pastRom: "zahkh", future: "zal zien", futureRom: "zahl zeen" },
+      { dict: "schrijven", rom: "SKHRY-vun", en: "to write", present: "schrijft", presentRom: "SKHRYFT", past: "schreef", pastRom: "skhrayf", future: "zal schrijven", futureRom: "zahl SKHRY-vun" },
+      { dict: "werken", rom: "VAIR-kun", en: "to work", present: "werkt", presentRom: "vairkt", past: "werkte", pastRom: "VAIRK-tuh", future: "zal werken", futureRom: "zahl VAIR-kun" },
+      { dict: "spreken", rom: "SPRAY-kun", en: "to speak", present: "spreekt", presentRom: "spraykt", past: "sprak", pastRom: "sprahk", future: "zal spreken", futureRom: "zahl SPRAY-kun" },
+    ];
+
+    const STROKE_ORDER_NL = [
+      { ch: "ij", strokes: ["Write a lowercase i.", "Follow with a lowercase j — together they make one sound, like 'y' in 'my'. In handwriting, ij is often written as a single connected letter."] },
+      { ch: "ui", strokes: ["Write a lowercase u.", "Follow with a lowercase i — together a rounded diphthong unique to Dutch, with no true English equivalent."] },
+      { ch: "sch", strokes: ["Write s, c, h together.", "At the start of a word, pronounced as 's' + a guttural 'kh' sound; at the end of a word (like 'Nederlands'), often softens to just 's'."] },
+    ];
+
+    const DUTCH_CHAT_TOPICS = [
+      { k: ["hallo", "hello", "hi "], a: "Hallo (HAH-loh) is a friendly, all-purpose greeting. Casually, hoi (hoy) is also very common, especially among friends." },
+      { k: ["tot ziens", "bye", "goodbye"], a: "Tot ziens (tot zeens, 'until we see again') is the standard 'goodbye.' Casually, doei (doo-ee) is what most people actually say." },
+      { k: ["dank je", "thank"], a: "Dank je (dahnk yuh) means 'thank you' — informal. The formal version, used with strangers or in business, is dank u (dahnk ew)." },
+      { k: ["sorry", "excuse"], a: "Sorry, borrowed directly from English, is extremely common in everyday Dutch for 'sorry.' For 'excuse me' to get someone's attention, pardon also works." },
+      { k: ["je", "u", "formal", "informal"], a: "Dutch distinguishes je/jij (informal 'you') from u (formal 'you', used with strangers, elders, or in business) — though Dutch culture overall is fairly informal, so je is used more broadly than in many other European languages." },
+      { k: ["dutch", "flemish", "difference"], a: "Dutch as spoken in the Netherlands and Flemish (Belgian Dutch) are the same language with regional differences in accent, vocabulary, and some expressions — similar to the difference between American and British English." },
+      { k: ["guttural g", "hard g", "pronunciation"], a: "The Dutch 'g' and 'ch' sound is a raspy, guttural sound made in the back of the throat — it's one of the most distinctive and challenging sounds for English speakers learning Dutch." },
+      { k: ["heart", "hearts", "lose"], a: "You lose a heart for each wrong answer in a lesson. Run out and the lesson ends — but hearts refill over time, or go Pro for unlimited hearts." },
+      { k: ["streak", "fire"], a: "Your streak counts consecutive days you complete at least one lesson. Miss a day and it resets — try a quick lesson daily! Ga zo door!" },
+      { k: ["xp", "level", "points"], a: "XP is earned by finishing lessons and quizzes. It builds your Level on your Profile page — the more you practice, the higher you climb!" },
+      { k: ["pro", "premium", "upgrade", "subscription", "price", "cost"], a: "Hangul Pro unlocks unlimited hearts, every unit instantly, advanced speaking drills, deeper stats, and unlimited tutor chats. Check the Pro tab for pricing and plans!" },
+      { k: ["speak", "pronounce", "mic", "pronunciation"], a: "For speaking exercises, tap the mic and say the word naturally — the app compares what it hears to the target word. If your browser blocks the mic, check your site permissions." },
+      { k: ["difficult", "hard", "struggling", "stuck", "confus"], a: "Geen probleem! (No problem!) The guttural g and diphthongs like ui both take real practice. Try replaying lessons or retaking a quiz — repetition is what makes it click." },
+    ];
     const AMHARIC_NUMBER_CHART = [
       {
         title: "Numbers 0–10", note: "The building blocks — every other number is formed from these.", chars: [
@@ -12610,6 +14273,10 @@
           ca: "You are Han, a warm, encouraging Catalan tutor inside a learning app called Hello Hangul (currently teaching Catalan to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Catalan and English together — give the Catalan phrase, a simple pronunciation guide, and an English translation whenever relevant, so the learner sees all three. Catalan is a distinct Romance language (not a Spanish dialect), spoken mainly in Catalonia, Valencia, the Balearic Islands, and Andorra. You can discuss ANY Catalan word, phrase, grammar point (including tu vs vostè formality, the l·l/ll distinction, unstressed vowel reduction), or cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
           yue: "You are Han, a warm, encouraging Cantonese tutor inside a learning app called Hello Hangul (currently teaching Cantonese to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Cantonese and English together — give the Traditional Chinese characters, Jyutping romanization with tone numbers, and an English translation whenever relevant, so the learner sees all three. Cantonese has six tones and is not mutually intelligible with Mandarin despite sharing a writing system — be clear that this app teaches Cantonese specifically, not Mandarin. You can discuss ANY Cantonese word, phrase, grammar point, or cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
           my: "You are Han, a warm, encouraging Burmese tutor inside a learning app called Hello Hangul (currently teaching Burmese to this learner, beginner-to-intermediate level). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Burmese and English together — give the Myanmar script, a simple pronunciation guide, and an English translation whenever relevant. Be honest that your depth in Burmese (a language using a complex abugida script with four tones) is more limited than other languages, so stick to well-established, commonly known vocabulary and avoid inventing idioms or advanced grammar you're not confident about. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
+          hr: "You are Han, a warm, encouraging Croatian tutor inside a learning app called Hello Hangul (currently teaching Croatian to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Croatian and English together — give the Croatian phrase, a simple pronunciation guide, and an English translation whenever relevant, so the learner sees all three. You can discuss ANY Croatian word, phrase, grammar point (including the seven grammatical cases, ti vs Vi formality, the č/ć and dž/đ distinctions), or cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
+          cs: "You are Han, a warm, encouraging Czech tutor inside a learning app called Hello Hangul (currently teaching Czech to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Czech and English together — give the Czech phrase, a simple pronunciation guide, and an English translation whenever relevant, so the learner sees all three. You can discuss ANY Czech word, phrase, grammar point (including the seven grammatical cases, ty vs vy formality, and the notoriously tricky ř sound), or cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
+          da: "You are Han, a warm, encouraging Danish tutor inside a learning app called Hello Hangul (currently teaching Danish to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Danish and English together — give the Danish phrase, a simple pronunciation guide, and an English translation whenever relevant, so the learner sees all three. You can discuss ANY Danish word, phrase, grammar point (including the stød glottal stop, the letters æ/ø/å, and Danish's irregular base-20-derived tens like halvtreds), or cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
+          nl: "You are Han, a warm, encouraging Dutch tutor inside a learning app called Hello Hangul (currently teaching Dutch to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Dutch and English together — give the Dutch phrase, a simple pronunciation guide, and an English translation whenever relevant, so the learner sees all three. You can discuss ANY Dutch word, phrase, grammar point (including je vs u formality, the guttural g/ch sound, and diphthongs like ij/ui), or cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
           ko: "You are Han, a warm, encouraging Korean-language tutor inside a learning app called Hello Hangul. You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Korean and English together — give the Korean phrase, its romanization, and an English translation whenever relevant, so the learner sees all three. You can discuss ANY Korean word, phrase, grammar point, or cultural topic, not just app mechanics. When asked about a number, remember Korean has two number systems (Sino-Korean, used for money/dates/phone numbers/math, and Native Korean, used for counting objects/age, which only goes up to 99) — explain both systems for that number when the learner doesn't specify one. Keep answers short (2-5 sentences), warm, and beginner-friendly."
         };
         const systemPrompt = systemPrompts[activeLang] || systemPrompts.ko;
@@ -12805,6 +14472,10 @@
         ca: "Hola! I'm Han — let's warm up first, then I'll quiz you in Catalan.",
         yue: "你好! I'm Han — let's warm up first, then I'll quiz you in Cantonese.",
         my: "မင်္ဂလာပါ! I'm Han — let's warm up first, then I'll quiz you in Burmese.",
+        hr: "Bok! I'm Han — let's warm up first, then I'll quiz you in Croatian.",
+        cs: "Ahoj! I'm Han — let's warm up first, then I'll quiz you in Czech.",
+        da: "Hej! I'm Han — let's warm up first, then I'll quiz you in Danish.",
+        nl: "Hallo! I'm Han — let's warm up first, then I'll quiz you in Dutch.",
         ko: "Hi! I'm Han — let's warm up first, then I'll quiz you."
       };
       document.getElementById('videocallCaption').textContent = greetings[lang] || greetings.ko;
@@ -13068,10 +14739,10 @@
       { code: 'yue', name: 'Cantonese', flag: '🇭🇰', available: true },
       { code: 'ca', name: 'Catalan', flag: '🏴', available: true },
       { code: 'zh', name: 'Chinese (Mandarin)', flag: '🇨🇳', available: true },
-      { code: 'hr', name: 'Croatian', flag: '🇭🇷', available: false },
-      { code: 'cs', name: 'Czech', flag: '🇨🇿', available: false },
-      { code: 'da', name: 'Danish', flag: '🇩🇰', available: false },
-      { code: 'nl', name: 'Dutch', flag: '🇳🇱', available: false },
+      { code: 'hr', name: 'Croatian', flag: '🇭🇷', available: true },
+      { code: 'cs', name: 'Czech', flag: '🇨🇿', available: true },
+      { code: 'da', name: 'Danish', flag: '🇩🇰', available: true },
+      { code: 'nl', name: 'Dutch', flag: '🇳🇱', available: true },
       { code: 'en', name: 'English', flag: '🇬🇧', available: true },
       { code: 'eo', name: 'Esperanto', flag: '🌐', available: false },
       { code: 'tl', name: 'Filipino (Tagalog)', flag: '🇵🇭', available: false },
