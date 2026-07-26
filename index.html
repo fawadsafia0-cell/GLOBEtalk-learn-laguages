@@ -1,9 +1,9 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>GlobeTalk · Learn Korean</title>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#B7A4E0">
@@ -35,6 +35,7 @@
 
     * {
       box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
     }
 
     body {
@@ -46,6 +47,8 @@
         var(--bg);
       color: var(--text);
       min-height: 100vh;
+      min-height: 100dvh;
+      overscroll-behavior-y: none;
     }
 
     h1,
@@ -65,6 +68,7 @@
       max-width: 480px;
       margin: 0 auto;
       min-height: 100vh;
+      min-height: 100dvh;
       background: transparent;
       display: flex;
       flex-direction: column;
@@ -610,7 +614,7 @@
       background: var(--card);
       color: var(--text);
       font-family: inherit;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 700;
     }
 
@@ -1094,7 +1098,7 @@
       transform: translateX(-50%);
       width: 100%;
       max-width: 480px;
-      padding: 18px;
+      padding: 18px 18px calc(18px + env(safe-area-inset-bottom));
       z-index: 20;
     }
 
@@ -1183,6 +1187,7 @@
       display: flex;
       flex-direction: column;
       height: calc(100vh - 160px);
+      height: calc(100dvh - 160px);
     }
 
     .chat-messages {
@@ -1229,7 +1234,7 @@
       border-radius: 14px;
       padding: 12px 14px;
       font-family: inherit;
-      font-size: 14px;
+      font-size: 16px;
     }
 
     .chat-input-row input:focus {
@@ -1298,6 +1303,7 @@
     .videocall-stage {
       background: linear-gradient(180deg, #2D2340, #1A1428);
       min-height: 100vh;
+      min-height: 100dvh;
       margin: -12px -18px -20px;
       padding: 20px 18px 100px;
       display: flex;
@@ -19915,6 +19921,8 @@
       state.settings.learningLang = code;
       saveState();
       selectedTier = null;
+      const chatWrap = document.getElementById('chatMessages');
+      if (chatWrap) chatWrap.innerHTML = '';
       updateLangPickCard();
       updateLanguageSpecificUI();
       goHome();
