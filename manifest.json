@@ -1,6 +1,6 @@
 {
-  "name": "Hello Hangul - Learn Korean",
-  "short_name": "Hello Hangul",
+  "name": "GlobeTalk - Learn Korean",
+  "short_name": "GlobeTalk",
   "description": "Learn Korean with bite-sized lessons, games, K-Drama scenes, and a chat tutor.",
   "start_url": "./index.html",
   "scope": "./",

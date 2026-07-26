@@ -1,9 +1,8 @@
-
-// Hello Hangul — service worker
+// GlobeTalk — service worker
 // Caches the app shell so the app opens instantly and works offline
 // after the first visit. Bump CACHE_NAME whenever you deploy an update
 // so old cached files get replaced.
-const CACHE_NAME = 'hello-hangul-v2';
+const CACHE_NAME = 'globetalk-v1';
 const APP_SHELL = [
     './',
     './index.html',
