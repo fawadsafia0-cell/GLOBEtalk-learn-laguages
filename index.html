@@ -1388,6 +1388,15 @@
       padding: 0 10px;
     }
 
+    .videocall-audio-warning {
+      color: #FFD9A0;
+      font-weight: 600;
+      font-size: 12.5px;
+      text-align: center;
+      margin: -10px 0 14px;
+      padding: 0 16px;
+    }
+
     .videocall-question-card {
       width: 100%;
       max-width: 400px;
@@ -2186,6 +2195,7 @@
           <img class="videocall-avatar" id="videocallAvatarImg" src="" alt="Han">
         </div>
         <div class="videocall-caption" id="videocallCaption">Hi! I'm Han — let's practice. What does this mean?</div>
+        <div class="videocall-audio-warning" id="videocallAudioWarning" style="display:none;"></div>
         <div class="videocall-question-card" id="videocallCard"></div>
       </div>
     </div>
@@ -16993,16 +17003,25 @@
     if ('speechSynthesis' in window) {
       loadKoreanVoice();
       window.speechSynthesis.onvoiceschanged = loadKoreanVoice;
+      setInterval(() => {
+        if (window.speechSynthesis.speaking || window.speechSynthesis.pending) {
+          window.speechSynthesis.resume();
+        }
+      }, 4000);
+    }
+    function safeSpeak(utter) {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      setTimeout(() => window.speechSynthesis.speak(utter), 50);
     }
     function speakKorean(text) {
       if (!('speechSynthesis' in window)) return;
-      window.speechSynthesis.cancel();
       const utter = new SpeechSynthesisUtterance(text.replace(/^-/, ''));
       utter.lang = 'ko-KR';
       utter.rate = 0.85;
       utter.pitch = 1;
       if (koreanVoice) utter.voice = koreanVoice;
-      window.speechSynthesis.speak(utter);
+      safeSpeak(utter);
     }
     const LANG_TTS_CODE = {
       ko: 'ko-KR', es: 'es-ES', ja: 'ja-JP', en: 'en-US', zh: 'zh-CN', af: 'af-ZA', ar: 'ar-SA', am: 'am-ET', eu: 'eu-ES', bn: 'bn-BD',
@@ -17023,18 +17042,16 @@
         ttsUnavailableNoticeShown[lang] = true;
         alert("Your device/browser doesn't have a " + activeLangLabel() + " voice for text-to-speech — this is common for less widely-supported languages. The written pronunciation guide is still accurate, just no audio for now.");
       }
-      window.speechSynthesis.cancel();
       const utter = new SpeechSynthesisUtterance(text);
       utter.lang = targetLangCode;
       utter.rate = 0.9;
-      window.speechSynthesis.speak(utter);
+      safeSpeak(utter);
     }
     function speakCaption(text) {
       if (!('speechSynthesis' in window)) return;
-      window.speechSynthesis.cancel();
       const utter = new SpeechSynthesisUtterance(text);
       utter.rate = 0.95;
-      window.speechSynthesis.speak(utter);
+      safeSpeak(utter);
     }
     const VC_SPEECH_OK = !!(window.SpeechRecognition || window.webkitSpeechRecognition);
 
@@ -22025,7 +22042,16 @@
         return;
       }
       showScreen('videocall');
+      unlockSpeechForCall();
       startVideoCallRound();
+    }
+    function unlockSpeechForCall() {
+      if (!('speechSynthesis' in window)) return;
+      try {
+        const unlock = new SpeechSynthesisUtterance(' ');
+        unlock.volume = 0;
+        window.speechSynthesis.speak(unlock);
+      } catch (e) { /* ignore */ }
     }
 
     const VIDEOCALL_ENCOURAGEMENT = {
@@ -22052,6 +22078,25 @@
       if (mood === 'happy') { wrap.classList.add('mood-happy'); img.src = HAN_HAPPY_SRC; }
       else if (mood === 'sad') { wrap.classList.add('mood-sad'); img.src = HAN_SAD_SRC; }
       else { img.src = HAN_HAPPY_SRC; }
+    }
+
+    function checkVideoCallAudioAvailability() {
+      const warn = document.getElementById('videocallAudioWarning');
+      if (!warn) return;
+      if (!('speechSynthesis' in window)) {
+        warn.textContent = "🔇 This browser doesn't support spoken audio — Han's replies will show as text only.";
+        warn.style.display = 'block';
+        return;
+      }
+      setTimeout(() => {
+        const voices = window.speechSynthesis.getVoices();
+        if (voices.length === 0) {
+          warn.textContent = "🔇 No voices found on this device — check your system's text-to-speech settings. You can still read along and use the 🔊 Listen button.";
+          warn.style.display = 'block';
+        } else {
+          warn.style.display = 'none';
+        }
+      }, 900);
     }
 
     function startVideoCallRound() {
@@ -22100,6 +22145,7 @@
       };
       document.getElementById('videocallCaption').textContent = greetings[lang] || greetings.ko;
       speakCaption(greetings[lang] || greetings.ko);
+      checkVideoCallAudioAvailability();
       setVideoCallMood('neutral');
       renderVideoCallStep();
     }
@@ -22120,7 +22166,7 @@
       <div class="teach-meaning">${word.en}</div>
       <button class="primary-btn" onclick="videoCallState.phase='${VC_SPEECH_OK ? 'speak' : 'quiz'}'; renderVideoCallStep();">I'm ready →</button>
     </div>`;
-        speakLearning(word.kr);
+        setTimeout(() => speakLearning(word.kr), 900);
         return;
       }
 
