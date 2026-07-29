@@ -5852,6 +5852,344 @@
     LEVELS_BG.forEach((l, i) => { l.id = 10000 + i + 1; });
 
     const TIERS_FR = TIERS;
+    const TIERS_IS = TIERS;
+    const LEVELS_IS = [
+      {
+        tier: "beginner", title: "Icelandic Basics", icon: "🇮🇸", words: [
+          { kr: "halló", rom: "ha-LOH", en: "hello" }, { kr: "takk", rom: "tahk", en: "thank you" },
+          { kr: "já", rom: "yow", en: "yes" }, { kr: "nei", rom: "nay", en: "no" },
+          { kr: "nafn", rom: "nahpn", en: "name" }, { kr: "vinur", rom: "VI-nur", en: "friend" }]
+      },
+      {
+        tier: "beginner", title: "Greetings & Manners", icon: "🙏", words: [
+          { kr: "bless", rom: "bless", en: "goodbye" }, { kr: "fyrirgefðu", rom: "FI-rir-gyev-thu", en: "I'm sorry" },
+          { kr: "afsakið", rom: "AHF-sa-kith", en: "excuse me" }, { kr: "gaman að kynnast þér", rom: "GA-man ath KIN-nast thyer", en: "nice to meet you" },
+          { kr: "allt í lagi", rom: "ahtlt ee LA-yi", en: "it's okay" }, { kr: "vinsamlegast", rom: "VIN-sam-leh-gast", en: "please" }]
+      },
+      {
+        tier: "beginner", title: "Numbers 1-6", icon: "🔢", words: [
+          { kr: "einn", rom: "AYDN", en: "one" }, { kr: "tveir", rom: "TVAYR", en: "two" },
+          { kr: "þrír", rom: "THREER", en: "three" }, { kr: "fjórir", rom: "FYOH-rir", en: "four" },
+          { kr: "fimm", rom: "fim", en: "five" }, { kr: "sex", rom: "sehx", en: "six" }]
+      },
+      {
+        tier: "beginner", title: "Days & Time", icon: "🕒", words: [
+          { kr: "í dag", rom: "ee dahg", en: "today" }, { kr: "á morgun", rom: "ow MOR-gun", en: "tomorrow" },
+          { kr: "í gær", rom: "ee gyair", en: "yesterday" }, { kr: "núna", rom: "NOO-na", en: "now" },
+          { kr: "tími", rom: "TEE-mi", en: "time" }, { kr: "morgunn", rom: "MOR-gun", en: "morning" }]
+      },
+      {
+        tier: "beginner", title: "Family", icon: "👪", words: [
+          { kr: "fjölskylda", rom: "FYUHL-skil-da", en: "family" }, { kr: "mamma", rom: "MAHM-ma", en: "mom" },
+          { kr: "pabbi", rom: "PAHB-bi", en: "dad" }, { kr: "bróðir", rom: "BROH-thir", en: "brother" },
+          { kr: "systir", rom: "SIS-tir", en: "sister" }, { kr: "afi", rom: "AH-vi", en: "grandfather" }]
+      },
+      {
+        tier: "beginner", title: "Food & Drink", icon: "🍚", words: [
+          { kr: "matur", rom: "MA-tur", en: "food" }, { kr: "vatn", rom: "VAHT-n", en: "water" },
+          { kr: "kaffi", rom: "KAHF-fi", en: "coffee" }, { kr: "brauð", rom: "breuth", en: "bread" },
+          { kr: "hrísgrjón", rom: "HREES-gryohn", en: "rice" }, { kr: "ljúffengt", rom: "LYOOF-fengt", en: "delicious" }]
+      },
+      {
+        tier: "beginner", title: "Colors", icon: "🎨", words: [
+          { kr: "rauður", rom: "REU-thur", en: "red" }, { kr: "blár", rom: "blowr", en: "blue" },
+          { kr: "gulur", rom: "GU-lur", en: "yellow" }, { kr: "grænn", rom: "grynn", en: "green" },
+          { kr: "svartur", rom: "SVAR-tur", en: "black" }, { kr: "hvítur", rom: "KVEE-tur", en: "white" }]
+      },
+      {
+        tier: "beginner", title: "Body Parts", icon: "🧍", words: [
+          { kr: "höfuð", rom: "HUH-vuth", en: "head" }, { kr: "hönd", rom: "huhnd", en: "hand" },
+          { kr: "auga", rom: "EU-ga", en: "eye" }, { kr: "nef", rom: "nehf", en: "nose" },
+          { kr: "munnur", rom: "MUN-nur", en: "mouth" }, { kr: "fótur", rom: "FOH-tur", en: "leg" }]
+      },
+      {
+        tier: "beginner", title: "Animals", icon: "🐾", words: [
+          { kr: "hundur", rom: "HUN-dur", en: "dog" }, { kr: "köttur", rom: "KUHT-tur", en: "cat" },
+          { kr: "fugl", rom: "fuygl", en: "bird" }, { kr: "fiskur", rom: "FIS-kur", en: "fish" },
+          { kr: "björn", rom: "byuhrn", en: "bear" }, { kr: "kanína", rom: "ka-NEE-na", en: "rabbit" }]
+      },
+      {
+        tier: "beginner", title: "Clothing", icon: "👕", words: [
+          { kr: "föt", rom: "fuht", en: "clothes" }, { kr: "skór", rom: "skohr", en: "shoes" },
+          { kr: "húfa", rom: "HOO-va", en: "hat" }, { kr: "buxur", rom: "BUK-sur", en: "pants" },
+          { kr: "pils", rom: "pils", en: "skirt" }, { kr: "taska", rom: "TAHS-ka", en: "bag" }]
+      },
+      {
+        tier: "beginner", title: "Weather", icon: "⛅", words: [
+          { kr: "veður", rom: "VEH-thur", en: "weather" }, { kr: "rigning", rom: "RIG-ning", en: "rain" },
+          { kr: "snjór", rom: "snyohr", en: "snow" }, { kr: "vindur", rom: "VIN-dur", en: "wind" },
+          { kr: "það er heitt", rom: "thath ehr hayt", en: "it's hot" }, { kr: "það er kalt", rom: "thath ehr kahlt", en: "it's cold" }]
+      },
+      {
+        tier: "beginner", title: "House & Rooms", icon: "🏠", words: [
+          { kr: "hús", rom: "hoos", en: "house" }, { kr: "herbergi", rom: "HER-ber-gi", en: "room" },
+          { kr: "rúm", rom: "room", en: "bed" }, { kr: "baðherbergi", rom: "BATH-her-ber-gi", en: "bathroom" },
+          { kr: "eldhús", rom: "ELD-hoos", en: "kitchen" }, { kr: "hurð", rom: "hurth", en: "door" }]
+      },
+      {
+        tier: "beginner", title: "School & Objects", icon: "🎒", words: [
+          { kr: "skóli", rom: "SKOH-li", en: "school" }, { kr: "bók", rom: "bohk", en: "book" },
+          { kr: "blýantur", rom: "BLEE-an-tur", en: "pencil" }, { kr: "skólataska", rom: "SKOH-la-tas-ka", en: "backpack" },
+          { kr: "kennari", rom: "KEN-na-ri", en: "teacher" }, { kr: "nemandi", rom: "NEH-man-di", en: "student" }]
+      },
+
+      /* ---------------- INTERMEDIATE ---------------- */
+      {
+        tier: "intermediate", title: "Feelings & Emotions", icon: "💗", words: [
+          { kr: "glaður", rom: "GLA-thur", en: "happy" }, { kr: "leiður", rom: "LAY-thur", en: "sad" },
+          { kr: "reiður", rom: "RAY-thur", en: "angry" }, { kr: "þreyttur", rom: "THRAYT-tur", en: "tired" },
+          { kr: "spenntur", rom: "SPENT-tur", en: "excited" }, { kr: "stressaður", rom: "STRES-sa-thur", en: "nervous" }]
+      },
+      {
+        tier: "intermediate", title: "Directions & Places", icon: "🧭", words: [
+          { kr: "vinstri", rom: "VIN-stri", en: "left" }, { kr: "hægri", rom: "HYE-gri", en: "right" },
+          { kr: "beint áfram", rom: "baynt OW-fram", en: "straight ahead" }, { kr: "nálægt", rom: "NOW-lyekt", en: "near" },
+          { kr: "langt í burtu", rom: "lowngt ee BUR-tu", en: "far" }, { kr: "hér", rom: "hyer", en: "here" }]
+      },
+      {
+        tier: "intermediate", title: "Shopping", icon: "🛍️", words: [
+          { kr: "að kaupa", rom: "ath KEU-pa", en: "to buy" }, { kr: "peningar", rom: "PEH-ning-gar", en: "money" },
+          { kr: "dýrt", rom: "deert", en: "expensive" }, { kr: "ódýrt", rom: "OH-deert", en: "cheap" },
+          { kr: "búð", rom: "booth", en: "store" }, { kr: "að borga", rom: "ath BOR-ga", en: "to pay" }]
+      },
+      {
+        tier: "intermediate", title: "Transportation", icon: "🚌", words: [
+          { kr: "bíll", rom: "beetl", en: "car" }, { kr: "strætó", rom: "STRYE-toh", en: "bus" },
+          { kr: "lest", rom: "lest", en: "train" }, { kr: "flugvél", rom: "FLUG-vyel", en: "airplane" },
+          { kr: "hjól", rom: "hyohl", en: "bicycle" }, { kr: "að ferðast", rom: "ath FER-thast", en: "to travel" }]
+      },
+      {
+        tier: "intermediate", title: "Hobbies", icon: "🎸", words: [
+          { kr: "að lesa", rom: "ath LEH-sa", en: "to read" }, { kr: "að synda", rom: "ath SIN-da", en: "to swim" },
+          { kr: "að dansa", rom: "ath DAHN-sa", en: "to dance" }, { kr: "að syngja", rom: "ath SIN-gya", en: "to sing" },
+          { kr: "að mála", rom: "ath MOW-la", en: "to paint" }, { kr: "áhugamál", rom: "OW-hu-ga-mowl", en: "hobby" }]
+      },
+      {
+        tier: "intermediate", title: "Work & Jobs", icon: "💼", words: [
+          { kr: "starf", rom: "stahrf", en: "job" }, { kr: "læknir", rom: "LYEK-nir", en: "doctor" },
+          { kr: "verkfræðingur", rom: "VERK-fry-thing-gur", en: "engineer" }, { kr: "yfirmaður", rom: "IH-vir-ma-thur", en: "boss" },
+          { kr: "laun", rom: "leun", en: "salary" }, { kr: "skrifstofa", rom: "SKRIF-sto-va", en: "office" }]
+      },
+      {
+        tier: "intermediate", title: "Health & Body", icon: "🩺", words: [
+          { kr: "veikur", rom: "VAY-kur", en: "sick" }, { kr: "heilbrigður", rom: "HAYL-brig-thur", en: "healthy" },
+          { kr: "lyf", rom: "lif", en: "medicine" }, { kr: "sjúkrahús", rom: "SYOOK-ra-hoos", en: "hospital" },
+          { kr: "verkur", rom: "VER-kur", en: "pain" }, { kr: "að hvíla sig", rom: "ath KVEE-la sig", en: "to rest" }]
+      },
+      {
+        tier: "intermediate", title: "Technology", icon: "📱", words: [
+          { kr: "sími", rom: "SEE-mi", en: "phone" }, { kr: "tölva", rom: "TUHL-va", en: "computer" },
+          { kr: "internet", rom: "IN-ter-net", en: "internet" }, { kr: "að senda skilaboð", rom: "ath SEN-da SKI-la-both", en: "to text" },
+          { kr: "forrit", rom: "FOR-rit", en: "app" }, { kr: "rafhlaða", rom: "RAHV-hla-tha", en: "battery" }]
+      },
+      {
+        tier: "intermediate", title: "Sports", icon: "⚽", words: [
+          { kr: "fótbolti", rom: "FOHT-bol-ti", en: "soccer" }, { kr: "að hlaupa", rom: "ath HLEU-pa", en: "to run" },
+          { kr: "bolti", rom: "BOL-ti", en: "ball" }, { kr: "lið", rom: "lith", en: "team" },
+          { kr: "að vinna", rom: "ath VIN-na", en: "to win" }, { kr: "að tapa", rom: "ath TAH-pa", en: "to lose" }]
+      },
+      {
+        tier: "intermediate", title: "Nature", icon: "🌳", words: [
+          { kr: "tré", rom: "tryeh", en: "tree" }, { kr: "fjall", rom: "fyahtl", en: "mountain" },
+          { kr: "á", rom: "ow", en: "river" }, { kr: "haf", rom: "hahv", en: "ocean" },
+          { kr: "skógur", rom: "SKOH-gur", en: "forest" }, { kr: "himinn", rom: "HI-min", en: "sky" }]
+      },
+      {
+        tier: "intermediate", title: "Numbers & Time", icon: "🔟", words: [
+          { kr: "sjö", rom: "syuh", en: "seven" }, { kr: "átta", rom: "OW-ta", en: "eight" },
+          { kr: "níu", rom: "NEE-u", en: "nine" }, { kr: "tíu", rom: "TEE-u", en: "ten" },
+          { kr: "klukkustund", rom: "KLUHK-ku-stund", en: "hour" }, { kr: "mínúta", rom: "MEE-noo-ta", en: "minute" }]
+      },
+      {
+        tier: "intermediate", title: "Making Plans", icon: "📅", words: [
+          { kr: "að skipuleggja", rom: "ath SKI-pu-leg-ya", en: "to plan" }, { kr: "í kvöld", rom: "ee kvuhld", en: "tonight" },
+          { kr: "helgi", rom: "HEL-gi", en: "weekend" }, { kr: "að hittast", rom: "ath HIT-tast", en: "to meet" },
+          { kr: "áætlun", rom: "OW-yet-lun", en: "schedule" }, { kr: "frítími", rom: "FREE-tee-mi", en: "free time" }]
+      },
+      {
+        tier: "intermediate", title: "Restaurant & Ordering", icon: "🍽️", words: [
+          { kr: "matseðill", rom: "MAT-seh-thitl", en: "menu" }, { kr: "að panta", rom: "ath PAN-ta", en: "to order" },
+          { kr: "reikningur", rom: "RAYK-ning-gur", en: "check/bill" }, { kr: "þjónn", rom: "thyohn", en: "waiter" },
+          { kr: "borð", rom: "borth", en: "table" }, { kr: "bragðgott", rom: "BRAGTH-goht", en: "tasty" }]
+      },
+
+      /* ---------------- ADVANCED ---------------- */
+      {
+        tier: "advanced", title: "Connectors & Grammar", icon: "🔗", words: [
+          { kr: "en", rom: "en", en: "but" }, { kr: "því", rom: "thvee", en: "because" },
+          { kr: "þess vegna", rom: "thes VEG-na", en: "therefore" }, { kr: "þó", rom: "thoh", en: "although" },
+          { kr: "og", rom: "oh", en: "and" }, { kr: "eða", rom: "EH-tha", en: "or" }]
+      },
+      {
+        tier: "advanced", title: "Business Icelandic", icon: "🏢", words: [
+          { kr: "fundur", rom: "FUN-dur", en: "meeting" }, { kr: "samningur", rom: "SAHM-ning-gur", en: "contract" },
+          { kr: "viðskiptavinur", rom: "VITH-skip-ta-vi-nur", en: "client" }, { kr: "frestur", rom: "FRES-tur", en: "deadline" },
+          { kr: "verkefni", rom: "VER-kef-ni", en: "project" }, { kr: "samningaviðræður", rom: "SAHM-ning-ga-vith-ryeh-thur", en: "negotiation" }]
+      },
+      {
+        tier: "advanced", title: "News & Media", icon: "📰", words: [
+          { kr: "fréttir", rom: "FRYET-tir", en: "news" }, { kr: "dagblað", rom: "DAHG-blath", en: "newspaper" },
+          { kr: "blaðamaður", rom: "BLA-tha-ma-thur", en: "journalist" }, { kr: "að tilkynna", rom: "ath TIL-kin-na", en: "to report" },
+          { kr: "fyrirsögn", rom: "FI-rir-suhgn", en: "headline" }, { kr: "atburður", rom: "AHT-bur-thur", en: "event" }]
+      },
+      {
+        tier: "advanced", title: "Nuanced Emotions", icon: "🌫️", words: [
+          { kr: "að sakna", rom: "ath SAHK-na", en: "to miss (someone)" }, { kr: "eftirsjá", rom: "EF-tir-syow", en: "regret" },
+          { kr: "léttir", rom: "LYET-tir", en: "relief" }, { kr: "söknuður", rom: "SUHK-nu-thur", en: "longing" },
+          { kr: "von", rom: "vohn", en: "hope" }, { kr: "vonbrigði", rom: "VOHN-brig-thi", en: "disappointment" }]
+      },
+      {
+        tier: "advanced", title: "Idioms: Everyday Life", icon: "🫴", words: [
+          { kr: "að kasta steinum úr glerhúsi", rom: "ath KAHS-ta STAY-num oor GLER-hoo-si", en: "to throw stones from a glass house" },
+          { kr: "að slá tvær flugur í einu höggi", rom: "ath slow tvyer FLU-gur ee AY-nu HUHG-gi", en: "to kill two birds with one stone" },
+          { kr: "að bíta í það súra epli", rom: "ath BEE-ta ee thath SOO-ra EHP-li", en: "to bite the sour apple (accept something unpleasant)" },
+          { kr: "að fara á límingunni", rom: "ath FA-ra ow LEE-ming-gun-ni", en: "to come apart at the seams (lose composure)" },
+          { kr: "að fara út um þúfur", rom: "ath FA-ra oot um THOO-vur", en: "for plans to fall through" },
+          { kr: "að hafa mörg járn í eldinum", rom: "ath HA-va muhrg yowrn ee ELD-i-num", en: "to have many irons in the fire" }]
+      },
+      {
+        tier: "advanced", title: "Idioms: Wisdom & Weather", icon: "🌧️", words: [
+          { kr: "það er sjaldan ein báran stök", rom: "thath ehr SYAL-dan ayn BOW-ran stuhk", en: "troubles seldom come alone" },
+          { kr: "fall er fararheill", rom: "fatl ehr FA-rar-haytl", en: "a stumble at the start brings luck" },
+          { kr: "úlfur í sauðargæru", rom: "OOL-vur ee SEU-thar-gye-ru", en: "a wolf in sheep's clothing" },
+          { kr: "það er ekki allt sem sýnist", rom: "thath ehr EH-ki ahtlt sem SEE-nist", en: "not everything is as it seems" },
+          { kr: "þar liggur hundurinn grafinn", rom: "thar LIG-gur HUN-du-rin GRA-vin", en: "that's the crux of the matter" },
+          { kr: "margt er skrýtið í kýrhausnum", rom: "margt ehr SKREE-tith ee KEER-heus-num", en: "truth is often stranger than fiction" }]
+      },
+      {
+        tier: "advanced", title: "Travel Advanced", icon: "🛂", words: [
+          { kr: "vegabréf", rom: "VEH-ga-bryef", en: "passport" }, { kr: "tollur", rom: "TOHT-lur", en: "customs" },
+          { kr: "farangur", rom: "FA-rang-gur", en: "luggage" }, { kr: "seinkun á flugi", rom: "SAYN-kun ow FLU-gi", en: "flight delay" },
+          { kr: "bókun", rom: "BOH-kun", en: "reservation" }, { kr: "vegabréfsáritun", rom: "VEH-ga-bryefs-ow-ri-tun", en: "visa" }]
+      },
+      {
+        tier: "advanced", title: "Relationships", icon: "💌", words: [
+          { kr: "ást", rom: "owst", en: "love" }, { kr: "vinátta", rom: "VI-nowt-ta", en: "friendship" },
+          { kr: "traust", rom: "treust", en: "trust" }, { kr: "hjónaband", rom: "HYOH-na-band", en: "marriage" },
+          { kr: "að slíta sambandi", rom: "ath SLEE-ta SAM-ban-di", en: "to break up" }, { kr: "að þrá", rom: "ath throw", en: "to long for" }]
+      },
+      {
+        tier: "advanced", title: "Debate & Opinions", icon: "🗣️", words: [
+          { kr: "skoðun", rom: "SKOH-thun", en: "opinion" }, { kr: "að vera sammála", rom: "ath VEH-ra SAHM-mow-la", en: "to agree" },
+          { kr: "að vera ósammála", rom: "ath VEH-ra OH-sahm-mow-la", en: "to disagree" }, { kr: "rök", rom: "ruhk", en: "argument" },
+          { kr: "sjónarhorn", rom: "SYOH-nar-horn", en: "point of view" }, { kr: "að sannfæra", rom: "ath SAHN-fye-ra", en: "to convince" }]
+      },
+      {
+        tier: "advanced", title: "Formal Speech & Register", icon: "🎩", words: [
+          { kr: "þér", rom: "thyer", en: "formal 'you' (archaic, rarely used today)" }, { kr: "þú", rom: "thoo", en: "informal 'you' (used almost universally now)" },
+          { kr: "herra", rom: "HER-ra", en: "Mr. / sir" }, { kr: "frú", rom: "froo", en: "Mrs. / madam" },
+          { kr: "kæri/kæra", rom: "KYE-ri / KYE-ra", en: "dear (formal letter opening)" }, { kr: "virðingarfyllst", rom: "VIRTH-ing-gar-fitlst", en: "sincerely (formal closing)" }]
+      },
+      {
+        tier: "advanced", title: "Slang & Internet Terms", icon: "📲", words: [
+          { kr: "æði", rom: "EYE-thi", en: "awesome (slang)" }, { kr: "kúl", rom: "kool", en: "cool" },
+          { kr: "djók", rom: "dyohk", en: "joke / just kidding" }, { kr: "sjúkt", rom: "syookt", en: "crazy / insane (slang for 'wild')" },
+          { kr: "plís", rom: "plees", en: "please (casual, borrowed from English)" }, { kr: "takk fyrir mig", rom: "tahk FI-rir mig", en: "thanks (said after a meal)" }]
+      },
+      {
+        tier: "advanced", title: "Culture & History", icon: "🏛️", words: [
+          { kr: "víkingar", rom: "VEE-king-gar", en: "Vikings" }, { kr: "sögur", rom: "SUH-gur", en: "sagas" },
+          { kr: "sjálfstæði", rom: "SYOWLV-styethi", en: "independence" }, { kr: "Alþingi", rom: "AL-thing-gi", en: "parliament" },
+          { kr: "menning", rom: "MEN-ning", en: "culture" }, { kr: "saga", rom: "SA-ga", en: "history" }]
+      },
+      {
+        tier: "advanced", title: "Advanced Verbs", icon: "💪", words: [
+          { kr: "að ná árangri", rom: "ath now OW-rang-ri", en: "to achieve" }, { kr: "að takast", rom: "ath TAH-kast", en: "to succeed" },
+          { kr: "að mistakast", rom: "ath MIS-tah-kast", en: "to fail" }, { kr: "að bæta sig", rom: "ath BYE-ta sig", en: "to improve" },
+          { kr: "að berjast", rom: "ath BER-yast", en: "to struggle" }, { kr: "að sigrast á", rom: "ath SIG-rast ow", en: "to overcome" }]
+      },
+
+      /* ---------------- FLUENT ---------------- */
+      {
+        tier: "fluent", title: "Proverbs Part 1", icon: "📜", words: [
+          { kr: "margur verður af aurum api", rom: "MAR-gur VER-thur av EU-rum A-pi", en: "money makes fools of many" },
+          { kr: "sjaldan launar kálfur ofeldi", rom: "SYAL-dan LEU-nar KOWL-vur OH-fel-di", en: "spoiling someone often backfires" },
+          { kr: "betri er krókur en kelda", rom: "BEH-tri ehr KROH-kur en KEL-da", en: "better a detour than a bog (better safe than sorry)" },
+          { kr: "allt er gott sem endar vel", rom: "ahtlt ehr goht sem EN-dar vel", en: "all's well that ends well" },
+          { kr: "enginn er spámaður í sínu föðurlandi", rom: "ENG-in ehr SPOW-ma-thur ee SEE-nu FUH-thur-lan-di", en: "no one is a prophet in his own homeland" },
+          { kr: "þolinmæði er dyggð", rom: "THOH-lin-my-thi ehr digd", en: "patience is a virtue" }]
+      },
+      {
+        tier: "fluent", title: "Literary Expressions", icon: "🖋️", words: [
+          { kr: "Ekki skal gráta Björn bónda, heldur safna liði", rom: "EH-ki skal GROW-ta byuhrn BOHN-da HEL-dur SAHV-na LI-thi", en: "famous Njáls saga line: don't mourn, but rally support" },
+          { kr: "skáld", rom: "skowld", en: "poet" }, { kr: "kvæði", rom: "KVYE-thi", en: "poem" },
+          { kr: "frásögn", rom: "FROW-suhgn", en: "narrative" }, { kr: "örlög", rom: "UHR-luhg", en: "fate / destiny" },
+          { kr: "rómantík", rom: "ROH-man-teek", en: "romance (literary)" }]
+      },
+      {
+        tier: "fluent", title: "Proverbs Part 2", icon: "🪞", words: [
+          { kr: "veðrið breytist hratt", rom: "VEH-thrith BRAY-tist hraht", en: "the weather changes fast" },
+          { kr: "það er aldrei að vita með veðrið", rom: "thath ehr AL-dray ath VI-ta meth VEH-thrith", en: "you never know with the weather" },
+          { kr: "að taka hlutunum með ró", rom: "ath TA-ka HLU-tu-num meth roh", en: "to take things calmly" },
+          { kr: "betra seint en aldrei", rom: "BEH-tra saynt en AL-dray", en: "better late than never" },
+          { kr: "þar sem er vilji, þar er vegur", rom: "thar sem ehr VIL-yi thar ehr VEH-gur", en: "where there's a will there's a way" },
+          { kr: "æfingin skapar meistarann", rom: "EYE-ving-in SKA-par MAY-sta-rahn", en: "practice makes perfect" }]
+      },
+      {
+        tier: "fluent", title: "Political & Social Terms", icon: "🏛️", words: [
+          { kr: "stjórnmál", rom: "STYOHRN-mowl", en: "politics" }, { kr: "ríkisstjórn", rom: "REE-kis-styohrn", en: "government" },
+          { kr: "kosningar", rom: "KOS-ning-gar", en: "elections" }, { kr: "lýðræði", rom: "LEETH-rye-thi", en: "democracy" },
+          { kr: "réttindi", rom: "RYET-tin-di", en: "rights" }, { kr: "jafnrétti", rom: "YAHV-nryet-ti", en: "equality" }]
+      },
+      {
+        tier: "fluent", title: "Psychology & Nuance", icon: "🧠", words: [
+          { kr: "meðvitund", rom: "METH-vi-tund", en: "consciousness / awareness" }, { kr: "undirmeðvitund", rom: "UN-dir-meth-vi-tund", en: "subconscious" },
+          { kr: "sjálfsmynd", rom: "SYOWLVS-mind", en: "self-image / identity" }, { kr: "samkennd", rom: "SAHM-kend", en: "empathy" },
+          { kr: "kvíði", rom: "KVEE-thi", en: "anxiety" }, { kr: "seigla", rom: "SAY-gla", en: "resilience" }]
+      },
+      {
+        tier: "fluent", title: "Business Negotiation", icon: "🤝", words: [
+          { kr: "tilboð", rom: "TIL-both", en: "offer" }, { kr: "gagntilboð", rom: "GAHGN-til-both", en: "counteroffer" },
+          { kr: "málamiðlun", rom: "MOW-la-mith-lun", en: "compromise" }, { kr: "hagsmunir", rom: "HAHGS-mu-nir", en: "interests" },
+          { kr: "samningsstaða", rom: "SAHM-nings-sta-tha", en: "bargaining position" }, { kr: "að skrifa undir", rom: "ath SKRI-va UN-dir", en: "to sign" }]
+      },
+      {
+        tier: "fluent", title: "Academic Icelandic", icon: "🎓", words: [
+          { kr: "rannsókn", rom: "RAHN-sohkn", en: "research" }, { kr: "kenning", rom: "KEN-ning", en: "theory" },
+          { kr: "ritgerð", rom: "RIT-gerth", en: "essay / thesis" }, { kr: "tilgáta", rom: "TIL-gow-ta", en: "hypothesis" },
+          { kr: "heimild", rom: "HAY-mild", en: "source / reference" }, { kr: "niðurstaða", rom: "NI-thur-sta-tha", en: "conclusion" }]
+      },
+      {
+        tier: "fluent", title: "Poetic & Formal Writing", icon: "🕊️", words: [
+          { kr: "ljóð", rom: "lyohth", en: "poem" }, { kr: "rím", rom: "reem", en: "rhyme" },
+          { kr: "líking", rom: "LEE-king", en: "metaphor / simile" }, { kr: "fegurð", rom: "FEH-gurth", en: "beauty" },
+          { kr: "þögn", rom: "thuhgn", en: "silence" }, { kr: "eilífð", rom: "AY-leevth", en: "eternity" }]
+      },
+      {
+        tier: "fluent", title: "Regional Flavor", icon: "🗺️", words: [
+          { kr: "Reykjavík", rom: "RAY-kya-veek", en: "Reykjavík (the capital)" }, { kr: "Akureyri", rom: "AH-ku-ray-ri", en: "Akureyri (northern town)" },
+          { kr: "hálendið", rom: "HOW-len-dith", en: "the highlands" }, { kr: "firðir", rom: "FIRTH-ir", en: "fjords" },
+          { kr: "landsbyggðin", rom: "LANDS-big-thin", en: "rural areas / the countryside" }, { kr: "þjóðhátíð", rom: "THYOHTH-how-teeth", en: "national festival" }]
+      },
+      {
+        tier: "fluent", title: "Complex Grammar: Cases", icon: "🧩", words: [
+          { kr: "nefnifall", rom: "NEB-ni-fahtl", en: "nominative case" }, { kr: "þolfall", rom: "THOL-fahtl", en: "accusative case" },
+          { kr: "þágufall", rom: "THOW-gu-fahtl", en: "dative case" }, { kr: "eignarfall", rom: "AYG-nar-fahtl", en: "genitive case" },
+          { kr: "fallorð", rom: "FAHTL-orth", en: "declinable word" }, { kr: "beyging", rom: "BAY-ging", en: "declension / inflection" }]
+      },
+      {
+        tier: "fluent", title: "More Proverbs", icon: "📖", words: [
+          { kr: "þolinmæði þrautir vinnur", rom: "THOH-lin-my-thi THREU-tir VIN-nur", en: "patience overcomes hardship" },
+          { kr: "margar hendur vinna létt verk", rom: "MAR-gar HEN-dur VIN-na lyet verk", en: "many hands make light work" },
+          { kr: "að læra af mistökum sínum", rom: "ath LYE-ra av MIS-tuh-kum SEE-num", en: "to learn from one's mistakes" },
+          { kr: "Rómaborg var ekki byggð á einum degi", rom: "ROH-ma-borg var EH-ki bigd ow AY-num DEH-yi", en: "Rome wasn't built in a day" },
+          { kr: "betri er einn fugl í hendi en tveir í skógi", rom: "BEH-tri ehr aydn fuygl ee HEN-di en tvayr ee SKOH-yi", en: "a bird in hand is worth two in the bush" },
+          { kr: "iðjuleysi er rót alls ills", rom: "ITH-yu-lay-si ehr roht ahls ils", en: "idleness is the root of all evil" }]
+      },
+      {
+        tier: "fluent", title: "Professional Terms", icon: "⚖️", words: [
+          { kr: "lögfræðingur", rom: "LUHG-fry-thing-gur", en: "lawyer" }, { kr: "réttarhöld", rom: "RYET-tar-huhld", en: "court proceedings / trial" },
+          { kr: "ábyrgð", rom: "OW-birgth", en: "responsibility / liability" }, { kr: "hæfni", rom: "HYEV-ni", en: "competence / qualification" },
+          { kr: "starfsreynsla", rom: "STARFS-rayn-sla", en: "work experience" }, { kr: "meðmæli", rom: "METH-my-li", en: "recommendation / reference" }]
+      },
+      {
+        tier: "fluent", title: "Mastery Review", icon: "🏆", words: [
+          { kr: "reynsla", rom: "RAYN-sla", en: "experience" }, { kr: "árangur", rom: "OW-rang-gur", en: "success / achievement" },
+          { kr: "þekking", rom: "THEK-king", en: "knowledge" }, { kr: "skilningur", rom: "SKIL-ning-gur", en: "understanding" },
+          { kr: "framfarir", rom: "FRAM-fa-rir", en: "progress" }, { kr: "hæfileiki", rom: "HYE-vi-lay-ki", en: "talent / ability" }]
+      },
+    ];
+
     const LEVELS_FR = [
       /* ---------------- BEGINNER ---------------- */
       {
@@ -16269,6 +16607,7 @@
     const ALL_VOCAB_HU = LEVELS_HU.flatMap(l => l.words);
     const ALL_VOCAB_ID = LEVELS_ID.flatMap(l => l.words);
     const ALL_VOCAB_FA = LEVELS_FA.flatMap(l => l.words);
+    const ALL_VOCAB_IS = LEVELS_IS.flatMap(l => l.words);
     function activeVocabPool() {
       const lang = (state.settings && state.settings.learningLang) || 'ko';
       if (lang === 'es') return ALL_VOCAB_ES;
@@ -16309,6 +16648,7 @@
       if (lang === 'hu') return ALL_VOCAB_HU;
       if (lang === 'id') return ALL_VOCAB_ID;
       if (lang === 'fa') return ALL_VOCAB_FA;
+      if (lang === 'is') return ALL_VOCAB_IS;
       return ALL_VOCAB;
     }
     function activeChatTopics() {
@@ -16351,6 +16691,7 @@
       if (lang === 'hu') return HUNGARIAN_CHAT_TOPICS;
       if (lang === 'id') return INDONESIAN_CHAT_TOPICS;
       if (lang === 'fa') return PERSIAN_CHAT_TOPICS;
+      if (lang === 'is') return ICELANDIC_CHAT_TOPICS;
       return CHAT_TOPICS;
     }
     function escapeRegex(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
@@ -16590,7 +16931,8 @@
         no: ['Norwegian Practice', 'Proficiency-style test questions'],
         hu: ['Hungarian Practice', 'Proficiency-style test questions'],
         id: ['Indonesian Practice', 'Proficiency-style test questions'],
-        fa: ['Persian Practice', 'Proficiency-style test questions']
+        fa: ['Persian Practice', 'Proficiency-style test questions'],
+        is: ['Icelandic Practice', 'Proficiency-style test questions']
       };
       const topikTitle = document.getElementById('topikCardTitle');
       if (topikTitle) {
@@ -16638,7 +16980,8 @@
         no: ['Norwegian Alphabet', 'æ, ø, å, and pitch accent + a quick quiz'],
         hu: ['Hungarian Alphabet', 'Vowel length pairs and distinctive digraphs + a quick quiz'],
         id: ['Indonesian Alphabet', 'Distinctive digraphs like ng, ny, and sy + a quick quiz'],
-        fa: ['Persian Alphabet', 'The Perso-Arabic script, right-to-left + a quick quiz']
+        fa: ['Persian Alphabet', 'The Perso-Arabic script, right-to-left + a quick quiz'],
+        is: ['Icelandic Alphabet', 'All 32 letters, including þ, ð, æ, ö + a quick quiz']
       };
       const alphabetTitle = document.getElementById('alphabetCardTitle');
       if (alphabetTitle) {
@@ -16686,7 +17029,8 @@
         no: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz'],
         hu: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz'],
         id: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz'],
-        fa: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz']
+        fa: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz'],
+        is: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz']
       };
       const numberCardTitle = document.getElementById('numberCardTitle');
       const numberSub = document.getElementById('numberCardSub');
@@ -16731,7 +17075,8 @@
         he: ['Verb Conjugation', 'Present, past, and future tense drills'],
         no: ['Verb Conjugation', 'Present, past, and future tense drills'],
         hu: ['Verb Conjugation', 'Present, past, and future tense drills'],
-        fa: ['Verb Conjugation', 'Present, past, and future tense drills']
+        fa: ['Verb Conjugation', 'Present, past, and future tense drills'],
+        is: ['Verb Conjugation', 'Present, past, and future tense drills']
       };
       const grammarTitle = document.getElementById('grammarCardTitle');
       if (grammarTitle) {
@@ -16778,7 +17123,8 @@
         no: 'Practice writing æ, ø, and å by hand',
         hu: 'Practice the long/short vowel pairs by hand',
         id: 'Practice the ng and ny digraphs by hand',
-        fa: 'Practice the Persian script by hand'
+        fa: 'Practice the Persian script by hand',
+        is: 'Practice the letters þ, ð, æ, and ö by hand'
       };
       const drawSub = document.getElementById('drawTraceCardSub');
       if (drawSub) drawSub.textContent = drawSubText[lang] || drawSubText.ko;
@@ -16823,6 +17169,7 @@
       if (lang === 'hu') return TIERS_HU;
       if (lang === 'id') return TIERS_ID;
       if (lang === 'fa') return TIERS_FA;
+      if (lang === 'is') return TIERS_IS;
       return TIERS;
     }
     function activeLevels() {
@@ -16865,6 +17212,7 @@
       if (lang === 'hu') return LEVELS_HU;
       if (lang === 'id') return LEVELS_ID;
       if (lang === 'fa') return LEVELS_FA;
+      if (lang === 'is') return LEVELS_IS;
       return LEVELS;
     }
 
@@ -17078,7 +17426,7 @@
       ko: 'ko-KR', es: 'es-ES', ja: 'ja-JP', en: 'en-US', zh: 'zh-CN', af: 'af-ZA', ar: 'ar-SA', am: 'am-ET', eu: 'eu-ES', bn: 'bn-BD',
       bg: 'bg-BG', fr: 'fr-FR', de: 'de-DE', it: 'it-IT', ca: 'ca-ES', yue: 'zh-HK', my: 'my-MM', hr: 'hr-HR', cs: 'cs-CZ', da: 'da-DK',
       nl: 'nl-NL', eo: 'eo', tl: 'fil-PH', fi: 'fi-FI', pt: 'pt-BR', pl: 'pl-PL', sv: 'sv-SE', ru: 'ru-RU', hi: 'hi-IN', vi: 'vi-VN',
-      tr: 'tr-TR', uk: 'uk-UA', ro: 'ro-RO', el: 'el-GR', he: 'he-IL', no: 'nb-NO', hu: 'hu-HU', id: 'id-ID', fa: 'fa-IR'
+      tr: 'tr-TR', uk: 'uk-UA', ro: 'ro-RO', el: 'el-GR', he: 'he-IL', no: 'nb-NO', hu: 'hu-HU', id: 'id-ID', fa: 'fa-IR', is: 'is-IS'
     };
     let ttsUnavailableNoticeShown = {};
     function speakLearning(text, onStart, onEnd) {
@@ -17407,7 +17755,7 @@
     function openHangulChart() {
       showScreen('hangul');
       const lang = (state.settings && state.settings.learningLang) || 'ko';
-      const titles = { es: '🔤 Spanish Alphabet', ja: '🔤 Hiragana Chart', en: '🔤 Irregular Verbs', zh: '🔤 Tones & Pinyin Chart', af: '🔤 Afrikaans Alphabet', ar: '🔤 Arabic Alphabet', am: '🔤 Amharic Core Characters', eu: '🔤 Basque Alphabet', bn: '🔤 Bengali Alphabet', bg: '🔤 Cyrillic Alphabet', fr: '🔤 French Alphabet', de: '🔤 German Alphabet', it: '🔤 Italian Alphabet', ca: '🔤 Catalan Alphabet', yue: '🔤 Jyutping & Tones', my: '🔤 Myanmar Script', hr: '🔤 Croatian Alphabet', cs: '🔤 Czech Alphabet', da: '🔤 Danish Alphabet', nl: '🔤 Dutch Alphabet', eo: '🔤 Esperanto Alphabet', tl: '🔤 Filipino Alphabet', fi: '🔤 Finnish Alphabet', pt: '🔤 Portuguese Alphabet', pl: '🔤 Polish Alphabet', sv: '🔤 Swedish Alphabet', ru: '🔤 Cyrillic Alphabet', hi: '🔤 Devanagari Script', vi: '🔤 Tones & Vowels', tr: '🔤 Turkish Alphabet', uk: '🔤 Ukrainian Alphabet', ro: '🔤 Romanian Alphabet', el: '🔤 Greek Alphabet', he: '🔤 Hebrew Alphabet', no: '🔤 Norwegian Alphabet', hu: '🔤 Hungarian Alphabet', id: '🔤 Indonesian Alphabet', fa: '🔤 Persian Alphabet', ko: '🔤 Hangul Chart' };
+      const titles = { es: '🔤 Spanish Alphabet', ja: '🔤 Hiragana Chart', en: '🔤 Irregular Verbs', zh: '🔤 Tones & Pinyin Chart', af: '🔤 Afrikaans Alphabet', ar: '🔤 Arabic Alphabet', am: '🔤 Amharic Core Characters', eu: '🔤 Basque Alphabet', bn: '🔤 Bengali Alphabet', bg: '🔤 Cyrillic Alphabet', fr: '🔤 French Alphabet', de: '🔤 German Alphabet', it: '🔤 Italian Alphabet', ca: '🔤 Catalan Alphabet', yue: '🔤 Jyutping & Tones', my: '🔤 Myanmar Script', hr: '🔤 Croatian Alphabet', cs: '🔤 Czech Alphabet', da: '🔤 Danish Alphabet', nl: '🔤 Dutch Alphabet', eo: '🔤 Esperanto Alphabet', tl: '🔤 Filipino Alphabet', fi: '🔤 Finnish Alphabet', pt: '🔤 Portuguese Alphabet', pl: '🔤 Polish Alphabet', sv: '🔤 Swedish Alphabet', ru: '🔤 Cyrillic Alphabet', hi: '🔤 Devanagari Script', vi: '🔤 Tones & Vowels', tr: '🔤 Turkish Alphabet', uk: '🔤 Ukrainian Alphabet', ro: '🔤 Romanian Alphabet', el: '🔤 Greek Alphabet', he: '🔤 Hebrew Alphabet', no: '🔤 Norwegian Alphabet', hu: '🔤 Hungarian Alphabet', id: '🔤 Indonesian Alphabet', fa: '🔤 Persian Alphabet', is: '🔤 Icelandic Alphabet', ko: '🔤 Hangul Chart' };
       const subs = {
         es: 'Tap any letter to hear it. Learn all 27 letters and try the quiz below.',
         ja: 'Tap any character to hear it. Learn all 46 basic hiragana and try the quiz below.',
@@ -17447,6 +17795,7 @@
         hu: 'Hungarian uses vowel length to distinguish meaning (a vs á) and vowel harmony throughout the language. Tap any to hear it.',
         id: 'Indonesian spelling is very phonetic, with distinctive digraphs like ng, ny, and sy. Tap any to hear it.',
         fa: 'Persian is written right-to-left using a version of the Arabic script with four extra letters. Tap any to hear it.',
+        is: 'Icelandic keeps four letters English used to have: þ, ð, æ, and ö. Tap any to hear it, then try the quiz.',
         ko: 'Tap any letter to hear it. Learn all 40 and try the quiz below.'
       };
       document.getElementById('alphabetChartTitle').textContent = titles[lang] || titles.ko;
@@ -17459,7 +17808,7 @@
       if (wrap.dataset.built === lang) return;
       wrap.dataset.built = lang;
       wrap.innerHTML = '';
-      const chart = lang === 'es' ? SPANISH_ALPHABET : lang === 'ja' ? JAPANESE_KANA : lang === 'en' ? IRREGULAR_VERBS : lang === 'zh' ? CHINESE_TONES : lang === 'af' ? AFRIKAANS_ALPHABET : lang === 'ar' ? ARABIC_ALPHABET : lang === 'am' ? AMHARIC_ALPHABET : lang === 'eu' ? BASQUE_ALPHABET : lang === 'bn' ? BENGALI_ALPHABET : lang === 'bg' ? BULGARIAN_ALPHABET : lang === 'fr' ? FRENCH_ALPHABET : lang === 'de' ? GERMAN_ALPHABET : lang === 'it' ? ITALIAN_ALPHABET : lang === 'ca' ? CATALAN_ALPHABET : lang === 'yue' ? CANTONESE_TONES : lang === 'my' ? BURMESE_ALPHABET : lang === 'hr' ? CROATIAN_ALPHABET : lang === 'cs' ? CZECH_ALPHABET : lang === 'da' ? DANISH_ALPHABET : lang === 'nl' ? DUTCH_ALPHABET : lang === 'eo' ? ESPERANTO_ALPHABET : lang === 'tl' ? FILIPINO_ALPHABET : lang === 'fi' ? FINNISH_ALPHABET : lang === 'pt' ? PORTUGUESE_ALPHABET : lang === 'pl' ? POLISH_ALPHABET : lang === 'sv' ? SWEDISH_ALPHABET : lang === 'ru' ? RUSSIAN_ALPHABET : lang === 'hi' ? HINDI_ALPHABET : lang === 'vi' ? VIETNAMESE_TONES : lang === 'tr' ? TURKISH_ALPHABET : lang === 'uk' ? UKRAINIAN_ALPHABET : lang === 'ro' ? ROMANIAN_ALPHABET : lang === 'el' ? GREEK_ALPHABET : lang === 'he' ? HEBREW_ALPHABET : lang === 'no' ? NORWEGIAN_ALPHABET : lang === 'hu' ? HUNGARIAN_ALPHABET : lang === 'id' ? INDONESIAN_ALPHABET : lang === 'fa' ? PERSIAN_ALPHABET : HANGUL_CHART;
+      const chart = lang === 'es' ? SPANISH_ALPHABET : lang === 'ja' ? JAPANESE_KANA : lang === 'en' ? IRREGULAR_VERBS : lang === 'zh' ? CHINESE_TONES : lang === 'af' ? AFRIKAANS_ALPHABET : lang === 'ar' ? ARABIC_ALPHABET : lang === 'am' ? AMHARIC_ALPHABET : lang === 'eu' ? BASQUE_ALPHABET : lang === 'bn' ? BENGALI_ALPHABET : lang === 'bg' ? BULGARIAN_ALPHABET : lang === 'fr' ? FRENCH_ALPHABET : lang === 'de' ? GERMAN_ALPHABET : lang === 'it' ? ITALIAN_ALPHABET : lang === 'ca' ? CATALAN_ALPHABET : lang === 'yue' ? CANTONESE_TONES : lang === 'my' ? BURMESE_ALPHABET : lang === 'hr' ? CROATIAN_ALPHABET : lang === 'cs' ? CZECH_ALPHABET : lang === 'da' ? DANISH_ALPHABET : lang === 'nl' ? DUTCH_ALPHABET : lang === 'eo' ? ESPERANTO_ALPHABET : lang === 'tl' ? FILIPINO_ALPHABET : lang === 'fi' ? FINNISH_ALPHABET : lang === 'pt' ? PORTUGUESE_ALPHABET : lang === 'pl' ? POLISH_ALPHABET : lang === 'sv' ? SWEDISH_ALPHABET : lang === 'ru' ? RUSSIAN_ALPHABET : lang === 'hi' ? HINDI_ALPHABET : lang === 'vi' ? VIETNAMESE_TONES : lang === 'tr' ? TURKISH_ALPHABET : lang === 'uk' ? UKRAINIAN_ALPHABET : lang === 'ro' ? ROMANIAN_ALPHABET : lang === 'el' ? GREEK_ALPHABET : lang === 'he' ? HEBREW_ALPHABET : lang === 'no' ? NORWEGIAN_ALPHABET : lang === 'hu' ? HUNGARIAN_ALPHABET : lang === 'id' ? INDONESIAN_ALPHABET : lang === 'fa' ? PERSIAN_ALPHABET : lang === 'is' ? ICELANDIC_ALPHABET : HANGUL_CHART;
       chart.forEach(section => {
         const sec = document.createElement('div');
         sec.className = 'hangul-section';
@@ -17553,6 +17902,8 @@
         lastCompletedLesson = { title: "Indonesian Alphabet", words: ALL_INDONESIAN_ALPHABET.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
       } else if (lang === 'fa') {
         lastCompletedLesson = { title: "Persian Alphabet", words: ALL_PERSIAN_ALPHABET.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
+      } else if (lang === 'is') {
+        lastCompletedLesson = { title: "Icelandic Alphabet", words: ALL_ICELANDIC_ALPHABET.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
       } else {
         lastCompletedLesson = { title: "Hangul Chart", words: ALL_HANGUL_CHARS.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
       }
@@ -17602,6 +17953,7 @@
         hu: 'Hungarian numbers combine regularly from twenty onward. Tap any number to hear it, then try the quiz.',
         id: 'Indonesian numbers combine regularly with puluh ("tens"). Tap any number to hear it, then try the quiz.',
         fa: 'Persian numbers are mostly regular from twenty onward. Tap any number to hear it, then try the quiz.',
+        is: 'Numbers 1-4 change form depending on the noun\u2019s gender. Tap any number to hear it, then try the quiz.',
         ko: 'Korean has two number systems. Tap any number to hear it, then try the quiz.'
       };
       document.getElementById('numberChartTitle').textContent = titles[lang] || '🔢 Number Chart';
@@ -17614,7 +17966,7 @@
       if (wrap.dataset.built === lang) return;
       wrap.dataset.built = lang;
       wrap.innerHTML = '';
-      const chart = lang === 'es' ? SPANISH_NUMBER_CHART : lang === 'ja' ? JAPANESE_NUMBER_CHART : lang === 'en' ? CONFUSED_WORDS : lang === 'zh' ? CHINESE_NUMBER_CHART : lang === 'af' ? AFRIKAANS_NUMBER_CHART : lang === 'ar' ? ARABIC_NUMBER_CHART : lang === 'am' ? AMHARIC_NUMBER_CHART : lang === 'eu' ? BASQUE_NUMBER_CHART : lang === 'bn' ? BENGALI_NUMBER_CHART : lang === 'bg' ? BULGARIAN_NUMBER_CHART : lang === 'fr' ? FRENCH_NUMBER_CHART : lang === 'de' ? GERMAN_NUMBER_CHART : lang === 'it' ? ITALIAN_NUMBER_CHART : lang === 'ca' ? CATALAN_NUMBER_CHART : lang === 'yue' ? CANTONESE_NUMBER_CHART : lang === 'my' ? BURMESE_NUMBER_CHART : lang === 'hr' ? CROATIAN_NUMBER_CHART : lang === 'cs' ? CZECH_NUMBER_CHART : lang === 'da' ? DANISH_NUMBER_CHART : lang === 'nl' ? DUTCH_NUMBER_CHART : lang === 'eo' ? ESPERANTO_NUMBER_CHART : lang === 'tl' ? FILIPINO_NUMBER_CHART : lang === 'fi' ? FINNISH_NUMBER_CHART : lang === 'pt' ? PORTUGUESE_NUMBER_CHART : lang === 'pl' ? POLISH_NUMBER_CHART : lang === 'sv' ? SWEDISH_NUMBER_CHART : lang === 'ru' ? RUSSIAN_NUMBER_CHART : lang === 'hi' ? HINDI_NUMBER_CHART : lang === 'vi' ? VIETNAMESE_NUMBER_CHART : lang === 'tr' ? TURKISH_NUMBER_CHART : lang === 'uk' ? UKRAINIAN_NUMBER_CHART : lang === 'ro' ? ROMANIAN_NUMBER_CHART : lang === 'el' ? GREEK_NUMBER_CHART : lang === 'he' ? HEBREW_NUMBER_CHART : lang === 'no' ? NORWEGIAN_NUMBER_CHART : lang === 'hu' ? HUNGARIAN_NUMBER_CHART : lang === 'id' ? INDONESIAN_NUMBER_CHART : lang === 'fa' ? PERSIAN_NUMBER_CHART : NUMBER_CHART;
+      const chart = lang === 'es' ? SPANISH_NUMBER_CHART : lang === 'ja' ? JAPANESE_NUMBER_CHART : lang === 'en' ? CONFUSED_WORDS : lang === 'zh' ? CHINESE_NUMBER_CHART : lang === 'af' ? AFRIKAANS_NUMBER_CHART : lang === 'ar' ? ARABIC_NUMBER_CHART : lang === 'am' ? AMHARIC_NUMBER_CHART : lang === 'eu' ? BASQUE_NUMBER_CHART : lang === 'bn' ? BENGALI_NUMBER_CHART : lang === 'bg' ? BULGARIAN_NUMBER_CHART : lang === 'fr' ? FRENCH_NUMBER_CHART : lang === 'de' ? GERMAN_NUMBER_CHART : lang === 'it' ? ITALIAN_NUMBER_CHART : lang === 'ca' ? CATALAN_NUMBER_CHART : lang === 'yue' ? CANTONESE_NUMBER_CHART : lang === 'my' ? BURMESE_NUMBER_CHART : lang === 'hr' ? CROATIAN_NUMBER_CHART : lang === 'cs' ? CZECH_NUMBER_CHART : lang === 'da' ? DANISH_NUMBER_CHART : lang === 'nl' ? DUTCH_NUMBER_CHART : lang === 'eo' ? ESPERANTO_NUMBER_CHART : lang === 'tl' ? FILIPINO_NUMBER_CHART : lang === 'fi' ? FINNISH_NUMBER_CHART : lang === 'pt' ? PORTUGUESE_NUMBER_CHART : lang === 'pl' ? POLISH_NUMBER_CHART : lang === 'sv' ? SWEDISH_NUMBER_CHART : lang === 'ru' ? RUSSIAN_NUMBER_CHART : lang === 'hi' ? HINDI_NUMBER_CHART : lang === 'vi' ? VIETNAMESE_NUMBER_CHART : lang === 'tr' ? TURKISH_NUMBER_CHART : lang === 'uk' ? UKRAINIAN_NUMBER_CHART : lang === 'ro' ? ROMANIAN_NUMBER_CHART : lang === 'el' ? GREEK_NUMBER_CHART : lang === 'he' ? HEBREW_NUMBER_CHART : lang === 'no' ? NORWEGIAN_NUMBER_CHART : lang === 'hu' ? HUNGARIAN_NUMBER_CHART : lang === 'id' ? INDONESIAN_NUMBER_CHART : lang === 'fa' ? PERSIAN_NUMBER_CHART : lang === 'is' ? ICELANDIC_NUMBER_CHART : NUMBER_CHART;
       chart.forEach(section => {
         const sec = document.createElement('div');
         sec.className = 'hangul-section';
@@ -17708,6 +18060,8 @@
         lastCompletedLesson = { title: "Indonesian Numbers", words: ALL_INDONESIAN_NUMBERS };
       } else if (lang === 'fa') {
         lastCompletedLesson = { title: "Persian Numbers", words: ALL_PERSIAN_NUMBERS };
+      } else if (lang === 'is') {
+        lastCompletedLesson = { title: "Icelandic Numbers", words: ALL_ICELANDIC_NUMBERS };
       } else {
         lastCompletedLesson = { title: "Number Chart", words: ALL_NUMBER_ITEMS };
       }
@@ -18036,9 +18390,9 @@
     let grammarTab = 'particles';
     function openGrammar() {
       const lang = (state.settings && state.settings.learningLang) || 'ko';
-      if (lang === 'es' || lang === 'af' || lang === 'ar' || lang === 'eu' || lang === 'bn' || lang === 'bg' || lang === 'fr' || lang === 'de' || lang === 'it' || lang === 'ca' || lang === 'my' || lang === 'hr' || lang === 'cs' || lang === 'da' || lang === 'nl' || lang === 'eo' || lang === 'tl' || lang === 'fi' || lang === 'pt' || lang === 'pl' || lang === 'sv' || lang === 'ru' || lang === 'hi' || lang === 'tr' || lang === 'uk' || lang === 'ro' || lang === 'el' || lang === 'he' || lang === 'no' || lang === 'hu' || lang === 'fa') grammarTab = 'conjugation';
+      if (lang === 'es' || lang === 'af' || lang === 'ar' || lang === 'eu' || lang === 'bn' || lang === 'bg' || lang === 'fr' || lang === 'de' || lang === 'it' || lang === 'ca' || lang === 'my' || lang === 'hr' || lang === 'cs' || lang === 'da' || lang === 'nl' || lang === 'eo' || lang === 'tl' || lang === 'fi' || lang === 'pt' || lang === 'pl' || lang === 'sv' || lang === 'ru' || lang === 'hi' || lang === 'tr' || lang === 'uk' || lang === 'ro' || lang === 'el' || lang === 'he' || lang === 'no' || lang === 'hu' || lang === 'fa' || lang === 'is') grammarTab = 'conjugation';
       else if (grammarTab === 'conjugation' && !VERB_CONJUGATIONS.length) grammarTab = 'particles';
-      const titles = { es: '📖 Verb Conjugation', af: '📖 Verb Conjugation', ar: '📖 Verb Conjugation', eu: '📖 Verb Conjugation', bn: '📖 Verb Conjugation', bg: '📖 Verb Conjugation', fr: '📖 Verb Conjugation', de: '📖 Verb Conjugation', it: '📖 Verb Conjugation', ca: '📖 Verb Conjugation', my: '📖 Verb Conjugation', hr: '📖 Verb Conjugation', cs: '📖 Verb Conjugation', da: '📖 Verb Conjugation', nl: '📖 Verb Conjugation', eo: '📖 Verb Conjugation', tl: '📖 Verb Conjugation', fi: '📖 Verb Conjugation', pt: '📖 Verb Conjugation', pl: '📖 Verb Conjugation', sv: '📖 Verb Conjugation', ru: '📖 Verb Conjugation', hi: '📖 Verb Conjugation', tr: '📖 Verb Conjugation', uk: '📖 Verb Conjugation', ro: '📖 Verb Conjugation', el: '📖 Verb Conjugation', he: '📖 Verb Conjugation', no: '📖 Verb Conjugation', hu: '📖 Verb Conjugation', fa: '📖 Verb Conjugation' };
+      const titles = { es: '📖 Verb Conjugation', af: '📖 Verb Conjugation', ar: '📖 Verb Conjugation', eu: '📖 Verb Conjugation', bn: '📖 Verb Conjugation', bg: '📖 Verb Conjugation', fr: '📖 Verb Conjugation', de: '📖 Verb Conjugation', it: '📖 Verb Conjugation', ca: '📖 Verb Conjugation', my: '📖 Verb Conjugation', hr: '📖 Verb Conjugation', cs: '📖 Verb Conjugation', da: '📖 Verb Conjugation', nl: '📖 Verb Conjugation', eo: '📖 Verb Conjugation', tl: '📖 Verb Conjugation', fi: '📖 Verb Conjugation', pt: '📖 Verb Conjugation', pl: '📖 Verb Conjugation', sv: '📖 Verb Conjugation', ru: '📖 Verb Conjugation', hi: '📖 Verb Conjugation', tr: '📖 Verb Conjugation', uk: '📖 Verb Conjugation', ro: '📖 Verb Conjugation', el: '📖 Verb Conjugation', he: '📖 Verb Conjugation', no: '📖 Verb Conjugation', hu: '📖 Verb Conjugation', fa: '📖 Verb Conjugation', is: '📖 Verb Conjugation' };
       document.getElementById('grammarScreenTitle').textContent = titles[lang] || '📖 Grammar & Particles';
       showScreen('grammar');
       renderGrammarTabs();
@@ -18047,7 +18401,7 @@
     function renderGrammarTabs() {
       const row = document.getElementById('grammarTabRow');
       const lang = (state.settings && state.settings.learningLang) || 'ko';
-      const tabs = (lang === 'es' || lang === 'af' || lang === 'ar' || lang === 'eu' || lang === 'bn' || lang === 'bg' || lang === 'fr' || lang === 'de' || lang === 'it' || lang === 'ca' || lang === 'my' || lang === 'hr' || lang === 'cs' || lang === 'da' || lang === 'nl' || lang === 'eo' || lang === 'tl' || lang === 'fi' || lang === 'pt' || lang === 'pl' || lang === 'sv' || lang === 'ru' || lang === 'hi' || lang === 'tr' || lang === 'uk' || lang === 'ro' || lang === 'el' || lang === 'he' || lang === 'no' || lang === 'hu' || lang === 'fa')
+      const tabs = (lang === 'es' || lang === 'af' || lang === 'ar' || lang === 'eu' || lang === 'bn' || lang === 'bg' || lang === 'fr' || lang === 'de' || lang === 'it' || lang === 'ca' || lang === 'my' || lang === 'hr' || lang === 'cs' || lang === 'da' || lang === 'nl' || lang === 'eo' || lang === 'tl' || lang === 'fi' || lang === 'pt' || lang === 'pl' || lang === 'sv' || lang === 'ru' || lang === 'hi' || lang === 'tr' || lang === 'uk' || lang === 'ro' || lang === 'el' || lang === 'he' || lang === 'no' || lang === 'hu' || lang === 'fa' || lang === 'is')
         ? [{ key: 'conjugation', label: 'Verbs', emoji: '🔀' }]
         : [
           { key: 'particles', label: 'Particles', emoji: '🔤' },
@@ -18082,7 +18436,7 @@
           wrap.appendChild(card);
         });
       } else if (grammarTab === 'conjugation') {
-        const verbs = lang === 'es' ? VERB_CONJUGATIONS_ES : lang === 'af' ? VERB_CONJUGATIONS_AF : lang === 'ar' ? VERB_CONJUGATIONS_AR : lang === 'eu' ? VERB_CONJUGATIONS_EU : lang === 'bn' ? VERB_CONJUGATIONS_BN : lang === 'bg' ? VERB_CONJUGATIONS_BG : lang === 'fr' ? VERB_CONJUGATIONS_FR : lang === 'de' ? VERB_CONJUGATIONS_DE : lang === 'it' ? VERB_CONJUGATIONS_IT : lang === 'ca' ? VERB_CONJUGATIONS_CA : lang === 'my' ? VERB_CONJUGATIONS_MY : lang === 'hr' ? VERB_CONJUGATIONS_HR : lang === 'cs' ? VERB_CONJUGATIONS_CS : lang === 'da' ? VERB_CONJUGATIONS_DA : lang === 'nl' ? VERB_CONJUGATIONS_NL : lang === 'eo' ? VERB_CONJUGATIONS_EO : lang === 'tl' ? VERB_CONJUGATIONS_TL : lang === 'fi' ? VERB_CONJUGATIONS_FI : lang === 'pt' ? VERB_CONJUGATIONS_PT : lang === 'pl' ? VERB_CONJUGATIONS_PL : lang === 'sv' ? VERB_CONJUGATIONS_SV : lang === 'ru' ? VERB_CONJUGATIONS_RU : lang === 'hi' ? VERB_CONJUGATIONS_HI : lang === 'tr' ? VERB_CONJUGATIONS_TR : lang === 'uk' ? VERB_CONJUGATIONS_UK : lang === 'ro' ? VERB_CONJUGATIONS_RO : lang === 'el' ? VERB_CONJUGATIONS_EL : lang === 'he' ? VERB_CONJUGATIONS_HE : lang === 'no' ? VERB_CONJUGATIONS_NO : lang === 'hu' ? VERB_CONJUGATIONS_HU : lang === 'fa' ? VERB_CONJUGATIONS_FA : VERB_CONJUGATIONS;
+        const verbs = lang === 'es' ? VERB_CONJUGATIONS_ES : lang === 'af' ? VERB_CONJUGATIONS_AF : lang === 'ar' ? VERB_CONJUGATIONS_AR : lang === 'eu' ? VERB_CONJUGATIONS_EU : lang === 'bn' ? VERB_CONJUGATIONS_BN : lang === 'bg' ? VERB_CONJUGATIONS_BG : lang === 'fr' ? VERB_CONJUGATIONS_FR : lang === 'de' ? VERB_CONJUGATIONS_DE : lang === 'it' ? VERB_CONJUGATIONS_IT : lang === 'ca' ? VERB_CONJUGATIONS_CA : lang === 'my' ? VERB_CONJUGATIONS_MY : lang === 'hr' ? VERB_CONJUGATIONS_HR : lang === 'cs' ? VERB_CONJUGATIONS_CS : lang === 'da' ? VERB_CONJUGATIONS_DA : lang === 'nl' ? VERB_CONJUGATIONS_NL : lang === 'eo' ? VERB_CONJUGATIONS_EO : lang === 'tl' ? VERB_CONJUGATIONS_TL : lang === 'fi' ? VERB_CONJUGATIONS_FI : lang === 'pt' ? VERB_CONJUGATIONS_PT : lang === 'pl' ? VERB_CONJUGATIONS_PL : lang === 'sv' ? VERB_CONJUGATIONS_SV : lang === 'ru' ? VERB_CONJUGATIONS_RU : lang === 'hi' ? VERB_CONJUGATIONS_HI : lang === 'tr' ? VERB_CONJUGATIONS_TR : lang === 'uk' ? VERB_CONJUGATIONS_UK : lang === 'ro' ? VERB_CONJUGATIONS_RO : lang === 'el' ? VERB_CONJUGATIONS_EL : lang === 'he' ? VERB_CONJUGATIONS_HE : lang === 'no' ? VERB_CONJUGATIONS_NO : lang === 'hu' ? VERB_CONJUGATIONS_HU : lang === 'fa' ? VERB_CONJUGATIONS_FA : lang === 'is' ? VERB_CONJUGATIONS_IS : VERB_CONJUGATIONS;
         verbs.forEach(v => {
           const card = document.createElement('div');
           card.className = 'scene-card';
@@ -18178,6 +18532,7 @@
       if (lang === 'hu') return STROKE_ORDER_HU;
       if (lang === 'id') return STROKE_ORDER_ID;
       if (lang === 'fa') return STROKE_ORDER_FA;
+      if (lang === 'is') return STROKE_ORDER_IS;
       return STROKE_ORDER;
     }
     function activeAlphabetChars() {
@@ -18219,6 +18574,7 @@
       if (lang === 'hu') return ALL_HUNGARIAN_ALPHABET;
       if (lang === 'id') return ALL_INDONESIAN_ALPHABET;
       if (lang === 'fa') return ALL_PERSIAN_ALPHABET;
+      if (lang === 'is') return ALL_ICELANDIC_ALPHABET;
       return ALL_HANGUL_CHARS;
     }
     function openDrawTrace() {
@@ -19261,6 +19617,97 @@
       { k: ["pro", "premium", "upgrade", "subscription", "price", "cost"], a: "Hangul Pro unlocks unlimited hearts, every unit instantly, advanced speaking drills, deeper stats, and unlimited tutor chats. Check the Pro tab for pricing and plans!" },
       { k: ["speak", "pronounce", "mic", "pronunciation"], a: "For speaking exercises, tap the mic and say the word naturally — the app compares what it hears to the target word. If your browser blocks the mic, check your site permissions." },
       { k: ["difficult", "hard", "struggling", "stuck", "confus"], a: "Няма проблем! (NYA-ma pro-BLEM — no problem!) A new script and grammar both take real practice. Try replaying lessons or retaking a quiz — repetition is what makes it click." },
+    ];
+
+    const ICELANDIC_ALPHABET = [
+      {
+        title: "Vowels", chars: [
+          { ch: "a", rom: "ah", sample: "dagur", hint: "like 'a' in father" }, { ch: "á", rom: "ow", sample: "á", hint: "like 'ow' in cow" },
+          { ch: "e", rom: "eh", sample: "hestur", hint: "like 'e' in bed" }, { ch: "é", rom: "yeh", sample: "él", hint: "like 'ye' in yes" },
+          { ch: "i", rom: "i", sample: "fiskur", hint: "like 'i' in sit" }, { ch: "í", rom: "ee", sample: "bíll", hint: "like 'ee' in see" },
+          { ch: "o", rom: "oh", sample: "hola", hint: "like 'o' in got" }, { ch: "ó", rom: "oh (long)", sample: "kók", hint: "like 'o' in go, held longer" },
+          { ch: "u", rom: "u", sample: "hundur", hint: "a tight 'u', close to German ü" }, { ch: "ú", rom: "oo", sample: "hús", hint: "like 'oo' in food" },
+          { ch: "y", rom: "i", sample: "yfir", hint: "pronounced exactly like 'i'" }, { ch: "ý", rom: "ee", sample: "hlýtt", hint: "pronounced exactly like 'í'" }]
+      },
+      {
+        title: "Consonants", chars: [
+          { ch: "b", rom: "p (unaspirated)", sample: "bók", hint: "softer than English 'b', close to 'p'" }, { ch: "d", rom: "t (unaspirated)", sample: "dagur", hint: "softer than English 'd', close to 't'" },
+          { ch: "f", rom: "f / v", sample: "fugl", hint: "'f' at the start of a word, often 'v' between vowels" }, { ch: "g", rom: "k / g", sample: "gata", hint: "hard 'g' or 'k' depending on position" },
+          { ch: "h", rom: "h", sample: "hús", hint: "as in English 'house'" }, { ch: "j", rom: "y", sample: "já", hint: "like 'y' in yes" },
+          { ch: "k", rom: "k", sample: "kaffi", hint: "as in English 'kite'" }, { ch: "l", rom: "l", sample: "lítill", hint: "as in English 'light'" },
+          { ch: "m", rom: "m", sample: "mamma", hint: "as in English 'mom'" }, { ch: "n", rom: "n", sample: "nafn", hint: "as in English 'name'" },
+          { ch: "p", rom: "p", sample: "penni", hint: "as in English 'pen'" }, { ch: "r", rom: "rolled r", sample: "rautt", hint: "a lightly rolled/trilled 'r'" },
+          { ch: "s", rom: "s", sample: "sól", hint: "always unvoiced, as in 'sun', never like 'z'" }, { ch: "t", rom: "t", sample: "tími", hint: "as in English 'time'" },
+          { ch: "v", rom: "v", sample: "vatn", hint: "as in English 'water'" }, { ch: "x", rom: "ks", sample: "sex", hint: "as in English 'box'" }]
+      },
+      {
+        title: "Distinctive Letters", chars: [
+          { ch: "ð", rom: "th (voiced)", sample: "það", hint: "like 'th' in 'this' — a letter English lost centuries ago" },
+          { ch: "þ", rom: "th (voiceless)", sample: "þú", hint: "like 'th' in 'thing' — never appears at the end of a word" },
+          { ch: "æ", rom: "eye", sample: "sæll", hint: "like the word 'eye'" },
+          { ch: "ö", rom: "uh", sample: "sögn", hint: "like German ö, or 'ur' in British 'fur'" }]
+      },
+    ];
+    const ALL_ICELANDIC_ALPHABET = ICELANDIC_ALPHABET.flatMap(s => s.chars);
+
+    const ICELANDIC_NUMBER_CHART = [
+      {
+        title: "Numbers 0–10", note: "The building blocks — every other number is formed from these. Note: einn, tveir, þrír, fjórir (1–4) change form depending on the gender of the noun they count.", chars: [
+          { ch: "núll", rom: "0 · noodl", en: "0" }, { ch: "einn", rom: "1 · AYDN", en: "1" }, { ch: "tveir", rom: "2 · TVAYR", en: "2" },
+          { ch: "þrír", rom: "3 · THREER", en: "3" }, { ch: "fjórir", rom: "4 · FYOH-rir", en: "4" }, { ch: "fimm", rom: "5 · fim", en: "5" },
+          { ch: "sex", rom: "6 · sehx", en: "6" }, { ch: "sjö", rom: "7 · syuh", en: "7" }, { ch: "átta", rom: "8 · OW-ta", en: "8" },
+          { ch: "níu", rom: "9 · NEE-u", en: "9" }, { ch: "tíu", rom: "10 · TEE-u", en: "10" }]
+      },
+      {
+        title: "Teens & Tens", note: "11 and 12 are their own words; from 13 on, numbers combine with -tán or -tugu.", chars: [
+          { ch: "ellefu", rom: "11 · EHT-leh-vu", en: "11" }, { ch: "tólf", rom: "12 · TOHLF", en: "12" },
+          { ch: "tuttugu", rom: "20 · TUHT-tu-gu", en: "20" }, { ch: "þrjátíu", rom: "30 · THRYOW-tee-u", en: "30" },
+          { ch: "fimmtíu", rom: "50 · FIM-tee-u", en: "50" }]
+      },
+      {
+        title: "Big Units", note: "Everything above 100 is built from these + 0-99.", chars: [
+          { ch: "hundrað", rom: "100 · HUN-drath", en: "100" }, { ch: "þúsund", rom: "1,000 · THOO-sund", en: "1,000" }, { ch: "milljón", rom: "1,000,000 · mil-YOHN", en: "1,000,000" }]
+      },
+    ];
+    const ALL_ICELANDIC_NUMBERS = ICELANDIC_NUMBER_CHART.flatMap(s => s.chars.map(c => ({ kr: c.ch, en: c.en, rom: c.rom })));
+
+    const VERB_CONJUGATIONS_IS = [
+      { dict: "að vera", rom: "ath VEH-ra", en: "to be", present: "er", presentRom: "ehr", past: "var", pastRom: "vahr", future: "verður", futureRom: "VEHR-thoor" },
+      { dict: "að hafa", rom: "ath HA-va", en: "to have", present: "hefur", presentRom: "HEH-voor", past: "hafði", pastRom: "HAV-thi", future: "mun hafa", futureRom: "moon HA-va" },
+      { dict: "að fara", rom: "ath FA-ra", en: "to go", present: "fer", presentRom: "fehr", past: "fór", pastRom: "fohr", future: "mun fara", futureRom: "moon FA-ra" },
+      { dict: "að koma", rom: "ath KOH-ma", en: "to come", present: "kemur", presentRom: "KEH-moor", past: "kom", pastRom: "kohm", future: "mun koma", futureRom: "moon KOH-ma" },
+      { dict: "að borða", rom: "ath BOR-tha", en: "to eat", present: "borðar", presentRom: "BOR-thar", past: "borðaði", pastRom: "BOR-tha-thi", future: "mun borða", futureRom: "moon BOR-tha" },
+      { dict: "að drekka", rom: "ath DREHK-ka", en: "to drink", present: "drekkur", presentRom: "DREHK-koor", past: "drakk", pastRom: "drahk", future: "mun drekka", futureRom: "moon DREHK-ka" },
+      { dict: "að sjá", rom: "ath syow", en: "to see", present: "sér", presentRom: "syehr", past: "sá", pastRom: "sow", future: "mun sjá", futureRom: "moon syow" },
+      { dict: "að skrifa", rom: "ath SKRI-va", en: "to write", present: "skrifar", presentRom: "SKRI-var", past: "skrifaði", pastRom: "SKRI-va-thi", future: "mun skrifa", futureRom: "moon SKRI-va" },
+      { dict: "að vinna", rom: "ath VIN-na", en: "to work", present: "vinnur", presentRom: "VIN-noor", past: "vann", pastRom: "vahn", future: "mun vinna", futureRom: "moon VIN-na" },
+      { dict: "að tala", rom: "ath TA-la", en: "to speak", present: "talar", presentRom: "TA-lar", past: "talaði", pastRom: "TA-la-thi", future: "mun tala", futureRom: "moon TA-la" },
+    ];
+
+    const STROKE_ORDER_IS = [
+      { ch: "þ", strokes: ["Write a tall vertical stem, extending both above and below the midline.", "Add a bowl on the right side at the middle — this letter makes the 'th' sound in 'thing' and never appears at the end of a word."] },
+      { ch: "ð", strokes: ["Write a rounded 'd' shape with a small loop at the top.", "Add a short diagonal crossbar through the ascender — this makes the 'th' sound in 'this', and English used to have this letter too."] },
+      { ch: "æ", strokes: ["Write a lowercase 'a' shape.", "Attach an 'e' directly to its right — together they're pronounced like the English word 'eye'."] },
+      { ch: "ö", strokes: ["Write a lowercase 'o'.", "Add two dots above it — pronounced like German ö, or the 'ur' in British 'fur'."] },
+      { ch: "á", strokes: ["Write a lowercase 'a'.", "Add an acute accent above it — this changes the sound completely, to 'ow' as in 'cow'."] },
+      { ch: "í", strokes: ["Write a lowercase 'i' with its dot.", "Add an acute accent above the dot — this lengthens the vowel to 'ee' as in 'see'."] },
+    ];
+
+    const ICELANDIC_CHAT_TOPICS = [
+      { k: ["halló", "hallo", "hello", "hi "], a: "Halló (ha-LOH) is a friendly, casual 'hello' — borrowed from English but fully naturalized. Sæll (to a man) and sæl (to a woman) are more traditional Icelandic greetings." },
+      { k: ["bless", "bye", "goodbye"], a: "Bless (bless) means 'goodbye' — often doubled as 'bless bless' when parting casually." },
+      { k: ["takk", "thanks", "thank"], a: "Takk (tahk) means 'thank you.' Takk fyrir (tahk FI-rir) is a slightly fuller 'thanks for that' — and takk fyrir mig is specifically said after a meal." },
+      { k: ["fyrirgefðu", "sorry", "afsakið", "excuse"], a: "Fyrirgefðu (FI-rir-gyev-thu) means 'I'm sorry,' while afsakið (AHF-sa-kith) is 'excuse me' — used to get someone's attention or apologize for a small bump." },
+      { k: ["þú", "þér", "formal", "informal", "you"], a: "Icelandic technically has a formal þér (you) alongside informal þú, but þér has almost disappeared from everyday use — nearly everyone uses þú with everyone, from strangers to the president." },
+      { k: ["case", "cases", "nefnifall", "þolfall", "grammar"], a: "Icelandic keeps all four historic Germanic cases — nominative, accusative, dative, and genitive — which change noun, adjective, and article endings depending on their role in the sentence. It's one of the trickiest parts for learners." },
+      { k: ["name", "surname", "son", "dóttir", "patronymic"], a: "Most Icelanders don't have inherited family surnames — instead they use patronymics: a child takes their father's (or mother's) first name plus -son (son) or -dóttir (daughter). So Jón Einarsson's daughter might be Anna Jónsdóttir." },
+      { k: ["viking", "vikings", "saga", "sagas"], a: "The Icelandic sagas, written in the 13th century, are some of medieval Europe's greatest literature — and modern Icelandic has changed so little that Icelanders can still read them largely unaided." },
+      { k: ["heart", "hearts", "lose"], a: "You lose a heart for each wrong answer in a lesson. Run out and the lesson ends — but hearts refill over time, or go Pro for unlimited hearts." },
+      { k: ["streak", "fire"], a: "Your streak counts consecutive days you complete at least one lesson. Miss a day and it resets — try a quick lesson daily! Áfram með smjörið! (roughly 'onward with the butter' — an Icelandic way of saying 'keep going!')" },
+      { k: ["xp", "level", "points"], a: "XP is earned by finishing lessons and quizzes. It builds your Level on your Profile page — the more you practice, the higher you climb!" },
+      { k: ["pro", "premium", "upgrade", "subscription", "price", "cost"], a: "Hangul Pro unlocks unlimited hearts, every unit instantly, advanced speaking drills, deeper stats, and unlimited tutor chats. Check the Pro tab for pricing and plans!" },
+      { k: ["speak", "pronounce", "mic", "pronunciation"], a: "For speaking exercises, tap the mic and say the word naturally — the app compares what it hears to the target word. If your browser blocks the mic, check your site permissions." },
+      { k: ["difficult", "hard", "struggling", "stuck", "confus"], a: "Ekkert mál! (no problem!) A new case system and new letters both take real practice. Try replaying lessons or retaking a quiz — repetition is what makes it click." },
     ];
 
     const FRENCH_ALPHABET = [
@@ -21933,6 +22380,7 @@
           hu: "You are Han, a warm, encouraging Hungarian tutor inside a learning app called GlobeTalk (currently teaching Hungarian to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Hungarian and English together — give the Hungarian phrase, a simple pronunciation guide, and an English translation whenever relevant, so the learner sees all three. Hungarian is a Uralic language, distantly related to Finnish, known for vowel harmony and its agglutinative grammar. You can discuss ANY Hungarian word, phrase, grammar point, or cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
           id: "You are Han, a warm, encouraging Indonesian tutor inside a learning app called GlobeTalk (currently teaching Indonesian to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Indonesian and English together — give the Indonesian phrase, a simple pronunciation guide, and an English translation whenever relevant, so the learner sees all three. Indonesian verbs don't conjugate for tense — time words and context carry that instead, while a rich prefix/suffix system changes meaning and focus. You can discuss ANY Indonesian word, phrase, grammar point, or cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
           fa: "You are Han, a warm, encouraging Persian (Farsi) tutor inside a learning app called GlobeTalk (currently teaching Persian to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Persian and English together — give the Persian phrase, a simple pronunciation guide, and an English translation whenever relevant, so the learner sees all three. Remind the learner as needed that Persian is written right-to-left using a version of the Arabic script (with four extra letters), but Persian itself is an Indo-European language unrelated to Arabic. You can discuss ANY Persian word, phrase, grammar point, or cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
+          is: "You are Han, a warm, encouraging Icelandic tutor inside a learning app called GlobeTalk (currently teaching Icelandic to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Icelandic and English together — give the Icelandic phrase, a simple pronunciation guide, and an English translation whenever relevant, so the learner sees all three. Icelandic keeps all four historic Germanic noun cases and the letters þ and ð that English lost centuries ago, and most Icelanders use patronymic names (father's/mother's first name + -son/-dóttir) rather than inherited surnames. You can discuss ANY Icelandic word, phrase, grammar point (including the case system, or how þú has replaced the old formal þér almost everywhere), or cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
           ko: "You are Han, a warm, encouraging Korean-language tutor inside a learning app called GlobeTalk. You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Korean and English together — give the Korean phrase, its romanization, and an English translation whenever relevant, so the learner sees all three. You can discuss ANY Korean word, phrase, grammar point, or cultural topic, not just app mechanics. When asked about a number, remember Korean has two number systems (Sino-Korean, used for money/dates/phone numbers/math, and Native Korean, used for counting objects/age, which only goes up to 99) — explain both systems for that number when the learner doesn't specify one. Keep answers short (2-5 sentences), warm, and beginner-friendly."
         };
         const systemPrompt = systemPrompts[activeLang] || systemPrompts.ko;
@@ -22201,6 +22649,7 @@
         hu: "Szia! I'm Han — let's warm up first, then I'll quiz you in Hungarian.",
         id: "Halo! I'm Han — let's warm up first, then I'll quiz you in Indonesian.",
         fa: "سلام! I'm Han — let's warm up first, then I'll quiz you in Persian.",
+        is: "Halló! I'm Han — let's warm up first, then I'll quiz you in Icelandic.",
         ko: "Hi! I'm Han — let's warm up first, then I'll quiz you."
       };
       document.getElementById('videocallCaption').textContent = greetings[lang] || greetings.ko;
@@ -22523,7 +22972,7 @@
       nl: "Hallo", eo: "Saluton", tl: "Kumusta", fi: "Hei", pt: "Olá",
       pl: "Cześć", sv: "Hej", ru: "Привет", hi: "नमस्ते", vi: "Xin chào",
       tr: "Merhaba", uk: "Привіт", ro: "Salut", el: "Γεια σου", he: "שלום", no: "Hei",
-      hu: "Szia", id: "Halo", fa: "سلام"
+      hu: "Szia", id: "Halo", fa: "سلام", is: "Halló"
     };
     function tutorHelloFor(lang) {
       return TUTOR_HELLO[lang] || TUTOR_HELLO.ko;
@@ -22560,7 +23009,7 @@
       { code: 'val', name: 'High Valyrian', flag: '🐉', available: false },
       { code: 'hi', name: 'Hindi', flag: '🇮🇳', available: true },
       { code: 'hu', name: 'Hungarian', flag: '🇭🇺', available: true },
-      { code: 'is', name: 'Icelandic', flag: '🇮🇸', available: false },
+      { code: 'is', name: 'Icelandic', flag: '🇮🇸', available: true },
       { code: 'id', name: 'Indonesian', flag: '🇮🇩', available: true },
       { code: 'ga', name: 'Irish (Gaelic)', flag: '🇮🇪', available: false },
       { code: 'it', name: 'Italian', flag: '🇮🇹', available: true },
