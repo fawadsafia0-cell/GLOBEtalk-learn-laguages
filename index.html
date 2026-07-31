@@ -6190,6 +6190,1017 @@
       },
     ];
 
+    const TIERS_SK = TIERS;
+    const LEVELS_SK = [
+      {
+        tier: "beginner", title: "Slovak Basics", icon: "🇸🇰", words: [
+          { kr: "ahoj", rom: "A-hoy", en: "hello" }, { kr: "ďakujem", rom: "DYA-ku-yem", en: "thank you" },
+          { kr: "áno", rom: "AH-no", en: "yes" }, { kr: "nie", rom: "ni-eh", en: "no" },
+          { kr: "meno", rom: "MEH-no", en: "name" }, { kr: "priateľ", rom: "PRI-a-tel", en: "friend" }]
+      },
+      {
+        tier: "beginner", title: "Greetings & Manners", icon: "🙏", words: [
+          { kr: "dovidenia", rom: "do-VI-de-nya", en: "goodbye" }, { kr: "prepáč", rom: "PREH-pahch", en: "I'm sorry" },
+          { kr: "prepáčte", rom: "PREH-pahch-teh", en: "excuse me" }, { kr: "teší ma", rom: "TEH-shee ma", en: "nice to meet you" },
+          { kr: "v poriadku", rom: "v po-RI-ad-ku", en: "it's okay" }, { kr: "prosím", rom: "PRO-seem", en: "please" }]
+      },
+      {
+        tier: "beginner", title: "Numbers 1-6", icon: "🔢", words: [
+          { kr: "jeden", rom: "YEH-den", en: "one" }, { kr: "dva", rom: "dvah", en: "two" },
+          { kr: "tri", rom: "tri", en: "three" }, { kr: "štyri", rom: "SHTI-ri", en: "four" },
+          { kr: "päť", rom: "pyet", en: "five" }, { kr: "šesť", rom: "shest", en: "six" }]
+      },
+      {
+        tier: "beginner", title: "Days & Time", icon: "🕒", words: [
+          { kr: "dnes", rom: "dnes", en: "today" }, { kr: "zajtra", rom: "ZAY-tra", en: "tomorrow" },
+          { kr: "včera", rom: "VCHEH-ra", en: "yesterday" }, { kr: "teraz", rom: "TEH-raz", en: "now" },
+          { kr: "čas", rom: "chahs", en: "time" }, { kr: "ráno", rom: "RAH-no", en: "morning" }]
+      },
+      {
+        tier: "beginner", title: "Family", icon: "👪", words: [
+          { kr: "rodina", rom: "RO-di-na", en: "family" }, { kr: "mama", rom: "MA-ma", en: "mom" },
+          { kr: "otec", rom: "O-tets", en: "dad" }, { kr: "brat", rom: "braht", en: "brother" },
+          { kr: "sestra", rom: "SES-tra", en: "sister" }, { kr: "dedko", rom: "DED-ko", en: "grandfather" }]
+      },
+      {
+        tier: "beginner", title: "Food & Drink", icon: "🍚", words: [
+          { kr: "jedlo", rom: "YED-lo", en: "food" }, { kr: "voda", rom: "VO-da", en: "water" },
+          { kr: "káva", rom: "KAH-va", en: "coffee" }, { kr: "chlieb", rom: "khli-eb", en: "bread" },
+          { kr: "ryža", rom: "RI-zha", en: "rice" }, { kr: "chutné", rom: "KHUT-neh", en: "delicious" }]
+      },
+      {
+        tier: "beginner", title: "Colors", icon: "🎨", words: [
+          { kr: "červená", rom: "CHER-veh-nah", en: "red" }, { kr: "modrá", rom: "MOD-rah", en: "blue" },
+          { kr: "žltá", rom: "ZHL-tah", en: "yellow" }, { kr: "zelená", rom: "ZEH-leh-nah", en: "green" },
+          { kr: "čierna", rom: "CHI-er-na", en: "black" }, { kr: "biela", rom: "BI-eh-la", en: "white" }]
+      },
+      {
+        tier: "beginner", title: "Body Parts", icon: "🧍", words: [
+          { kr: "hlava", rom: "HLA-va", en: "head" }, { kr: "ruka", rom: "RU-ka", en: "hand" },
+          { kr: "oko", rom: "O-ko", en: "eye" }, { kr: "nos", rom: "nos", en: "nose" },
+          { kr: "ústa", rom: "OOS-ta", en: "mouth" }, { kr: "noha", rom: "NO-ha", en: "leg" }]
+      },
+      {
+        tier: "beginner", title: "Animals", icon: "🐾", words: [
+          { kr: "pes", rom: "pes", en: "dog" }, { kr: "mačka", rom: "MACH-ka", en: "cat" },
+          { kr: "vták", rom: "VTAHK", en: "bird" }, { kr: "ryba", rom: "RI-ba", en: "fish" },
+          { kr: "medveď", rom: "MED-ved", en: "bear" }, { kr: "zajac", rom: "ZA-yats", en: "rabbit" }]
+      },
+      {
+        tier: "beginner", title: "Clothing", icon: "👕", words: [
+          { kr: "oblečenie", rom: "OB-leh-cheh-ni-eh", en: "clothes" }, { kr: "topánky", rom: "TO-pahn-ki", en: "shoes" },
+          { kr: "čiapka", rom: "CHI-ap-ka", en: "hat" }, { kr: "nohavice", rom: "NO-ha-vi-tseh", en: "pants" },
+          { kr: "sukňa", rom: "SUK-nya", en: "skirt" }, { kr: "taška", rom: "TASH-ka", en: "bag" }]
+      },
+      {
+        tier: "beginner", title: "Weather", icon: "⛅", words: [
+          { kr: "počasie", rom: "PO-cha-si-eh", en: "weather" }, { kr: "dážď", rom: "dahzhd", en: "rain" },
+          { kr: "sneh", rom: "sneh", en: "snow" }, { kr: "vietor", rom: "VI-eh-tor", en: "wind" },
+          { kr: "je horúco", rom: "yeh HO-roo-tso", en: "it's hot" }, { kr: "je zima", rom: "yeh ZI-ma", en: "it's cold" }]
+      },
+      {
+        tier: "beginner", title: "House & Rooms", icon: "🏠", words: [
+          { kr: "dom", rom: "dom", en: "house" }, { kr: "izba", rom: "IZ-ba", en: "room" },
+          { kr: "posteľ", rom: "POS-tel", en: "bed" }, { kr: "kúpeľňa", rom: "KOO-pel-nya", en: "bathroom" },
+          { kr: "kuchyňa", rom: "KU-khi-nya", en: "kitchen" }, { kr: "dvere", rom: "DVEH-reh", en: "door" }]
+      },
+      {
+        tier: "beginner", title: "School & Objects", icon: "🎒", words: [
+          { kr: "škola", rom: "SHKO-la", en: "school" }, { kr: "kniha", rom: "KNI-ha", en: "book" },
+          { kr: "ceruzka", rom: "TSEH-ruz-ka", en: "pencil" }, { kr: "batoh", rom: "BA-toh", en: "backpack" },
+          { kr: "učiteľ", rom: "U-chi-tel", en: "teacher" }, { kr: "žiak", rom: "ZHI-ak", en: "student" }]
+      },
+
+      /* ---------------- INTERMEDIATE ---------------- */
+      {
+        tier: "intermediate", title: "Feelings & Emotions", icon: "💗", words: [
+          { kr: "šťastný", rom: "SHTYAST-nee", en: "happy" }, { kr: "smutný", rom: "SMUT-nee", en: "sad" },
+          { kr: "nahnevaný", rom: "na-HNEH-va-nee", en: "angry" }, { kr: "unavený", rom: "U-na-veh-nee", en: "tired" },
+          { kr: "nadšený", rom: "NAD-sheh-nee", en: "excited" }, { kr: "nervózny", rom: "ner-VOHZ-ni", en: "nervous" }]
+      },
+      {
+        tier: "intermediate", title: "Directions & Places", icon: "🧭", words: [
+          { kr: "vľavo", rom: "VLYA-vo", en: "left" }, { kr: "vpravo", rom: "VPRA-vo", en: "right" },
+          { kr: "rovno", rom: "ROV-no", en: "straight ahead" }, { kr: "blízko", rom: "BLEEZ-ko", en: "near" },
+          { kr: "ďaleko", rom: "DYA-leh-ko", en: "far" }, { kr: "tu", rom: "too", en: "here" }]
+      },
+      {
+        tier: "intermediate", title: "Shopping", icon: "🛍️", words: [
+          { kr: "kúpiť", rom: "KOO-pit", en: "to buy" }, { kr: "peniaze", rom: "PEH-ni-a-zeh", en: "money" },
+          { kr: "drahé", rom: "DRA-heh", en: "expensive" }, { kr: "lacné", rom: "LATS-neh", en: "cheap" },
+          { kr: "obchod", rom: "OB-khod", en: "store" }, { kr: "platiť", rom: "PLA-tit", en: "to pay" }]
+      },
+      {
+        tier: "intermediate", title: "Transportation", icon: "🚌", words: [
+          { kr: "auto", rom: "AU-to", en: "car" }, { kr: "autobus", rom: "AU-to-bus", en: "bus" },
+          { kr: "vlak", rom: "vlak", en: "train" }, { kr: "lietadlo", rom: "LI-eh-tad-lo", en: "airplane" },
+          { kr: "bicykel", rom: "BI-tsi-kel", en: "bicycle" }, { kr: "cestovať", rom: "TSES-to-vat", en: "to travel" }]
+      },
+      {
+        tier: "intermediate", title: "Hobbies", icon: "🎸", words: [
+          { kr: "čítať", rom: "CHEE-tat", en: "to read" }, { kr: "plávať", rom: "PLAH-vat", en: "to swim" },
+          { kr: "tancovať", rom: "TAN-tso-vat", en: "to dance" }, { kr: "spievať", rom: "SPI-eh-vat", en: "to sing" },
+          { kr: "maľovať", rom: "MA-lyo-vat", en: "to paint" }, { kr: "koníček", rom: "KO-nee-check", en: "hobby" }]
+      },
+      {
+        tier: "intermediate", title: "Work & Jobs", icon: "💼", words: [
+          { kr: "práca", rom: "PRAH-tsa", en: "job" }, { kr: "lekár", rom: "LEH-kahr", en: "doctor" },
+          { kr: "inžinier", rom: "IN-zhi-ni-er", en: "engineer" }, { kr: "šéf", rom: "shehf", en: "boss" },
+          { kr: "plat", rom: "plat", en: "salary" }, { kr: "kancelária", rom: "KAN-tseh-lah-ri-a", en: "office" }]
+      },
+      {
+        tier: "intermediate", title: "Health & Body", icon: "🩺", words: [
+          { kr: "chorý", rom: "KHO-ree", en: "sick" }, { kr: "zdravý", rom: "ZDRA-vee", en: "healthy" },
+          { kr: "liek", rom: "li-ek", en: "medicine" }, { kr: "nemocnica", rom: "NEH-mots-ni-tsa", en: "hospital" },
+          { kr: "bolesť", rom: "BO-lest", en: "pain" }, { kr: "oddýchnuť si", rom: "od-DEEKH-nut si", en: "to rest" }]
+      },
+      {
+        tier: "intermediate", title: "Technology", icon: "📱", words: [
+          { kr: "telefón", rom: "TEH-leh-fohn", en: "phone" }, { kr: "počítač", rom: "PO-chee-tach", en: "computer" },
+          { kr: "internet", rom: "IN-ter-net", en: "internet" }, { kr: "napísať správu", rom: "NA-pee-sat SPRAH-vu", en: "to text" },
+          { kr: "aplikácia", rom: "AP-li-kah-tsi-a", en: "app" }, { kr: "batéria", rom: "BA-teh-ri-a", en: "battery" }]
+      },
+      {
+        tier: "intermediate", title: "Sports", icon: "⚽", words: [
+          { kr: "futbal", rom: "FUT-bal", en: "soccer" }, { kr: "bežať", rom: "BEH-zhat", en: "to run" },
+          { kr: "lopta", rom: "LOP-ta", en: "ball" }, { kr: "tím", rom: "teem", en: "team" },
+          { kr: "vyhrať", rom: "VI-hrat", en: "to win" }, { kr: "prehrať", rom: "PREH-hrat", en: "to lose" }]
+      },
+      {
+        tier: "intermediate", title: "Nature", icon: "🌳", words: [
+          { kr: "strom", rom: "strom", en: "tree" }, { kr: "hora", rom: "HO-ra", en: "mountain" },
+          { kr: "rieka", rom: "RI-eh-ka", en: "river" }, { kr: "oceán", rom: "O-tseh-ahn", en: "ocean" },
+          { kr: "les", rom: "les", en: "forest" }, { kr: "obloha", rom: "OB-lo-ha", en: "sky" }]
+      },
+      {
+        tier: "intermediate", title: "Numbers & Time", icon: "🔟", words: [
+          { kr: "sedem", rom: "SEH-dem", en: "seven" }, { kr: "osem", rom: "O-sem", en: "eight" },
+          { kr: "deväť", rom: "DEH-vet", en: "nine" }, { kr: "desať", rom: "DEH-sat", en: "ten" },
+          { kr: "hodina", rom: "HO-di-na", en: "hour" }, { kr: "minúta", rom: "MI-noo-ta", en: "minute" }]
+      },
+      {
+        tier: "intermediate", title: "Making Plans", icon: "📅", words: [
+          { kr: "plánovať", rom: "PLAH-no-vat", en: "to plan" }, { kr: "dnes večer", rom: "dnes VEH-cher", en: "tonight" },
+          { kr: "víkend", rom: "VEE-kend", en: "weekend" }, { kr: "stretnúť sa", rom: "STRET-noot sa", en: "to meet" },
+          { kr: "harmonogram", rom: "HAR-mo-no-gram", en: "schedule" }, { kr: "voľný čas", rom: "VOL-nee chahs", en: "free time" }]
+      },
+      {
+        tier: "intermediate", title: "Restaurant & Ordering", icon: "🍽️", words: [
+          { kr: "jedálny lístok", rom: "YEH-dahl-nee LEES-tok", en: "menu" }, { kr: "objednať", rom: "OB-yed-nat", en: "to order" },
+          { kr: "účet", rom: "OO-chet", en: "check/bill" }, { kr: "čašník", rom: "CHASH-neek", en: "waiter" },
+          { kr: "stôl", rom: "stwol", en: "table" }, { kr: "výborné", rom: "VEE-bor-neh", en: "tasty" }]
+      },
+
+      /* ---------------- ADVANCED ---------------- */
+      {
+        tier: "advanced", title: "Connectors & Grammar", icon: "🔗", words: [
+          { kr: "ale", rom: "A-leh", en: "but" }, { kr: "pretože", rom: "PREH-to-zheh", en: "because" },
+          { kr: "preto", rom: "PREH-to", en: "therefore" }, { kr: "hoci", rom: "HO-tsi", en: "although" },
+          { kr: "a", rom: "ah", en: "and" }, { kr: "alebo", rom: "A-leh-bo", en: "or" }]
+      },
+      {
+        tier: "advanced", title: "Business Slovak", icon: "🏢", words: [
+          { kr: "stretnutie", rom: "STRET-nu-ti-eh", en: "meeting" }, { kr: "zmluva", rom: "ZMLU-va", en: "contract" },
+          { kr: "klient", rom: "KLI-ent", en: "client" }, { kr: "termín", rom: "TER-meen", en: "deadline" },
+          { kr: "projekt", rom: "PRO-yekt", en: "project" }, { kr: "rokovanie", rom: "RO-ko-va-ni-eh", en: "negotiation" }]
+      },
+      {
+        tier: "advanced", title: "News & Media", icon: "📰", words: [
+          { kr: "správy", rom: "SPRAH-vi", en: "news" }, { kr: "noviny", rom: "NO-vi-ni", en: "newspaper" },
+          { kr: "novinár", rom: "NO-vi-nahr", en: "journalist" }, { kr: "oznámiť", rom: "OZ-nah-mit", en: "to report" },
+          { kr: "titulok", rom: "TI-tu-lok", en: "headline" }, { kr: "udalosť", rom: "U-da-lost", en: "event" }]
+      },
+      {
+        tier: "advanced", title: "Nuanced Emotions", icon: "🌫️", words: [
+          { kr: "chýbať", rom: "KHEE-bat", en: "to miss (someone)" }, { kr: "ľútosť", rom: "LYOO-tost", en: "regret" },
+          { kr: "úľava", rom: "OO-lya-va", en: "relief" }, { kr: "túžba", rom: "TOOZH-ba", en: "longing" },
+          { kr: "nádej", rom: "NAH-dey", en: "hope" }, { kr: "sklamanie", rom: "SKLA-ma-ni-eh", en: "disappointment" }]
+      },
+      {
+        tier: "advanced", title: "Idioms: Everyday Life", icon: "🫴", words: [
+          { kr: "mať motýle v bruchu", rom: "mat MO-tee-leh v BRU-khu", en: "to have butterflies in the stomach" },
+          { kr: "hodiť flintu do žita", rom: "HO-dit FLIN-tu do ZHI-ta", en: "to throw the rifle into the rye (to give up)" },
+          { kr: "búrka v pohári vody", rom: "BOOR-ka v PO-hah-ri VO-di", en: "a storm in a glass of water (tempest in a teapot)" },
+          { kr: "mať v tom prsty", rom: "mat v tom PRS-ti", en: "to have a hand in it" },
+          { kr: "je mi to španielska dedina", rom: "yeh mi to SHPA-ni-el-ska DEH-di-na", en: "it's a Spanish village to me (it's all Greek to me)" },
+          { kr: "chytiť býka za rohy", rom: "KHI-tit BEE-ka za RO-hi", en: "to grab the bull by the horns" }]
+      },
+      {
+        tier: "advanced", title: "Idioms: Wisdom & Weather", icon: "🌧️", words: [
+          { kr: "všetko zlé je na niečo dobré", rom: "VSHET-ko zleh yeh na NI-eh-cho DOB-reh", en: "every cloud has a silver lining" },
+          { kr: "ako si kto ustelie, tak si aj ľahne", rom: "A-ko si kto US-teh-li-eh tak si ay LYAH-neh", en: "as you make your bed, so you must lie in it" },
+          { kr: "nie je všetko zlato, čo sa blyští", rom: "ni-eh yeh VSHET-ko ZLA-to cho sa BLISH-tee", en: "not all that glitters is gold" },
+          { kr: "kto sa smeje naposledy, ten sa smeje najlepšie", rom: "kto sa SMEH-yeh na-POS-leh-di ten sa SMEH-yeh NAY-lep-shi-eh", en: "he who laughs last, laughs best" },
+          { kr: "ráno múdrejšie večera", rom: "RAH-no MOOD-rey-shi-eh VEH-che-ra", en: "morning is wiser than evening" },
+          { kr: "keď je najväčšia núdza, pomoc je najbližšia", rom: "ked yeh NAY-vech-shi-a NOOD-za PO-mots yeh NAY-blizh-shi-a", en: "when need is greatest, help is nearest" }]
+      },
+      {
+        tier: "advanced", title: "Travel Advanced", icon: "🛂", words: [
+          { kr: "pas", rom: "pahs", en: "passport" }, { kr: "colnica", rom: "TSOL-ni-tsa", en: "customs" },
+          { kr: "batožina", rom: "BA-to-zhi-na", en: "luggage" }, { kr: "meškanie letu", rom: "MESH-ka-ni-eh LEH-tu", en: "flight delay" },
+          { kr: "rezervácia", rom: "REH-zer-vah-tsi-a", en: "reservation" }, { kr: "vízum", rom: "VEE-zum", en: "visa" }]
+      },
+      {
+        tier: "advanced", title: "Relationships", icon: "💌", words: [
+          { kr: "láska", rom: "LAHS-ka", en: "love" }, { kr: "priateľstvo", rom: "PRI-a-tel-stvo", en: "friendship" },
+          { kr: "dôvera", rom: "DWO-veh-ra", en: "trust" }, { kr: "manželstvo", rom: "MAN-zhel-stvo", en: "marriage" },
+          { kr: "rozísť sa", rom: "RO-zeest sa", en: "to break up" }, { kr: "túžiť", rom: "TOO-zhit", en: "to long for" }]
+      },
+      {
+        tier: "advanced", title: "Debate & Opinions", icon: "🗣️", words: [
+          { kr: "názor", rom: "NAH-zor", en: "opinion" }, { kr: "súhlasiť", rom: "SOO-hla-sit", en: "to agree" },
+          { kr: "nesúhlasiť", rom: "NEH-soo-hla-sit", en: "to disagree" }, { kr: "argument", rom: "AR-gu-ment", en: "argument" },
+          { kr: "pohľad", rom: "PO-hlyad", en: "point of view" }, { kr: "presvedčiť", rom: "PRES-ved-chit", en: "to convince" }]
+      },
+      {
+        tier: "advanced", title: "Formal Speech (Ty vs Vy)", icon: "🎩", words: [
+          { kr: "ty", rom: "ti", en: "informal 'you'" }, { kr: "vy", rom: "vi", en: "formal 'you'" },
+          { kr: "pán", rom: "pahn", en: "Mr." }, { kr: "pani", rom: "PA-ni", en: "Mrs." },
+          { kr: "vážený/vážená", rom: "VAH-zheh-nee / VAH-zheh-nah", en: "dear (formal letter opening)" }, { kr: "s pozdravom", rom: "s POZ-dra-vom", en: "sincerely (formal closing)" }]
+      },
+      {
+        tier: "advanced", title: "Slang & Internet Terms", icon: "📲", words: [
+          { kr: "super", rom: "SU-per", en: "cool/awesome" }, { kr: "pohoda", rom: "PO-ho-da", en: "chill / all good" },
+          { kr: "fakt", rom: "fakt", en: "seriously / for real" }, { kr: "čau", rom: "chow", en: "casual hi/bye" },
+          { kr: "OK", rom: "oh-KAY", en: "OK" }, { kr: "škoda", rom: "SHKO-da", en: "shame / too bad" }]
+      },
+      {
+        tier: "advanced", title: "Culture & History", icon: "🏛️", words: [
+          { kr: "hrad", rom: "hrad", en: "castle" }, { kr: "folklór", rom: "FOL-klor", en: "folklore" },
+          { kr: "ľudový tanec", rom: "LYU-do-vee TA-nets", en: "folk dance" }, { kr: "nezávislosť", rom: "NEH-zah-vis-lost", en: "independence" },
+          { kr: "tradícia", rom: "TRA-dee-tsi-a", en: "tradition" }, { kr: "história", rom: "HIS-toh-ri-a", en: "history" }]
+      },
+      {
+        tier: "advanced", title: "Advanced Verbs", icon: "💪", words: [
+          { kr: "dosiahnuť", rom: "DO-si-ah-nut", en: "to achieve" }, { kr: "uspieť", rom: "US-pi-et", en: "to succeed" },
+          { kr: "zlyhať", rom: "ZLI-hat", en: "to fail" }, { kr: "zlepšiť sa", rom: "ZLEP-shit sa", en: "to improve" },
+          { kr: "bojovať", rom: "BO-yo-vat", en: "to struggle" }, { kr: "prekonať", rom: "PREH-ko-nat", en: "to overcome" }]
+      },
+
+      /* ---------------- FLUENT ---------------- */
+      {
+        tier: "fluent", title: "Proverbs Part 1", icon: "📜", words: [
+          { kr: "všade dobre, doma najlepšie", rom: "VSHA-deh DOB-reh DO-ma NAY-lep-shi-eh", en: "there's no place like home" },
+          { kr: "bez práce nie sú koláče", rom: "bez PRAH-tseh ni-eh soo KO-lah-cheh", en: "no work, no cakes (no pain, no gain)" },
+          { kr: "kto hľadá, nájde", rom: "kto HLYA-dah NAY-deh", en: "seek and you shall find" },
+          { kr: "trpezlivosť ruže prináša", rom: "TRPEZ-li-vost RU-zheh PRI-nah-sha", en: "patience brings roses" },
+          { kr: "darovanému koňovi na zuby nepozeraj", rom: "DA-ro-va-neh-mu KO-nyo-vi na ZU-bi NEH-po-zeh-ray", en: "don't look a gift horse in the mouth" },
+          { kr: "líška srsť mení, ale povahu nie", rom: "LEESH-ka srst MEH-nee A-leh PO-va-hu ni-eh", en: "the fox changes its fur but not its nature" }]
+      },
+      {
+        tier: "fluent", title: "Literary Expressions", icon: "🖋️", words: [
+          { kr: "básnik", rom: "BAHS-nik", en: "poet" }, { kr: "báseň", rom: "BAH-sen", en: "poem" },
+          { kr: "rozprávanie", rom: "ROZ-prah-va-ni-eh", en: "narrative" }, { kr: "osud", rom: "O-sud", en: "fate" },
+          { kr: "romantika", rom: "RO-man-ti-ka", en: "romance" }, { kr: "metafora", rom: "MEH-ta-fo-ra", en: "metaphor" }]
+      },
+      {
+        tier: "fluent", title: "Proverbs Part 2", icon: "🪞", words: [
+          { kr: "ranná hodina, zlatá hodina", rom: "RAN-nah HO-di-na ZLA-tah HO-di-na", en: "the morning hour has gold in its mouth" },
+          { kr: "kto neskoro chodí, sám sebe škodí", rom: "kto NES-ko-ro KHO-dee sahm SEH-beh SHKO-dee", en: "he who comes late harms himself" },
+          { kr: "hovoriť je striebro, mlčať je zlato", rom: "HO-vo-rit yeh STRI-eb-ro MLCHAT yeh ZLA-to", en: "speech is silver, silence is golden" },
+          { kr: "opakovanie je matka múdrosti", rom: "O-pa-ko-va-ni-eh yeh MAT-ka MOOD-ros-ti", en: "repetition is the mother of learning" },
+          { kr: "nehas, čo ťa nepáli", rom: "NEH-has cho tya NEH-pah-li", en: "don't put out what doesn't burn you (don't meddle)" },
+          { kr: "účel svätí prostriedky", rom: "OO-chel SVYA-tee PROS-tri-ed-ki", en: "the end justifies the means" }]
+      },
+      {
+        tier: "fluent", title: "Political & Social Terms", icon: "🏛️", words: [
+          { kr: "politika", rom: "PO-li-ti-ka", en: "politics" }, { kr: "vláda", rom: "VLAH-da", en: "government" },
+          { kr: "voľby", rom: "VOL-bi", en: "elections" }, { kr: "demokracia", rom: "DEH-mo-kra-tsi-a", en: "democracy" },
+          { kr: "práva", rom: "PRAH-va", en: "rights" }, { kr: "rovnosť", rom: "ROV-nost", en: "equality" }]
+      },
+      {
+        tier: "fluent", title: "Psychology & Nuance", icon: "🧠", words: [
+          { kr: "vedomie", rom: "VEH-do-mi-eh", en: "consciousness" }, { kr: "podvedomie", rom: "POD-veh-do-mi-eh", en: "subconscious" },
+          { kr: "sebavedomie", rom: "SEH-ba-veh-do-mi-eh", en: "self-confidence / self-image" }, { kr: "empatia", rom: "EM-pa-ti-a", en: "empathy" },
+          { kr: "úzkosť", rom: "OOZ-kost", en: "anxiety" }, { kr: "odolnosť", rom: "O-dol-nost", en: "resilience" }]
+      },
+      {
+        tier: "fluent", title: "Business Negotiation", icon: "🤝", words: [
+          { kr: "ponuka", rom: "PO-nu-ka", en: "offer" }, { kr: "protiponuka", rom: "PRO-ti-po-nu-ka", en: "counteroffer" },
+          { kr: "kompromis", rom: "KOM-pro-mis", en: "compromise" }, { kr: "záujmy", rom: "ZAH-uy-mi", en: "interests" },
+          { kr: "vyjednávacia pozícia", rom: "VI-yed-nah-va-tsi-a PO-zee-tsi-a", en: "bargaining position" }, { kr: "podpísať", rom: "POD-pee-sat", en: "to sign" }]
+      },
+      {
+        tier: "fluent", title: "Academic Slovak", icon: "🎓", words: [
+          { kr: "výskum", rom: "VEES-kum", en: "research" }, { kr: "teória", rom: "TEH-oh-ri-a", en: "theory" },
+          { kr: "esej", rom: "EH-sey", en: "essay" }, { kr: "hypotéza", rom: "HI-po-teh-za", en: "hypothesis" },
+          { kr: "zdroj", rom: "zdroy", en: "source" }, { kr: "záver", rom: "ZAH-ver", en: "conclusion" }]
+      },
+      {
+        tier: "fluent", title: "Poetic & Formal Writing", icon: "🕊️", words: [
+          { kr: "verš", rom: "versh", en: "verse" }, { kr: "rým", rom: "reem", en: "rhyme" },
+          { kr: "prirovnanie", rom: "PRI-rov-na-ni-eh", en: "simile" }, { kr: "krása", rom: "KRAH-sa", en: "beauty" },
+          { kr: "ticho", rom: "TI-kho", en: "silence" }, { kr: "večnosť", rom: "VECH-nost", en: "eternity" }]
+      },
+      {
+        tier: "fluent", title: "Regional Flavor", icon: "🗺️", words: [
+          { kr: "Bratislava", rom: "BRA-ti-sla-va", en: "Bratislava (the capital)" }, { kr: "Tatry", rom: "TAT-ri", en: "the Tatra mountains" },
+          { kr: "vidiek", rom: "VI-di-ek", en: "countryside" }, { kr: "hory", rom: "HO-ri", en: "mountains" },
+          { kr: "ľudová kultúra", rom: "LYU-do-vah KUL-too-ra", en: "folk culture" }, { kr: "slávnosť", rom: "SLAHV-nost", en: "festival" }]
+      },
+      {
+        tier: "fluent", title: "Complex Grammar: Cases", icon: "🧩", words: [
+          { kr: "nominatív", rom: "NO-mi-na-teev", en: "nominative case" }, { kr: "genitív", rom: "GEH-ni-teev", en: "genitive case" },
+          { kr: "datív", rom: "DA-teev", en: "dative case" }, { kr: "akuzatív", rom: "A-ku-za-teev", en: "accusative case" },
+          { kr: "lokál", rom: "LO-kahl", en: "locative case" }, { kr: "inštrumentál", rom: "IN-shtru-men-tahl", en: "instrumental case" }]
+      },
+      {
+        tier: "fluent", title: "More Proverbs", icon: "📖", words: [
+          { kr: "kto druhému jamu kope, sám do nej padne", rom: "kto DRU-heh-mu YA-mu KO-peh sahm do ney PAD-neh", en: "he who digs a pit for others falls into it himself" },
+          { kr: "s jedlom rastie chuť", rom: "s YED-lom RAS-ti-eh khut", en: "appetite grows with eating" },
+          { kr: "všetky cesty vedú do Ríma", rom: "VSHET-ki TSES-ti VEH-doo do REE-ma", en: "all roads lead to Rome" },
+          { kr: "nie je dym bez ohňa", rom: "ni-eh yeh dim bez OH-nya", en: "there's no smoke without fire" },
+          { kr: "lepšie neskoro ako nikdy", rom: "LEP-shi-eh NES-ko-ro A-ko NIK-di", en: "better late than never" },
+          { kr: "cvičenie robí majstra", rom: "TSVI-cheh-ni-eh RO-bee MAY-stra", en: "practice makes perfect" }]
+      },
+      {
+        tier: "fluent", title: "Professional Terms", icon: "⚖️", words: [
+          { kr: "právnik", rom: "PRAHV-nik", en: "lawyer" }, { kr: "súdne konanie", rom: "SOOD-neh KO-na-ni-eh", en: "court proceedings" },
+          { kr: "zodpovednosť", rom: "ZOD-po-ved-nost", en: "responsibility" }, { kr: "kvalifikácia", rom: "KVA-li-fi-kah-tsi-a", en: "qualification" },
+          { kr: "pracovné skúsenosti", rom: "PRA-tsov-neh SKOO-seh-nos-ti", en: "work experience" }, { kr: "odporúčanie", rom: "OD-po-roo-cha-ni-eh", en: "recommendation" }]
+      },
+      {
+        tier: "fluent", title: "Mastery Review", icon: "🏆", words: [
+          { kr: "skúsenosť", rom: "SKOO-seh-nost", en: "experience" }, { kr: "úspech", rom: "OOS-pekh", en: "success" },
+          { kr: "vedomosti", rom: "VEH-do-mos-ti", en: "knowledge" }, { kr: "porozumenie", rom: "PO-ro-zu-meh-ni-eh", en: "understanding" },
+          { kr: "pokrok", rom: "PO-krok", en: "progress" }, { kr: "talent", rom: "TA-lent", en: "talent" }]
+      },
+    ];
+
+    const TIERS_SR = TIERS;
+    const LEVELS_SR = [
+      {
+        tier: "beginner", title: "Serbian Basics", icon: "🇷🇸", words: [
+          { kr: "здраво", rom: "ZDRA-vo", en: "hello" }, { kr: "хвала", rom: "HVA-la", en: "thank you" },
+          { kr: "да", rom: "dah", en: "yes" }, { kr: "не", rom: "neh", en: "no" },
+          { kr: "име", rom: "EE-meh", en: "name" }, { kr: "пријатељ", rom: "PRI-ya-tel", en: "friend" }]
+      },
+      {
+        tier: "beginner", title: "Greetings & Manners", icon: "🙏", words: [
+          { kr: "довиђења", rom: "do-VI-je-nya", en: "goodbye" }, { kr: "жао ми је", rom: "ZHA-o mi yeh", en: "I'm sorry" },
+          { kr: "извините", rom: "IZ-vi-ni-teh", en: "excuse me" }, { kr: "драго ми је", rom: "DRA-go mi yeh", en: "nice to meet you" },
+          { kr: "у реду је", rom: "u REH-du yeh", en: "it's okay" }, { kr: "молим", rom: "MO-lim", en: "please" }]
+      },
+      {
+        tier: "beginner", title: "Numbers 1-6", icon: "🔢", words: [
+          { kr: "један", rom: "YEH-dan", en: "one" }, { kr: "два", rom: "dvah", en: "two" },
+          { kr: "три", rom: "tri", en: "three" }, { kr: "четири", rom: "CHEH-ti-ri", en: "four" },
+          { kr: "пет", rom: "pet", en: "five" }, { kr: "шест", rom: "shest", en: "six" }]
+      },
+      {
+        tier: "beginner", title: "Days & Time", icon: "🕒", words: [
+          { kr: "данас", rom: "DA-nas", en: "today" }, { kr: "сутра", rom: "SU-tra", en: "tomorrow" },
+          { kr: "јуче", rom: "YU-cheh", en: "yesterday" }, { kr: "сада", rom: "SA-da", en: "now" },
+          { kr: "време", rom: "VREH-meh", en: "time" }, { kr: "јутро", rom: "YU-tro", en: "morning" }]
+      },
+      {
+        tier: "beginner", title: "Family", icon: "👪", words: [
+          { kr: "породица", rom: "po-RO-di-tsa", en: "family" }, { kr: "мама", rom: "MA-ma", en: "mom" },
+          { kr: "тата", rom: "TA-ta", en: "dad" }, { kr: "брат", rom: "braht", en: "brother" },
+          { kr: "сестра", rom: "SES-tra", en: "sister" }, { kr: "деда", rom: "DEH-da", en: "grandfather" }]
+      },
+      {
+        tier: "beginner", title: "Food & Drink", icon: "🍚", words: [
+          { kr: "храна", rom: "HRA-na", en: "food" }, { kr: "вода", rom: "VO-da", en: "water" },
+          { kr: "кафа", rom: "KA-fa", en: "coffee" }, { kr: "хлеб", rom: "hlep", en: "bread" },
+          { kr: "пиринач", rom: "PI-ri-nach", en: "rice" }, { kr: "укусно", rom: "u-KUS-no", en: "delicious" }]
+      },
+      {
+        tier: "beginner", title: "Colors", icon: "🎨", words: [
+          { kr: "црвена", rom: "TSR-veh-na", en: "red" }, { kr: "плава", rom: "PLA-va", en: "blue" },
+          { kr: "жута", rom: "ZHU-ta", en: "yellow" }, { kr: "зелена", rom: "zeh-LEH-na", en: "green" },
+          { kr: "црна", rom: "TSR-na", en: "black" }, { kr: "бела", rom: "BEH-la", en: "white" }]
+      },
+      {
+        tier: "beginner", title: "Body Parts", icon: "🧍", words: [
+          { kr: "глава", rom: "GLA-va", en: "head" }, { kr: "рука", rom: "RU-ka", en: "hand" },
+          { kr: "око", rom: "O-ko", en: "eye" }, { kr: "нос", rom: "nos", en: "nose" },
+          { kr: "уста", rom: "US-ta", en: "mouth" }, { kr: "нога", rom: "NO-ga", en: "leg" }]
+      },
+      {
+        tier: "beginner", title: "Animals", icon: "🐾", words: [
+          { kr: "пас", rom: "pahs", en: "dog" }, { kr: "мачка", rom: "MACH-ka", en: "cat" },
+          { kr: "птица", rom: "PTI-tsa", en: "bird" }, { kr: "риба", rom: "RI-ba", en: "fish" },
+          { kr: "медвед", rom: "MED-ved", en: "bear" }, { kr: "зец", rom: "zets", en: "rabbit" }]
+      },
+      {
+        tier: "beginner", title: "Clothing", icon: "👕", words: [
+          { kr: "одећа", rom: "o-DEH-cha", en: "clothes" }, { kr: "ципеле", rom: "TSI-peh-leh", en: "shoes" },
+          { kr: "шешир", rom: "SHEH-shir", en: "hat" }, { kr: "панталоне", rom: "pan-ta-LO-neh", en: "pants" },
+          { kr: "сукња", rom: "SUK-nya", en: "skirt" }, { kr: "торба", rom: "TOR-ba", en: "bag" }]
+      },
+      {
+        tier: "beginner", title: "Weather", icon: "⛅", words: [
+          { kr: "временска прогноза", rom: "VREH-men-ska PROG-no-za", en: "weather forecast" }, { kr: "киша", rom: "KI-sha", en: "rain" },
+          { kr: "снег", rom: "sneg", en: "snow" }, { kr: "ветар", rom: "VEH-tar", en: "wind" },
+          { kr: "топло је", rom: "TOP-lo yeh", en: "it's hot" }, { kr: "хладно је", rom: "HLAD-no yeh", en: "it's cold" }]
+      },
+      {
+        tier: "beginner", title: "House & Rooms", icon: "🏠", words: [
+          { kr: "кућа", rom: "KU-cha", en: "house" }, { kr: "соба", rom: "SO-ba", en: "room" },
+          { kr: "кревет", rom: "KREH-vet", en: "bed" }, { kr: "купатило", rom: "ku-PA-ti-lo", en: "bathroom" },
+          { kr: "кухиња", rom: "ku-HI-nya", en: "kitchen" }, { kr: "врата", rom: "VRA-ta", en: "door" }]
+      },
+      {
+        tier: "beginner", title: "School & Objects", icon: "🎒", words: [
+          { kr: "школа", rom: "SHKO-la", en: "school" }, { kr: "књига", rom: "KNYI-ga", en: "book" },
+          { kr: "оловка", rom: "o-LOV-ka", en: "pencil" }, { kr: "ранац", rom: "RA-nats", en: "backpack" },
+          { kr: "учитељ", rom: "u-CHI-tel", en: "teacher" }, { kr: "ученик", rom: "u-CHEH-nik", en: "student" }]
+      },
+
+      /* ---------------- INTERMEDIATE ---------------- */
+      {
+        tier: "intermediate", title: "Feelings & Emotions", icon: "💗", words: [
+          { kr: "срећан", rom: "SREH-chan", en: "happy" }, { kr: "тужан", rom: "TU-zhan", en: "sad" },
+          { kr: "љут", rom: "lyoot", en: "angry" }, { kr: "уморан", rom: "u-MO-ran", en: "tired" },
+          { kr: "узбуђен", rom: "uz-BU-jen", en: "excited" }, { kr: "нервозан", rom: "ner-VO-zan", en: "nervous" }]
+      },
+      {
+        tier: "intermediate", title: "Directions & Places", icon: "🧭", words: [
+          { kr: "лево", rom: "LEH-vo", en: "left" }, { kr: "десно", rom: "DES-no", en: "right" },
+          { kr: "право", rom: "PRA-vo", en: "straight ahead" }, { kr: "близу", rom: "BLI-zu", en: "near" },
+          { kr: "далеко", rom: "da-LEH-ko", en: "far" }, { kr: "овде", rom: "OV-deh", en: "here" }]
+      },
+      {
+        tier: "intermediate", title: "Shopping", icon: "🛍️", words: [
+          { kr: "купити", rom: "KU-pi-ti", en: "to buy" }, { kr: "новац", rom: "NO-vats", en: "money" },
+          { kr: "скупо", rom: "SKU-po", en: "expensive" }, { kr: "јефтино", rom: "yef-TI-no", en: "cheap" },
+          { kr: "продавница", rom: "pro-DAV-ni-tsa", en: "store" }, { kr: "платити", rom: "PLA-ti-ti", en: "to pay" }]
+      },
+      {
+        tier: "intermediate", title: "Transportation", icon: "🚌", words: [
+          { kr: "аутомобил", rom: "au-to-MO-bil", en: "car" }, { kr: "аутобус", rom: "AU-to-bus", en: "bus" },
+          { kr: "воз", rom: "voz", en: "train" }, { kr: "авион", rom: "a-VI-on", en: "airplane" },
+          { kr: "бицикл", rom: "BI-tsi-kl", en: "bicycle" }, { kr: "путовати", rom: "pu-TO-va-ti", en: "to travel" }]
+      },
+      {
+        tier: "intermediate", title: "Hobbies", icon: "🎸", words: [
+          { kr: "читати", rom: "CHI-ta-ti", en: "to read" }, { kr: "пливати", rom: "PLI-va-ti", en: "to swim" },
+          { kr: "плесати", rom: "PLEH-sa-ti", en: "to dance" }, { kr: "певати", rom: "PEH-va-ti", en: "to sing" },
+          { kr: "сликати", rom: "SLI-ka-ti", en: "to paint" }, { kr: "хоби", rom: "HO-bi", en: "hobby" }]
+      },
+      {
+        tier: "intermediate", title: "Work & Jobs", icon: "💼", words: [
+          { kr: "посао", rom: "PO-sa-o", en: "job" }, { kr: "лекар", rom: "LEH-kar", en: "doctor" },
+          { kr: "инжењер", rom: "in-zhe-NYER", en: "engineer" }, { kr: "шеф", rom: "shef", en: "boss" },
+          { kr: "плата", rom: "PLA-ta", en: "salary" }, { kr: "канцеларија", rom: "kan-tse-LA-ri-ya", en: "office" }]
+      },
+      {
+        tier: "intermediate", title: "Health & Body", icon: "🩺", words: [
+          { kr: "болестан", rom: "BO-les-tan", en: "sick" }, { kr: "здрав", rom: "zdrahv", en: "healthy" },
+          { kr: "лек", rom: "lek", en: "medicine" }, { kr: "болница", rom: "BOL-ni-tsa", en: "hospital" },
+          { kr: "бол", rom: "bol", en: "pain" }, { kr: "одморити се", rom: "od-MO-ri-ti seh", en: "to rest" }]
+      },
+      {
+        tier: "intermediate", title: "Technology", icon: "📱", words: [
+          { kr: "телефон", rom: "teh-leh-FON", en: "phone" }, { kr: "рачунар", rom: "ra-CHU-nar", en: "computer" },
+          { kr: "интернет", rom: "IN-ter-net", en: "internet" }, { kr: "послати поруку", rom: "POS-la-ti PO-ru-ku", en: "to text" },
+          { kr: "апликација", rom: "a-pli-KA-tsi-ya", en: "app" }, { kr: "батерија", rom: "ba-TEH-ri-ya", en: "battery" }]
+      },
+      {
+        tier: "intermediate", title: "Sports", icon: "⚽", words: [
+          { kr: "фудбал", rom: "FUD-bal", en: "soccer" }, { kr: "трчати", rom: "TR-cha-ti", en: "to run" },
+          { kr: "лопта", rom: "LOP-ta", en: "ball" }, { kr: "тим", rom: "tim", en: "team" },
+          { kr: "победити", rom: "po-BEH-di-ti", en: "to win" }, { kr: "изгубити", rom: "iz-GU-bi-ti", en: "to lose" }]
+      },
+      {
+        tier: "intermediate", title: "Nature", icon: "🌳", words: [
+          { kr: "дрво", rom: "DR-vo", en: "tree" }, { kr: "планина", rom: "pla-NI-na", en: "mountain" },
+          { kr: "река", rom: "REH-ka", en: "river" }, { kr: "океан", rom: "o-keh-AHN", en: "ocean" },
+          { kr: "шума", rom: "SHU-ma", en: "forest" }, { kr: "небо", rom: "NEH-bo", en: "sky" }]
+      },
+      {
+        tier: "intermediate", title: "Numbers & Time", icon: "🔟", words: [
+          { kr: "седам", rom: "SEH-dam", en: "seven" }, { kr: "осам", rom: "O-sam", en: "eight" },
+          { kr: "девет", rom: "DEH-vet", en: "nine" }, { kr: "десет", rom: "DEH-set", en: "ten" },
+          { kr: "сат", rom: "saht", en: "hour" }, { kr: "минут", rom: "MI-nut", en: "minute" }]
+      },
+      {
+        tier: "intermediate", title: "Making Plans", icon: "📅", words: [
+          { kr: "планирати", rom: "pla-NI-ra-ti", en: "to plan" }, { kr: "вечерас", rom: "veh-CHEH-ras", en: "tonight" },
+          { kr: "викенд", rom: "VI-kend", en: "weekend" }, { kr: "састати се", rom: "SAS-ta-ti seh", en: "to meet" },
+          { kr: "распоред", rom: "RAS-po-red", en: "schedule" }, { kr: "слободно време", rom: "SLO-bod-no VREH-meh", en: "free time" }]
+      },
+      {
+        tier: "intermediate", title: "Restaurant & Ordering", icon: "🍽️", words: [
+          { kr: "јеловник", rom: "yeh-LOV-nik", en: "menu" }, { kr: "наручити", rom: "na-RU-chi-ti", en: "to order" },
+          { kr: "рачун", rom: "RA-choon", en: "check/bill" }, { kr: "конобар", rom: "ko-no-BAR", en: "waiter" },
+          { kr: "сто", rom: "stoh", en: "table" }, { kr: "одлично", rom: "od-LICH-no", en: "tasty/excellent" }]
+      },
+
+      /* ---------------- ADVANCED ---------------- */
+      {
+        tier: "advanced", title: "Connectors & Grammar", icon: "🔗", words: [
+          { kr: "али", rom: "A-li", en: "but" }, { kr: "зато што", rom: "ZA-to shto", en: "because" },
+          { kr: "зато", rom: "ZA-to", en: "therefore" }, { kr: "иако", rom: "i-A-ko", en: "although" },
+          { kr: "и", rom: "ee", en: "and" }, { kr: "или", rom: "I-li", en: "or" }]
+      },
+      {
+        tier: "advanced", title: "Business Serbian", icon: "🏢", words: [
+          { kr: "састанак", rom: "SAS-ta-nak", en: "meeting" }, { kr: "уговор", rom: "u-GO-vor", en: "contract" },
+          { kr: "клијент", rom: "kli-YENT", en: "client" }, { kr: "рок", rom: "rok", en: "deadline" },
+          { kr: "пројекат", rom: "pro-YEH-kat", en: "project" }, { kr: "преговори", rom: "preh-go-VO-ri", en: "negotiation" }]
+      },
+      {
+        tier: "advanced", title: "News & Media", icon: "📰", words: [
+          { kr: "вести", rom: "VES-ti", en: "news" }, { kr: "новине", rom: "no-VI-neh", en: "newspaper" },
+          { kr: "новинар", rom: "no-vi-NAR", en: "journalist" }, { kr: "известити", rom: "iz-VES-ti-ti", en: "to report" },
+          { kr: "наслов", rom: "NAS-lov", en: "headline" }, { kr: "догађај", rom: "do-GA-jai", en: "event" }]
+      },
+      {
+        tier: "advanced", title: "Nuanced Emotions", icon: "🌫️", words: [
+          { kr: "недостајати", rom: "neh-do-STA-ya-ti", en: "to miss (someone)" }, { kr: "жаљење", rom: "ZHA-lye-nyeh", en: "regret" },
+          { kr: "олакшање", rom: "o-LAK-sha-nyeh", en: "relief" }, { kr: "чежња", rom: "CHEZH-nya", en: "longing" },
+          { kr: "нада", rom: "NA-da", en: "hope" }, { kr: "разочарање", rom: "ra-zo-cha-RA-nyeh", en: "disappointment" }]
+      },
+      {
+        tier: "advanced", title: "Idioms: Everyday Life", icon: "🫴", words: [
+          { kr: "убити две муве једним ударцем", rom: "u-BI-ti dveh MU-veh YED-nim u-DAR-tsem", en: "to kill two flies with one blow (two birds, one stone)" },
+          { kr: "бацити пасуљ", rom: "BA-tsi-ti PA-sul", en: "to throw the beans (fortune-telling / to predict)" },
+          { kr: "пао ми је камен са срца", rom: "PA-o mi yeh KA-men sa SR-tsa", en: "a stone fell from my heart (relief)" },
+          { kr: "не види од дрвећа шуму", rom: "neh VI-di od DR-veh-cha SHU-mu", en: "can't see the forest for the trees" },
+          { kr: "имати путера на глави", rom: "I-ma-ti PU-teh-ra na GLA-vi", en: "to have butter on one's head (to have a guilty conscience)" },
+          { kr: "ради као пчела", rom: "RA-di KA-o PCHEH-la", en: "works like a bee (hardworking)" }]
+      },
+      {
+        tier: "advanced", title: "Idioms: Wisdom & Weather", icon: "🌧️", words: [
+          { kr: "после кише долази сунце", rom: "POS-leh KI-sheh DO-la-zi SUN-tseh", en: "after rain comes sunshine" },
+          { kr: "не купуј мачку у џаку", rom: "neh KU-puy MACH-ku u JA-ku", en: "don't buy a cat in a sack (a pig in a poke)" },
+          { kr: "ко рано рани, две среће грабе", rom: "ko RA-no RA-ni dveh SREH-cheh GRA-beh", en: "the early bird catches two fortunes" },
+          { kr: "вук длаку мења, али ћуд никада", rom: "vook DLA-ku MEH-nya A-li chood NI-ka-da", en: "the wolf changes its coat but never its temperament" },
+          { kr: "није злато све што сија", rom: "NI-yeh ZLA-to sveh shto SI-ya", en: "not all that glitters is gold" },
+          { kr: "гвожђе се кује док је вруће", rom: "GVOZH-jeh seh KU-yeh dok yeh VRU-cheh", en: "strike while the iron is hot" }]
+      },
+      {
+        tier: "advanced", title: "Travel Advanced", icon: "🛂", words: [
+          { kr: "пасош", rom: "PA-sosh", en: "passport" }, { kr: "царина", rom: "TSA-ri-na", en: "customs" },
+          { kr: "пртљаг", rom: "PRT-lyag", en: "luggage" }, { kr: "кашњење лета", rom: "KASH-nye-nyeh LEH-ta", en: "flight delay" },
+          { kr: "резервација", rom: "reh-zer-VA-tsi-ya", en: "reservation" }, { kr: "виза", rom: "VI-za", en: "visa" }]
+      },
+      {
+        tier: "advanced", title: "Relationships", icon: "💌", words: [
+          { kr: "љубав", rom: "LYU-bav", en: "love" }, { kr: "пријатељство", rom: "pri-ya-TELY-stvo", en: "friendship" },
+          { kr: "поверење", rom: "po-VEH-reh-nyeh", en: "trust" }, { kr: "брак", rom: "brahk", en: "marriage" },
+          { kr: "раскинути", rom: "ras-KI-nu-ti", en: "to break up" }, { kr: "чезнути", rom: "CHEZ-nu-ti", en: "to long for" }]
+      },
+      {
+        tier: "advanced", title: "Debate & Opinions", icon: "🗣️", words: [
+          { kr: "мишљење", rom: "MISH-lye-nyeh", en: "opinion" }, { kr: "слагати се", rom: "SLA-ga-ti seh", en: "to agree" },
+          { kr: "не слагати се", rom: "neh SLA-ga-ti seh", en: "to disagree" }, { kr: "аргумент", rom: "ar-gu-MENT", en: "argument" },
+          { kr: "гледиште", rom: "GLEH-dish-teh", en: "point of view" }, { kr: "убедити", rom: "u-BEH-di-ti", en: "to convince" }]
+      },
+      {
+        tier: "advanced", title: "Formal Speech (Ti vs Vi)", icon: "🎩", words: [
+          { kr: "ти", rom: "ti", en: "informal 'you'" }, { kr: "ви", rom: "vi", en: "formal 'you'" },
+          { kr: "господин", rom: "gos-po-DIN", en: "Mr." }, { kr: "госпођа", rom: "gos-PO-ja", en: "Mrs." },
+          { kr: "поштовани/поштована", rom: "posh-TO-va-ni / posh-TO-va-na", en: "dear (formal letter opening)" }, { kr: "с поштовањем", rom: "s posh-TO-va-nyem", en: "sincerely (formal closing)" }]
+      },
+      {
+        tier: "advanced", title: "Slang & Internet Terms", icon: "📲", words: [
+          { kr: "супер", rom: "SU-per", en: "cool/awesome" }, { kr: "стварно", rom: "STVAR-no", en: "really/seriously" },
+          { kr: "опуштено", rom: "o-PUSH-teh-no", en: "chill" }, { kr: "ћао", rom: "chow", en: "casual hi/bye" },
+          { kr: "океј", rom: "o-KAY", en: "OK" }, { kr: "штета", rom: "SHTEH-ta", en: "shame / too bad" }]
+      },
+      {
+        tier: "advanced", title: "Culture & History", icon: "🏛️", words: [
+          { kr: "тврђава", rom: "TVR-ja-va", en: "fortress" }, { kr: "фолклор", rom: "fol-KLOR", en: "folklore" },
+          { kr: "народна игра", rom: "NA-rod-na I-gra", en: "folk dance" }, { kr: "независност", rom: "neh-za-VIS-nost", en: "independence" },
+          { kr: "традиција", rom: "tra-DI-tsi-ya", en: "tradition" }, { kr: "историја", rom: "is-TO-ri-ya", en: "history" }]
+      },
+      {
+        tier: "advanced", title: "Advanced Verbs", icon: "💪", words: [
+          { kr: "постићи", rom: "POS-ti-chi", en: "to achieve" }, { kr: "успети", rom: "us-PEH-ti", en: "to succeed" },
+          { kr: "не успети", rom: "neh us-PEH-ti", en: "to fail" }, { kr: "побољшати се", rom: "po-BOL-sha-ti seh", en: "to improve" },
+          { kr: "борити се", rom: "BO-ri-ti seh", en: "to struggle" }, { kr: "превазићи", rom: "preh-va-ZI-chi", en: "to overcome" }]
+      },
+
+      /* ---------------- FLUENT ---------------- */
+      {
+        tier: "fluent", title: "Proverbs Part 1", icon: "📜", words: [
+          { kr: "ко другом јаму копа, сам у њу упада", rom: "ko DRU-gom YA-mu KO-pa sam u nyu u-PA-da", en: "he who digs a pit for others falls into it himself" },
+          { kr: "боље спречити него лечити", rom: "BO-lye SPREH-chi-ti NEH-go LEH-chi-ti", en: "better to prevent than to cure" },
+          { kr: "сваки почетак је тежак", rom: "SVA-ki po-CHEH-tak yeh TEH-zhak", en: "every beginning is hard" },
+          { kr: "ко чека, тај и дочека", rom: "ko CHEH-ka tai ee do-CHEH-ka", en: "good things come to those who wait" },
+          { kr: "апетит долази с јелом", rom: "a-peh-TIT DO-la-zi s YEH-lom", en: "appetite comes with eating" },
+          { kr: "сви путеви воде у Рим", rom: "svi PU-teh-vi VO-deh u rim", en: "all roads lead to Rome" }]
+      },
+      {
+        tier: "fluent", title: "Literary Expressions", icon: "🖋️", words: [
+          { kr: "песник", rom: "PES-nik", en: "poet" }, { kr: "песма", rom: "PES-ma", en: "poem" },
+          { kr: "приповетка", rom: "pri-po-VET-ka", en: "narrative / story" }, { kr: "судбина", rom: "sud-BI-na", en: "fate" },
+          { kr: "романтика", rom: "ro-MAN-ti-ka", en: "romance" }, { kr: "метафора", rom: "meh-TA-fo-ra", en: "metaphor" }]
+      },
+      {
+        tier: "fluent", title: "Proverbs Part 2", icon: "🪞", words: [
+          { kr: "нема дима без ватре", rom: "NEH-ma DI-ma bez VA-treh", en: "there's no smoke without fire" },
+          { kr: "говор је сребро, ћутање је злато", rom: "GO-vor yeh SREB-ro CHU-ta-nyeh yeh ZLA-to", en: "speech is silver, silence is golden" },
+          { kr: "понављање је мајка знања", rom: "po-NAV-lya-nyeh yeh MAI-ka ZNA-nya", en: "repetition is the mother of knowledge" },
+          { kr: "не гледај поклоњеном коњу у зубе", rom: "neh GLEH-day po-KLO-nye-nom KO-nyu u ZU-beh", en: "don't look a gift horse in the mouth" },
+          { kr: "вежба чини мајстора", rom: "VEZH-ba CHI-ni MAI-sto-ra", en: "practice makes perfect" },
+          { kr: "боље ишта него ништа", rom: "BO-lye ISH-ta NEH-go NISH-ta", en: "better something than nothing" }]
+      },
+      {
+        tier: "fluent", title: "Political & Social Terms", icon: "🏛️", words: [
+          { kr: "политика", rom: "po-LI-ti-ka", en: "politics" }, { kr: "влада", rom: "VLA-da", en: "government" },
+          { kr: "избори", rom: "IZ-bo-ri", en: "elections" }, { kr: "демократија", rom: "deh-mo-kra-TI-ya", en: "democracy" },
+          { kr: "права", rom: "PRA-va", en: "rights" }, { kr: "једнакост", rom: "yed-NA-kost", en: "equality" }]
+      },
+      {
+        tier: "fluent", title: "Psychology & Nuance", icon: "🧠", words: [
+          { kr: "свест", rom: "svest", en: "consciousness" }, { kr: "подсвест", rom: "POD-svest", en: "subconscious" },
+          { kr: "самопоуздање", rom: "sa-mo-po-UZ-da-nyeh", en: "self-confidence" }, { kr: "емпатија", rom: "em-PA-ti-ya", en: "empathy" },
+          { kr: "анксиозност", rom: "an-ksi-OZ-nost", en: "anxiety" }, { kr: "отпорност", rom: "ot-POR-nost", en: "resilience" }]
+      },
+      {
+        tier: "fluent", title: "Business Negotiation", icon: "🤝", words: [
+          { kr: "понуда", rom: "PO-nu-da", en: "offer" }, { kr: "против-понуда", rom: "PRO-tiv PO-nu-da", en: "counteroffer" },
+          { kr: "компромис", rom: "kom-pro-MIS", en: "compromise" }, { kr: "интереси", rom: "in-teh-REH-si", en: "interests" },
+          { kr: "преговарачка позиција", rom: "preh-go-va-RACH-ka po-ZI-tsi-ya", en: "bargaining position" }, { kr: "потписати", rom: "POT-pi-sa-ti", en: "to sign" }]
+      },
+      {
+        tier: "fluent", title: "Academic Serbian", icon: "🎓", words: [
+          { kr: "истраживање", rom: "is-tra-ZHI-va-nyeh", en: "research" }, { kr: "теорија", rom: "teh-O-ri-ya", en: "theory" },
+          { kr: "есеј", rom: "EH-sey", en: "essay" }, { kr: "хипотеза", rom: "hi-po-TEH-za", en: "hypothesis" },
+          { kr: "извор", rom: "IZ-vor", en: "source" }, { kr: "закључак", rom: "ZA-klyu-chak", en: "conclusion" }]
+      },
+      {
+        tier: "fluent", title: "Poetic & Formal Writing", icon: "🕊️", words: [
+          { kr: "стих", rom: "stih", en: "verse" }, { kr: "рима", rom: "RI-ma", en: "rhyme" },
+          { kr: "поређење", rom: "po-REH-je-nyeh", en: "simile" }, { kr: "лепота", rom: "leh-PO-ta", en: "beauty" },
+          { kr: "тишина", rom: "ti-SHI-na", en: "silence" }, { kr: "вечност", rom: "VECH-nost", en: "eternity" }]
+      },
+      {
+        tier: "fluent", title: "Regional Flavor", icon: "🗺️", words: [
+          { kr: "Београд", rom: "BEH-o-grad", en: "Belgrade (the capital)" }, { kr: "Нови Сад", rom: "NO-vi sahd", en: "Novi Sad" },
+          { kr: "планине", rom: "pla-NI-neh", en: "mountains" }, { kr: "село", rom: "SEH-lo", en: "village" },
+          { kr: "народна култура", rom: "NA-rod-na kul-TU-ra", en: "folk culture" }, { kr: "фестивал", rom: "FES-ti-val", en: "festival" }]
+      },
+      {
+        tier: "fluent", title: "Complex Grammar: Cases", icon: "🧩", words: [
+          { kr: "номинатив", rom: "no-mi-NA-tiv", en: "nominative case" }, { kr: "генитив", rom: "geh-NI-tiv", en: "genitive case" },
+          { kr: "датив", rom: "DA-tiv", en: "dative case" }, { kr: "акузатив", rom: "a-ku-ZA-tiv", en: "accusative case" },
+          { kr: "вокатив", rom: "vo-KA-tiv", en: "vocative case" }, { kr: "инструментал", rom: "in-stru-men-TAL", en: "instrumental case" }]
+      },
+      {
+        tier: "fluent", title: "More Proverbs", icon: "📖", words: [
+          { kr: "тамо где има воље, има и начина", rom: "TA-mo gdeh I-ma VO-lyeh I-ma ee NA-chi-na", en: "where there's a will there's a way" },
+          { kr: "ко тражи, налази", rom: "ko TRA-zhi NA-la-zi", en: "seek and you shall find" },
+          { kr: "стрпљење је врлина", rom: "STR-plye-nyeh yeh VR-li-na", en: "patience is a virtue" },
+          { kr: "ђаво је у детаљима", rom: "JA-vo yeh u DEH-ta-lyi-ma", en: "the devil is in the details" },
+          { kr: "ко пре дође, пре добије", rom: "ko preh DO-jeh preh DO-bi-yeh", en: "first come, first served" },
+          { kr: "мирна вода брег рони", rom: "MIR-na VO-da breg RO-ni", en: "still waters run deep" }]
+      },
+      {
+        tier: "fluent", title: "Professional Terms", icon: "⚖️", words: [
+          { kr: "адвокат", rom: "ad-vo-KAT", en: "lawyer" }, { kr: "судски поступак", rom: "SUD-ski po-STU-pak", en: "court proceedings" },
+          { kr: "одговорност", rom: "od-go-VOR-nost", en: "responsibility" }, { kr: "квалификација", rom: "kva-li-fi-KA-tsi-ya", en: "qualification" },
+          { kr: "радно искуство", rom: "RAD-no is-KUS-tvo", en: "work experience" }, { kr: "препорука", rom: "preh-po-RU-ka", en: "recommendation" }]
+      },
+      {
+        tier: "fluent", title: "Mastery Review", icon: "🏆", words: [
+          { kr: "искуство", rom: "is-KUS-tvo", en: "experience" }, { kr: "успех", rom: "US-peh", en: "success" },
+          { kr: "знање", rom: "ZNA-nyeh", en: "knowledge" }, { kr: "разумевање", rom: "ra-zu-MEH-va-nyeh", en: "understanding" },
+          { kr: "напредак", rom: "NA-preh-dak", en: "progress" }, { kr: "таленат", rom: "ta-LEH-nat", en: "talent" }]
+      },
+    ];
+
+    const TIERS_MS = TIERS;
+    const LEVELS_MS = [
+      {
+        tier: "beginner", title: "Malay Basics", icon: "🇲🇾", words: [
+          { kr: "helo", rom: "HEH-lo", en: "hello" }, { kr: "terima kasih", rom: "teh-REE-ma KA-sih", en: "thank you" },
+          { kr: "ya", rom: "yah", en: "yes" }, { kr: "tidak", rom: "TEE-dak", en: "no" },
+          { kr: "nama", rom: "NA-ma", en: "name" }, { kr: "kawan", rom: "KA-wan", en: "friend" }]
+      },
+      {
+        tier: "beginner", title: "Greetings & Manners", icon: "🙏", words: [
+          { kr: "selamat tinggal", rom: "seh-LA-mat TING-gal", en: "goodbye" }, { kr: "maaf", rom: "MA-af", en: "I'm sorry" },
+          { kr: "maafkan saya", rom: "MA-af-kan SA-ya", en: "excuse me" }, { kr: "gembira bertemu anda", rom: "gem-BI-ra ber-TEH-mu AN-da", en: "nice to meet you" },
+          { kr: "tidak mengapa", rom: "TEE-dak meng-A-pa", en: "it's okay" }, { kr: "tolong", rom: "TO-long", en: "please" }]
+      },
+      {
+        tier: "beginner", title: "Numbers 1-6", icon: "🔢", words: [
+          { kr: "satu", rom: "SA-too", en: "one" }, { kr: "dua", rom: "DOO-a", en: "two" },
+          { kr: "tiga", rom: "TI-ga", en: "three" }, { kr: "empat", rom: "EM-pat", en: "four" },
+          { kr: "lima", rom: "LI-ma", en: "five" }, { kr: "enam", rom: "EH-nam", en: "six" }]
+      },
+      {
+        tier: "beginner", title: "Days & Time", icon: "🕒", words: [
+          { kr: "hari ini", rom: "HA-ree EE-nee", en: "today" }, { kr: "esok", rom: "EH-sok", en: "tomorrow" },
+          { kr: "semalam", rom: "seh-MA-lam", en: "yesterday" }, { kr: "sekarang", rom: "seh-KA-rang", en: "now" },
+          { kr: "masa", rom: "MA-sa", en: "time" }, { kr: "pagi", rom: "PA-gee", en: "morning" }]
+      },
+      {
+        tier: "beginner", title: "Family", icon: "👪", words: [
+          { kr: "keluarga", rom: "keh-loo-AR-ga", en: "family" }, { kr: "ibu", rom: "EE-boo", en: "mom" },
+          { kr: "ayah", rom: "A-yah", en: "dad" }, { kr: "abang", rom: "A-bang", en: "older brother" },
+          { kr: "kakak", rom: "KA-kak", en: "older sister" }, { kr: "datuk", rom: "DA-tok", en: "grandfather" }]
+      },
+      {
+        tier: "beginner", title: "Food & Drink", icon: "🍚", words: [
+          { kr: "makanan", rom: "ma-KA-nan", en: "food" }, { kr: "air", rom: "A-eer", en: "water" },
+          { kr: "kopi", rom: "KO-pee", en: "coffee" }, { kr: "roti", rom: "RO-tee", en: "bread" },
+          { kr: "nasi", rom: "NA-see", en: "rice" }, { kr: "sedap", rom: "seh-DAP", en: "delicious" }]
+      },
+      {
+        tier: "beginner", title: "Colors", icon: "🎨", words: [
+          { kr: "merah", rom: "MEH-rah", en: "red" }, { kr: "biru", rom: "BI-roo", en: "blue" },
+          { kr: "kuning", rom: "KOO-ning", en: "yellow" }, { kr: "hijau", rom: "HI-jow", en: "green" },
+          { kr: "hitam", rom: "HI-tam", en: "black" }, { kr: "putih", rom: "POO-tih", en: "white" }]
+      },
+      {
+        tier: "beginner", title: "Body Parts", icon: "🧍", words: [
+          { kr: "kepala", rom: "keh-PA-la", en: "head" }, { kr: "tangan", rom: "TANG-an", en: "hand" },
+          { kr: "mata", rom: "MA-ta", en: "eye" }, { kr: "hidung", rom: "HI-dung", en: "nose" },
+          { kr: "mulut", rom: "MOO-loot", en: "mouth" }, { kr: "kaki", rom: "KA-kee", en: "leg" }]
+      },
+      {
+        tier: "beginner", title: "Animals", icon: "🐾", words: [
+          { kr: "anjing", rom: "AN-jing", en: "dog" }, { kr: "kucing", rom: "KOO-ching", en: "cat" },
+          { kr: "burung", rom: "BOO-rung", en: "bird" }, { kr: "ikan", rom: "EE-kan", en: "fish" },
+          { kr: "beruang", rom: "beh-ROO-ang", en: "bear" }, { kr: "arnab", rom: "AR-nab", en: "rabbit" }]
+      },
+      {
+        tier: "beginner", title: "Clothing", icon: "👕", words: [
+          { kr: "pakaian", rom: "pa-KAI-an", en: "clothes" }, { kr: "kasut", rom: "KA-soot", en: "shoes" },
+          { kr: "topi", rom: "TO-pee", en: "hat" }, { kr: "seluar", rom: "seh-LOO-ar", en: "pants" },
+          { kr: "skirt", rom: "skert", en: "skirt" }, { kr: "beg", rom: "beg", en: "bag" }]
+      },
+      {
+        tier: "beginner", title: "Weather", icon: "⛅", words: [
+          { kr: "cuaca", rom: "choo-A-cha", en: "weather" }, { kr: "hujan", rom: "HOO-jan", en: "rain" },
+          { kr: "salji", rom: "SAL-jee", en: "snow" }, { kr: "angin", rom: "A-ngin", en: "wind" },
+          { kr: "panas", rom: "PA-nas", en: "it's hot" }, { kr: "sejuk", rom: "seh-JOOK", en: "it's cold" }]
+      },
+      {
+        tier: "beginner", title: "House & Rooms", icon: "🏠", words: [
+          { kr: "rumah", rom: "ROO-mah", en: "house" }, { kr: "bilik", rom: "BI-lik", en: "room" },
+          { kr: "katil", rom: "KA-til", en: "bed" }, { kr: "bilik air", rom: "BI-lik A-eer", en: "bathroom" },
+          { kr: "dapur", rom: "DA-poor", en: "kitchen" }, { kr: "pintu", rom: "PIN-too", en: "door" }]
+      },
+      {
+        tier: "beginner", title: "School & Objects", icon: "🎒", words: [
+          { kr: "sekolah", rom: "seh-KO-lah", en: "school" }, { kr: "buku", rom: "BOO-koo", en: "book" },
+          { kr: "pensel", rom: "PEN-sel", en: "pencil" }, { kr: "beg sekolah", rom: "beg seh-KO-lah", en: "backpack" },
+          { kr: "guru", rom: "GOO-roo", en: "teacher" }, { kr: "pelajar", rom: "peh-LA-jar", en: "student" }]
+      },
+
+      /* ---------------- INTERMEDIATE ---------------- */
+      {
+        tier: "intermediate", title: "Feelings & Emotions", icon: "💗", words: [
+          { kr: "gembira", rom: "gem-BI-ra", en: "happy" }, { kr: "sedih", rom: "seh-DIH", en: "sad" },
+          { kr: "marah", rom: "MA-rah", en: "angry" }, { kr: "penat", rom: "peh-NAT", en: "tired" },
+          { kr: "teruja", rom: "teh-ROO-ja", en: "excited" }, { kr: "gementar", rom: "geh-men-TAR", en: "nervous" }]
+      },
+      {
+        tier: "intermediate", title: "Directions & Places", icon: "🧭", words: [
+          { kr: "kiri", rom: "KI-ree", en: "left" }, { kr: "kanan", rom: "KA-nan", en: "right" },
+          { kr: "terus", rom: "teh-ROOS", en: "straight ahead" }, { kr: "dekat", rom: "deh-KAT", en: "near" },
+          { kr: "jauh", rom: "JA-ooh", en: "far" }, { kr: "sini", rom: "SI-nee", en: "here" }]
+      },
+      {
+        tier: "intermediate", title: "Shopping", icon: "🛍️", words: [
+          { kr: "beli", rom: "BEH-lee", en: "to buy" }, { kr: "wang", rom: "wang", en: "money" },
+          { kr: "mahal", rom: "MA-hal", en: "expensive" }, { kr: "murah", rom: "MOO-rah", en: "cheap" },
+          { kr: "kedai", rom: "keh-DAI", en: "store" }, { kr: "bayar", rom: "BA-yar", en: "to pay" }]
+      },
+      {
+        tier: "intermediate", title: "Transportation", icon: "🚌", words: [
+          { kr: "kereta", rom: "keh-REH-ta", en: "car" }, { kr: "bas", rom: "bahs", en: "bus" },
+          { kr: "kereta api", rom: "keh-REH-ta A-pee", en: "train" }, { kr: "kapal terbang", rom: "KA-pal ter-BANG", en: "airplane" },
+          { kr: "basikal", rom: "BA-si-kal", en: "bicycle" }, { kr: "melancong", rom: "meh-LAN-chong", en: "to travel" }]
+      },
+      {
+        tier: "intermediate", title: "Hobbies", icon: "🎸", words: [
+          { kr: "membaca", rom: "mem-BA-cha", en: "to read" }, { kr: "berenang", rom: "beh-REH-nang", en: "to swim" },
+          { kr: "menari", rom: "meh-NA-ree", en: "to dance" }, { kr: "menyanyi", rom: "meh-NYA-nyee", en: "to sing" },
+          { kr: "melukis", rom: "meh-LOO-kis", en: "to paint" }, { kr: "hobi", rom: "HO-bee", en: "hobby" }]
+      },
+      {
+        tier: "intermediate", title: "Work & Jobs", icon: "💼", words: [
+          { kr: "kerja", rom: "KER-ja", en: "job" }, { kr: "doktor", rom: "DOK-tor", en: "doctor" },
+          { kr: "jurutera", rom: "joo-roo-TEH-ra", en: "engineer" }, { kr: "bos", rom: "bohs", en: "boss" },
+          { kr: "gaji", rom: "GA-jee", en: "salary" }, { kr: "pejabat", rom: "peh-JA-bat", en: "office" }]
+      },
+      {
+        tier: "intermediate", title: "Health & Body", icon: "🩺", words: [
+          { kr: "sakit", rom: "SA-kit", en: "sick" }, { kr: "sihat", rom: "SI-hat", en: "healthy" },
+          { kr: "ubat", rom: "OO-bat", en: "medicine" }, { kr: "hospital", rom: "hos-PI-tal", en: "hospital" },
+          { kr: "kesakitan", rom: "keh-SA-ki-tan", en: "pain" }, { kr: "berehat", rom: "beh-REH-hat", en: "to rest" }]
+      },
+      {
+        tier: "intermediate", title: "Technology", icon: "📱", words: [
+          { kr: "telefon", rom: "TEH-leh-fon", en: "phone" }, { kr: "komputer", rom: "kom-POO-ter", en: "computer" },
+          { kr: "internet", rom: "IN-ter-net", en: "internet" }, { kr: "menghantar mesej", rom: "meng-HAN-tar MEH-sej", en: "to text" },
+          { kr: "aplikasi", rom: "ap-li-KA-see", en: "app" }, { kr: "bateri", rom: "ba-TEH-ree", en: "battery" }]
+      },
+      {
+        tier: "intermediate", title: "Sports", icon: "⚽", words: [
+          { kr: "bola sepak", rom: "BO-la SEH-pak", en: "soccer" }, { kr: "berlari", rom: "ber-LA-ree", en: "to run" },
+          { kr: "bola", rom: "BO-la", en: "ball" }, { kr: "pasukan", rom: "pa-SOO-kan", en: "team" },
+          { kr: "menang", rom: "MEH-nang", en: "to win" }, { kr: "kalah", rom: "KA-lah", en: "to lose" }]
+      },
+      {
+        tier: "intermediate", title: "Nature", icon: "🌳", words: [
+          { kr: "pokok", rom: "PO-kok", en: "tree" }, { kr: "gunung", rom: "GOO-nung", en: "mountain" },
+          { kr: "sungai", rom: "SOO-ngai", en: "river" }, { kr: "lautan", rom: "LA-oo-tan", en: "ocean" },
+          { kr: "hutan", rom: "HOO-tan", en: "forest" }, { kr: "langit", rom: "LA-ngit", en: "sky" }]
+      },
+      {
+        tier: "intermediate", title: "Numbers & Time", icon: "🔟", words: [
+          { kr: "tujuh", rom: "TOO-jooh", en: "seven" }, { kr: "lapan", rom: "LA-pan", en: "eight" },
+          { kr: "sembilan", rom: "sem-BI-lan", en: "nine" }, { kr: "sepuluh", rom: "seh-POO-looh", en: "ten" },
+          { kr: "jam", rom: "jahm", en: "hour" }, { kr: "minit", rom: "MI-nit", en: "minute" }]
+      },
+      {
+        tier: "intermediate", title: "Making Plans", icon: "📅", words: [
+          { kr: "merancang", rom: "meh-RAN-chang", en: "to plan" }, { kr: "malam ini", rom: "MA-lam EE-nee", en: "tonight" },
+          { kr: "hujung minggu", rom: "HOO-jung MING-goo", en: "weekend" }, { kr: "berjumpa", rom: "ber-JOOM-pa", en: "to meet" },
+          { kr: "jadual", rom: "JAD-wal", en: "schedule" }, { kr: "masa lapang", rom: "MA-sa LA-pang", en: "free time" }]
+      },
+      {
+        tier: "intermediate", title: "Restaurant & Ordering", icon: "🍽️", words: [
+          { kr: "menu", rom: "MEH-noo", en: "menu" }, { kr: "menempah", rom: "meh-NEM-pah", en: "to order" },
+          { kr: "bil", rom: "bil", en: "check/bill" }, { kr: "pelayan", rom: "peh-LA-yan", en: "waiter" },
+          { kr: "meja", rom: "MEH-ja", en: "table" }, { kr: "lazat", rom: "LA-zat", en: "tasty" }]
+      },
+
+      /* ---------------- ADVANCED ---------------- */
+      {
+        tier: "advanced", title: "Connectors & Grammar", icon: "🔗", words: [
+          { kr: "tetapi", rom: "teh-TA-pee", en: "but" }, { kr: "kerana", rom: "keh-RA-na", en: "because" },
+          { kr: "oleh itu", rom: "O-leh EE-too", en: "therefore" }, { kr: "walaupun", rom: "wa-la-oo-POON", en: "although" },
+          { kr: "dan", rom: "dahn", en: "and" }, { kr: "atau", rom: "A-ta-oo", en: "or" }]
+      },
+      {
+        tier: "advanced", title: "Business Malay", icon: "🏢", words: [
+          { kr: "mesyuarat", rom: "meh-shoo-A-rat", en: "meeting" }, { kr: "kontrak", rom: "KON-trak", en: "contract" },
+          { kr: "pelanggan", rom: "peh-LANG-gan", en: "client" }, { kr: "tarikh akhir", rom: "TA-rikh A-khir", en: "deadline" },
+          { kr: "projek", rom: "PRO-jek", en: "project" }, { kr: "rundingan", rom: "roon-DI-ngan", en: "negotiation" }]
+      },
+      {
+        tier: "advanced", title: "News & Media", icon: "📰", words: [
+          { kr: "berita", rom: "beh-REE-ta", en: "news" }, { kr: "akhbar", rom: "AKH-bar", en: "newspaper" },
+          { kr: "wartawan", rom: "war-TA-wan", en: "journalist" }, { kr: "melaporkan", rom: "meh-la-POR-kan", en: "to report" },
+          { kr: "tajuk utama", rom: "TA-jook oo-TA-ma", en: "headline" }, { kr: "peristiwa", rom: "peh-ris-TI-wa", en: "event" }]
+      },
+      {
+        tier: "advanced", title: "Nuanced Emotions", icon: "🌫️", words: [
+          { kr: "merindui", rom: "meh-rin-DOO-ee", en: "to miss (someone)" }, { kr: "penyesalan", rom: "peh-nyeh-SA-lan", en: "regret" },
+          { kr: "kelegaan", rom: "keh-leh-GA-an", en: "relief" }, { kr: "kerinduan", rom: "keh-rin-DOO-an", en: "longing" },
+          { kr: "harapan", rom: "ha-RA-pan", en: "hope" }, { kr: "kekecewaan", rom: "keh-keh-cheh-WA-an", en: "disappointment" }]
+      },
+      {
+        tier: "advanced", title: "Idioms: Everyday Life", icon: "🫴", words: [
+          { kr: "sambil menyelam minum air", rom: "SAM-bil meh-NYEH-lam MI-num A-eer", en: "while diving, drink water (kill two birds with one stone)" },
+          { kr: "bagai anjing dengan kucing", rom: "BA-gai AN-jing deh-NGAN KOO-ching", en: "like a dog and cat (constantly fighting)" },
+          { kr: "berat sama dipikul, ringan sama dijinjing", rom: "beh-RAT SA-ma DI-pi-kul RI-ngan SA-ma DI-jin-jing", en: "heavy carried together, light carried together (sharing burdens equally)" },
+          { kr: "hangat-hangat tahi ayam", rom: "HA-ngat HA-ngat TA-hee A-yam", en: "hot like chicken droppings (enthusiasm that fades fast)" },
+          { kr: "seperti katak di bawah tempurung", rom: "seh-PER-tee KA-tak dee BA-wah tem-POO-roong", en: "like a frog under a coconut shell (narrow-minded)" },
+          { kr: "buah tangan", rom: "BOO-ah TA-ngan", en: "hand fruit (a souvenir/gift)" }]
+      },
+      {
+        tier: "advanced", title: "Idioms: Wisdom & Weather", icon: "🌧️", words: [
+          { kr: "sedia payung sebelum hujan", rom: "seh-DEE-a PA-yung seh-beh-LOOM HOO-jan", en: "prepare an umbrella before it rains (better safe than sorry)" },
+          { kr: "biar lambat asal selamat", rom: "BI-ar LAM-bat A-sal seh-LA-mat", en: "better slow but safe" },
+          { kr: "melentur buluh biarlah dari rebungnya", rom: "meh-LEN-tur BOO-looh BI-ar-lah DA-ree reh-BOONG-nya", en: "bend the bamboo while it's still a shoot (train children young)" },
+          { kr: "ke bukit sama didaki, ke lurah sama dituruni", rom: "keh BOO-kit SA-ma DI-da-kee keh LOO-rah SA-ma DI-too-roo-nee", en: "climb the hill together, descend the valley together (stick together)" },
+          { kr: "air tenang jangan disangka tiada buaya", rom: "A-eer teh-NANG JA-ngan dee-SANG-ka TI-a-da boo-A-ya", en: "calm water, don't assume there's no crocodile (danger can be hidden)" },
+          { kr: "harapkan pagar, pagar makan padi", rom: "ha-RAP-kan PA-gar PA-gar MA-kan PA-dee", en: "rely on the fence, but the fence eats the rice (betrayed by a protector)" }]
+      },
+      {
+        tier: "advanced", title: "Travel Advanced", icon: "🛂", words: [
+          { kr: "pasport", rom: "PAS-port", en: "passport" }, { kr: "kastam", rom: "KAS-tam", en: "customs" },
+          { kr: "bagasi", rom: "ba-GA-see", en: "luggage" }, { kr: "kelewatan penerbangan", rom: "keh-leh-WA-tan peh-ner-BA-ngan", en: "flight delay" },
+          { kr: "tempahan", rom: "tem-PA-han", en: "reservation" }, { kr: "visa", rom: "VEE-sa", en: "visa" }]
+      },
+      {
+        tier: "advanced", title: "Relationships", icon: "💌", words: [
+          { kr: "cinta", rom: "CHIN-ta", en: "love" }, { kr: "persahabatan", rom: "per-sa-ha-BA-tan", en: "friendship" },
+          { kr: "kepercayaan", rom: "keh-per-cha-YA-an", en: "trust" }, { kr: "perkahwinan", rom: "per-kah-WI-nan", en: "marriage" },
+          { kr: "putus cinta", rom: "POO-toos CHIN-ta", en: "to break up" }, { kr: "mendambakan", rom: "men-dam-BA-kan", en: "to yearn for" }]
+      },
+      {
+        tier: "advanced", title: "Debate & Opinions", icon: "🗣️", words: [
+          { kr: "pendapat", rom: "pen-DA-pat", en: "opinion" }, { kr: "bersetuju", rom: "ber-seh-TOO-joo", en: "to agree" },
+          { kr: "tidak bersetuju", rom: "TEE-dak ber-seh-TOO-joo", en: "to disagree" }, { kr: "hujah", rom: "HOO-jah", en: "argument" },
+          { kr: "sudut pandangan", rom: "SOO-doot pan-DA-ngan", en: "point of view" }, { kr: "meyakinkan", rom: "meh-YA-kin-kan", en: "to convince" }]
+      },
+      {
+        tier: "advanced", title: "Formal Speech (Anda vs Awak)", icon: "🎩", words: [
+          { kr: "anda", rom: "AN-da", en: "formal 'you'" }, { kr: "awak", rom: "A-wak", en: "casual 'you'" },
+          { kr: "encik", rom: "EN-chik", en: "Mr." }, { kr: "puan", rom: "POO-an", en: "Mrs. / Madam" },
+          { kr: "yang dihormati", rom: "yahng dee-hor-MA-tee", en: "dear (formal letter opening)" }, { kr: "yang benar", rom: "yahng beh-NAR", en: "sincerely (formal closing)" }]
+      },
+      {
+        tier: "advanced", title: "Slang & Internet Terms", icon: "📲", words: [
+          { kr: "best", rom: "best", en: "awesome / cool" }, { kr: "power", rom: "POW-er", en: "impressive / cool" },
+          { kr: "chill", rom: "chil", en: "relax / take it easy" }, { kr: "hehe", rom: "heh-heh", en: "haha (casual laughter)" },
+          { kr: "OK", rom: "oh-KAY", en: "OK" }, { kr: "alamak", rom: "A-la-mak", en: "oh no! (classic exclamation)" }]
+      },
+      {
+        tier: "advanced", title: "Culture & History", icon: "🏛️", words: [
+          { kr: "istana", rom: "is-TA-na", en: "palace" }, { kr: "warisan", rom: "wa-REE-san", en: "heritage" },
+          { kr: "tarian tradisional", rom: "TA-ri-an tra-di-si-o-NAL", en: "traditional dance" }, { kr: "kemerdekaan", rom: "keh-mer-deh-KA-an", en: "independence" },
+          { kr: "budaya", rom: "boo-DA-ya", en: "culture" }, { kr: "sejarah", rom: "seh-JA-rah", en: "history" }]
+      },
+      {
+        tier: "advanced", title: "Advanced Verbs", icon: "💪", words: [
+          { kr: "mencapai", rom: "men-CHA-pai", en: "to achieve" }, { kr: "berjaya", rom: "ber-JA-ya", en: "to succeed" },
+          { kr: "gagal", rom: "GA-gal", en: "to fail" }, { kr: "memperbaiki", rom: "mem-per-BAI-kee", en: "to improve" },
+          { kr: "bergelut", rom: "ber-geh-LOOT", en: "to struggle" }, { kr: "mengatasi", rom: "meng-A-ta-see", en: "to overcome" }]
+      },
+
+      /* ---------------- FLUENT ---------------- */
+      {
+        tier: "fluent", title: "Proverbs Part 1", icon: "📜", words: [
+          { kr: "bagai aur dengan tebing", rom: "BA-gai A-oor deh-NGAN teh-BING", en: "like bamboo and riverbank (mutual dependence)" },
+          { kr: "tak kenal maka tak cinta", rom: "tak keh-NAL MA-ka tak CHIN-ta", en: "if you don't know it, you won't love it" },
+          { kr: "hendak seribu daya, tak hendak seribu dalih", rom: "HEN-dak seh-REE-boo DA-ya tak HEN-dak seh-REE-boo DA-lih", en: "when willing, a thousand ways; when unwilling, a thousand excuses" },
+          { kr: "malu bertanya sesat jalan", rom: "MA-loo ber-TA-nya seh-SAT JA-lan", en: "shy to ask, lost on the road" },
+          { kr: "usaha tangga kejayaan", rom: "oo-SA-ha TANG-ga keh-ja-YA-an", en: "effort is the ladder to success" },
+          { kr: "bersatu teguh, bercerai roboh", rom: "ber-SA-too teh-GOOH ber-cheh-RAI RO-boh", en: "united we stand, divided we fall" }]
+      },
+      {
+        tier: "fluent", title: "Literary Expressions", icon: "🖋️", words: [
+          { kr: "penyair", rom: "peh-NYA-eer", en: "poet" }, { kr: "puisi", rom: "poo-EE-see", en: "poem" },
+          { kr: "kisah", rom: "KEE-sah", en: "narrative / story" }, { kr: "takdir", rom: "TAK-deer", en: "fate / destiny" },
+          { kr: "roman", rom: "RO-man", en: "romance (literary)" }, { kr: "metafora", rom: "meh-ta-FO-ra", en: "metaphor" }]
+      },
+      {
+        tier: "fluent", title: "Proverbs Part 2", icon: "🪞", words: [
+          { kr: "sedikit-sedikit lama-lama jadi bukit", rom: "seh-DI-kit seh-DI-kit LA-ma LA-ma JA-dee BOO-kit", en: "little by little eventually becomes a hill" },
+          { kr: "seperti pinang dibelah dua", rom: "seh-PER-tee PI-nang DI-beh-lah DOO-a", en: "like an areca nut split in two (identical)" },
+          { kr: "berakit-rakit ke hulu, berenang-renang ke tepian", rom: "beh-RA-kit RA-kit keh HOO-loo beh-REH-nang REH-nang keh teh-PI-an", en: "raft upstream, swim to shore (suffer first, enjoy later)" },
+          { kr: "genggam bara api biar sampai jadi arang", rom: "GENG-gam BA-ra A-pee BI-ar SAM-pai JA-dee A-rang", en: "hold the burning coal until it becomes charcoal (persevere)" },
+          { kr: "ada gula ada semut", rom: "A-da GOO-la A-da seh-MOOT", en: "where there's sugar, there are ants" },
+          { kr: "air dicincang tidak akan putus", rom: "A-eer dee-CHIN-chang TEE-dak A-kan POO-toos", en: "water that is chopped will not be severed (family bonds)" }]
+      },
+      {
+        tier: "fluent", title: "Political & Social Terms", icon: "🏛️", words: [
+          { kr: "politik", rom: "PO-li-tik", en: "politics" }, { kr: "kerajaan", rom: "keh-ra-JA-an", en: "government" },
+          { kr: "pilihan raya", rom: "pi-LI-han RA-ya", en: "elections" }, { kr: "demokrasi", rom: "deh-mo-KRA-see", en: "democracy" },
+          { kr: "hak", rom: "hahk", en: "rights" }, { kr: "kesaksamaan", rom: "keh-sak-sa-MA-an", en: "equality" }]
+      },
+      {
+        tier: "fluent", title: "Psychology & Nuance", icon: "🧠", words: [
+          { kr: "kesedaran", rom: "keh-seh-DA-ran", en: "consciousness" }, { kr: "bawah sedar", rom: "BA-wah seh-DAR", en: "subconscious" },
+          { kr: "keyakinan diri", rom: "keh-YA-ki-nan DI-ree", en: "self-confidence" }, { kr: "empati", rom: "em-PA-tee", en: "empathy" },
+          { kr: "kegelisahan", rom: "keh-geh-li-SA-han", en: "anxiety" }, { kr: "daya tahan", rom: "DA-ya TA-han", en: "resilience" }]
+      },
+      {
+        tier: "fluent", title: "Business Negotiation", icon: "🤝", words: [
+          { kr: "tawaran", rom: "ta-WA-ran", en: "offer" }, { kr: "tawaran balas", rom: "ta-WA-ran BA-las", en: "counteroffer" },
+          { kr: "kompromi", rom: "kom-PRO-mee", en: "compromise" }, { kr: "kepentingan", rom: "keh-pen-TI-ngan", en: "interests" },
+          { kr: "kedudukan rundingan", rom: "keh-doo-DOO-kan roon-DI-ngan", en: "bargaining position" }, { kr: "menandatangani", rom: "meh-nan-da-ta-NGA-nee", en: "to sign" }]
+      },
+      {
+        tier: "fluent", title: "Academic Malay", icon: "🎓", words: [
+          { kr: "penyelidikan", rom: "peh-nyeh-li-DI-kan", en: "research" }, { kr: "teori", rom: "teh-O-ree", en: "theory" },
+          { kr: "esei", rom: "EH-say", en: "essay" }, { kr: "hipotesis", rom: "hi-po-TEH-sis", en: "hypothesis" },
+          { kr: "sumber", rom: "SOOM-ber", en: "source" }, { kr: "kesimpulan", rom: "keh-sim-POO-lan", en: "conclusion" }]
+      },
+      {
+        tier: "fluent", title: "Poetic & Formal Writing", icon: "🕊️", words: [
+          { kr: "sajak", rom: "SA-jak", en: "verse" }, { kr: "rima", rom: "REE-ma", en: "rhyme" },
+          { kr: "perumpamaan", rom: "peh-room-pa-MA-an", en: "simile" }, { kr: "keindahan", rom: "keh-in-DA-han", en: "beauty" },
+          { kr: "kesunyian", rom: "keh-soo-NYI-an", en: "silence" }, { kr: "keabadian", rom: "keh-a-ba-DI-an", en: "eternity" }]
+      },
+      {
+        tier: "fluent", title: "Regional Flavor", icon: "🗺️", words: [
+          { kr: "Kuala Lumpur", rom: "KWA-la LOOM-poor", en: "Kuala Lumpur (the capital)" }, { kr: "Pulau Pinang", rom: "POO-la-oo PI-nang", en: "Penang" },
+          { kr: "kampung", rom: "KAM-poong", en: "village" }, { kr: "pantai", rom: "PAN-tai", en: "beach" },
+          { kr: "budaya rakyat", rom: "boo-DA-ya RAK-yat", en: "folk culture" }, { kr: "pesta", rom: "PES-ta", en: "festival" }]
+      },
+      {
+        tier: "fluent", title: "Complex Grammar: Affixes", icon: "🧩", words: [
+          { kr: "imbuhan", rom: "im-BOO-han", en: "affix" }, { kr: "awalan", rom: "a-WA-lan", en: "prefix" },
+          { kr: "akhiran", rom: "a-KHI-ran", en: "suffix" }, { kr: "kata dasar", rom: "KA-ta DA-sar", en: "root word" },
+          { kr: "meN- (imbuhan kata kerja)", rom: "mem/men/meng-", en: "the common active-verb prefix" }, { kr: "ke-...-an", rom: "keh- -an", en: "a common noun-forming circumfix" }]
+      },
+      {
+        tier: "fluent", title: "More Proverbs", icon: "📖", words: [
+          { kr: "seperti kacang lupakan kulit", rom: "seh-PER-tee KA-chang loo-PA-kan KOO-lit", en: "like a peanut forgetting its shell (ungrateful)" },
+          { kr: "sepandai-pandai tupai melompat, akhirnya jatuh ke tanah juga", rom: "seh-pan-DAI pan-DAI too-PAI meh-LOM-pat a-KHIR-nya JA-tooh keh TA-nah JOO-ga", en: "however skilled the squirrel jumps, it eventually falls" },
+          { kr: "melepaskan batuk di tangga", rom: "meh-leh-PAS-kan BA-took dee TANG-ga", en: "releasing a cough on the stairs (doing something half-heartedly)" },
+          { kr: "kalau tidak dipecahkan ruyung, manakan dapat sagunya", rom: "KA-la-oo TEE-dak dee-peh-CHAH-kan ROO-yoong ma-NA-kan DA-pat SA-goo-nya", en: "no effort, no reward" },
+          { kr: "bagaikan pungguk merindukan bulan", rom: "ba-GAI-kan POONG-gook meh-rin-DOO-kan BOO-lan", en: "like a nightjar longing for the moon (a hopeless love)" },
+          { kr: "alah bisa, tegal biasa", rom: "A-lah BEE-sa TEH-gal bee-A-sa", en: "practice makes perfect" }]
+      },
+      {
+        tier: "fluent", title: "Professional Terms", icon: "⚖️", words: [
+          { kr: "peguam", rom: "peh-GWAM", en: "lawyer" }, { kr: "perbicaraan", rom: "per-bi-cha-RA-an", en: "court proceedings / trial" },
+          { kr: "tanggungjawab", rom: "tang-goong-JA-wab", en: "responsibility" }, { kr: "kelayakan", rom: "keh-la-YA-kan", en: "qualification" },
+          { kr: "pengalaman kerja", rom: "peng-A-la-man KER-ja", en: "work experience" }, { kr: "rujukan", rom: "roo-JOO-kan", en: "recommendation / reference" }]
+      },
+      {
+        tier: "fluent", title: "Mastery Review", icon: "🏆", words: [
+          { kr: "pengalaman", rom: "peng-A-la-man", en: "experience" }, { kr: "kejayaan", rom: "keh-ja-YA-an", en: "success" },
+          { kr: "pengetahuan", rom: "peng-eh-ta-HOO-an", en: "knowledge" }, { kr: "pemahaman", rom: "peh-ma-HA-man", en: "understanding" },
+          { kr: "kemajuan", rom: "keh-ma-JOO-an", en: "progress" }, { kr: "bakat", rom: "BA-kat", en: "talent" }]
+      },
+    ];
+
     const LEVELS_FR = [
       /* ---------------- BEGINNER ---------------- */
       {
@@ -16608,6 +17619,9 @@
     const ALL_VOCAB_ID = LEVELS_ID.flatMap(l => l.words);
     const ALL_VOCAB_FA = LEVELS_FA.flatMap(l => l.words);
     const ALL_VOCAB_IS = LEVELS_IS.flatMap(l => l.words);
+    const ALL_VOCAB_SK = LEVELS_SK.flatMap(l => l.words);
+    const ALL_VOCAB_SR = LEVELS_SR.flatMap(l => l.words);
+    const ALL_VOCAB_MS = LEVELS_MS.flatMap(l => l.words);
     function activeVocabPool() {
       const lang = (state.settings && state.settings.learningLang) || 'ko';
       if (lang === 'es') return ALL_VOCAB_ES;
@@ -16649,6 +17663,9 @@
       if (lang === 'id') return ALL_VOCAB_ID;
       if (lang === 'fa') return ALL_VOCAB_FA;
       if (lang === 'is') return ALL_VOCAB_IS;
+      if (lang === 'sk') return ALL_VOCAB_SK;
+      if (lang === 'sr') return ALL_VOCAB_SR;
+      if (lang === 'ms') return ALL_VOCAB_MS;
       return ALL_VOCAB;
     }
     function activeChatTopics() {
@@ -16692,6 +17709,9 @@
       if (lang === 'id') return INDONESIAN_CHAT_TOPICS;
       if (lang === 'fa') return PERSIAN_CHAT_TOPICS;
       if (lang === 'is') return ICELANDIC_CHAT_TOPICS;
+      if (lang === 'sk') return SLOVAK_CHAT_TOPICS;
+      if (lang === 'sr') return SERBIAN_CHAT_TOPICS;
+      if (lang === 'ms') return MALAY_CHAT_TOPICS;
       return CHAT_TOPICS;
     }
     function escapeRegex(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
@@ -16932,7 +17952,10 @@
         hu: ['Hungarian Practice', 'Proficiency-style test questions'],
         id: ['Indonesian Practice', 'Proficiency-style test questions'],
         fa: ['Persian Practice', 'Proficiency-style test questions'],
-        is: ['Icelandic Practice', 'Proficiency-style test questions']
+        is: ['Icelandic Practice', 'Proficiency-style test questions'],
+        sk: ['Slovak Practice', 'Proficiency-style test questions'],
+        sr: ['Serbian Practice', 'Proficiency-style test questions'],
+        ms: ['Malay Practice', 'Proficiency-style test questions']
       };
       const topikTitle = document.getElementById('topikCardTitle');
       if (topikTitle) {
@@ -16981,7 +18004,10 @@
         hu: ['Hungarian Alphabet', 'Vowel length pairs and distinctive digraphs + a quick quiz'],
         id: ['Indonesian Alphabet', 'Distinctive digraphs like ng, ny, and sy + a quick quiz'],
         fa: ['Persian Alphabet', 'The Perso-Arabic script, right-to-left + a quick quiz'],
-        is: ['Icelandic Alphabet', 'All 32 letters, including þ, ð, æ, ö + a quick quiz']
+        is: ['Icelandic Alphabet', 'All 32 letters, including þ, ð, æ, ö + a quick quiz'],
+        sk: ['Slovak Alphabet', 'Carons, soft consonants, and long vowels + a quick quiz'],
+        sr: ['Cyrillic Alphabet', 'All 30 letters + a quick quiz'],
+        ms: ['Malay Alphabet', 'Distinctive digraphs like ng, ny, sy + a quick quiz']
       };
       const alphabetTitle = document.getElementById('alphabetCardTitle');
       if (alphabetTitle) {
@@ -17030,7 +18056,10 @@
         hu: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz'],
         id: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz'],
         fa: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz'],
-        is: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz']
+        is: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz'],
+        sk: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz'],
+        sr: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz'],
+        ms: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz']
       };
       const numberCardTitle = document.getElementById('numberCardTitle');
       const numberSub = document.getElementById('numberCardSub');
@@ -17076,7 +18105,9 @@
         no: ['Verb Conjugation', 'Present, past, and future tense drills'],
         hu: ['Verb Conjugation', 'Present, past, and future tense drills'],
         fa: ['Verb Conjugation', 'Present, past, and future tense drills'],
-        is: ['Verb Conjugation', 'Present, past, and future tense drills']
+        is: ['Verb Conjugation', 'Present, past, and future tense drills'],
+        sk: ['Verb Conjugation', 'Present, past, and future tense drills'],
+        sr: ['Verb Conjugation', 'Present, past, and future tense drills']
       };
       const grammarTitle = document.getElementById('grammarCardTitle');
       if (grammarTitle) {
@@ -17124,7 +18155,10 @@
         hu: 'Practice the long/short vowel pairs by hand',
         id: 'Practice the ng and ny digraphs by hand',
         fa: 'Practice the Persian script by hand',
-        is: 'Practice the letters þ, ð, æ, and ö by hand'
+        is: 'Practice the letters þ, ð, æ, and ö by hand',
+        sk: 'Practice the carons and soft consonants by hand'
+        , sr: 'Practice the Cyrillic letters by hand',
+        ms: 'Practice the digraphs ng, ny, sy, kh by hand'
       };
       const drawSub = document.getElementById('drawTraceCardSub');
       if (drawSub) drawSub.textContent = drawSubText[lang] || drawSubText.ko;
@@ -17170,6 +18204,9 @@
       if (lang === 'id') return TIERS_ID;
       if (lang === 'fa') return TIERS_FA;
       if (lang === 'is') return TIERS_IS;
+      if (lang === 'sk') return TIERS_SK;
+      if (lang === 'sr') return TIERS_SR;
+      if (lang === 'ms') return TIERS_MS;
       return TIERS;
     }
     function activeLevels() {
@@ -17213,6 +18250,9 @@
       if (lang === 'id') return LEVELS_ID;
       if (lang === 'fa') return LEVELS_FA;
       if (lang === 'is') return LEVELS_IS;
+      if (lang === 'sk') return LEVELS_SK;
+      if (lang === 'sr') return LEVELS_SR;
+      if (lang === 'ms') return LEVELS_MS;
       return LEVELS;
     }
 
@@ -17426,7 +18466,7 @@
       ko: 'ko-KR', es: 'es-ES', ja: 'ja-JP', en: 'en-US', zh: 'zh-CN', af: 'af-ZA', ar: 'ar-SA', am: 'am-ET', eu: 'eu-ES', bn: 'bn-BD',
       bg: 'bg-BG', fr: 'fr-FR', de: 'de-DE', it: 'it-IT', ca: 'ca-ES', yue: 'zh-HK', my: 'my-MM', hr: 'hr-HR', cs: 'cs-CZ', da: 'da-DK',
       nl: 'nl-NL', eo: 'eo', tl: 'fil-PH', fi: 'fi-FI', pt: 'pt-BR', pl: 'pl-PL', sv: 'sv-SE', ru: 'ru-RU', hi: 'hi-IN', vi: 'vi-VN',
-      tr: 'tr-TR', uk: 'uk-UA', ro: 'ro-RO', el: 'el-GR', he: 'he-IL', no: 'nb-NO', hu: 'hu-HU', id: 'id-ID', fa: 'fa-IR', is: 'is-IS'
+      tr: 'tr-TR', uk: 'uk-UA', ro: 'ro-RO', el: 'el-GR', he: 'he-IL', no: 'nb-NO', hu: 'hu-HU', id: 'id-ID', fa: 'fa-IR', is: 'is-IS', sk: 'sk-SK', sr: 'sr-RS', ms: 'ms-MY'
     };
     let ttsUnavailableNoticeShown = {};
     function speakLearning(text, onStart, onEnd) {
@@ -17755,7 +18795,7 @@
     function openHangulChart() {
       showScreen('hangul');
       const lang = (state.settings && state.settings.learningLang) || 'ko';
-      const titles = { es: '🔤 Spanish Alphabet', ja: '🔤 Hiragana Chart', en: '🔤 Irregular Verbs', zh: '🔤 Tones & Pinyin Chart', af: '🔤 Afrikaans Alphabet', ar: '🔤 Arabic Alphabet', am: '🔤 Amharic Core Characters', eu: '🔤 Basque Alphabet', bn: '🔤 Bengali Alphabet', bg: '🔤 Cyrillic Alphabet', fr: '🔤 French Alphabet', de: '🔤 German Alphabet', it: '🔤 Italian Alphabet', ca: '🔤 Catalan Alphabet', yue: '🔤 Jyutping & Tones', my: '🔤 Myanmar Script', hr: '🔤 Croatian Alphabet', cs: '🔤 Czech Alphabet', da: '🔤 Danish Alphabet', nl: '🔤 Dutch Alphabet', eo: '🔤 Esperanto Alphabet', tl: '🔤 Filipino Alphabet', fi: '🔤 Finnish Alphabet', pt: '🔤 Portuguese Alphabet', pl: '🔤 Polish Alphabet', sv: '🔤 Swedish Alphabet', ru: '🔤 Cyrillic Alphabet', hi: '🔤 Devanagari Script', vi: '🔤 Tones & Vowels', tr: '🔤 Turkish Alphabet', uk: '🔤 Ukrainian Alphabet', ro: '🔤 Romanian Alphabet', el: '🔤 Greek Alphabet', he: '🔤 Hebrew Alphabet', no: '🔤 Norwegian Alphabet', hu: '🔤 Hungarian Alphabet', id: '🔤 Indonesian Alphabet', fa: '🔤 Persian Alphabet', is: '🔤 Icelandic Alphabet', ko: '🔤 Hangul Chart' };
+      const titles = { es: '🔤 Spanish Alphabet', ja: '🔤 Hiragana Chart', en: '🔤 Irregular Verbs', zh: '🔤 Tones & Pinyin Chart', af: '🔤 Afrikaans Alphabet', ar: '🔤 Arabic Alphabet', am: '🔤 Amharic Core Characters', eu: '🔤 Basque Alphabet', bn: '🔤 Bengali Alphabet', bg: '🔤 Cyrillic Alphabet', fr: '🔤 French Alphabet', de: '🔤 German Alphabet', it: '🔤 Italian Alphabet', ca: '🔤 Catalan Alphabet', yue: '🔤 Jyutping & Tones', my: '🔤 Myanmar Script', hr: '🔤 Croatian Alphabet', cs: '🔤 Czech Alphabet', da: '🔤 Danish Alphabet', nl: '🔤 Dutch Alphabet', eo: '🔤 Esperanto Alphabet', tl: '🔤 Filipino Alphabet', fi: '🔤 Finnish Alphabet', pt: '🔤 Portuguese Alphabet', pl: '🔤 Polish Alphabet', sv: '🔤 Swedish Alphabet', ru: '🔤 Cyrillic Alphabet', hi: '🔤 Devanagari Script', vi: '🔤 Tones & Vowels', tr: '🔤 Turkish Alphabet', uk: '🔤 Ukrainian Alphabet', ro: '🔤 Romanian Alphabet', el: '🔤 Greek Alphabet', he: '🔤 Hebrew Alphabet', no: '🔤 Norwegian Alphabet', hu: '🔤 Hungarian Alphabet', id: '🔤 Indonesian Alphabet', fa: '🔤 Persian Alphabet', is: '🔤 Icelandic Alphabet', sk: '🔤 Slovak Alphabet', sr: '🔤 Cyrillic Alphabet', ms: '🔤 Malay Alphabet', ko: '🔤 Hangul Chart' };
       const subs = {
         es: 'Tap any letter to hear it. Learn all 27 letters and try the quiz below.',
         ja: 'Tap any character to hear it. Learn all 46 basic hiragana and try the quiz below.',
@@ -17796,6 +18836,9 @@
         id: 'Indonesian spelling is very phonetic, with distinctive digraphs like ng, ny, and sy. Tap any to hear it.',
         fa: 'Persian is written right-to-left using a version of the Arabic script with four extra letters. Tap any to hear it.',
         is: 'Icelandic keeps four letters English used to have: þ, ð, æ, and ö. Tap any to hear it, then try the quiz.',
+        sk: 'Slovak uses carons (č, š, ž) and soft consonants (ď, ť, ň, ľ) not found in English. Tap any to hear it.',
+        sr: 'Serbian is written in both Cyrillic and Latin script — this app uses Cyrillic. Tap any letter to hear it, then try the quiz.',
+        ms: 'Malay spelling is very phonetic, with distinctive digraphs like ng, ny, and sy. Tap any to hear it.',
         ko: 'Tap any letter to hear it. Learn all 40 and try the quiz below.'
       };
       document.getElementById('alphabetChartTitle').textContent = titles[lang] || titles.ko;
@@ -17808,7 +18851,7 @@
       if (wrap.dataset.built === lang) return;
       wrap.dataset.built = lang;
       wrap.innerHTML = '';
-      const chart = lang === 'es' ? SPANISH_ALPHABET : lang === 'ja' ? JAPANESE_KANA : lang === 'en' ? IRREGULAR_VERBS : lang === 'zh' ? CHINESE_TONES : lang === 'af' ? AFRIKAANS_ALPHABET : lang === 'ar' ? ARABIC_ALPHABET : lang === 'am' ? AMHARIC_ALPHABET : lang === 'eu' ? BASQUE_ALPHABET : lang === 'bn' ? BENGALI_ALPHABET : lang === 'bg' ? BULGARIAN_ALPHABET : lang === 'fr' ? FRENCH_ALPHABET : lang === 'de' ? GERMAN_ALPHABET : lang === 'it' ? ITALIAN_ALPHABET : lang === 'ca' ? CATALAN_ALPHABET : lang === 'yue' ? CANTONESE_TONES : lang === 'my' ? BURMESE_ALPHABET : lang === 'hr' ? CROATIAN_ALPHABET : lang === 'cs' ? CZECH_ALPHABET : lang === 'da' ? DANISH_ALPHABET : lang === 'nl' ? DUTCH_ALPHABET : lang === 'eo' ? ESPERANTO_ALPHABET : lang === 'tl' ? FILIPINO_ALPHABET : lang === 'fi' ? FINNISH_ALPHABET : lang === 'pt' ? PORTUGUESE_ALPHABET : lang === 'pl' ? POLISH_ALPHABET : lang === 'sv' ? SWEDISH_ALPHABET : lang === 'ru' ? RUSSIAN_ALPHABET : lang === 'hi' ? HINDI_ALPHABET : lang === 'vi' ? VIETNAMESE_TONES : lang === 'tr' ? TURKISH_ALPHABET : lang === 'uk' ? UKRAINIAN_ALPHABET : lang === 'ro' ? ROMANIAN_ALPHABET : lang === 'el' ? GREEK_ALPHABET : lang === 'he' ? HEBREW_ALPHABET : lang === 'no' ? NORWEGIAN_ALPHABET : lang === 'hu' ? HUNGARIAN_ALPHABET : lang === 'id' ? INDONESIAN_ALPHABET : lang === 'fa' ? PERSIAN_ALPHABET : lang === 'is' ? ICELANDIC_ALPHABET : HANGUL_CHART;
+      const chart = lang === 'es' ? SPANISH_ALPHABET : lang === 'ja' ? JAPANESE_KANA : lang === 'en' ? IRREGULAR_VERBS : lang === 'zh' ? CHINESE_TONES : lang === 'af' ? AFRIKAANS_ALPHABET : lang === 'ar' ? ARABIC_ALPHABET : lang === 'am' ? AMHARIC_ALPHABET : lang === 'eu' ? BASQUE_ALPHABET : lang === 'bn' ? BENGALI_ALPHABET : lang === 'bg' ? BULGARIAN_ALPHABET : lang === 'fr' ? FRENCH_ALPHABET : lang === 'de' ? GERMAN_ALPHABET : lang === 'it' ? ITALIAN_ALPHABET : lang === 'ca' ? CATALAN_ALPHABET : lang === 'yue' ? CANTONESE_TONES : lang === 'my' ? BURMESE_ALPHABET : lang === 'hr' ? CROATIAN_ALPHABET : lang === 'cs' ? CZECH_ALPHABET : lang === 'da' ? DANISH_ALPHABET : lang === 'nl' ? DUTCH_ALPHABET : lang === 'eo' ? ESPERANTO_ALPHABET : lang === 'tl' ? FILIPINO_ALPHABET : lang === 'fi' ? FINNISH_ALPHABET : lang === 'pt' ? PORTUGUESE_ALPHABET : lang === 'pl' ? POLISH_ALPHABET : lang === 'sv' ? SWEDISH_ALPHABET : lang === 'ru' ? RUSSIAN_ALPHABET : lang === 'hi' ? HINDI_ALPHABET : lang === 'vi' ? VIETNAMESE_TONES : lang === 'tr' ? TURKISH_ALPHABET : lang === 'uk' ? UKRAINIAN_ALPHABET : lang === 'ro' ? ROMANIAN_ALPHABET : lang === 'el' ? GREEK_ALPHABET : lang === 'he' ? HEBREW_ALPHABET : lang === 'no' ? NORWEGIAN_ALPHABET : lang === 'hu' ? HUNGARIAN_ALPHABET : lang === 'id' ? INDONESIAN_ALPHABET : lang === 'fa' ? PERSIAN_ALPHABET : lang === 'is' ? ICELANDIC_ALPHABET : lang === 'sk' ? SLOVAK_ALPHABET : lang === 'sr' ? SERBIAN_ALPHABET : lang === 'ms' ? MALAY_ALPHABET : HANGUL_CHART;
       chart.forEach(section => {
         const sec = document.createElement('div');
         sec.className = 'hangul-section';
@@ -17904,6 +18947,12 @@
         lastCompletedLesson = { title: "Persian Alphabet", words: ALL_PERSIAN_ALPHABET.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
       } else if (lang === 'is') {
         lastCompletedLesson = { title: "Icelandic Alphabet", words: ALL_ICELANDIC_ALPHABET.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
+      } else if (lang === 'sk') {
+        lastCompletedLesson = { title: "Slovak Alphabet", words: ALL_SLOVAK_ALPHABET.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
+      } else if (lang === 'sr') {
+        lastCompletedLesson = { title: "Cyrillic Alphabet", words: ALL_SERBIAN_ALPHABET.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
+      } else if (lang === 'ms') {
+        lastCompletedLesson = { title: "Malay Alphabet", words: ALL_MALAY_ALPHABET.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
       } else {
         lastCompletedLesson = { title: "Hangul Chart", words: ALL_HANGUL_CHARS.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
       }
@@ -17954,6 +19003,9 @@
         id: 'Indonesian numbers combine regularly with puluh ("tens"). Tap any number to hear it, then try the quiz.',
         fa: 'Persian numbers are mostly regular from twenty onward. Tap any number to hear it, then try the quiz.',
         is: 'Numbers 1-4 change form depending on the noun\u2019s gender. Tap any number to hear it, then try the quiz.',
+        sk: 'Slovak numbers combine regularly with -násť (teens) and -desiat (tens). Tap any number to hear it.',
+        sr: 'Serbian numbers combine regularly with -наест (teens) and -десет (tens). Tap any number to hear it.',
+        ms: 'Malay numbers combine regularly with belas (teens) and puluh (tens) — no exceptions. Tap any number to hear it.',
         ko: 'Korean has two number systems. Tap any number to hear it, then try the quiz.'
       };
       document.getElementById('numberChartTitle').textContent = titles[lang] || '🔢 Number Chart';
@@ -17966,7 +19018,7 @@
       if (wrap.dataset.built === lang) return;
       wrap.dataset.built = lang;
       wrap.innerHTML = '';
-      const chart = lang === 'es' ? SPANISH_NUMBER_CHART : lang === 'ja' ? JAPANESE_NUMBER_CHART : lang === 'en' ? CONFUSED_WORDS : lang === 'zh' ? CHINESE_NUMBER_CHART : lang === 'af' ? AFRIKAANS_NUMBER_CHART : lang === 'ar' ? ARABIC_NUMBER_CHART : lang === 'am' ? AMHARIC_NUMBER_CHART : lang === 'eu' ? BASQUE_NUMBER_CHART : lang === 'bn' ? BENGALI_NUMBER_CHART : lang === 'bg' ? BULGARIAN_NUMBER_CHART : lang === 'fr' ? FRENCH_NUMBER_CHART : lang === 'de' ? GERMAN_NUMBER_CHART : lang === 'it' ? ITALIAN_NUMBER_CHART : lang === 'ca' ? CATALAN_NUMBER_CHART : lang === 'yue' ? CANTONESE_NUMBER_CHART : lang === 'my' ? BURMESE_NUMBER_CHART : lang === 'hr' ? CROATIAN_NUMBER_CHART : lang === 'cs' ? CZECH_NUMBER_CHART : lang === 'da' ? DANISH_NUMBER_CHART : lang === 'nl' ? DUTCH_NUMBER_CHART : lang === 'eo' ? ESPERANTO_NUMBER_CHART : lang === 'tl' ? FILIPINO_NUMBER_CHART : lang === 'fi' ? FINNISH_NUMBER_CHART : lang === 'pt' ? PORTUGUESE_NUMBER_CHART : lang === 'pl' ? POLISH_NUMBER_CHART : lang === 'sv' ? SWEDISH_NUMBER_CHART : lang === 'ru' ? RUSSIAN_NUMBER_CHART : lang === 'hi' ? HINDI_NUMBER_CHART : lang === 'vi' ? VIETNAMESE_NUMBER_CHART : lang === 'tr' ? TURKISH_NUMBER_CHART : lang === 'uk' ? UKRAINIAN_NUMBER_CHART : lang === 'ro' ? ROMANIAN_NUMBER_CHART : lang === 'el' ? GREEK_NUMBER_CHART : lang === 'he' ? HEBREW_NUMBER_CHART : lang === 'no' ? NORWEGIAN_NUMBER_CHART : lang === 'hu' ? HUNGARIAN_NUMBER_CHART : lang === 'id' ? INDONESIAN_NUMBER_CHART : lang === 'fa' ? PERSIAN_NUMBER_CHART : lang === 'is' ? ICELANDIC_NUMBER_CHART : NUMBER_CHART;
+      const chart = lang === 'es' ? SPANISH_NUMBER_CHART : lang === 'ja' ? JAPANESE_NUMBER_CHART : lang === 'en' ? CONFUSED_WORDS : lang === 'zh' ? CHINESE_NUMBER_CHART : lang === 'af' ? AFRIKAANS_NUMBER_CHART : lang === 'ar' ? ARABIC_NUMBER_CHART : lang === 'am' ? AMHARIC_NUMBER_CHART : lang === 'eu' ? BASQUE_NUMBER_CHART : lang === 'bn' ? BENGALI_NUMBER_CHART : lang === 'bg' ? BULGARIAN_NUMBER_CHART : lang === 'fr' ? FRENCH_NUMBER_CHART : lang === 'de' ? GERMAN_NUMBER_CHART : lang === 'it' ? ITALIAN_NUMBER_CHART : lang === 'ca' ? CATALAN_NUMBER_CHART : lang === 'yue' ? CANTONESE_NUMBER_CHART : lang === 'my' ? BURMESE_NUMBER_CHART : lang === 'hr' ? CROATIAN_NUMBER_CHART : lang === 'cs' ? CZECH_NUMBER_CHART : lang === 'da' ? DANISH_NUMBER_CHART : lang === 'nl' ? DUTCH_NUMBER_CHART : lang === 'eo' ? ESPERANTO_NUMBER_CHART : lang === 'tl' ? FILIPINO_NUMBER_CHART : lang === 'fi' ? FINNISH_NUMBER_CHART : lang === 'pt' ? PORTUGUESE_NUMBER_CHART : lang === 'pl' ? POLISH_NUMBER_CHART : lang === 'sv' ? SWEDISH_NUMBER_CHART : lang === 'ru' ? RUSSIAN_NUMBER_CHART : lang === 'hi' ? HINDI_NUMBER_CHART : lang === 'vi' ? VIETNAMESE_NUMBER_CHART : lang === 'tr' ? TURKISH_NUMBER_CHART : lang === 'uk' ? UKRAINIAN_NUMBER_CHART : lang === 'ro' ? ROMANIAN_NUMBER_CHART : lang === 'el' ? GREEK_NUMBER_CHART : lang === 'he' ? HEBREW_NUMBER_CHART : lang === 'no' ? NORWEGIAN_NUMBER_CHART : lang === 'hu' ? HUNGARIAN_NUMBER_CHART : lang === 'id' ? INDONESIAN_NUMBER_CHART : lang === 'fa' ? PERSIAN_NUMBER_CHART : lang === 'is' ? ICELANDIC_NUMBER_CHART : lang === 'sk' ? SLOVAK_NUMBER_CHART : lang === 'sr' ? SERBIAN_NUMBER_CHART : lang === 'ms' ? MALAY_NUMBER_CHART : NUMBER_CHART;
       chart.forEach(section => {
         const sec = document.createElement('div');
         sec.className = 'hangul-section';
@@ -18062,6 +19114,12 @@
         lastCompletedLesson = { title: "Persian Numbers", words: ALL_PERSIAN_NUMBERS };
       } else if (lang === 'is') {
         lastCompletedLesson = { title: "Icelandic Numbers", words: ALL_ICELANDIC_NUMBERS };
+      } else if (lang === 'sk') {
+        lastCompletedLesson = { title: "Slovak Numbers", words: ALL_SLOVAK_NUMBERS };
+      } else if (lang === 'sr') {
+        lastCompletedLesson = { title: "Serbian Numbers", words: ALL_SERBIAN_NUMBERS };
+      } else if (lang === 'ms') {
+        lastCompletedLesson = { title: "Malay Numbers", words: ALL_MALAY_NUMBERS };
       } else {
         lastCompletedLesson = { title: "Number Chart", words: ALL_NUMBER_ITEMS };
       }
@@ -18390,9 +19448,9 @@
     let grammarTab = 'particles';
     function openGrammar() {
       const lang = (state.settings && state.settings.learningLang) || 'ko';
-      if (lang === 'es' || lang === 'af' || lang === 'ar' || lang === 'eu' || lang === 'bn' || lang === 'bg' || lang === 'fr' || lang === 'de' || lang === 'it' || lang === 'ca' || lang === 'my' || lang === 'hr' || lang === 'cs' || lang === 'da' || lang === 'nl' || lang === 'eo' || lang === 'tl' || lang === 'fi' || lang === 'pt' || lang === 'pl' || lang === 'sv' || lang === 'ru' || lang === 'hi' || lang === 'tr' || lang === 'uk' || lang === 'ro' || lang === 'el' || lang === 'he' || lang === 'no' || lang === 'hu' || lang === 'fa' || lang === 'is') grammarTab = 'conjugation';
+      if (lang === 'es' || lang === 'af' || lang === 'ar' || lang === 'eu' || lang === 'bn' || lang === 'bg' || lang === 'fr' || lang === 'de' || lang === 'it' || lang === 'ca' || lang === 'my' || lang === 'hr' || lang === 'cs' || lang === 'da' || lang === 'nl' || lang === 'eo' || lang === 'tl' || lang === 'fi' || lang === 'pt' || lang === 'pl' || lang === 'sv' || lang === 'ru' || lang === 'hi' || lang === 'tr' || lang === 'uk' || lang === 'ro' || lang === 'el' || lang === 'he' || lang === 'no' || lang === 'hu' || lang === 'fa' || lang === 'is' || lang === 'sk' || lang === 'sr') grammarTab = 'conjugation';
       else if (grammarTab === 'conjugation' && !VERB_CONJUGATIONS.length) grammarTab = 'particles';
-      const titles = { es: '📖 Verb Conjugation', af: '📖 Verb Conjugation', ar: '📖 Verb Conjugation', eu: '📖 Verb Conjugation', bn: '📖 Verb Conjugation', bg: '📖 Verb Conjugation', fr: '📖 Verb Conjugation', de: '📖 Verb Conjugation', it: '📖 Verb Conjugation', ca: '📖 Verb Conjugation', my: '📖 Verb Conjugation', hr: '📖 Verb Conjugation', cs: '📖 Verb Conjugation', da: '📖 Verb Conjugation', nl: '📖 Verb Conjugation', eo: '📖 Verb Conjugation', tl: '📖 Verb Conjugation', fi: '📖 Verb Conjugation', pt: '📖 Verb Conjugation', pl: '📖 Verb Conjugation', sv: '📖 Verb Conjugation', ru: '📖 Verb Conjugation', hi: '📖 Verb Conjugation', tr: '📖 Verb Conjugation', uk: '📖 Verb Conjugation', ro: '📖 Verb Conjugation', el: '📖 Verb Conjugation', he: '📖 Verb Conjugation', no: '📖 Verb Conjugation', hu: '📖 Verb Conjugation', fa: '📖 Verb Conjugation', is: '📖 Verb Conjugation' };
+      const titles = { es: '📖 Verb Conjugation', af: '📖 Verb Conjugation', ar: '📖 Verb Conjugation', eu: '📖 Verb Conjugation', bn: '📖 Verb Conjugation', bg: '📖 Verb Conjugation', fr: '📖 Verb Conjugation', de: '📖 Verb Conjugation', it: '📖 Verb Conjugation', ca: '📖 Verb Conjugation', my: '📖 Verb Conjugation', hr: '📖 Verb Conjugation', cs: '📖 Verb Conjugation', da: '📖 Verb Conjugation', nl: '📖 Verb Conjugation', eo: '📖 Verb Conjugation', tl: '📖 Verb Conjugation', fi: '📖 Verb Conjugation', pt: '📖 Verb Conjugation', pl: '📖 Verb Conjugation', sv: '📖 Verb Conjugation', ru: '📖 Verb Conjugation', hi: '📖 Verb Conjugation', tr: '📖 Verb Conjugation', uk: '📖 Verb Conjugation', ro: '📖 Verb Conjugation', el: '📖 Verb Conjugation', he: '📖 Verb Conjugation', no: '📖 Verb Conjugation', hu: '📖 Verb Conjugation', fa: '📖 Verb Conjugation', is: '📖 Verb Conjugation', sk: '📖 Verb Conjugation', sr: '📖 Verb Conjugation' };
       document.getElementById('grammarScreenTitle').textContent = titles[lang] || '📖 Grammar & Particles';
       showScreen('grammar');
       renderGrammarTabs();
@@ -18401,7 +19459,7 @@
     function renderGrammarTabs() {
       const row = document.getElementById('grammarTabRow');
       const lang = (state.settings && state.settings.learningLang) || 'ko';
-      const tabs = (lang === 'es' || lang === 'af' || lang === 'ar' || lang === 'eu' || lang === 'bn' || lang === 'bg' || lang === 'fr' || lang === 'de' || lang === 'it' || lang === 'ca' || lang === 'my' || lang === 'hr' || lang === 'cs' || lang === 'da' || lang === 'nl' || lang === 'eo' || lang === 'tl' || lang === 'fi' || lang === 'pt' || lang === 'pl' || lang === 'sv' || lang === 'ru' || lang === 'hi' || lang === 'tr' || lang === 'uk' || lang === 'ro' || lang === 'el' || lang === 'he' || lang === 'no' || lang === 'hu' || lang === 'fa' || lang === 'is')
+      const tabs = (lang === 'es' || lang === 'af' || lang === 'ar' || lang === 'eu' || lang === 'bn' || lang === 'bg' || lang === 'fr' || lang === 'de' || lang === 'it' || lang === 'ca' || lang === 'my' || lang === 'hr' || lang === 'cs' || lang === 'da' || lang === 'nl' || lang === 'eo' || lang === 'tl' || lang === 'fi' || lang === 'pt' || lang === 'pl' || lang === 'sv' || lang === 'ru' || lang === 'hi' || lang === 'tr' || lang === 'uk' || lang === 'ro' || lang === 'el' || lang === 'he' || lang === 'no' || lang === 'hu' || lang === 'fa' || lang === 'is' || lang === 'sk' || lang === 'sr')
         ? [{ key: 'conjugation', label: 'Verbs', emoji: '🔀' }]
         : [
           { key: 'particles', label: 'Particles', emoji: '🔤' },
@@ -18436,7 +19494,7 @@
           wrap.appendChild(card);
         });
       } else if (grammarTab === 'conjugation') {
-        const verbs = lang === 'es' ? VERB_CONJUGATIONS_ES : lang === 'af' ? VERB_CONJUGATIONS_AF : lang === 'ar' ? VERB_CONJUGATIONS_AR : lang === 'eu' ? VERB_CONJUGATIONS_EU : lang === 'bn' ? VERB_CONJUGATIONS_BN : lang === 'bg' ? VERB_CONJUGATIONS_BG : lang === 'fr' ? VERB_CONJUGATIONS_FR : lang === 'de' ? VERB_CONJUGATIONS_DE : lang === 'it' ? VERB_CONJUGATIONS_IT : lang === 'ca' ? VERB_CONJUGATIONS_CA : lang === 'my' ? VERB_CONJUGATIONS_MY : lang === 'hr' ? VERB_CONJUGATIONS_HR : lang === 'cs' ? VERB_CONJUGATIONS_CS : lang === 'da' ? VERB_CONJUGATIONS_DA : lang === 'nl' ? VERB_CONJUGATIONS_NL : lang === 'eo' ? VERB_CONJUGATIONS_EO : lang === 'tl' ? VERB_CONJUGATIONS_TL : lang === 'fi' ? VERB_CONJUGATIONS_FI : lang === 'pt' ? VERB_CONJUGATIONS_PT : lang === 'pl' ? VERB_CONJUGATIONS_PL : lang === 'sv' ? VERB_CONJUGATIONS_SV : lang === 'ru' ? VERB_CONJUGATIONS_RU : lang === 'hi' ? VERB_CONJUGATIONS_HI : lang === 'tr' ? VERB_CONJUGATIONS_TR : lang === 'uk' ? VERB_CONJUGATIONS_UK : lang === 'ro' ? VERB_CONJUGATIONS_RO : lang === 'el' ? VERB_CONJUGATIONS_EL : lang === 'he' ? VERB_CONJUGATIONS_HE : lang === 'no' ? VERB_CONJUGATIONS_NO : lang === 'hu' ? VERB_CONJUGATIONS_HU : lang === 'fa' ? VERB_CONJUGATIONS_FA : lang === 'is' ? VERB_CONJUGATIONS_IS : VERB_CONJUGATIONS;
+        const verbs = lang === 'es' ? VERB_CONJUGATIONS_ES : lang === 'af' ? VERB_CONJUGATIONS_AF : lang === 'ar' ? VERB_CONJUGATIONS_AR : lang === 'eu' ? VERB_CONJUGATIONS_EU : lang === 'bn' ? VERB_CONJUGATIONS_BN : lang === 'bg' ? VERB_CONJUGATIONS_BG : lang === 'fr' ? VERB_CONJUGATIONS_FR : lang === 'de' ? VERB_CONJUGATIONS_DE : lang === 'it' ? VERB_CONJUGATIONS_IT : lang === 'ca' ? VERB_CONJUGATIONS_CA : lang === 'my' ? VERB_CONJUGATIONS_MY : lang === 'hr' ? VERB_CONJUGATIONS_HR : lang === 'cs' ? VERB_CONJUGATIONS_CS : lang === 'da' ? VERB_CONJUGATIONS_DA : lang === 'nl' ? VERB_CONJUGATIONS_NL : lang === 'eo' ? VERB_CONJUGATIONS_EO : lang === 'tl' ? VERB_CONJUGATIONS_TL : lang === 'fi' ? VERB_CONJUGATIONS_FI : lang === 'pt' ? VERB_CONJUGATIONS_PT : lang === 'pl' ? VERB_CONJUGATIONS_PL : lang === 'sv' ? VERB_CONJUGATIONS_SV : lang === 'ru' ? VERB_CONJUGATIONS_RU : lang === 'hi' ? VERB_CONJUGATIONS_HI : lang === 'tr' ? VERB_CONJUGATIONS_TR : lang === 'uk' ? VERB_CONJUGATIONS_UK : lang === 'ro' ? VERB_CONJUGATIONS_RO : lang === 'el' ? VERB_CONJUGATIONS_EL : lang === 'he' ? VERB_CONJUGATIONS_HE : lang === 'no' ? VERB_CONJUGATIONS_NO : lang === 'hu' ? VERB_CONJUGATIONS_HU : lang === 'fa' ? VERB_CONJUGATIONS_FA : lang === 'is' ? VERB_CONJUGATIONS_IS : lang === 'sk' ? VERB_CONJUGATIONS_SK : lang === 'sr' ? VERB_CONJUGATIONS_SR : VERB_CONJUGATIONS;
         verbs.forEach(v => {
           const card = document.createElement('div');
           card.className = 'scene-card';
@@ -18533,6 +19591,9 @@
       if (lang === 'id') return STROKE_ORDER_ID;
       if (lang === 'fa') return STROKE_ORDER_FA;
       if (lang === 'is') return STROKE_ORDER_IS;
+      if (lang === 'sk') return STROKE_ORDER_SK;
+      if (lang === 'sr') return STROKE_ORDER_SR;
+      if (lang === 'ms') return STROKE_ORDER_MS;
       return STROKE_ORDER;
     }
     function activeAlphabetChars() {
@@ -18575,6 +19636,9 @@
       if (lang === 'id') return ALL_INDONESIAN_ALPHABET;
       if (lang === 'fa') return ALL_PERSIAN_ALPHABET;
       if (lang === 'is') return ALL_ICELANDIC_ALPHABET;
+      if (lang === 'sk') return ALL_SLOVAK_ALPHABET;
+      if (lang === 'sr') return ALL_SERBIAN_ALPHABET;
+      if (lang === 'ms') return ALL_MALAY_ALPHABET;
       return ALL_HANGUL_CHARS;
     }
     function openDrawTrace() {
@@ -19708,6 +20772,251 @@
       { k: ["pro", "premium", "upgrade", "subscription", "price", "cost"], a: "Hangul Pro unlocks unlimited hearts, every unit instantly, advanced speaking drills, deeper stats, and unlimited tutor chats. Check the Pro tab for pricing and plans!" },
       { k: ["speak", "pronounce", "mic", "pronunciation"], a: "For speaking exercises, tap the mic and say the word naturally — the app compares what it hears to the target word. If your browser blocks the mic, check your site permissions." },
       { k: ["difficult", "hard", "struggling", "stuck", "confus"], a: "Ekkert mál! (no problem!) A new case system and new letters both take real practice. Try replaying lessons or retaking a quiz — repetition is what makes it click." },
+    ];
+
+    const SLOVAK_ALPHABET = [
+      {
+        title: "Vowels", chars: [
+          { ch: "a / á", rom: "ah", sample: "auto", hint: "short or long 'ah', like 'father'" }, { ch: "ä", rom: "eh", sample: "mäso", hint: "like 'e' in bed, between a and e" },
+          { ch: "e / é", rom: "eh", sample: "sestra", hint: "short or long 'eh'" }, { ch: "i / í", rom: "ee", sample: "izba", hint: "short or long 'ee'" },
+          { ch: "o / ó", rom: "oh", sample: "oko", hint: "short or long 'oh'" }, { ch: "ô", rom: "woh", sample: "stôl", hint: "a diphthong, like 'wo' in 'won't'" },
+          { ch: "u / ú", rom: "oo", sample: "ruka", hint: "short or long 'oo'" }, { ch: "y / ý", rom: "ee", sample: "ryba", hint: "pronounced exactly like i / í" }]
+      },
+      {
+        title: "Consonants with Caron", chars: [
+          { ch: "č", rom: "ch", sample: "čas", hint: "like 'ch' in chair" }, { ch: "š", rom: "sh", sample: "škola", hint: "like 'sh' in shoe" },
+          { ch: "ž", rom: "zh", sample: "žena", hint: "like 's' in pleasure" }, { ch: "ď", rom: "dy", sample: "ďakujem", hint: "a soft, palatalized 'd'" },
+          { ch: "ť", rom: "ty", sample: "päť", hint: "a soft, palatalized 't'" }, { ch: "ň", rom: "ny", sample: "deň", hint: "like 'ny' in canyon" }]
+      },
+      {
+        title: "Distinctive Letters", chars: [
+          { ch: "ľ", rom: "ly", sample: "ľudia", hint: "a soft, palatalized 'l'" },
+          { ch: "ĺ / ŕ", rom: "long l / r", sample: "vĺčatá / vŕba", hint: "syllabic long consonants that act like vowels" },
+          { ch: "dz", rom: "dz", sample: "medzi", hint: "one sound, like 'ds' in 'kids'" },
+          { ch: "dž", rom: "j", sample: "džem", hint: "one sound, like 'j' in 'jam'" }]
+      },
+    ];
+    const ALL_SLOVAK_ALPHABET = SLOVAK_ALPHABET.flatMap(s => s.chars);
+
+    const SLOVAK_NUMBER_CHART = [
+      {
+        title: "Numbers 0–10", note: "The building blocks — every other number is formed from these.", chars: [
+          { ch: "nula", rom: "0 · NU-la", en: "0" }, { ch: "jeden", rom: "1 · YEH-den", en: "1" }, { ch: "dva", rom: "2 · dvah", en: "2" },
+          { ch: "tri", rom: "3 · tri", en: "3" }, { ch: "štyri", rom: "4 · SHTI-ri", en: "4" }, { ch: "päť", rom: "5 · pyet", en: "5" },
+          { ch: "šesť", rom: "6 · shest", en: "6" }, { ch: "sedem", rom: "7 · SEH-dem", en: "7" }, { ch: "osem", rom: "8 · O-sem", en: "8" },
+          { ch: "deväť", rom: "9 · DEH-vet", en: "9" }, { ch: "desať", rom: "10 · DEH-sat", en: "10" }]
+      },
+      {
+        title: "Teens & Tens", note: "11-19 add -násť to the digit; tens above 20 add -desiat.", chars: [
+          { ch: "jedenásť", rom: "11 · YEH-deh-nahst", en: "11" }, { ch: "dvanásť", rom: "12 · DVA-nahst", en: "12" },
+          { ch: "dvadsať", rom: "20 · DVAD-sat", en: "20" }, { ch: "tridsať", rom: "30 · TRID-sat", en: "30" },
+          { ch: "päťdesiat", rom: "50 · pyet-DEH-si-at", en: "50" }]
+      },
+      {
+        title: "Big Units", note: "Everything above 100 is built from these + 0-99.", chars: [
+          { ch: "sto", rom: "100 · sto", en: "100" }, { ch: "tisíc", rom: "1,000 · TI-seets", en: "1,000" }, { ch: "milión", rom: "1,000,000 · MI-li-ohn", en: "1,000,000" }]
+      },
+    ];
+    const ALL_SLOVAK_NUMBERS = SLOVAK_NUMBER_CHART.flatMap(s => s.chars.map(c => ({ kr: c.ch, en: c.en, rom: c.rom })));
+
+    const VERB_CONJUGATIONS_SK = [
+      { dict: "byť", rom: "bit", en: "to be", present: "je", presentRom: "yeh", past: "bol", pastRom: "bol", future: "bude", futureRom: "BU-deh" },
+      { dict: "mať", rom: "mat", en: "to have", present: "má", presentRom: "mah", past: "mal", pastRom: "mahl", future: "bude mať", futureRom: "BU-deh mat" },
+      { dict: "ísť", rom: "eest", en: "to go", present: "ide", presentRom: "I-deh", past: "išiel", pastRom: "I-shyel", future: "pôjde", futureRom: "PWOY-deh" },
+      { dict: "prísť", rom: "preest", en: "to come", present: "príde", presentRom: "PREE-deh", past: "prišiel", pastRom: "PRI-shyel", future: "príde", futureRom: "PREE-deh" },
+      { dict: "jesť", rom: "yest", en: "to eat", present: "je", presentRom: "yeh", past: "jedol", pastRom: "YEH-dol", future: "bude jesť", futureRom: "BU-deh yest" },
+      { dict: "piť", rom: "pit", en: "to drink", present: "pije", presentRom: "PI-yeh", past: "pil", pastRom: "pil", future: "bude piť", futureRom: "BU-deh pit" },
+      { dict: "vidieť", rom: "VI-dyet", en: "to see", present: "vidí", presentRom: "VI-dee", past: "videl", pastRom: "VI-del", future: "bude vidieť", futureRom: "BU-deh VI-dyet" },
+      { dict: "písať", rom: "PEE-sat", en: "to write", present: "píše", presentRom: "PEE-sheh", past: "písal", pastRom: "PEE-sal", future: "bude písať", futureRom: "BU-deh PEE-sat" },
+      { dict: "pracovať", rom: "PRA-tso-vat", en: "to work", present: "pracuje", presentRom: "PRA-tsu-yeh", past: "pracoval", pastRom: "PRA-tso-val", future: "bude pracovať", futureRom: "BU-deh PRA-tso-vat" },
+      { dict: "hovoriť", rom: "HO-vo-rit", en: "to speak", present: "hovorí", presentRom: "HO-vo-ree", past: "hovoril", pastRom: "HO-vo-ril", future: "bude hovoriť", futureRom: "BU-deh HO-vo-rit" },
+    ];
+
+    const STROKE_ORDER_SK = [
+      { ch: "č", strokes: ["Write a lowercase 'c'.", "Add a caron (v-shape) above it — this makes the 'ch' sound, as in 'chair'."] },
+      { ch: "š", strokes: ["Write a lowercase 's'.", "Add a caron above it — this makes the 'sh' sound, as in 'shoe'."] },
+      { ch: "ž", strokes: ["Write a lowercase 'z'.", "Add a caron above it — this makes the soft 'zh' sound, like the 's' in pleasure."] },
+      { ch: "ľ", strokes: ["Write a lowercase 'l'.", "Add a small hook (soft sign) at the top right — this softens/palatalizes the 'l'."] },
+      { ch: "ô", strokes: ["Write a lowercase 'o'.", "Add a circumflex (^) above it — this turns it into a two-part 'wo' diphthong sound."] },
+      { ch: "ä", strokes: ["Write a lowercase 'a'.", "Add two dots above it — pronounced like 'e' in bed, between a and e."] },
+    ];
+
+    const SLOVAK_CHAT_TOPICS = [
+      { k: ["ahoj", "hello", "hi "], a: "Ahoj (A-hoy) is a casual, all-purpose 'hi' or 'bye' used with friends and family. With strangers or in formal settings, dobrý deň (good day) is safer." },
+      { k: ["dovidenia", "bye", "goodbye"], a: "Dovidenia (do-VI-de-nya) is the standard polite 'goodbye.' Casually, ahoj or čau both work too, just like hello." },
+      { k: ["ďakujem", "thanks", "thank"], a: "Ďakujem (DYA-ku-yem) means 'thank you.' Ďakujem pekne adds 'nicely' for extra warmth, similar to 'thanks so much.'" },
+      { k: ["prepáč", "prepáčte", "sorry", "excuse"], a: "Prepáč (informal) and prepáčte (formal/plural) both mean 'sorry' or 'excuse me' — the ending changes based on who you're speaking to, a core feature of Slovak politeness." },
+      { k: ["ty", "vy", "formal", "informal"], a: "Slovak distinguishes ty (informal 'you') from vy (formal/plural 'you'), similar to tu/vous in French — use vy with strangers, elders, and in business." },
+      { k: ["case", "cases", "pád", "grammar"], a: "Slovak has six grammatical cases that change noun, adjective, and pronoun endings depending on their role in the sentence — inherited from its Slavic roots, and one of the trickiest parts for learners." },
+      { k: ["tatra", "tatras", "bratislava", "castle"], a: "The High Tatras, shared with Poland, are Slovakia's most dramatic mountain range, and the country is famous for having more castles and châteaux per capita than almost anywhere in Europe." },
+      { k: ["heart", "hearts", "lose"], a: "You lose a heart for each wrong answer in a lesson. Run out and the lesson ends — but hearts refill over time, or go Pro for unlimited hearts." },
+      { k: ["streak", "fire"], a: "Your streak counts consecutive days you complete at least one lesson. Miss a day and it resets — try a quick lesson daily! Poďme na to! (Let's do this!)" },
+      { k: ["xp", "level", "points"], a: "XP is earned by finishing lessons and quizzes. It builds your Level on your Profile page — the more you practice, the higher you climb!" },
+      { k: ["pro", "premium", "upgrade", "subscription", "price", "cost"], a: "Hangul Pro unlocks unlimited hearts, every unit instantly, advanced speaking drills, deeper stats, and unlimited tutor chats. Check the Pro tab for pricing and plans!" },
+      { k: ["speak", "pronounce", "mic", "pronunciation"], a: "For speaking exercises, tap the mic and say the word naturally — the app compares what it hears to the target word. If your browser blocks the mic, check your site permissions." },
+      { k: ["difficult", "hard", "struggling", "stuck", "confus"], a: "To nič! (No problem!) Six grammatical cases and consonant clusters both take real practice. Try replaying lessons or retaking a quiz — repetition is what makes it click." },
+    ];
+
+    const SERBIAN_ALPHABET = [
+      {
+        title: "Vowels", chars: [
+          { ch: "а", rom: "ah", sample: "мама", hint: "like 'a' in father" }, { ch: "е", rom: "eh", sample: "село", hint: "like 'e' in bed" },
+          { ch: "и", rom: "ee", sample: "риба", hint: "like 'ee' in see" }, { ch: "о", rom: "oh", sample: "око", hint: "like 'o' in go" },
+          { ch: "у", rom: "oo", sample: "кућа", hint: "like 'oo' in food" }]
+      },
+      {
+        title: "Consonants (Б–Н)", chars: [
+          { ch: "б", rom: "buh", sample: "брат", hint: "as in брат (brother)" }, { ch: "в", rom: "vuh", sample: "вода", hint: "as in вода (water)" },
+          { ch: "г", rom: "guh", sample: "глава", hint: "hard 'g' — as in глава (head)" }, { ch: "д", rom: "duh", sample: "дом", hint: "as in дом (home)" },
+          { ch: "ж", rom: "zhuh", sample: "жена", hint: "like 's' in pleasure — as in жена (woman)" }, { ch: "з", rom: "zuh", sample: "зима", hint: "as in зима (winter)" },
+          { ch: "к", rom: "kuh", sample: "књига", hint: "as in књига (book)" }, { ch: "л", rom: "luh", sample: "лето", hint: "as in лето (summer)" },
+          { ch: "м", rom: "muh", sample: "море", hint: "as in море (sea)" }, { ch: "н", rom: "nuh", sample: "нос", hint: "as in нос (nose)" }]
+      },
+      {
+        title: "Consonants (П–Ш)", chars: [
+          { ch: "п", rom: "puh", sample: "пас", hint: "as in пас (dog)" }, { ch: "р", rom: "ruh", sample: "рука", hint: "a lightly rolled 'r' — as in рука (hand)" },
+          { ch: "с", rom: "suh", sample: "сунце", hint: "as in сунце (sun)" }, { ch: "т", rom: "tuh", sample: "тата", hint: "as in тата (dad)" },
+          { ch: "ф", rom: "fuh", sample: "филм", hint: "as in филм (film)" }, { ch: "х", rom: "kh", sample: "хлеб", hint: "guttural, like 'ch' in Scottish loch — as in хлеб (bread)" },
+          { ch: "ц", rom: "ts", sample: "цвет", hint: "like 'ts' in cats — as in цвет (flower)" }, { ch: "ч", rom: "ch", sample: "час", hint: "as in час (hour)" },
+          { ch: "ш", rom: "sh", sample: "школа", hint: "as in школа (school)" }]
+      },
+      {
+        title: "Distinctive Letters", chars: [
+          { ch: "ђ", rom: "dj", sample: "ђак", hint: "a soft 'dj', as in 'jeans' — as in ђак (pupil)" },
+          { ch: "ј", rom: "y", sample: "ја", hint: "like 'y' in yes — as in ја (I)" },
+          { ch: "љ", rom: "ly", sample: "љубав", hint: "like 'lli' in million — as in љубав (love)" },
+          { ch: "њ", rom: "ny", sample: "коњ", hint: "like 'ny' in canyon — as in коњ (horse)" },
+          { ch: "ћ", rom: "ch (soft)", sample: "кућа", hint: "a softer 'ch' than ч — as in кућа (house)" },
+          { ch: "џ", rom: "j (hard)", sample: "џеп", hint: "like 'j' in jam — as in џеп (pocket)" }]
+      },
+    ];
+    const ALL_SERBIAN_ALPHABET = SERBIAN_ALPHABET.flatMap(s => s.chars);
+
+    const SERBIAN_NUMBER_CHART = [
+      {
+        title: "Numbers 0–10", note: "The building blocks — every other number is formed from these.", chars: [
+          { ch: "нула", rom: "0 · NU-la", en: "0" }, { ch: "један", rom: "1 · YEH-dan", en: "1" }, { ch: "два", rom: "2 · dvah", en: "2" },
+          { ch: "три", rom: "3 · tri", en: "3" }, { ch: "четири", rom: "4 · CHEH-ti-ri", en: "4" }, { ch: "пет", rom: "5 · pet", en: "5" },
+          { ch: "шест", rom: "6 · shest", en: "6" }, { ch: "седам", rom: "7 · SEH-dam", en: "7" }, { ch: "осам", rom: "8 · O-sam", en: "8" },
+          { ch: "девет", rom: "9 · DEH-vet", en: "9" }, { ch: "десет", rom: "10 · DEH-set", en: "10" }]
+      },
+      {
+        title: "Teens & Tens", note: "11-19 add -наест to the digit; tens above 20 add -десет.", chars: [
+          { ch: "једанаест", rom: "11 · yeh-da-NA-est", en: "11" }, { ch: "дванаест", rom: "12 · dva-NA-est", en: "12" },
+          { ch: "двадесет", rom: "20 · DVA-deh-set", en: "20" }, { ch: "тридесет", rom: "30 · TRI-deh-set", en: "30" },
+          { ch: "педесет", rom: "50 · peh-DEH-set", en: "50" }]
+      },
+      {
+        title: "Big Units", note: "Everything above 100 is built from these + 0-99.", chars: [
+          { ch: "сто", rom: "100 · stoh", en: "100" }, { ch: "хиљада", rom: "1,000 · hi-LYA-da", en: "1,000" }, { ch: "милион", rom: "1,000,000 · mi-li-ON", en: "1,000,000" }]
+      },
+    ];
+    const ALL_SERBIAN_NUMBERS = SERBIAN_NUMBER_CHART.flatMap(s => s.chars.map(c => ({ kr: c.ch, en: c.en, rom: c.rom })));
+
+    const VERB_CONJUGATIONS_SR = [
+      { dict: "бити", rom: "BI-ti", en: "to be", present: "је", presentRom: "yeh", past: "био је", pastRom: "BI-o yeh", future: "биће", futureRom: "BI-cheh" },
+      { dict: "имати", rom: "I-ma-ti", en: "to have", present: "има", presentRom: "I-ma", past: "имао је", pastRom: "I-ma-o yeh", future: "имаће", futureRom: "I-ma-cheh" },
+      { dict: "ићи", rom: "I-chi", en: "to go", present: "иде", presentRom: "I-deh", past: "ишао је", pastRom: "I-sha-o yeh", future: "ићи ће", futureRom: "I-chi cheh" },
+      { dict: "долазити", rom: "do-LA-zi-ti", en: "to come", present: "долази", presentRom: "DO-la-zi", past: "долазио је", pastRom: "do-LA-zi-o yeh", future: "долазиће", futureRom: "do-LA-zi-cheh" },
+      { dict: "јести", rom: "YES-ti", en: "to eat", present: "једе", presentRom: "YEH-deh", past: "јео је", pastRom: "YEH-o yeh", future: "јешће", futureRom: "YESH-cheh" },
+      { dict: "пити", rom: "PI-ti", en: "to drink", present: "пије", presentRom: "PI-yeh", past: "пио је", pastRom: "PI-o yeh", future: "пиће", futureRom: "PI-cheh" },
+      { dict: "видети", rom: "VI-deh-ti", en: "to see", present: "види", presentRom: "VI-di", past: "видео је", pastRom: "VI-deh-o yeh", future: "видеће", futureRom: "VI-deh-cheh" },
+      { dict: "писати", rom: "PI-sa-ti", en: "to write", present: "пише", presentRom: "PI-sheh", past: "писао је", pastRom: "PI-sa-o yeh", future: "писаће", futureRom: "PI-sa-cheh" },
+      { dict: "радити", rom: "RA-di-ti", en: "to work", present: "ради", presentRom: "RA-di", past: "радио је", pastRom: "RA-di-o yeh", future: "радиће", futureRom: "RA-di-cheh" },
+      { dict: "говорити", rom: "go-VO-ri-ti", en: "to speak", present: "говори", presentRom: "go-VO-ri", past: "говорио је", pastRom: "go-VO-ri-o yeh", future: "говориће", futureRom: "go-VO-ri-cheh" },
+    ];
+
+    const STROKE_ORDER_SR = [
+      { ch: "ђ", strokes: ["Write a lowercase 'gj' shape (like a script d with a tail).", "This soft 'dj' sound has no single-letter English equivalent — as in ђак (pupil)."] },
+      { ch: "џ", strokes: ["Write two joined curved strokes.", "This is the hard 'j' sound, as in 'jam' — as in џеп (pocket)."] },
+      { ch: "љ", strokes: ["Write a lowercase л (l) shape.", "Add a small loop at the base — pronounced like 'lli' in million, as in љубав (love)."] },
+      { ch: "њ", strokes: ["Write a lowercase н (n) shape.", "Add a small loop at the base — pronounced like 'ny' in canyon, as in коњ (horse)."] },
+      { ch: "ћ", strokes: ["Write a lowercase т (t) shape with an ascender.", "Add a small crossbar — a softer 'ch' than ч, as in кућа (house)."] },
+      { ch: "ч", strokes: ["Draw a small bowl shape.", "Add a short tail extending down — a harder 'ch' than ћ, as in час (hour)."] },
+    ];
+
+    const SERBIAN_CHAT_TOPICS = [
+      { k: ["здраво", "zdravo", "hello", "hi "], a: "Здраво (ZDRA-vo) is a friendly, all-purpose 'hi.' Ћао (chow, borrowed from Italian) is even more casual, used with friends." },
+      { k: ["довиђења", "bye", "goodbye"], a: "Довиђења (do-VI-je-nya) is the standard polite 'goodbye,' literally 'until seeing again.' Casually, ћао works for both hello and goodbye." },
+      { k: ["хвала", "thanks", "thank"], a: "Хвала (HVA-la) means 'thank you.' Хвала лепо adds 'nicely' for a warmer 'thanks so much.'" },
+      { k: ["извините", "sorry", "excuse"], a: "Извините (IZ-vi-ni-teh) covers both 'sorry' and 'excuse me' in formal/polite contexts — жао ми је is used specifically for a heartfelt apology." },
+      { k: ["ти", "ви", "formal", "informal", "you"], a: "Serbian distinguishes ти (informal 'you') from ви (formal/plural 'you'), similar to tu/vous in French — use ви with strangers, elders, and in business." },
+      { k: ["cyrillic", "latin", "script", "alphabet"], a: "Serbian is unusual in officially using two alphabets side by side — Cyrillic (ћирилица) and Latin (latinica) — both taught in schools, and either is considered correct." },
+      { k: ["case", "cases", "падеж", "grammar"], a: "Serbian has seven grammatical cases that change noun, adjective, and pronoun endings depending on their role in the sentence — inherited from its Slavic roots, and one of the trickiest parts for learners." },
+      { k: ["heart", "hearts", "lose"], a: "You lose a heart for each wrong answer in a lesson. Run out and the lesson ends — but hearts refill over time, or go Pro for unlimited hearts." },
+      { k: ["streak", "fire"], a: "Your streak counts consecutive days you complete at least one lesson. Miss a day and it resets — try a quick lesson daily! Хајде (HAI-deh — come on, let's go!)" },
+      { k: ["xp", "level", "points"], a: "XP is earned by finishing lessons and quizzes. It builds your Level on your Profile page — the more you practice, the higher you climb!" },
+      { k: ["pro", "premium", "upgrade", "subscription", "price", "cost"], a: "Hangul Pro unlocks unlimited hearts, every unit instantly, advanced speaking drills, deeper stats, and unlimited tutor chats. Check the Pro tab for pricing and plans!" },
+      { k: ["speak", "pronounce", "mic", "pronunciation"], a: "For speaking exercises, tap the mic and say the word naturally — the app compares what it hears to the target word. If your browser blocks the mic, check your site permissions." },
+      { k: ["difficult", "hard", "struggling", "stuck", "confus"], a: "Нема везе! (no worries!) Seven grammatical cases and a dual alphabet both take real practice. Try replaying lessons or retaking a quiz — repetition is what makes it click." },
+    ];
+
+    const MALAY_ALPHABET = [
+      {
+        title: "Vowels", chars: [
+          { ch: "a", rom: "ah", sample: "apa", hint: "like 'a' in father" }, { ch: "e", rom: "eh / uh", sample: "meja / besar", hint: "clear 'eh' in some words, a schwa 'uh' in others — context decides" },
+          { ch: "i", rom: "ee", sample: "ibu", hint: "like 'ee' in see" }, { ch: "o", rom: "oh", sample: "orang", hint: "like 'o' in go" },
+          { ch: "u", rom: "oo", sample: "ubi", hint: "like 'oo' in food" }]
+      },
+      {
+        title: "Consonants", chars: [
+          { ch: "c", rom: "ch", sample: "cinta", hint: "always like 'ch' in chair, never like English 'c'" }, { ch: "g", rom: "g (hard)", sample: "gula", hint: "always hard, like 'g' in go" },
+          { ch: "h", rom: "h", sample: "hari", hint: "as in English 'house'" }, { ch: "j", rom: "j", sample: "jalan", hint: "as in English 'jam'" },
+          { ch: "k", rom: "k", sample: "kaki", hint: "as in English 'kite'" }, { ch: "r", rom: "rolled r", sample: "rumah", hint: "a lightly rolled/trilled 'r'" },
+          { ch: "s", rom: "s", sample: "sini", hint: "always unvoiced, as in 'sun'" }]
+      },
+      {
+        title: "Distinctive Digraphs", chars: [
+          { ch: "ng", rom: "ng", sample: "nasi lemang", hint: "one sound, like 'ng' in 'sing' — can start a word in Malay" },
+          { ch: "ny", rom: "ny", sample: "nyanyi", hint: "one sound, like 'ny' in canyon" },
+          { ch: "sy", rom: "sh", sample: "syarikat", hint: "one sound, like 'sh' in shoe" },
+          { ch: "kh", rom: "kh", sample: "khabar", hint: "a guttural sound, like 'ch' in Scottish loch, mostly in Arabic loanwords" }]
+      },
+    ];
+    const ALL_MALAY_ALPHABET = MALAY_ALPHABET.flatMap(s => s.chars);
+
+    const MALAY_NUMBER_CHART = [
+      {
+        title: "Numbers 0–10", note: "The building blocks — every other number is formed from these.", chars: [
+          { ch: "kosong", rom: "0 · KO-song", en: "0" }, { ch: "satu", rom: "1 · SA-too", en: "1" }, { ch: "dua", rom: "2 · DOO-a", en: "2" },
+          { ch: "tiga", rom: "3 · TI-ga", en: "3" }, { ch: "empat", rom: "4 · EM-pat", en: "4" }, { ch: "lima", rom: "5 · LI-ma", en: "5" },
+          { ch: "enam", rom: "6 · EH-nam", en: "6" }, { ch: "tujuh", rom: "7 · TOO-jooh", en: "7" }, { ch: "lapan", rom: "8 · LA-pan", en: "8" },
+          { ch: "sembilan", rom: "9 · sem-BI-lan", en: "9" }, { ch: "sepuluh", rom: "10 · seh-POO-looh", en: "10" }]
+      },
+      {
+        title: "Teens & Tens", note: "11-19 add belas to the digit; tens above 20 add puluh — all fully regular.", chars: [
+          { ch: "sebelas", rom: "11 · seh-beh-LAS", en: "11" }, { ch: "dua belas", rom: "12 · DOO-a beh-LAS", en: "12" },
+          { ch: "dua puluh", rom: "20 · DOO-a POO-looh", en: "20" }, { ch: "tiga puluh", rom: "30 · TI-ga POO-looh", en: "30" },
+          { ch: "lima puluh", rom: "50 · LI-ma POO-looh", en: "50" }]
+      },
+      {
+        title: "Big Units", note: "Everything above 100 is built from these + 0-99.", chars: [
+          { ch: "seratus", rom: "100 · seh-RA-toos", en: "100" }, { ch: "seribu", rom: "1,000 · seh-REE-boo", en: "1,000" }, { ch: "sejuta", rom: "1,000,000 · seh-JOO-ta", en: "1,000,000" }]
+      },
+    ];
+    const ALL_MALAY_NUMBERS = MALAY_NUMBER_CHART.flatMap(s => s.chars.map(c => ({ kr: c.ch, en: c.en, rom: c.rom })));
+
+    const STROKE_ORDER_MS = [
+      { ch: "ng", strokes: ["Write a lowercase 'n'.", "Attach a 'g' directly after it — together they make one sound, like 'ng' in 'sing', and can even start a word in Malay (e.g. ngeri)."] },
+      { ch: "ny", strokes: ["Write a lowercase 'n'.", "Attach a 'y' directly after it — together they make one sound, like 'ny' in canyon."] },
+      { ch: "sy", strokes: ["Write a lowercase 's'.", "Attach a 'y' directly after it — together they make one sound, like 'sh' in shoe."] },
+      { ch: "kh", strokes: ["Write a lowercase 'k'.", "Attach an 'h' directly after it — a guttural sound found mostly in Arabic loanwords like khabar (news)."] },
+    ];
+
+    const MALAY_CHAT_TOPICS = [
+      { k: ["helo", "hai", "hello", "hi "], a: "Helo and hai are both casual borrowed greetings used everywhere. Selamat pagi (good morning), selamat tengah hari (good afternoon), and selamat petang (good evening) are more traditional time-of-day greetings." },
+      { k: ["selamat tinggal", "bye", "goodbye"], a: "Selamat tinggal (literally 'safe staying,' said by the person leaving) and selamat jalan ('safe travels,' said by the person staying) are the traditional goodbyes — casually, bye or jumpa lagi ('see you again') work too." },
+      { k: ["terima kasih", "thanks", "thank"], a: "Terima kasih (teh-REE-ma KA-sih) literally means 'receive love/affection' — a lovely, poetic way to say thank you." },
+      { k: ["maaf", "sorry", "excuse"], a: "Maaf covers both 'sorry' and 'excuse me' in most everyday situations — maafkan saya is a slightly fuller, more formal version." },
+      { k: ["anda", "awak", "formal", "informal", "you"], a: "Malay has several words for 'you' with different registers — anda is neutral/formal (common in writing and ads), awak is casual, and kamu is intimate/used with children — choosing the right one shows social awareness." },
+      { k: ["affix", "imbuhan", "prefix", "suffix", "grammar"], a: "Malay doesn't conjugate verbs or use grammatical cases — instead it uses a rich system of prefixes and suffixes (imbuhan) attached to root words to change meaning, focus, and part of speech, like meN- for active verbs." },
+      { k: ["peribahasa", "proverb", "proverbs", "idiom"], a: "Malay culture has an especially rich tradition of peribahasa (proverbs) — many use vivid nature and village imagery, like frogs, coconuts, and rice fields, to teach life lessons." },
+      { k: ["heart", "hearts", "lose"], a: "You lose a heart for each wrong answer in a lesson. Run out and the lesson ends — but hearts refill over time, or go Pro for unlimited hearts." },
+      { k: ["streak", "fire"], a: "Your streak counts consecutive days you complete at least one lesson. Miss a day and it resets — try a quick lesson daily! Jom! (Let's go!)" },
+      { k: ["xp", "level", "points"], a: "XP is earned by finishing lessons and quizzes. It builds your Level on your Profile page — the more you practice, the higher you climb!" },
+      { k: ["pro", "premium", "upgrade", "subscription", "price", "cost"], a: "Hangul Pro unlocks unlimited hearts, every unit instantly, advanced speaking drills, deeper stats, and unlimited tutor chats. Check the Pro tab for pricing and plans!" },
+      { k: ["speak", "pronounce", "mic", "pronunciation"], a: "For speaking exercises, tap the mic and say the word naturally — the app compares what it hears to the target word. If your browser blocks the mic, check your site permissions." },
+      { k: ["difficult", "hard", "struggling", "stuck", "confus"], a: "Tak apa! (No worries!) The prefix/suffix system takes real practice since one root word can take many different forms. Try replaying lessons or retaking a quiz — repetition is what makes it click." },
     ];
 
     const FRENCH_ALPHABET = [
@@ -22381,6 +23690,9 @@
           id: "You are Han, a warm, encouraging Indonesian tutor inside a learning app called GlobeTalk (currently teaching Indonesian to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Indonesian and English together — give the Indonesian phrase, a simple pronunciation guide, and an English translation whenever relevant, so the learner sees all three. Indonesian verbs don't conjugate for tense — time words and context carry that instead, while a rich prefix/suffix system changes meaning and focus. You can discuss ANY Indonesian word, phrase, grammar point, or cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
           fa: "You are Han, a warm, encouraging Persian (Farsi) tutor inside a learning app called GlobeTalk (currently teaching Persian to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Persian and English together — give the Persian phrase, a simple pronunciation guide, and an English translation whenever relevant, so the learner sees all three. Remind the learner as needed that Persian is written right-to-left using a version of the Arabic script (with four extra letters), but Persian itself is an Indo-European language unrelated to Arabic. You can discuss ANY Persian word, phrase, grammar point, or cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
           is: "You are Han, a warm, encouraging Icelandic tutor inside a learning app called GlobeTalk (currently teaching Icelandic to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Icelandic and English together — give the Icelandic phrase, a simple pronunciation guide, and an English translation whenever relevant, so the learner sees all three. Icelandic keeps all four historic Germanic noun cases and the letters þ and ð that English lost centuries ago, and most Icelanders use patronymic names (father's/mother's first name + -son/-dóttir) rather than inherited surnames. You can discuss ANY Icelandic word, phrase, grammar point (including the case system, or how þú has replaced the old formal þér almost everywhere), or cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
+          sk: "You are Han, a warm, encouraging Slovak tutor inside a learning app called GlobeTalk (currently teaching Slovak to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Slovak and English together — give the Slovak phrase, a simple pronunciation guide, and an English translation whenever relevant, so the learner sees all three. Slovak has six grammatical cases and distinguishes ty (informal you) from vy (formal you), similar to tu/vous in French. You can discuss ANY Slovak word, phrase, grammar point (including the case system, aspect pairs, or carons like č/š/ž), or cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
+          sr: "You are Han, a warm, encouraging Serbian tutor inside a learning app called GlobeTalk (currently teaching Serbian to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Serbian and English together — give the Cyrillic phrase, a simple pronunciation guide, and an English translation whenever relevant, so the learner sees all three. Serbian is unusual for officially using both Cyrillic and Latin scripts interchangeably, and it keeps seven grammatical cases along with a ти vs ви formality distinction. You can discuss ANY Serbian word, phrase, grammar point, or cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
+          ms: "You are Han, a warm, encouraging Malay tutor inside a learning app called GlobeTalk (currently teaching Malay to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Malay and English together — give the Malay phrase, a simple pronunciation guide, and an English translation whenever relevant, so the learner sees all three. Malay verbs don't conjugate for tense — time words and context carry that instead, while a rich prefix/suffix system (imbuhan) changes meaning and focus, and the language has a beautiful tradition of peribahasa (proverbs). You can discuss ANY Malay word, phrase, grammar point, or cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
           ko: "You are Han, a warm, encouraging Korean-language tutor inside a learning app called GlobeTalk. You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Korean and English together — give the Korean phrase, its romanization, and an English translation whenever relevant, so the learner sees all three. You can discuss ANY Korean word, phrase, grammar point, or cultural topic, not just app mechanics. When asked about a number, remember Korean has two number systems (Sino-Korean, used for money/dates/phone numbers/math, and Native Korean, used for counting objects/age, which only goes up to 99) — explain both systems for that number when the learner doesn't specify one. Keep answers short (2-5 sentences), warm, and beginner-friendly."
         };
         const systemPrompt = systemPrompts[activeLang] || systemPrompts.ko;
@@ -22650,6 +23962,9 @@
         id: "Halo! I'm Han — let's warm up first, then I'll quiz you in Indonesian.",
         fa: "سلام! I'm Han — let's warm up first, then I'll quiz you in Persian.",
         is: "Halló! I'm Han — let's warm up first, then I'll quiz you in Icelandic.",
+        sk: "Ahoj! I'm Han — let's warm up first, then I'll quiz you in Slovak.",
+        sr: "Здраво! I'm Han — let's warm up first, then I'll quiz you in Serbian.",
+        ms: "Helo! I'm Han — let's warm up first, then I'll quiz you in Malay.",
         ko: "Hi! I'm Han — let's warm up first, then I'll quiz you."
       };
       document.getElementById('videocallCaption').textContent = greetings[lang] || greetings.ko;
@@ -22972,7 +24287,7 @@
       nl: "Hallo", eo: "Saluton", tl: "Kumusta", fi: "Hei", pt: "Olá",
       pl: "Cześć", sv: "Hej", ru: "Привет", hi: "नमस्ते", vi: "Xin chào",
       tr: "Merhaba", uk: "Привіт", ro: "Salut", el: "Γεια σου", he: "שלום", no: "Hei",
-      hu: "Szia", id: "Halo", fa: "سلام", is: "Halló"
+      hu: "Szia", id: "Halo", fa: "سلام", is: "Halló", sk: "Ahoj", sr: "Здраво", ms: "Helo"
     };
     function tutorHelloFor(lang) {
       return TUTOR_HELLO[lang] || TUTOR_HELLO.ko;
@@ -23019,7 +24334,7 @@
       { code: 'ko', name: 'Korean', flag: '🇰🇷', available: true },
       { code: 'lo', name: 'Lao', flag: '🇱🇦', available: false },
       { code: 'la', name: 'Latin', flag: '🏛️', available: false },
-      { code: 'ms', name: 'Malay', flag: '🇲🇾', available: false },
+      { code: 'ms', name: 'Malay', flag: '🇲🇾', available: true },
       { code: 'mr', name: 'Marathi', flag: '🇮🇳', available: false },
       { code: 'mn', name: 'Mongolian', flag: '🇲🇳', available: false },
       { code: 'nv', name: 'Navajo', flag: '🪶', available: false },
@@ -23032,9 +24347,9 @@
       { code: 'ro', name: 'Romanian', flag: '🇷🇴', available: true },
       { code: 'ru', name: 'Russian', flag: '🇷🇺', available: true },
       { code: 'gd', name: 'Scottish Gaelic', flag: '🏴󠁧󠁢󠁳󠁣󠁴󠁿', available: false },
-      { code: 'sr', name: 'Serbian', flag: '🇷🇸', available: false },
+      { code: 'sr', name: 'Serbian', flag: '🇷🇸', available: true },
       { code: 'si', name: 'Sinhala', flag: '🇱🇰', available: false },
-      { code: 'sk', name: 'Slovak', flag: '🇸🇰', available: false },
+      { code: 'sk', name: 'Slovak', flag: '🇸🇰', available: true },
       { code: 'es', name: 'Spanish', flag: '🇪🇸', available: true },
       { code: 'sw', name: 'Swahili', flag: '🇰🇪', available: false },
       { code: 'sv', name: 'Swedish', flag: '🇸🇪', available: true },
