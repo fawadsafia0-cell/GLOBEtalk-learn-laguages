@@ -10,408 +10,737 @@
         href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap"
         rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Nunito', sans-serif;
-        }
+<style>/* ===========================
+   GlobeTalk Premium Sign In
+=========================== */
 
-        body {
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Nunito',sans-serif;
+}
 
-            background:
-                radial-gradient(circle at top left, #EAD9FF 0%, transparent 40%),
-                radial-gradient(circle at bottom right, #FFE4F2 0%, transparent 40%),
-                #F9F6FC;
+body{
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            overflow: hidden;
+min-height:100vh;
 
-        }
+display:flex;
+justify-content:center;
+align-items:center;
 
-        .background {
+overflow:hidden;
 
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
+background:
+linear-gradient(135deg,#f9f5ff,#f4eaff,#ffeef8);
 
-        }
+}
 
-        .blob {
+.background{
 
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(70px);
-            opacity: .45;
-            animation: float 12s infinite alternate;
+position:fixed;
 
-        }
+top:0;
+left:0;
 
-        .blob:nth-child(1) {
+width:100%;
+height:100%;
 
-            width: 260px;
-            height: 260px;
-            background: #B18AE9;
-            left: -80px;
-            top: -60px;
+overflow:hidden;
 
-        }
+z-index:-1;
 
-        .blob:nth-child(2) {
+}
 
-            width: 220px;
-            height: 220px;
-            background: #FFD2E8;
-            right: -60px;
-            bottom: -50px;
-            animation-delay: 3s;
+.blob{
 
-        }
+position:absolute;
 
-        @keyframes float {
+border-radius:50%;
 
-            from {
-                transform: translateY(0px);
-            }
+filter:blur(70px);
 
-            to {
-                transform: translateY(-40px);
-            }
+animation:float 8s infinite alternate;
 
-        }
+}
 
-        .card {
+.blob1{
 
-            width: 380px;
-            max-width: 92%;
-            background: rgba(255, 255, 255, .75);
-            backdrop-filter: blur(18px);
-            padding: 35px;
-            border-radius: 28px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, .12);
-            position: relative;
-            z-index: 10;
+width:320px;
+height:320px;
 
-        }
+background:#b084ff;
 
-        .logo {
+left:-100px;
+top:-80px;
 
-            width: 90px;
-            height: 90px;
-            margin: auto;
-            display: block;
-            border-radius: 50%;
-            background: #B7A4E0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 45px;
-            box-shadow: 0 8px 25px rgba(183, 164, 224, .5);
+opacity:.35;
 
-        }
+}
 
-        h1 {
+.blob2{
 
-            font-family: 'Baloo 2';
-            font-size: 38px;
-            text-align: center;
-            margin-top: 15px;
-            color: #7C5CD1;
+width:260px;
+height:260px;
 
-        }
+background:#ff9fd2;
 
-        .subtitle {
+right:-60px;
+bottom:-60px;
 
-            text-align: center;
-            color: #777;
-            margin-bottom: 28px;
+opacity:.30;
 
-        }
+animation-delay:2s;
 
-        label {
+}
 
-            font-size: 14px;
-            font-weight: 700;
-            color: #555;
+@keyframes float{
 
-        }
+from{
 
-        input {
+transform:translateY(0px);
 
-            width: 100%;
-            padding: 15px;
-            border: none;
-            outline: none;
-            border-radius: 14px;
-            margin-top: 8px;
-            margin-bottom: 18px;
-            background: #F4F1FA;
-            font-size: 15px;
-            transition: .3s;
+}
 
-        }
+to{
 
-        input:focus {
+transform:translateY(-45px);
 
-            box-shadow: 0 0 0 3px rgba(183, 164, 224, .35);
+}
 
-        }
+}
 
-        .options {
+.login-card{
 
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 14px;
-            margin-bottom: 20px;
+width:430px;
 
-        }
+max-width:94%;
 
-        .options a {
+padding:40px;
 
-            text-decoration: none;
-            color: #8D6ED7;
-            font-weight: 700;
+border-radius:32px;
 
-        }
+background:rgba(255,255,255,.82);
 
-        .login {
+backdrop-filter:blur(18px);
 
-            width: 100%;
-            padding: 16px;
-            border: none;
-            border-radius: 16px;
-            background: linear-gradient(135deg, #B18AE9, #9C6DFF);
-            color: white;
-            font-size: 17px;
-            font-weight: 800;
-            cursor: pointer;
-            transition: .25s;
+box-shadow:
+0 25px 70px rgba(0,0,0,.12);
 
-        }
+animation:fadeUp .8s;
 
-        .login:hover {
+}
 
-            transform: translateY(-2px);
-            box-shadow: 0 12px 30px rgba(156, 109, 255, .35);
+@keyframes fadeUp{
 
-        }
+from{
 
-        .or {
+opacity:0;
 
-            text-align: center;
-            margin: 22px 0;
-            color: #888;
-            font-weight: 700;
+transform:translateY(40px);
 
-        }
+}
 
-        .google {
+to{
 
-            width: 100%;
-            padding: 15px;
-            border-radius: 16px;
-            border: none;
-            background: white;
-            cursor: pointer;
-            font-size: 15px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+opacity:1;
 
-        }
+transform:none;
 
-        .bottom {
+}
 
-            margin-top: 28px;
-            text-align: center;
-            font-size: 15px;
+}
 
-        }
+.logo{
 
-        .bottom a {
+width:95px;
+height:95px;
 
-            text-decoration: none;
-            color: #8D6ED7;
-            font-weight: 800;
+margin:auto;
 
-        }
+display:flex;
+align-items:center;
+justify-content:center;
 
-        footer {
+font-size:48px;
 
-            margin-top: 25px;
-            text-align: center;
-            font-size: 12px;
-            color: #999;
+border-radius:50%;
 
-        }
-        
-        .password-box{
+background:
+linear-gradient(135deg,#9c6dff,#b18ae9);
+
+color:white;
+
+box-shadow:
+0 15px 35px rgba(156,109,255,.35);
+
+margin-bottom:20px;
+
+}
+
+h1{
+
+text-align:center;
+
+font-size:40px;
+
+font-family:'Baloo 2';
+
+color:#7b4fe0;
+
+}
+
+.subtitle{
+
+text-align:center;
+
+margin-top:5px;
+
+color:#777;
+
+margin-bottom:30px;
+
+}
+
+.input-group{
+
+margin-bottom:18px;
+
+}
+
+.input-group label{
+
+display:block;
+
+font-weight:700;
+
+margin-bottom:8px;
+
+color:#555;
+
+}
+
+.input-group input{
+
+width:100%;
+
+padding:15px 18px;
+
+border:none;
+
+outline:none;
+
+background:#f6f2fd;
+
+border-radius:16px;
+
+font-size:15px;
+
+transition:.3s;
+
+}
+
+.input-group input:focus{
+
+box-shadow:
+0 0 0 3px rgba(156,109,255,.25);
+
+}
+
+.password-wrapper{
 
 position:relative;
 
 }
 
-.password-box input{
+.password-wrapper input{
 
-padding-right:55px;
+padding-right:60px;
 
 }
 
-.toggle-password{
+#togglePassword{
 
 position:absolute;
 
-right:12px;
+right:10px;
 
 top:50%;
 
 transform:translateY(-50%);
 
-background:none;
+width:42px;
+
+height:42px;
 
 border:none;
+
+border-radius:12px;
+
+background:none;
 
 cursor:pointer;
 
 font-size:20px;
 
-}
-    </style>
+transition:.2s;
 
+}
+
+#togglePassword:hover{
+
+background:#ede4ff;
+
+}
+
+.row{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:25px;
+
+font-size:14px;
+
+}
+
+.row a{
+
+color:#8b5cf6;
+
+text-decoration:none;
+
+font-weight:700;
+
+}
+
+.remember{
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+}
+
+#loginBtn{
+
+width:100%;
+
+padding:16px;
+
+border:none;
+
+border-radius:18px;
+
+font-size:17px;
+
+font-weight:800;
+
+cursor:pointer;
+
+background:
+linear-gradient(135deg,#8b5cf6,#b18ae9);
+
+color:white;
+
+transition:.25s;
+
+}
+
+#loginBtn:hover{
+
+transform:translateY(-2px);
+
+box-shadow:
+0 12px 30px rgba(139,92,246,.35);
+
+}
+
+.divider{
+
+display:flex;
+
+align-items:center;
+
+margin:25px 0;
+
+}
+
+.divider::before,
+.divider::after{
+
+content:"";
+
+flex:1;
+
+height:1px;
+
+background:#ddd;
+
+}
+
+.divider span{
+
+padding:0 15px;
+
+font-size:13px;
+
+color:#999;
+
+font-weight:700;
+
+}
+
+#googleBtn{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:18px;
+
+background:white;
+
+cursor:pointer;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:10px;
+
+font-size:15px;
+
+font-weight:700;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.08);
+
+transition:.25s;
+
+}
+
+#googleBtn:hover{
+
+transform:translateY(-2px);
+
+}
+
+.signup{
+
+margin-top:25px;
+
+text-align:center;
+
+font-size:15px;
+
+}
+
+.signup a{
+
+font-weight:800;
+
+text-decoration:none;
+
+color:#8b5cf6;
+
+}
+
+.loader{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(255,255,255,.85);
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:9999;
+
+}
+
+.hidden{
+
+display:none;
+
+}
+
+.spinner{
+
+width:70px;
+height:70px;
+
+border:6px solid #eee;
+
+border-top:6px solid #8b5cf6;
+
+border-radius:50%;
+
+animation:spin .8s linear infinite;
+
+margin-bottom:20px;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+.loader p{
+
+font-weight:700;
+
+color:#7b4fe0;
+
+}
+
+@media(max-width:500px){
+
+.login-card{
+
+padding:28px;
+
+border-radius:24px;
+
+}
+
+.logo{
+
+width:80px;
+height:80px;
+
+font-size:40px;
+
+}
+
+h1{
+
+font-size:32px;
+
+}
+
+}
+</style>
 </head>
 
 <body>
-    <div class="password-box">
-    
-        <input type="password" id="password" placeholder="Enter your password">
-    
-        <button type="button" class="toggle-password" onclick="togglePassword()">
-    
-            👁️
-    
-        </button>
-    
-    </div>
 
     <div class="background">
-        <div class="blob"></div>
-        <div class="blob"></div>
+
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+
     </div>
 
-    <div class="card">
+    <div class="login-card">
 
         <div class="logo">
+
             🌍
+
         </div>
 
         <h1>GlobeTalk</h1>
 
-        <div class="subtitle">
+        <p class="subtitle">
+
             Learn Languages The Fun Way
-        </div>
 
-        <label>Email</label>
+        </p>
 
-        <input type="email" id="email" placeholder="Enter your email">
+        <form id="loginForm">
 
-        <label>Password</label>
+            <div class="input-group">
 
-        <input type="password" id="password" placeholder="Enter your password">
+                <label>Email</label>
 
-        <div class="options">
+                <input type="email" id="email" placeholder="Enter your email" required>
 
-            <label>
+            </div>
 
-                <input type="checkbox" style="width:auto;margin:0 5px 0 0;">
+            <div class="input-group">
 
-                Remember Me
+                <label>Password</label>
 
-            </label>
+                <div class="password-wrapper">
 
-            <a href="forgot.html">
-                Forgot Password?
-            </a>
+                    <input type="password" id="password" placeholder="Enter your password" required>
 
-        </div>
+                    <button type="button" id="togglePassword">
 
-        <button class="login" onclick="login()">
+                        👁️
 
-            Sign In
+                    </button>
 
-        </button>
+                </div>
 
-        <div class="or">
-            OR
-        </div>
+            </div>
 
-        <button class="google">
-            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" width="20">
-            Continue with Google
-        </button>
+            <div class="row">
 
-        <div class="bottom">
+                <label class="remember">
 
-            Don't have an account?
+                    <input type="checkbox">
 
-            <a href="signup.html">
+                    Remember Me
 
-                Create Account
+                </label>
 
-            </a>
+                <a href="forgot.html">
 
-        </div>
+                    Forgot Password?
 
-        <footer>
+                </a>
 
-            Version 1.0
+            </div>
 
-        </footer>
+            <button type="submit" id="loginBtn">
+
+                Sign In
+
+            </button>
+
+            <div class="divider">
+
+                <span>OR</span>
+
+            </div>
+
+            <button type="button" id="googleBtn">
+
+                <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" width="22">
+
+                Continue with Google
+
+            </button>
+
+            <div class="signup">
+
+                Don't have an account?
+
+                <a href="signup.html">
+
+                    Create Account
+
+                </a>
+
+            </div>
+
+        </form>
 
     </div>
 
-<script type="module">
+    <div id="loader" class="loader hidden">
 
-    import { login } from "./firebase.js";
+        <div class="spinner"></div>
 
-    window.login = async function () {
+        <p>Signing you in...</p>
 
-        const email = document.getElementById("email").value.trim();
-        const password = document.getElementById("password").value;
+    </div><script type="module">
 
-        if (email === "" || password === "") {
+        import {
 
-            alert("Please enter your email and password.");
-            return;
+            login,
+            googleLogin
 
-        }
+        } from "./firebase.js";
 
-        try {
+        const form = document.getElementById("loginForm");
 
-            await login(email, password);
+        const loader = document.getElementById("loader");
 
-            alert("Welcome back!");
+        const toggle = document.getElementById("togglePassword");
 
-            window.location.href = "index.html";
+        const password = document.getElementById("password");
 
-        } catch (error) {
+        toggle.onclick = () => {
 
-            alert(error.message);
+            if (password.type === "password") {
 
-        }
+                password.type = "text";
 
-    };
+                toggle.innerHTML = "🙈";
 
-</script>
+            } else {
 
-</body>
+                password.type = "password";
 
-</html>
+                toggle.innerHTML = "👁️";
+
+            }
+
+        };
+
+        form.addEventListener("submit", async (e) => {
+
+            e.preventDefault();
+
+            loader.classList.remove("hidden");
+
+            try {
+
+                await login(
+
+                    email.value,
+
+                    password.value
+
+                );
+
+                window.location.href = "index.html";
+
+            } catch (error) {
+
+                loader.classList.add("hidden");
+
+                alert(error.message);
+
+            }
+
+        });
+
+        googleBtn.onclick = async () => {
+
+            try {
+
+                await googleLogin();
+
+                window.location.href = "index.html";
+
+            } catch (error) {
+
+                alert(error.message);
+
+            }
+
+        };
+
+    </script>
+    
+    </body>

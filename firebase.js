@@ -1,22 +1,38 @@
-// ============================================
-// GlobeTalk Firebase Configuration
-// ============================================
+// ===================================================
+// GlobeTalk Firebase
+// ===================================================
+
+// Firebase App
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+
+// Firebase Authentication
+import {
+    getAuth,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    sendPasswordResetEmail,
+    signOut,
+    onAuthStateChanged,
+    GoogleAuthProvider,
+    signInWithPopup,
+    updateProfile
+} from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+
+// Firestore
+import {
+    getFirestore,
+    doc,
+    setDoc,
+    getDoc,
+    updateDoc,
+    serverTimestamp
+} from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
 
+// ==========================================
+// YOUR FIREBASE CONFIG
+// ==========================================
 
-
-// ============================================
-// Replace with YOUR Firebase Keys
-// ============================================
-
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: "AIzaSyDasciB6xPOX1voyOBCkaCTpxOsgiFZiSA",
     authDomain: "globetalk-9a8ca.firebaseapp.com",
@@ -27,26 +43,22 @@ const firebaseConfig = {
     measurementId: "G-8K1LR824VM"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 
 
-
-// ============================================
+// ==========================================
 
 const app = initializeApp(firebaseConfig);
 
-const auth = getAuth(app);
+export const auth = getAuth(app);
 
-const db = getFirestore(app);
+export const db = getFirestore(app);
 
 const googleProvider = new GoogleAuthProvider();
 
 
-// ============================================
-// Register
-// ============================================
+// ==========================================
+// REGISTER
+// ==========================================
 
 export async function register(name, email, password) {
 
@@ -61,36 +73,45 @@ export async function register(name, email, password) {
         displayName: name
     });
 
-    await setDoc(doc(db, "users", userCredential.user.uid), {
+    await setDoc(
+        doc(db, "users", userCredential.user.uid),
+        {
 
-        name: name,
+            uid: userCredential.user.uid,
 
-        email: email,
+            name: name,
 
-        xp: 0,
+            email: email,
 
-        hearts: 5,
+            avatar: "🌍",
 
-        streak: 0,
+            level: 1,
 
-        coins: 0,
+            xp: 0,
 
-        level: 1,
+            hearts: 5,
 
-        lessonsCompleted: [],
+            coins: 0,
 
-        createdAt: new Date()
+            streak: 0,
 
-    });
+            lessonsCompleted: [],
+
+            createdAt: serverTimestamp(),
+
+            lastLogin: serverTimestamp()
+
+        }
+    );
 
     return userCredential.user;
 
 }
 
 
-// ============================================
-// Login
-// ============================================
+// ==========================================
+// LOGIN
+// ==========================================
 
 export async function login(email, password) {
 
@@ -101,14 +122,21 @@ export async function login(email, password) {
             password
         );
 
+    await updateDoc(
+        doc(db, "users", userCredential.user.uid),
+        {
+            lastLogin: serverTimestamp()
+        }
+    );
+
     return userCredential.user;
 
 }
 
 
-// ============================================
-// Google Login
-// ============================================
+// ==========================================
+// GOOGLE LOGIN
+// ==========================================
 
 export async function googleLogin() {
 
@@ -126,21 +154,29 @@ export async function googleLogin() {
 
         await setDoc(ref, {
 
+            uid: result.user.uid,
+
             name: result.user.displayName,
 
             email: result.user.email,
+
+            avatar: "🌍",
+
+            level: 1,
 
             xp: 0,
 
             hearts: 5,
 
-            streak: 0,
-
             coins: 0,
 
-            level: 1,
+            streak: 0,
 
-            lessonsCompleted: []
+            lessonsCompleted: [],
+
+            createdAt: serverTimestamp(),
+
+            lastLogin: serverTimestamp()
 
         });
 
@@ -151,31 +187,31 @@ export async function googleLogin() {
 }
 
 
-// ============================================
-// Forgot Password
-// ============================================
+// ==========================================
+// PASSWORD RESET
+// ==========================================
 
 export async function resetPassword(email) {
 
-    return sendPasswordResetEmail(auth, email);
+    await sendPasswordResetEmail(auth, email);
 
 }
 
 
-// ============================================
-// Logout
-// ============================================
+// ==========================================
+// LOGOUT
+// ==========================================
 
 export async function logout() {
 
-    return signOut(auth);
+    await signOut(auth);
 
 }
 
 
-// ============================================
-// Current User
-// ============================================
+// ==========================================
+// AUTH STATE
+// ==========================================
 
 export function currentUser(callback) {
 
@@ -188,35 +224,31 @@ export function currentUser(callback) {
 }
 
 
-// ============================================
-// Load User Data
-// ============================================
+// ==========================================
+// LOAD USER
+// ==========================================
 
-export async function loadUser(uid) {
+export async function getUserData(uid) {
 
-    const ref = doc(db, "users", uid);
+    const snapshot =
+        await getDoc(
+            doc(db, "users", uid)
+        );
 
-    const snap = await getDoc(ref);
-
-    return snap.data();
+    return snapshot.data();
 
 }
 
 
-// ============================================
-// Save Progress
-// ============================================
+// ==========================================
+// SAVE USER DATA
+// ==========================================
 
-export async function saveProgress(uid, data) {
+export async function saveUserData(uid, data) {
 
-    const ref = doc(db, "users", uid);
-
-    await setDoc(
-        ref,
-        data,
-        {
-            merge: true
-        }
+    await updateDoc(
+        doc(db, "users", uid),
+        data
     );
 
 }
