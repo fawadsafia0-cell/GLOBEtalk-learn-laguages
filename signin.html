@@ -253,11 +253,54 @@
             color: #999;
 
         }
+        
+        .password-box{
+
+position:relative;
+
+}
+
+.password-box input{
+
+padding-right:55px;
+
+}
+
+.toggle-password{
+
+position:absolute;
+
+right:12px;
+
+top:50%;
+
+transform:translateY(-50%);
+
+background:none;
+
+border:none;
+
+cursor:pointer;
+
+font-size:20px;
+
+}
     </style>
 
 </head>
 
 <body>
+    <div class="password-box">
+    
+        <input type="password" id="password" placeholder="Enter your password">
+    
+        <button type="button" class="toggle-password" onclick="togglePassword()">
+    
+            👁️
+    
+        </button>
+    
+    </div>
 
     <div class="background">
         <div class="blob"></div>
