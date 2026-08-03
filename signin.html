@@ -378,45 +378,39 @@ font-size:20px;
 
     </div>
 
-    <script type="module">
+<script type="module">
 
-        import { register } from "./firebase.js";
+    import { login } from "./firebase.js";
 
-        window.register = async function () {
+    window.login = async function () {
 
-            const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value;
 
-            const email = document.getElementById("email").value;
+        if (email === "" || password === "") {
 
-            const password = document.getElementById("password").value;
-
-            const confirm = document.getElementById("confirm").value;
-
-            if (password !== confirm) {
-
-                alert("Passwords do not match.");
-
-                return;
-
-            }
-
-            try {
-
-                await register(name, email, password);
-
-                alert("Account created successfully!");
-
-                window.location.href = "signin.html";
-
-            } catch (error) {
-
-                alert(error.message);
-
-            }
+            alert("Please enter your email and password.");
+            return;
 
         }
 
-    </script>
+        try {
+
+            await login(email, password);
+
+            alert("Welcome back!");
+
+            window.location.href = "index.html";
+
+        } catch (error) {
+
+            alert(error.message);
+
+        }
+
+    };
+
+</script>
 
 </body>
 

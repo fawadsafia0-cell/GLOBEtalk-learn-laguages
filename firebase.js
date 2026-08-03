@@ -2,27 +2,7 @@
 // GlobeTalk Firebase Configuration
 // ============================================
 
-// Import Firebase (SDK v11)
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
 
-import {
-    getAuth,
-    createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
-    sendPasswordResetEmail,
-    GoogleAuthProvider,
-    signInWithPopup,
-    signOut,
-    onAuthStateChanged,
-    updateProfile
-} from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-
-import {
-    getFirestore,
-    doc,
-    setDoc,
-    getDoc
-} from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
 
 // ============================================
