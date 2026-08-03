@@ -33948,8 +33948,21 @@
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('service-worker.js').catch(() => { });
-      });
-    }
+      
+    type = "module" >
+
+import { currentUser } from "./firebase.js";
+
+        currentUser((user) => {
+
+          if (!user) {
+
+            window.location.href = "signin.html";
+
+          }
+
+        });
+      }
   </script>
 </body>
 
