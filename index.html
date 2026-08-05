@@ -654,6 +654,24 @@
       border-color: var(--mint);
     }
 
+    .unit-card-danger {
+      cursor: pointer;
+    }
+
+    .unit-card-danger:hover {
+      border-color: #FFC9C9;
+      background: #FFF8F8;
+    }
+
+    .unit-card-danger:active {
+      transform: scale(.98);
+      background: #FFEDED;
+    }
+
+    .unit-card-danger .unit-info b {
+      color: #D64545;
+    }
+
     .unit-num {
       width: 48px;
       height: 48px;
@@ -1935,11 +1953,6 @@
 </head>
 
 <body>
-  <button id="logoutBtn">
-
-    Logout
-
-  </button>
   <div id="splash">
 
     <div class="logo">
@@ -2632,6 +2645,10 @@
       <div class="unit-card" onclick="resetProgress()" style="margin-top:10px;">
         <div class="unit-icon" style="background:#FFEAF0;">🗑️</div>
         <div class="unit-info"><b>Reset all progress</b><small>Start fresh from Lesson 1</small></div>
+      </div>
+      <div class="unit-card unit-card-danger" id="logoutBtn" style="margin-top:10px;">
+        <div class="unit-icon" style="background:#FFE3E3;">🚪</div>
+        <div class="unit-info"><b>Log out</b><small>Sign out of your account</small></div>
       </div>
     </div>
 
