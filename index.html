@@ -14555,6 +14555,1017 @@
       },
     ];
 
+    const TIERS_PS = TIERS;
+    const LEVELS_PS = [
+      {
+        tier: "beginner", title: "Pashto Basics", icon: "🇦🇫", words: [
+          { kr: "سلام", rom: "sa-LAAM", en: "hello" }, { kr: "مننه", rom: "ma-na-NA", en: "thank you" },
+          { kr: "هو", rom: "ho", en: "yes" }, { kr: "نه", rom: "na", en: "no" },
+          { kr: "نوم", rom: "noom", en: "name" }, { kr: "ملگری", rom: "mal-GA-ray", en: "friend" }]
+      },
+      {
+        tier: "beginner", title: "Greetings & Manners", icon: "🙏", words: [
+          { kr: "خدای پامان", rom: "khoo-DAI pa-MAAN", en: "goodbye" }, { kr: "بخښنه غواړم", rom: "bakh-shu-NA ghwaa-RAM", en: "I'm sorry" },
+          { kr: "غوږ راکړئ", rom: "ghwadz raa-KRAI", en: "excuse me" }, { kr: "ستاسو سره خوشحاله شوم", rom: "sta-SO sa-RA khwush-haa-LA shwam", en: "nice to meet you" },
+          { kr: "ښه ده", rom: "shah da", en: "it's okay" }, { kr: "مهرباني وکړئ", rom: "meh-ra-baa-NEE wu-KRAI", en: "please" }]
+      },
+      {
+        tier: "beginner", title: "Numbers 1-6", icon: "🔢", words: [
+          { kr: "یو", rom: "yaw", en: "one" }, { kr: "دوه", rom: "dwa", en: "two" },
+          { kr: "درې", rom: "dray", en: "three" }, { kr: "څلور", rom: "tsa-LOR", en: "four" },
+          { kr: "پنځه", rom: "pin-DZA", en: "five" }, { kr: "شپږ", rom: "shpudz", en: "six" }]
+      },
+      {
+        tier: "beginner", title: "Days & Time", icon: "🕒", words: [
+          { kr: "نن", rom: "nun", en: "today" }, { kr: "سبا", rom: "sa-BAA", en: "tomorrow" },
+          { kr: "پرون", rom: "pa-RUN", en: "yesterday" }, { kr: "اوس", rom: "aws", en: "now" },
+          { kr: "وخت", rom: "wakht", en: "time" }, { kr: "سهار", rom: "sa-HAAR", en: "morning" }]
+      },
+      {
+        tier: "beginner", title: "Family", icon: "👪", words: [
+          { kr: "کورنۍ", rom: "kor-a-NAI", en: "family" }, { kr: "مور", rom: "mor", en: "mom" },
+          { kr: "پلار", rom: "plaar", en: "dad" }, { kr: "ورور", rom: "wror", en: "brother" },
+          { kr: "خور", rom: "khor", en: "sister" }, { kr: "نیکه", rom: "NEE-ka", en: "grandfather" }]
+      },
+      {
+        tier: "beginner", title: "Food & Drink", icon: "🍚", words: [
+          { kr: "خواړه", rom: "khwaa-RA", en: "food" }, { kr: "اوبه", rom: "OO-ba", en: "water" },
+          { kr: "قهوه", rom: "qah-WA", en: "coffee" }, { kr: "ډوډۍ", rom: "do-DAI", en: "bread" },
+          { kr: "وریجې", rom: "wu-ri-JAY", en: "rice" }, { kr: "خوندور", rom: "khwan-DOR", en: "delicious" }]
+      },
+      {
+        tier: "beginner", title: "Colors", icon: "🎨", words: [
+          { kr: "سور", rom: "sor", en: "red" }, { kr: "نیلي", rom: "NEE-lai", en: "blue" },
+          { kr: "ژیړ", rom: "zheerh", en: "yellow" }, { kr: "شین", rom: "sheen", en: "green" },
+          { kr: "تور", rom: "tor", en: "black" }, { kr: "سپین", rom: "spEEn", en: "white" }]
+      },
+      {
+        tier: "beginner", title: "Body Parts", icon: "🧍", words: [
+          { kr: "سر", rom: "sar", en: "head" }, { kr: "لاس", rom: "laas", en: "hand" },
+          { kr: "سترګه", rom: "STAR-ga", en: "eye" }, { kr: "پزه", rom: "PA-za", en: "nose" },
+          { kr: "خوله", rom: "KHO-la", en: "mouth" }, { kr: "پښه", rom: "PKHA", en: "leg" }]
+      },
+      {
+        tier: "beginner", title: "Animals", icon: "🐾", words: [
+          { kr: "سپی", rom: "spai", en: "dog" }, { kr: "پیشو", rom: "pi-SHO", en: "cat" },
+          { kr: "مرغۍ", rom: "mar-GHAI", en: "bird" }, { kr: "کب", rom: "kab", en: "fish" },
+          { kr: "ایسپ", rom: "AYS-p", en: "horse" }, { kr: "خرگوش", rom: "khar-GOSH", en: "rabbit" }]
+      },
+      {
+        tier: "beginner", title: "Clothing", icon: "👕", words: [
+          { kr: "کالي", rom: "KAA-lai", en: "clothes" }, { kr: "بوټان", rom: "boo-TAAN", en: "shoes" },
+          { kr: "خولۍ", rom: "kho-LAI", en: "hat" }, { kr: "پرتوګ", rom: "par-TOG", en: "pants" },
+          { kr: "دامن", rom: "DAA-man", en: "skirt" }, { kr: "لاسي بګ", rom: "LAA-see bag", en: "bag" }]
+      },
+      {
+        tier: "beginner", title: "Weather", icon: "⛅", words: [
+          { kr: "هوا", rom: "ha-WAA", en: "weather" }, { kr: "باران", rom: "baa-RAAN", en: "rain" },
+          { kr: "واوره", rom: "waa-WRA", en: "snow" }, { kr: "باد", rom: "baad", en: "wind" },
+          { kr: "ګرمي ده", rom: "gar-MEE da", en: "it's hot" }, { kr: "یخني ده", rom: "yakh-NEE da", en: "it's cold" }]
+      },
+      {
+        tier: "beginner", title: "House & Rooms", icon: "🏠", words: [
+          { kr: "کور", rom: "kor", en: "house" }, { kr: "کوټه", rom: "KO-ta", en: "room" },
+          { kr: "بستره", rom: "bis-TA-ra", en: "bed" }, { kr: "تشناب", rom: "tash-NAAB", en: "bathroom" },
+          { kr: "پخلنځی", rom: "pakh-lan-DZAI", en: "kitchen" }, { kr: "دروازه", rom: "dar-WAA-za", en: "door" }]
+      },
+      {
+        tier: "beginner", title: "School & Objects", icon: "🎒", words: [
+          { kr: "ښوونځی", rom: "shoo-wan-DZAI", en: "school" }, { kr: "کتاب", rom: "ki-TAAB", en: "book" },
+          { kr: "پنسل", rom: "pen-SIL", en: "pencil" }, { kr: "بګ", rom: "bag", en: "backpack" },
+          { kr: "ښوونکی", rom: "shoo-wan-KAY", en: "teacher" }, { kr: "زده کوونکی", rom: "za-da koo-wan-KAY", en: "student" }]
+      },
+
+      /* ---------------- INTERMEDIATE ---------------- */
+      {
+        tier: "intermediate", title: "Feelings & Emotions", icon: "💗", words: [
+          { kr: "خوشحاله", rom: "khwush-HAA-la", en: "happy" }, { kr: "غمجن", rom: "gham-JAN", en: "sad" },
+          { kr: "غصه", rom: "GHOO-sa", en: "angry" }, { kr: "ستړی", rom: "STA-rhai", en: "tired" },
+          { kr: "خوشاله", rom: "khwu-SHAA-la", en: "excited" }, { kr: "اندېښمن", rom: "an-daysh-MAN", en: "nervous" }]
+      },
+      {
+        tier: "intermediate", title: "Directions & Places", icon: "🧭", words: [
+          { kr: "چپ", rom: "chap", en: "left" }, { kr: "ښي", rom: "sh-KHEE", en: "right" },
+          { kr: "سیده", rom: "SEE-da", en: "straight ahead" }, { kr: "نږدې", rom: "nazh-DAY", en: "near" },
+          { kr: "لرې", rom: "la-RAY", en: "far" }, { kr: "دلته", rom: "DAL-ta", en: "here" }]
+      },
+      {
+        tier: "intermediate", title: "Shopping", icon: "🛍️", words: [
+          { kr: "اخیستل", rom: "aa-khis-TAL", en: "to buy" }, { kr: "پیسې", rom: "pai-SAY", en: "money" },
+          { kr: "ګران", rom: "graan", en: "expensive" }, { kr: "ارزان", rom: "ar-ZAAN", en: "cheap" },
+          { kr: "پلورنځی", rom: "plor-an-DZAI", en: "store" }, { kr: "پیسې ورکول", rom: "pai-SAY war-KOL", en: "to pay" }]
+      },
+      {
+        tier: "intermediate", title: "Transportation", icon: "🚌", words: [
+          { kr: "موټر", rom: "MO-tar", en: "car" }, { kr: "بس", rom: "bus", en: "bus" },
+          { kr: "اورګاډی", rom: "or-gaa-DAI", en: "train" }, { kr: "الوتکه", rom: "a-lot-KA", en: "airplane" },
+          { kr: "بایسکل", rom: "bai-si-KAL", en: "bicycle" }, { kr: "سفر کول", rom: "sa-FAR kol", en: "to travel" }]
+      },
+      {
+        tier: "intermediate", title: "Hobbies", icon: "🎸", words: [
+          { kr: "لوستل", rom: "los-TAL", en: "to read" }, { kr: "لامبو وهل", rom: "LAAM-bo wa-HAL", en: "to swim" },
+          { kr: "نڅا کول", rom: "na-TSAA kol", en: "to dance" }, { kr: "سندره ویل", rom: "san-DA-ra wa-YAL", en: "to sing" },
+          { kr: "انځور جوړول", rom: "an-DZOR jo-RA-wal", en: "to paint" }, { kr: "سرګرمي", rom: "sar-gar-MEE", en: "hobby" }]
+      },
+      {
+        tier: "intermediate", title: "Work & Jobs", icon: "💼", words: [
+          { kr: "دنده", rom: "DAN-da", en: "job" }, { kr: "ډاکټر", rom: "DAAK-tar", en: "doctor" },
+          { kr: "انجینیر", rom: "in-ji-NEER", en: "engineer" }, { kr: "مشر", rom: "mu-SHAR", en: "boss" },
+          { kr: "معاش", rom: "ma-AASH", en: "salary" }, { kr: "دفتر", rom: "DAF-tar", en: "office" }]
+      },
+      {
+        tier: "intermediate", title: "Health & Body", icon: "🩺", words: [
+          { kr: "ناروغ", rom: "naa-ROGH", en: "sick" }, { kr: "روغ", rom: "rogh", en: "healthy" },
+          { kr: "درمل", rom: "dar-MAL", en: "medicine" }, { kr: "روغتون", rom: "rogh-TOON", en: "hospital" },
+          { kr: "درد", rom: "dard", en: "pain" }, { kr: "آرام کول", rom: "aa-RAAM kol", en: "to rest" }]
+      },
+      {
+        tier: "intermediate", title: "Technology", icon: "📱", words: [
+          { kr: "ټیلیفون", rom: "te-li-FON", en: "phone" }, { kr: "کمپیوټر", rom: "kam-pyoo-TAR", en: "computer" },
+          { kr: "انټرنیټ", rom: "in-tar-NET", en: "internet" }, { kr: "پیغام لیږل", rom: "pay-GHAAM lay-GAL", en: "to text" },
+          { kr: "اپلیکیشن", rom: "ap-li-KAY-shan", en: "app" }, { kr: "بټری", rom: "bat-REE", en: "battery" }]
+      },
+      {
+        tier: "intermediate", title: "Sports", icon: "⚽", words: [
+          { kr: "فوتبال", rom: "foot-BAAL", en: "soccer" }, { kr: "منډې وهل", rom: "man-DAY wa-HAL", en: "to run" },
+          { kr: "توپ", rom: "top", en: "ball" }, { kr: "ټیم", rom: "team", en: "team" },
+          { kr: "برلاسی کیدل", rom: "bar-LAA-say ki-DAL", en: "to win" }, { kr: "بایلل", rom: "baa-YLAL", en: "to lose" }]
+      },
+      {
+        tier: "intermediate", title: "Nature", icon: "🌳", words: [
+          { kr: "ونه", rom: "WA-na", en: "tree" }, { kr: "غر", rom: "ghar", en: "mountain" },
+          { kr: "سیند", rom: "seend", en: "river" }, { kr: "سمندر", rom: "sa-man-DAR", en: "ocean" },
+          { kr: "ځنګل", rom: "dzan-GAL", en: "forest" }, { kr: "آسمان", rom: "aas-MAAN", en: "sky" }]
+      },
+      {
+        tier: "intermediate", title: "Numbers & Time", icon: "🔟", words: [
+          { kr: "اووه", rom: "OO-wa", en: "seven" }, { kr: "اته", rom: "AT-a", en: "eight" },
+          { kr: "نهه", rom: "NA-ha", en: "nine" }, { kr: "لس", rom: "las", en: "ten" },
+          { kr: "ساعت", rom: "saa-AT", en: "hour" }, { kr: "دقیقه", rom: "da-qee-QA", en: "minute" }]
+      },
+      {
+        tier: "intermediate", title: "Making Plans", icon: "📅", words: [
+          { kr: "پلان جوړول", rom: "plaan jo-RA-wal", en: "to plan" }, { kr: "نن شپه", rom: "nun shpa", en: "tonight" },
+          { kr: "د اونۍ پای", rom: "da aw-a-NAI paai", en: "weekend" }, { kr: "لیدل", rom: "LEE-dal", en: "to meet" },
+          { kr: "مهالویش", rom: "ma-haal-WESH", en: "schedule" }, { kr: "وړکه وخت", rom: "wu-RA-ka wakht", en: "free time" }]
+      },
+      {
+        tier: "intermediate", title: "Restaurant & Ordering", icon: "🍽️", words: [
+          { kr: "مینو", rom: "MEE-noo", en: "menu" }, { kr: "امر ورکول", rom: "amar war-KOL", en: "to order" },
+          { kr: "بل", rom: "bill", en: "check/bill" }, { kr: "خدمتګار", rom: "khid-mat-GAAR", en: "waiter" },
+          { kr: "میز", rom: "meez", en: "table" }, { kr: "خوندور دی", rom: "khwan-DOR dai", en: "tasty" }]
+      },
+
+      /* ---------------- ADVANCED ---------------- */
+      {
+        tier: "advanced", title: "Connectors & Grammar", icon: "🔗", words: [
+          { kr: "خو", rom: "kho", en: "but" }, { kr: "ځکه چې", rom: "dza-KA che", en: "because" },
+          { kr: "نو", rom: "no", en: "therefore" }, { kr: "که څه هم", rom: "ka tsa ham", en: "although" },
+          { kr: "او", rom: "aw", en: "and" }, { kr: "یا", rom: "yaa", en: "or" }]
+      },
+      {
+        tier: "advanced", title: "Business Pashto", icon: "🏢", words: [
+          { kr: "غونډه", rom: "GHUN-da", en: "meeting" }, { kr: "تړون", rom: "ta-RHOON", en: "contract" },
+          { kr: "پیرودونکی", rom: "pay-ro-dun-KAY", en: "client" }, { kr: "نیټه", rom: "NEE-ta", en: "deadline" },
+          { kr: "پروژه", rom: "pro-ZHA", en: "project" }, { kr: "خبرې اترې", rom: "khu-ba-RAY at-a-RAY", en: "negotiation" }]
+      },
+      {
+        tier: "advanced", title: "News & Media", icon: "📰", words: [
+          { kr: "خبرونه", rom: "khab-a-ROO-na", en: "news" }, { kr: "ورځپاڼه", rom: "warh-dzpaa-NA", en: "newspaper" },
+          { kr: "خبریال", rom: "khab-a-RYAAL", en: "journalist" }, { kr: "راپور ورکول", rom: "raa-POOR war-KOL", en: "to report" },
+          { kr: "سرلیک", rom: "sar-LEEK", en: "headline" }, { kr: "پیښه", rom: "PAY-sha", en: "event" }]
+      },
+      {
+        tier: "advanced", title: "Nuanced Emotions", icon: "🌫️", words: [
+          { kr: "یادول", rom: "yaa-DOL", en: "to miss (someone)" }, { kr: "پښیمانتیا", rom: "pash-ee-maan-TEE-aa", en: "regret" },
+          { kr: "آرامي", rom: "aa-raa-MEE", en: "relief" }, { kr: "هیله", rom: "HEE-la", en: "longing/hope" },
+          { kr: "هیله مندي", rom: "hee-la man-DEE", en: "hope" }, { kr: "نا امیدي", rom: "naa u-mee-DEE", en: "disappointment" }]
+      },
+      {
+        tier: "advanced", title: "Idioms: Everyday Life", icon: "🫴", words: [
+          { kr: "په یو ډزو دوه ښکار کول", rom: "pa yaw dzo dwa shkaar kol", en: "to hunt two with one shot (kill two birds with one stone)" },
+          { kr: "زړه سوی لرل", rom: "zrha SWAI la-RAL", en: "to have a burning heart (to be compassionate)" },
+          { kr: "سترګې پټول", rom: "STAR-gay pa-TOL", en: "to close one's eyes (to ignore)" },
+          { kr: "سخته کار کول", rom: "SAKH-ta kaar kol", en: "to work hard" },
+          { kr: "زړه خفه کیدل", rom: "zrha khu-FA ki-DAL", en: "for one's heart to be upset (to feel hurt)" },
+          { kr: "سترګې پرانیستل", rom: "STAR-gay pa-raan-is-TAL", en: "to open one's eyes (to become aware)" }]
+      },
+      {
+        tier: "advanced", title: "Idioms: Wisdom & Weather", icon: "🌧️", words: [
+          { kr: "له باران وروسته لمر راځي", rom: "la baa-RAAN wa-ROOS-ta lmar raa-DZEE", en: "after rain the sun comes out" },
+          { kr: "صبر د بریا کلیل دی", rom: "sabr da ba-RYAA ka-LEEL dai", en: "patience is the key to success" },
+          { kr: "بیړه د شیطان کار دی", rom: "beer-RA da shai-TAAN kaar dai", en: "haste is the devil's work" },
+          { kr: "خپلمنځي مرسته پیاوړتیا ده", rom: "khpal-man-DZEE mar-STA pyaa-warh-TEE-aa da", en: "mutual help is strength" },
+          { kr: "وخت له زره ډیر ارزښت لري", rom: "wakht la ZA-ra dair ar-ZASHT la-REE", en: "time is more precious than gold" },
+          { kr: "څاڅکی څاڅکی ډنډ ډکیږي", rom: "tsaa-TSKAY tsaa-TSKAY dand da-KEE-gee", en: "drop by drop, a pond fills up" }]
+      },
+      {
+        tier: "advanced", title: "Travel Advanced", icon: "🛂", words: [
+          { kr: "پاسپورټ", rom: "paas-PORT", en: "passport" }, { kr: "ګمرک", rom: "gum-RUK", en: "customs" },
+          { kr: "سامان", rom: "saa-MAAN", en: "luggage" }, { kr: "د الوتکې ځنډ", rom: "da a-lot-KAY dzand", en: "flight delay" },
+          { kr: "ریزرویشن", rom: "re-zer-vay-SHUN", en: "reservation" }, { kr: "ویزه", rom: "VEE-za", en: "visa" }]
+      },
+      {
+        tier: "advanced", title: "Relationships", icon: "💌", words: [
+          { kr: "مینه", rom: "MEE-na", en: "love" }, { kr: "ملګرتیا", rom: "mal-gar-TEE-aa", en: "friendship" },
+          { kr: "باور", rom: "baa-WAR", en: "trust" }, { kr: "واده", rom: "WAA-da", en: "marriage" },
+          { kr: "بېلتون کول", rom: "bail-TOON kol", en: "to break up" }, { kr: "هیله لرل", rom: "HEE-la la-RAL", en: "to long for" }]
+      },
+      {
+        tier: "advanced", title: "Debate & Opinions", icon: "🗣️", words: [
+          { kr: "نظر", rom: "na-ZAR", en: "opinion" }, { kr: "منل", rom: "MA-nal", en: "to agree" },
+          { kr: "نه منل", rom: "na MA-nal", en: "to disagree" }, { kr: "بحث", rom: "bahs", en: "argument" },
+          { kr: "لید", rom: "leed", en: "point of view" }, { kr: "قانع کول", rom: "qaa-NE kol", en: "to convince" }]
+      },
+      {
+        tier: "advanced", title: "Formal Speech & Register", icon: "🎩", words: [
+          { kr: "ته", rom: "ta", en: "informal 'you'" }, { kr: "تاسو", rom: "TAA-so", en: "formal/plural 'you'" },
+          { kr: "صاحب", rom: "SAA-hib", en: "Mr. / sir" }, { kr: "بيبي", rom: "BEE-bee", en: "Mrs. / madam" },
+          { kr: "درانه", rom: "dra-NA", en: "dear (formal letter opening)" }, { kr: "درنښت سره", rom: "dran-ASHT sa-RA", en: "sincerely (formal closing)" }]
+      },
+      {
+        tier: "advanced", title: "Slang & Internet Terms", icon: "📲", words: [
+          { kr: "ډیر ښه", rom: "dair sha", en: "very good / awesome" }, { kr: "زبردست", rom: "zabar-DAST", en: "amazing" },
+          { kr: "خامخا", rom: "khaam-KHAA", en: "definitely / for sure" }, { kr: "کوم ستونزه نشته", rom: "kum stun-ZA nish-TA", en: "no worries" },
+          { kr: "OK", rom: "oh-KAY", en: "OK" }, { kr: "څه حال دی", rom: "tsa haal dai", en: "what's up (casual greeting)" }]
+      },
+      {
+        tier: "advanced", title: "Culture & History", icon: "🏛️", words: [
+          { kr: "اتڼ", rom: "at-TAN", en: "Attan (a traditional Pashtun dance)" }, { kr: "لنډۍ", rom: "lan-DAI", en: "landay (a traditional short folk poem)" },
+          { kr: "دودیزه نڅا", rom: "do-dee-ZA na-TSAA", en: "traditional dance" }, { kr: "خپلواکي", rom: "khpal-waa-KEE", en: "independence" },
+          { kr: "کلتور", rom: "kul-TOOR", en: "culture" }, { kr: "تاریخ", rom: "taa-REEKH", en: "history" }]
+      },
+      {
+        tier: "advanced", title: "Advanced Verbs", icon: "💪", words: [
+          { kr: "ترلاسه کول", rom: "tar-laa-SA kol", en: "to achieve" }, { kr: "بریالی کیدل", rom: "ba-ryaa-LAY ki-DAL", en: "to succeed" },
+          { kr: "ناکام کیدل", rom: "naa-KAAM ki-DAL", en: "to fail" }, { kr: "ښه کول", rom: "sha kol", en: "to improve" },
+          { kr: "مبارزه کول", rom: "mu-baa-ra-ZA kol", en: "to struggle" }, { kr: "برلاسی کول", rom: "bar-LAA-say kol", en: "to overcome" }]
+      },
+
+      /* ---------------- FLUENT ---------------- */
+      {
+        tier: "fluent", title: "Proverbs Part 1", icon: "📜", words: [
+          { kr: "لکه کرل شوی داسې به رېبل شي", rom: "LA-ka ku-RAL SHAWAY DAA-say ba RAY-bal shee", en: "as you sow, so shall you reap" },
+          { kr: "تش لوښی ډیر غږ کوي", rom: "tash lo-SHAI dair ghadz ka-WEE", en: "an empty vessel makes the most noise" },
+          { kr: "چیرې چې اراده وي هلته لار وي", rom: "chee-RAY che a-raa-DA wee HAL-ta laar wee", en: "where there's a will, there's a way" },
+          { kr: "یووالی طاقت دی", rom: "yaw-WAA-lay taa-QAT dai", en: "unity is strength" },
+          { kr: "تمرین انسان بشپړوي", rom: "tam-REEN in-SAAN bash-pa-RA-wee", en: "practice makes a person perfect" },
+          { kr: "وخت غوره ښوونکی دی", rom: "wakht ghwa-RA shoo-wan-KAY dai", en: "time is the greatest teacher" }]
+      },
+      {
+        tier: "fluent", title: "Literary Expressions", icon: "🖋️", words: [
+          { kr: "شاعر", rom: "shaa-AIR", en: "poet" }, { kr: "شعر", rom: "sh-AIR", en: "poem" },
+          { kr: "کیسه", rom: "KEE-sa", en: "narrative / story" }, { kr: "تقدیر", rom: "taq-DEER", en: "fate / destiny" },
+          { kr: "د مینې کیسه", rom: "da mee-NAY KEE-sa", en: "romance" }, { kr: "استعاره", rom: "is-te-AA-ra", en: "metaphor" }]
+      },
+      {
+        tier: "fluent", title: "Proverbs Part 2", icon: "🪞", words: [
+          { kr: "دروبه دروبه سیند جوړیږي", rom: "DRO-ba DRO-ba seend jo-REE-gee", en: "little by little, a river forms" },
+          { kr: "چوپتیا نیمه رضایت ده", rom: "chop-TYAA nee-MA ri-zaa-YAT da", en: "silence is half consent" },
+          { kr: "کتاب د پوښ له مخې مه ارزوه", rom: "ki-TAAB da posh la MA-khay ma ar-ZA-wa", en: "don't judge a book by its cover" },
+          { kr: "پخپله پښه تبر وهل", rom: "pakh-PA-la PKHA tabar wa-HAL", en: "to strike one's own foot with an axe (self-sabotage)" },
+          { kr: "دیوالونه هم غوږونه لري", rom: "dee-waa-LOO-na ham ghwa-ZHOO-na la-REE", en: "even walls have ears" },
+          { kr: "کوچنۍ تیروتنه لویه ستونزه کیدلی شي", rom: "koch-a-NAI tee-ro-a-TA-na LOO-ya stun-ZA ki-da-LAI shee", en: "a small mistake can become a big problem" }]
+      },
+      {
+        tier: "fluent", title: "Political & Social Terms", icon: "🏛️", words: [
+          { kr: "سیاست", rom: "si-YAA-sat", en: "politics" }, { kr: "حکومت", rom: "hu-koo-MAT", en: "government" },
+          { kr: "ټاکنې", rom: "TAAK-a-nay", en: "elections" }, { kr: "دیموکراسي", rom: "de-mo-kraa-SEE", en: "democracy" },
+          { kr: "حقونه", rom: "hu-QOO-na", en: "rights" }, { kr: "مساوات", rom: "mu-saa-WAAT", en: "equality" }]
+      },
+      {
+        tier: "fluent", title: "Psychology & Nuance", icon: "🧠", words: [
+          { kr: "شعور", rom: "shu-OOR", en: "consciousness" }, { kr: "ناخودآګاه ذهن", rom: "naa-khod-aa-GAAH zehn", en: "subconscious" },
+          { kr: "ځان باوری", rom: "dzaan baa-WA-ray", en: "self-confidence" }, { kr: "همدردي", rom: "ham-dar-DEE", en: "empathy" },
+          { kr: "اندېښنه", rom: "an-daysh-NA", en: "anxiety" }, { kr: "زغم", rom: "za-GHAM", en: "resilience" }]
+      },
+      {
+        tier: "fluent", title: "Business Negotiation", icon: "🤝", words: [
+          { kr: "وړاندیز", rom: "wu-raan-DEEZ", en: "offer" }, { kr: "متقابل وړاندیز", rom: "mu-ta-QAA-bil wu-raan-DEEZ", en: "counteroffer" },
+          { kr: "غوښتنلیک", rom: "ghwash-tan-LEEK", en: "compromise" }, { kr: "ګټې", rom: "GA-tay", en: "interests" },
+          { kr: "د خبرو اترو حالت", rom: "da khab-a-RO at-a-RO HAA-lat", en: "bargaining position" }, { kr: "لاسلیک کول", rom: "laas-LEEK kol", en: "to sign" }]
+      },
+      {
+        tier: "fluent", title: "Academic Pashto", icon: "🎓", words: [
+          { kr: "څیړنه", rom: "tsee-RHA-na", en: "research" }, { kr: "تیوري", rom: "te-o-REE", en: "theory" },
+          { kr: "مقاله", rom: "ma-QAA-la", en: "essay" }, { kr: "فرضیه", rom: "far-ZEE-a", en: "hypothesis" },
+          { kr: "سرچینه", rom: "sar-CHEE-na", en: "source" }, { kr: "پایله", rom: "paai-LA", en: "conclusion" }]
+      },
+      {
+        tier: "fluent", title: "Poetic & Formal Writing", icon: "🕊️", words: [
+          { kr: "بیت", rom: "bait", en: "verse" }, { kr: "قافیه", rom: "qaa-fee-A", en: "rhyme" },
+          { kr: "تشبیه", rom: "tash-BEE", en: "simile" }, { kr: "ښکلا", rom: "shke-LAA", en: "beauty" },
+          { kr: "چوپتیا", rom: "chop-TYAA", en: "silence" }, { kr: "تلپاتوالی", rom: "tal-paa-to-WAA-lay", en: "eternity" }]
+      },
+      {
+        tier: "fluent", title: "Regional Flavor", icon: "🗺️", words: [
+          { kr: "کابل", rom: "KAA-bul", en: "Kabul (the capital)" }, { kr: "کندهار", rom: "kan-da-HAAR", en: "Kandahar" },
+          { kr: "کلی", rom: "ka-LAI", en: "village" }, { kr: "ولسوالۍ", rom: "wo-lus-waa-LAI", en: "district" },
+          { kr: "خلکو کلتور", rom: "khal-KO kul-TOOR", en: "folk culture" }, { kr: "جشن", rom: "jashn", en: "festival" }]
+      },
+      {
+        tier: "fluent", title: "Complex Grammar: Ergativity", icon: "🧩", words: [
+          { kr: "فاعل", rom: "faa-EL", en: "the subject marker" }, { kr: "مفعول", rom: "maf-OOL", en: "the object marker" },
+          { kr: "ماضي", rom: "MAA-zee", en: "the past-tense ergative construction" }, { kr: "فعل", rom: "fe-AL", en: "verb" },
+          { kr: "اسم", rom: "ism", en: "noun" }, { kr: "صفت", rom: "si-FAT", en: "adjective" }]
+      },
+      {
+        tier: "fluent", title: "More Proverbs", icon: "📖", words: [
+          { kr: "چا چې د بل لپاره کنده وکنده، پخپله پکې پریوځي", rom: "chaa che da bal la-PAA-ra KAN-da wu-KAN-da pakh-PA-la pu-KAY pray-woo-DZEE", en: "he who digs a pit for others falls into it himself" },
+          { kr: "لرې لرې غرونه ښکلي ښکاري", rom: "la-RAY la-RAY ghwa-ROO-na shke-LEE shkaa-REE", en: "distant mountains look beautiful (the grass is greener)" },
+          { kr: "د ډیوې لاندې تیاره وي", rom: "da DEE-way LAAN-day tya-RA wee", en: "darkness under the lamp (blind to what's closest)" },
+          { kr: "یو او یو یولس شي", rom: "yaw aw yaw yaw-LAS shee", en: "one and one make eleven (unity multiplies strength)" },
+          { kr: "خپل قد ته کتل پکار دي", rom: "khpal qad ta ka-TAL pa-KAAR dee", en: "look to your own measure (live within your means)" },
+          { kr: "ښه کار کوه، بدله به یې هرومرو ورکړل شي", rom: "sha kaar kwa BAD-la ba yay ha-ro-MA-ro war-ka-RHUL shee", en: "do good work, and you'll surely be repaid" }]
+      },
+      {
+        tier: "fluent", title: "Professional Terms", icon: "⚖️", words: [
+          { kr: "وکیل", rom: "wa-KEEL", en: "lawyer" }, { kr: "د محکمې کړنلاره", rom: "da mah-ka-MAY kra-nla-RA", en: "court proceedings" },
+          { kr: "مسولیت", rom: "ma-soo-lee-YAT", en: "responsibility" }, { kr: "وړتیا", rom: "wa-rha-TEE-aa", en: "qualification" },
+          { kr: "کاري تجربه", rom: "KAA-ree taj-RI-ba", en: "work experience" }, { kr: "سپارښتنه", rom: "spaa-rash-ta-NA", en: "recommendation" }]
+      },
+      {
+        tier: "fluent", title: "Mastery Review", icon: "🏆", words: [
+          { kr: "تجربه", rom: "taj-RI-ba", en: "experience" }, { kr: "بریالیتوب", rom: "ba-ryaa-lee-TOB", en: "success" },
+          { kr: "پوهه", rom: "PO-ha", en: "knowledge" }, { kr: "پوهاوی", rom: "po-haa-WAY", en: "understanding" },
+          { kr: "پرمختګ", rom: "par-makh-TAG", en: "progress" }, { kr: "استعداد", rom: "is-te-DAAD", en: "talent" }]
+      },
+    ];
+
+    const TIERS_BAL = TIERS;
+    const LEVELS_BAL = [
+      {
+        tier: "beginner", title: "Balochi Basics", icon: "🇵🇰", words: [
+          { kr: "سلام", rom: "sa-LAAM", en: "hello" }, { kr: "مهرباني", rom: "mehr-baa-NEE", en: "thank you" },
+          { kr: "هان", rom: "haan", en: "yes" }, { kr: "نه", rom: "na", en: "no" },
+          { kr: "نام", rom: "naam", en: "name" }, { kr: "دوست", rom: "dost", en: "friend" }]
+      },
+      {
+        tier: "beginner", title: "Greetings & Manners", icon: "🙏", words: [
+          { kr: "خدا حافظ", rom: "khu-daa HAA-fiz", en: "goodbye" }, { kr: "بخشش گشین", rom: "bakh-SHISH ga-SHEEN", en: "I'm sorry" },
+          { kr: "گوش کن", rom: "gosh kan", en: "excuse me" }, { kr: "شمارا وستین خوش حال بوتان", rom: "sha-MAA-raa was-TEEN khosh haal bo-TAAN", en: "nice to meet you" },
+          { kr: "دیر نیست", rom: "dair neyst", en: "it's okay" }, { kr: "لطف بکن", rom: "lutf ba-KAN", en: "please" }]
+      },
+      {
+        tier: "beginner", title: "Numbers 1-6", icon: "🔢", words: [
+          { kr: "یک", rom: "yak", en: "one" }, { kr: "دو", rom: "do", en: "two" },
+          { kr: "سه", rom: "seh", en: "three" }, { kr: "چار", rom: "chaar", en: "four" },
+          { kr: "پنچ", rom: "panch", en: "five" }, { kr: "شش", rom: "shash", en: "six" }]
+      },
+      {
+        tier: "beginner", title: "Days & Time", icon: "🕒", words: [
+          { kr: "امروچی", rom: "am-RO-chee", en: "today" }, { kr: "باندین", rom: "baan-DEEN", en: "tomorrow" },
+          { kr: "پگاه", rom: "pa-GAAH", en: "yesterday" }, { kr: "هنون", rom: "ha-NOON", en: "now" },
+          { kr: "وخت", rom: "wakht", en: "time" }, { kr: "بگاه", rom: "ba-GAAH", en: "morning" }]
+      },
+      {
+        tier: "beginner", title: "Family", icon: "👪", words: [
+          { kr: "کورگ", rom: "KOR-ag", en: "family" }, { kr: "ماس", rom: "maas", en: "mom" },
+          { kr: "پیس", rom: "pees", en: "dad" }, { kr: "برات", rom: "ba-RAAT", en: "brother" },
+          { kr: "گوهار", rom: "go-HAAR", en: "sister" }, { kr: "پیسین پیس", rom: "PEE-seen pees", en: "grandfather" }]
+      },
+      {
+        tier: "beginner", title: "Food & Drink", icon: "🍚", words: [
+          { kr: "وراک", rom: "wa-RAAK", en: "food" }, { kr: "آپ", rom: "aap", en: "water" },
+          { kr: "قهوه", rom: "qah-WA", en: "coffee" }, { kr: "نان", rom: "naan", en: "bread" },
+          { kr: "برنج", rom: "bi-RENJ", en: "rice" }, { kr: "شیرین", rom: "shee-REEN", en: "delicious" }]
+      },
+      {
+        tier: "beginner", title: "Colors", icon: "🎨", words: [
+          { kr: "سرخ", rom: "surkh", en: "red" }, { kr: "آبی", rom: "AA-bee", en: "blue" },
+          { kr: "زرد", rom: "zard", en: "yellow" }, { kr: "سبز", rom: "sabz", en: "green" },
+          { kr: "سیاه", rom: "si-YAAH", en: "black" }, { kr: "سپید", rom: "sa-PEED", en: "white" }]
+      },
+      {
+        tier: "beginner", title: "Body Parts", icon: "🧍", words: [
+          { kr: "سر", rom: "sar", en: "head" }, { kr: "دست", rom: "dast", en: "hand" },
+          { kr: "چم", rom: "cham", en: "eye" }, { kr: "پوز", rom: "poz", en: "nose" },
+          { kr: "دهان", rom: "da-HAAN", en: "mouth" }, { kr: "پاد", rom: "paad", en: "leg" }]
+      },
+      {
+        tier: "beginner", title: "Animals", icon: "🐾", words: [
+          { kr: "کوچک", rom: "koo-CHAK", en: "dog" }, { kr: "پیشی", rom: "PEE-shee", en: "cat" },
+          { kr: "پرنده", rom: "par-an-DA", en: "bird" }, { kr: "ماهی", rom: "maa-HEE", en: "fish" },
+          { kr: "اسپ", rom: "asp", en: "horse" }, { kr: "خرگوش", rom: "khar-GOSH", en: "rabbit" }]
+      },
+      {
+        tier: "beginner", title: "Clothing", icon: "👕", words: [
+          { kr: "جامگ", rom: "JAAM-ag", en: "clothes" }, { kr: "موچی", rom: "MO-chee", en: "shoes" },
+          { kr: "کلاه", rom: "ka-LAAH", en: "hat" }, { kr: "شلوار", rom: "shal-WAAR", en: "pants" },
+          { kr: "دامن", rom: "DAA-man", en: "skirt" }, { kr: "بگ", rom: "bag", en: "bag" }]
+      },
+      {
+        tier: "beginner", title: "Weather", icon: "⛅", words: [
+          { kr: "هوا", rom: "ha-WAA", en: "weather" }, { kr: "هور", rom: "hor", en: "rain" },
+          { kr: "واف", rom: "waaf", en: "snow" }, { kr: "گوات", rom: "gu-WAAT", en: "wind" },
+          { kr: "گرم انت", rom: "garm ant", en: "it's hot" }, { kr: "سرد انت", rom: "sard ant", en: "it's cold" }]
+      },
+      {
+        tier: "beginner", title: "House & Rooms", icon: "🏠", words: [
+          { kr: "کت", rom: "kat", en: "house" }, { kr: "کوتک", rom: "KO-tak", en: "room" },
+          { kr: "خفتگاه", rom: "khuf-ta-GAAH", en: "bed" }, { kr: "غسل خانه", rom: "ghusl-khaa-NA", en: "bathroom" },
+          { kr: "پچگ خانه", rom: "PACH-ag khaa-NA", en: "kitchen" }, { kr: "در", rom: "dar", en: "door" }]
+      },
+      {
+        tier: "beginner", title: "School & Objects", icon: "🎒", words: [
+          { kr: "مکتب", rom: "mak-TAB", en: "school" }, { kr: "کتاب", rom: "ki-TAAB", en: "book" },
+          { kr: "پنسل", rom: "pen-SIL", en: "pencil" }, { kr: "مکتبی بگ", rom: "mak-TA-bee bag", en: "backpack" },
+          { kr: "مچین", rom: "ma-CHEEN", en: "teacher" }, { kr: "درسگر", rom: "dars-a-GAR", en: "student" }]
+      },
+
+      /* ---------------- INTERMEDIATE ---------------- */
+      {
+        tier: "intermediate", title: "Feelings & Emotions", icon: "💗", words: [
+          { kr: "خوش", rom: "khosh", en: "happy" }, { kr: "غمین", rom: "gham-EEN", en: "sad" },
+          { kr: "قهرین", rom: "qahr-EEN", en: "angry" }, { kr: "خستگ", rom: "khast-AG", en: "tired" },
+          { kr: "خوش حال", rom: "khosh haal", en: "excited" }, { kr: "پریشان", rom: "pa-ree-SHAAN", en: "nervous" }]
+      },
+      {
+        tier: "intermediate", title: "Directions & Places", icon: "🧭", words: [
+          { kr: "چپ", rom: "chap", en: "left" }, { kr: "راست", rom: "raast", en: "right" },
+          { kr: "سیدا", rom: "SEE-daa", en: "straight ahead" }, { kr: "نزیک", rom: "na-ZEEK", en: "near" },
+          { kr: "دور", rom: "dor", en: "far" }, { kr: "اجه", rom: "A-ja", en: "here" }]
+      },
+      {
+        tier: "intermediate", title: "Shopping", icon: "🛍️", words: [
+          { kr: "گیریگ", rom: "GEE-rig", en: "to buy" }, { kr: "پول", rom: "pol", en: "money" },
+          { kr: "گران", rom: "graan", en: "expensive" }, { kr: "ارزان", rom: "ar-ZAAN", en: "cheap" },
+          { kr: "دکان", rom: "du-KAAN", en: "store" }, { kr: "دیگ", rom: "DAY-ag", en: "to pay" }]
+      },
+      {
+        tier: "intermediate", title: "Transportation", icon: "🚌", words: [
+          { kr: "موتر", rom: "MO-tar", en: "car" }, { kr: "بس", rom: "bas", en: "bus" },
+          { kr: "ریل", rom: "reyl", en: "train" }, { kr: "هوایی جهاز", rom: "ha-WAA-ee ja-HAAZ", en: "airplane" },
+          { kr: "سایکل", rom: "SAAI-kal", en: "bicycle" }, { kr: "سفر کنگ", rom: "sa-FAR ka-NAG", en: "to travel" }]
+      },
+      {
+        tier: "intermediate", title: "Hobbies", icon: "🎸", words: [
+          { kr: "وانگ", rom: "WAA-nag", en: "to read" }, { kr: "لمبیگ", rom: "lam-BEEG", en: "to swim" },
+          { kr: "دیوانگ", rom: "dee-WAA-nag", en: "to dance" }, { kr: "سوتگ", rom: "SOOT-ag", en: "to sing" },
+          { kr: "چتر کشگ", rom: "chit-ar kash-AG", en: "to paint" }, { kr: "پسند", rom: "pa-SAND", en: "hobby" }]
+      },
+      {
+        tier: "intermediate", title: "Work & Jobs", icon: "💼", words: [
+          { kr: "کار", rom: "kaar", en: "job" }, { kr: "داکتر", rom: "DAAK-tar", en: "doctor" },
+          { kr: "انجینیر", rom: "in-ji-NEER", en: "engineer" }, { kr: "سرکار", rom: "sar-KAAR", en: "boss" },
+          { kr: "تنخواه", rom: "tan-KHWAAH", en: "salary" }, { kr: "دفتر", rom: "DAF-tar", en: "office" }]
+      },
+      {
+        tier: "intermediate", title: "Health & Body", icon: "🩺", words: [
+          { kr: "بیمار", rom: "bee-MAAR", en: "sick" }, { kr: "سلامت", rom: "sa-laa-MAT", en: "healthy" },
+          { kr: "دوا", rom: "da-WAA", en: "medicine" }, { kr: "هسپتال", rom: "has-pi-TAAL", en: "hospital" },
+          { kr: "دگار", rom: "da-GAAR", en: "pain" }, { kr: "آرام کنگ", rom: "aa-RAAM ka-NAG", en: "to rest" }]
+      },
+      {
+        tier: "intermediate", title: "Technology", icon: "📱", words: [
+          { kr: "تلیفون", rom: "te-li-FON", en: "phone" }, { kr: "کمپیوتر", rom: "kam-pyoo-TAR", en: "computer" },
+          { kr: "انترنیت", rom: "in-tar-NEET", en: "internet" }, { kr: "پیغام دیگ", rom: "pay-GHAAM day-AG", en: "to text" },
+          { kr: "اپلیکیشن", rom: "ap-li-KAY-shan", en: "app" }, { kr: "بتری", rom: "bat-REE", en: "battery" }]
+      },
+      {
+        tier: "intermediate", title: "Sports", icon: "⚽", words: [
+          { kr: "فوتبال", rom: "foot-BAAL", en: "soccer" }, { kr: "تگ", rom: "tag", en: "to run" },
+          { kr: "توپ", rom: "top", en: "ball" }, { kr: "ٹیم", rom: "team", en: "team" },
+          { kr: "برنده بیگ", rom: "bur-RAN-da bee-AG", en: "to win" }, { kr: "هارگ", rom: "HAAR-ag", en: "to lose" }]
+      },
+      {
+        tier: "intermediate", title: "Nature", icon: "🌳", words: [
+          { kr: "دار", rom: "daar", en: "tree" }, { kr: "کوه", rom: "koh", en: "mountain" },
+          { kr: "رود", rom: "rod", en: "river" }, { kr: "دریا", rom: "dar-YAA", en: "ocean" },
+          { kr: "بیشه", rom: "BEE-sha", en: "forest" }, { kr: "آسمان", rom: "aas-MAAN", en: "sky" }]
+      },
+      {
+        tier: "intermediate", title: "Numbers & Time", icon: "🔟", words: [
+          { kr: "هپت", rom: "hapt", en: "seven" }, { kr: "هشت", rom: "hasht", en: "eight" },
+          { kr: "نُه", rom: "noh", en: "nine" }, { kr: "ده", rom: "dah", en: "ten" },
+          { kr: "گشت", rom: "gasht", en: "hour" }, { kr: "دقیقه", rom: "da-qee-QA", en: "minute" }]
+      },
+      {
+        tier: "intermediate", title: "Making Plans", icon: "📅", words: [
+          { kr: "پلان کنگ", rom: "plaan ka-NAG", en: "to plan" }, { kr: "امشپ", rom: "am-SHAP", en: "tonight" },
+          { kr: "هفته سر", rom: "haf-TA sar", en: "weekend" }, { kr: "دیدار کنگ", rom: "dee-DAAR ka-NAG", en: "to meet" },
+          { kr: "برنامه", rom: "bar-naa-MA", en: "schedule" }, { kr: "آزات وخت", rom: "aa-ZAAT wakht", en: "free time" }]
+      },
+      {
+        tier: "intermediate", title: "Restaurant & Ordering", icon: "🍽️", words: [
+          { kr: "مینو", rom: "MEE-noo", en: "menu" }, { kr: "امر دیگ", rom: "amr DAY-ag", en: "to order" },
+          { kr: "بل", rom: "bil", en: "check/bill" }, { kr: "خدمتکار", rom: "khid-mat-KAAR", en: "waiter" },
+          { kr: "میز", rom: "meyz", en: "table" }, { kr: "خوش مزه", rom: "khosh MA-za", en: "tasty" }]
+      },
+
+      /* ---------------- ADVANCED ---------------- */
+      {
+        tier: "advanced", title: "Connectors & Grammar", icon: "🔗", words: [
+          { kr: "بلی", rom: "BA-lee", en: "but" }, { kr: "چون که", rom: "choon ke", en: "because" },
+          { kr: "پددان", rom: "pad-DAAN", en: "therefore" }, { kr: "اگرچه", rom: "a-gar-CHE", en: "although" },
+          { kr: "و", rom: "wa", en: "and" }, { kr: "یا", rom: "yaa", en: "or" }]
+      },
+      {
+        tier: "advanced", title: "Business Balochi", icon: "🏢", words: [
+          { kr: "دیوان", rom: "dee-WAAN", en: "meeting" }, { kr: "قرارداد", rom: "qa-raar-DAAD", en: "contract" },
+          { kr: "خریدار", rom: "kha-ree-DAAR", en: "client" }, { kr: "آخری تاریخ", rom: "AA-kha-ree taa-REEKH", en: "deadline" },
+          { kr: "پروژه", rom: "pro-ZHA", en: "project" }, { kr: "گپ زانگ", rom: "gup ZAAN-ag", en: "negotiation" }]
+      },
+      {
+        tier: "advanced", title: "News & Media", icon: "📰", words: [
+          { kr: "خبر", rom: "kha-BAR", en: "news" }, { kr: "اخبار", rom: "akh-BAAR", en: "newspaper" },
+          { kr: "خبرنگار", rom: "kha-bar-ne-GAAR", en: "journalist" }, { kr: "خبر دیگ", rom: "kha-BAR DAY-ag", en: "to report" },
+          { kr: "سرخط", rom: "sar-KHAT", en: "headline" }, { kr: "واقعه", rom: "waa-qi-A", en: "event" }]
+      },
+      {
+        tier: "advanced", title: "Nuanced Emotions", icon: "🌫️", words: [
+          { kr: "یاد کنگ", rom: "yaad ka-NAG", en: "to miss (someone)" }, { kr: "پشیمانی", rom: "pa-shee-maa-NEE", en: "regret" },
+          { kr: "آرامی", rom: "aa-raa-MEE", en: "relief" }, { kr: "هسرت", rom: "has-RAT", en: "longing" },
+          { kr: "امید", rom: "u-MEED", en: "hope" }, { kr: "ناامیدی", rom: "naa-u-mee-DEE", en: "disappointment" }]
+      },
+      {
+        tier: "advanced", title: "Idioms: Everyday Life", icon: "🫴", words: [
+          { kr: "یک تیر و دو نشان", rom: "yak teer wa do ni-SHAAN", en: "one arrow, two targets (kill two birds with one stone)" },
+          { kr: "دل گرم", rom: "dil garm", en: "warm-hearted (kind/generous)" },
+          { kr: "چم بندگ", rom: "cham band-AG", en: "to close one's eyes (to ignore)" },
+          { kr: "سخت کار کنگ", rom: "sakht kaar ka-NAG", en: "to work hard" },
+          { kr: "دل نارضا بیگ", rom: "dil naa-ra-ZAA bee-AG", en: "for one's heart to be displeased" },
+          { kr: "چم واکنگ", rom: "cham WAA-kang", en: "to open one's eyes (to become aware)" }]
+      },
+      {
+        tier: "advanced", title: "Idioms: Wisdom & Weather", icon: "🌧️", words: [
+          { kr: "هور پدا آفتاب کیت", rom: "hor pa-DAA aaf-TAAB keet", en: "after the rain comes sunshine" },
+          { kr: "صبر کامیابی کلید انت", rom: "sabr kaam-yaa-BEE ka-LEED ant", en: "patience is the key to success" },
+          { kr: "شتاب شیطان کار انت", rom: "shi-TAAB shai-TAAN kaar ant", en: "haste is the devil's work" },
+          { kr: "اتحاد قوت انت", rom: "it-ti-HAAD quw-WAT ant", en: "unity is strength" },
+          { kr: "وخت له زر گران تر انت", rom: "wakht la zar gr-AAN tar ant", en: "time is more precious than gold" },
+          { kr: "قطره قطره دریا بیت", rom: "qat-RA qat-RA dar-YAA beet", en: "drop by drop, a river forms" }]
+      },
+      {
+        tier: "advanced", title: "Travel Advanced", icon: "🛂", words: [
+          { kr: "پاسپورت", rom: "paas-PORT", en: "passport" }, { kr: "گمرک", rom: "gum-RUK", en: "customs" },
+          { kr: "سامان", rom: "saa-MAAN", en: "luggage" }, { kr: "جهاز دیر", rom: "ja-HAAZ dair", en: "flight delay" },
+          { kr: "بکینگ", rom: "book-ING", en: "reservation" }, { kr: "ویزه", rom: "VEE-za", en: "visa" }]
+      },
+      {
+        tier: "advanced", title: "Relationships", icon: "💌", words: [
+          { kr: "عشق", rom: "eshq", en: "love" }, { kr: "دوستی", rom: "dos-TEE", en: "friendship" },
+          { kr: "باور", rom: "baa-WAR", en: "trust" }, { kr: "زناوگ", rom: "za-NAA-wag", en: "marriage" },
+          { kr: "جدا بیگ", rom: "ju-DAA bee-AG", en: "to break up" }, { kr: "هسرت کنگ", rom: "has-RAT ka-NAG", en: "to long for" }]
+      },
+      {
+        tier: "advanced", title: "Debate & Opinions", icon: "🗣️", words: [
+          { kr: "نظر", rom: "na-ZAR", en: "opinion" }, { kr: "قبول کنگ", rom: "qa-BOOL ka-NAG", en: "to agree" },
+          { kr: "قبول نه کنگ", rom: "qa-BOOL na ka-NAG", en: "to disagree" }, { kr: "بحث", rom: "bahs", en: "argument" },
+          { kr: "دید", rom: "deed", en: "point of view" }, { kr: "قانع کنگ", rom: "qaa-NE ka-NAG", en: "to convince" }]
+      },
+      {
+        tier: "advanced", title: "Formal Speech & Register", icon: "🎩", words: [
+          { kr: "تو", rom: "to", en: "informal 'you'" }, { kr: "شما", rom: "shu-MAA", en: "formal/plural 'you'" },
+          { kr: "آقا", rom: "AA-qaa", en: "Mr. / sir" }, { kr: "بی بی", rom: "BEE-bee", en: "Mrs. / madam" },
+          { kr: "محترم", rom: "moh-ta-RAM", en: "dear (formal letter opening)" }, { kr: "با احترام", rom: "baa eh-ti-RAAM", en: "sincerely (formal closing)" }]
+      },
+      {
+        tier: "advanced", title: "Slang & Internet Terms", icon: "📲", words: [
+          { kr: "زبردست", rom: "za-bar-DAST", en: "awesome" }, { kr: "واقعا", rom: "waa-qi-AN", en: "really / truly" },
+          { kr: "باش", rom: "baash", en: "OK / alright" }, { kr: "غم نیست", rom: "gham neyst", en: "no worries" },
+          { kr: "OK", rom: "oh-KAY", en: "OK" }, { kr: "چه حال انت", rom: "cheh haal ant", en: "what's up (casual greeting)" }]
+      },
+      {
+        tier: "advanced", title: "Culture & History", icon: "🏛️", words: [
+          { kr: "چاپ", rom: "chaap", en: "chap (a traditional Balochi dance)" }, { kr: "لوکی قصه", rom: "lo-KEE qis-SA", en: "folklore" },
+          { kr: "دستوری نچ", rom: "das-too-REE nach", en: "traditional dance" }, { kr: "آزادی", rom: "aa-ZAA-dee", en: "independence" },
+          { kr: "فرهنگ", rom: "far-HANG", en: "culture" }, { kr: "تاریخ", rom: "taa-REEKH", en: "history" }]
+      },
+      {
+        tier: "advanced", title: "Advanced Verbs", icon: "💪", words: [
+          { kr: "رسیدگ", rom: "ra-SEE-dag", en: "to achieve" }, { kr: "کامیاب بیگ", rom: "kaam-YAAB bee-AG", en: "to succeed" },
+          { kr: "ناکام بیگ", rom: "naa-KAAM bee-AG", en: "to fail" }, { kr: "به کنگ", rom: "beh ka-NAG", en: "to improve" },
+          { kr: "کوشش کنگ", rom: "ko-SHISH ka-NAG", en: "to struggle" }, { kr: "غالب بیگ", rom: "ghaa-LIB bee-AG", en: "to overcome" }]
+      },
+
+      /* ---------------- FLUENT ---------------- */
+      {
+        tier: "fluent", title: "Proverbs Part 1", icon: "📜", words: [
+          { kr: "چی کاریگ همی درویگ", rom: "chee kaa-REEG ha-MEE dar-WEEG", en: "as you sow, so shall you reap" },
+          { kr: "خالی برتن زیاد آواز کنت", rom: "khaa-LEE bar-TAN zee-AAD aa-WAAZ ka-NANT", en: "an empty vessel makes the most noise" },
+          { kr: "کجا اراده هست راه هم هست", rom: "ko-JAA i-raa-DA hast raah ham hast", en: "where there's a will, there's a way" },
+          { kr: "خپلمنځي مرسته قوت انت", rom: "khpal-man-DZEE mar-STA quw-WAT ant", en: "mutual help is strength" },
+          { kr: "تمرین آدم ه کامل کنت", rom: "tam-REEN aa-DAM a kaa-MIL ka-NANT", en: "practice makes a person perfect" },
+          { kr: "وخت گپترین مچین انت", rom: "wakht gap-ta-REEN ma-CHEEN ant", en: "time is the greatest teacher" }]
+      },
+      {
+        tier: "fluent", title: "Literary Expressions", icon: "🖋️", words: [
+          { kr: "شاعر", rom: "shaa-AIR", en: "poet" }, { kr: "شعر", rom: "sheh-AIR", en: "poem" },
+          { kr: "قصه", rom: "qis-SA", en: "narrative / story" }, { kr: "قسمت", rom: "qis-MAT", en: "fate / destiny" },
+          { kr: "عشقی قصه", rom: "esh-QEE qis-SA", en: "romance" }, { kr: "استعاره", rom: "is-te-AA-ra", en: "metaphor" }]
+      },
+      {
+        tier: "fluent", title: "Proverbs Part 2", icon: "🪞", words: [
+          { kr: "کم کم رود بیت", rom: "kam kam rod beet", en: "little by little, a river forms" },
+          { kr: "خاموشی نیم رضایت انت", rom: "khaa-MO-shee neem ri-zaa-YAT ant", en: "silence is half consent" },
+          { kr: "کتاب ه جلد ز مه سنجید", rom: "ki-TAAB a jild za ma san-JEED", en: "don't judge a book by its cover" },
+          { kr: "پچی پاد ه خپل تبر زنگ", rom: "pa-CHEE paad a khpal ta-BAR za-NAG", en: "to strike one's own foot with an axe (self-sabotage)" },
+          { kr: "دیوالان ام گوش هست", rom: "dee-WAA-laan am gosh hast", en: "even walls have ears" },
+          { kr: "یک کوچک غلطی گپ مسله بیت", rom: "yak koo-CHAK ghal-TEE gap mas-a-LA beet", en: "a small mistake can become a big problem" }]
+      },
+      {
+        tier: "fluent", title: "Political & Social Terms", icon: "🏛️", words: [
+          { kr: "سیاست", rom: "si-YAA-sat", en: "politics" }, { kr: "حکومت", rom: "hu-koo-MAT", en: "government" },
+          { kr: "انتخابات", rom: "in-ti-khaa-BAAT", en: "elections" }, { kr: "دیموکراسی", rom: "de-mo-kraa-SEE", en: "democracy" },
+          { kr: "حقوق", rom: "hu-QOOQ", en: "rights" }, { kr: "برابری", rom: "ba-raa-BA-ree", en: "equality" }]
+      },
+      {
+        tier: "fluent", title: "Psychology & Nuance", icon: "🧠", words: [
+          { kr: "آگاهی", rom: "aa-gaa-HEE", en: "consciousness" }, { kr: "ناخودآگاه", rom: "naa-khod-aa-GAAH", en: "subconscious" },
+          { kr: "خود باوری", rom: "khod baa-WA-ree", en: "self-confidence" }, { kr: "همدردی", rom: "ham-dar-DEE", en: "empathy" },
+          { kr: "اضطراب", rom: "iz-ti-RAAB", en: "anxiety" }, { kr: "تاب آوری", rom: "taab aa-WA-ree", en: "resilience" }]
+      },
+      {
+        tier: "fluent", title: "Business Negotiation", icon: "🤝", words: [
+          { kr: "پیشنهاد", rom: "pesh-ni-HAAD", en: "offer" }, { kr: "متقابل پیشنهاد", rom: "mo-ta-QAA-bil pesh-ni-HAAD", en: "counteroffer" },
+          { kr: "سازش", rom: "saa-ZISH", en: "compromise" }, { kr: "منافع", rom: "ma-naa-FE", en: "interests" },
+          { kr: "گپ زانگی حالت", rom: "gup ZAAN-a-gee HAA-lat", en: "bargaining position" }, { kr: "دستخط کنگ", rom: "das-KHAT ka-NAG", en: "to sign" }]
+      },
+      {
+        tier: "fluent", title: "Academic Balochi", icon: "🎓", words: [
+          { kr: "تحقیق", rom: "tah-QEEQ", en: "research" }, { kr: "نظریه", rom: "na-za-REE-a", en: "theory" },
+          { kr: "مقاله", rom: "ma-QAA-la", en: "essay" }, { kr: "فرضیه", rom: "far-ZEE-a", en: "hypothesis" },
+          { kr: "منبع", rom: "man-BA", en: "source" }, { kr: "نتیجه", rom: "na-TEE-ja", en: "conclusion" }]
+      },
+      {
+        tier: "fluent", title: "Poetic & Formal Writing", icon: "🕊️", words: [
+          { kr: "بیت", rom: "bait", en: "verse" }, { kr: "قافیه", rom: "qaa-fee-A", en: "rhyme" },
+          { kr: "تشبیه", rom: "tash-BEE", en: "simile" }, { kr: "زیبایی", rom: "zee-baa-YEE", en: "beauty" },
+          { kr: "خاموشی", rom: "khaa-mo-SHEE", en: "silence" }, { kr: "ابدیت", rom: "a-ba-DEE-yat", en: "eternity" }]
+      },
+      {
+        tier: "fluent", title: "Regional Flavor", icon: "🗺️", words: [
+          { kr: "کویته", rom: "kwet-TA", en: "Quetta" }, { kr: "زاهدان", rom: "zaa-he-DAAN", en: "Zahedan" },
+          { kr: "دیه", rom: "DEH-ah", en: "village" }, { kr: "ساحل", rom: "saa-HIL", en: "coast" },
+          { kr: "لوکی فرهنگ", rom: "lo-KEE far-HANG", en: "folk culture" }, { kr: "جشن", rom: "jashn", en: "festival" }]
+      },
+      {
+        tier: "fluent", title: "Complex Grammar: Ergativity", icon: "🧩", words: [
+          { kr: "فاعل", rom: "faa-EL", en: "the subject marker" }, { kr: "مفعول", rom: "maf-OOL", en: "the object marker" },
+          { kr: "ارگتیو حالت", rom: "er-ga-TEEV HAA-lat", en: "the ergative case (used with past transitive verbs)" }, { kr: "فعل", rom: "fe-AL", en: "verb" },
+          { kr: "اسم", rom: "ism", en: "noun" }, { kr: "صفت", rom: "si-FAT", en: "adjective" }]
+      },
+      {
+        tier: "fluent", title: "More Proverbs", icon: "📖", words: [
+          { kr: "هرکه دگه ره گودار کنت خپل ام کپیت", rom: "har-ke di-GA ra go-DAAR ka-NANT khpal am ka-PEET", en: "he who digs a pit for others falls into it himself" },
+          { kr: "هرچی زیاد وارگ زیاد میل کنت", rom: "har-CHEE zee-AAD WAAR-ag zee-AAD meyl ka-NANT", en: "the more you eat, the more you want" },
+          { kr: "همه راه ه روم برسنت", rom: "ha-MA raah a rom bar-a-SANT", en: "all roads lead to Rome" },
+          { kr: "دود بی آتش نیست", rom: "dood bee AA-tash neyst", en: "there's no smoke without fire" },
+          { kr: "کند مگر یقین بهتر ز تیز و غلط", rom: "kund ma-GAR ya-QEEN beh-TAR za teyz o ghalat", en: "slow but sure beats fast but mistaken" },
+          { kr: "تمرین ماهریت پیدا کنت", rom: "tam-REEN maa-hi-YAT pai-DAA ka-NANT", en: "practice creates mastery" }]
+      },
+      {
+        tier: "fluent", title: "Professional Terms", icon: "⚖️", words: [
+          { kr: "وکیل", rom: "wa-KEEL", en: "lawyer" }, { kr: "عدالتی کاروایی", rom: "e-daa-la-TEE kaar-waa-EE", en: "court proceedings" },
+          { kr: "مسولیت", rom: "ma-soo-lee-YAT", en: "responsibility" }, { kr: "لیاقت", rom: "lee-YAA-qat", en: "qualification" },
+          { kr: "کاری تجربه", rom: "KAA-ree taj-RI-ba", en: "work experience" }, { kr: "سفارش", rom: "se-faa-RISH", en: "recommendation" }]
+      },
+      {
+        tier: "fluent", title: "Mastery Review", icon: "🏆", words: [
+          { kr: "تجربه", rom: "taj-RI-ba", en: "experience" }, { kr: "کامیابی", rom: "kaam-yaa-BEE", en: "success" },
+          { kr: "دانش", rom: "daa-NISH", en: "knowledge" }, { kr: "پوهیدن", rom: "po-hee-DAN", en: "understanding" },
+          { kr: "پیشرفت", rom: "peesh-ra-FAT", en: "progress" }, { kr: "استعداد", rom: "is-te-DAAD", en: "talent" }]
+      },
+    ];
+
+    const TIERS_SD = TIERS;
+    const LEVELS_SD = [
+      {
+        tier: "beginner", title: "Sindhi Basics", icon: "🇵🇰", words: [
+          { kr: "السلام عليڪم", rom: "as-sa-LAAM a-LAI-kum", en: "hello" }, { kr: "مهرباني", rom: "mehr-baa-NEE", en: "thank you" },
+          { kr: "ها", rom: "haa", en: "yes" }, { kr: "نه", rom: "na", en: "no" },
+          { kr: "نالو", rom: "NAA-lo", en: "name" }, { kr: "دوست", rom: "dost", en: "friend" }]
+      },
+      {
+        tier: "beginner", title: "Greetings & Manners", icon: "🙏", words: [
+          { kr: "خدا حافظ", rom: "khu-daa HAA-fiz", en: "goodbye" }, { kr: "مُعاف ڪجو", rom: "mu-AAF ki-jo", en: "I'm sorry" },
+          { kr: "معاف ڪجو", rom: "ma-AAF ki-jo", en: "excuse me" }, { kr: "توهان سان مِلي خوشي ٿي", rom: "to-HAAN saan mi-LI khu-SHI thi", en: "nice to meet you" },
+          { kr: "ٺيڪ آهي", rom: "theek AA-hi", en: "it's okay" }, { kr: "مهرباني ڪري", rom: "mehr-baa-NEE ka-ri", en: "please" }]
+      },
+      {
+        tier: "beginner", title: "Numbers 1-6", icon: "🔢", words: [
+          { kr: "هڪ", rom: "hik", en: "one" }, { kr: "ٻه", rom: "bay", en: "two" },
+          { kr: "ٽي", rom: "tay", en: "three" }, { kr: "چار", rom: "chaar", en: "four" },
+          { kr: "پنج", rom: "panj", en: "five" }, { kr: "ڇهه", rom: "chhah", en: "six" }]
+      },
+      {
+        tier: "beginner", title: "Days & Time", icon: "🕒", words: [
+          { kr: "اڄ", rom: "aj", en: "today" }, { kr: "سڀاڻي", rom: "sub-HAA-ni", en: "tomorrow" },
+          { kr: "ڪالهه", rom: "KAAL-hu", en: "yesterday" }, { kr: "هاڻي", rom: "HAA-ni", en: "now" },
+          { kr: "وقت", rom: "wakht", en: "time" }, { kr: "صبح", rom: "su-BAH", en: "morning" }]
+      },
+      {
+        tier: "beginner", title: "Family", icon: "👪", words: [
+          { kr: "خاندان", rom: "khaan-DAAN", en: "family" }, { kr: "امان", rom: "a-MAAN", en: "mom" },
+          { kr: "ابا", rom: "A-baa", en: "dad" }, { kr: "ڀاءُ", rom: "bhaa-oo", en: "brother" },
+          { kr: "ڀيڻ", rom: "BHEN", en: "sister" }, { kr: "ڏاڏو", rom: "DHAA-dho", en: "grandfather" }]
+      },
+      {
+        tier: "beginner", title: "Food & Drink", icon: "🍚", words: [
+          { kr: "طعام", rom: "ta-AAM", en: "food" }, { kr: "پاڻي", rom: "PAA-ni", en: "water" },
+          { kr: "ڪافي", rom: "KAA-fi", en: "coffee" }, { kr: "ماني", rom: "MAA-ni", en: "bread" },
+          { kr: "چانور", rom: "chaa-WAR", en: "rice" }, { kr: "لذيذ", rom: "la-ZEEZ", en: "delicious" }]
+      },
+      {
+        tier: "beginner", title: "Colors", icon: "🎨", words: [
+          { kr: "ڳاڙهو", rom: "GAA-rho", en: "red" }, { kr: "نيرو", rom: "NEE-ro", en: "blue" },
+          { kr: "پيلو", rom: "PAY-lo", en: "yellow" }, { kr: "سائو", rom: "SAA-o", en: "green" },
+          { kr: "ڪارو", rom: "KAA-ro", en: "black" }, { kr: "اڇو", rom: "A-chho", en: "white" }]
+      },
+      {
+        tier: "beginner", title: "Body Parts", icon: "🧍", words: [
+          { kr: "مٿو", rom: "MU-tho", en: "head" }, { kr: "هٿ", rom: "hath", en: "hand" },
+          { kr: "اک", rom: "akh", en: "eye" }, { kr: "نڪ", rom: "nak", en: "nose" },
+          { kr: "وات", rom: "waat", en: "mouth" }, { kr: "ٽنگ", rom: "tang", en: "leg" }]
+      },
+      {
+        tier: "beginner", title: "Animals", icon: "🐾", words: [
+          { kr: "ڪتو", rom: "KU-to", en: "dog" }, { kr: "ٻلي", rom: "BIL-li", en: "cat" },
+          { kr: "پکي", rom: "PA-khi", en: "bird" }, { kr: "مڇي", rom: "MA-chhi", en: "fish" },
+          { kr: "گهوڙو", rom: "GHO-rho", en: "horse" }, { kr: "خرگوش", rom: "khar-GOSH", en: "rabbit" }]
+      },
+      {
+        tier: "beginner", title: "Clothing", icon: "👕", words: [
+          { kr: "ڪپڙا", rom: "kap-RHAA", en: "clothes" }, { kr: "بوٽ", rom: "boot", en: "shoes" },
+          { kr: "ٽوپي", rom: "TO-pi", en: "hat" }, { kr: "پاجامو", rom: "paa-JAA-mo", en: "pants" },
+          { kr: "چولي", rom: "CHO-li", en: "skirt" }, { kr: "ٿيلهو", rom: "THAY-lho", en: "bag" }]
+      },
+      {
+        tier: "beginner", title: "Weather", icon: "⛅", words: [
+          { kr: "موسم", rom: "MOU-sam", en: "weather" }, { kr: "مينهن", rom: "MAY-hn", en: "rain" },
+          { kr: "برف", rom: "barf", en: "snow" }, { kr: "هوا", rom: "ha-WAA", en: "wind" },
+          { kr: "گرمي آهي", rom: "GAR-mi AA-hi", en: "it's hot" }, { kr: "ٿڌ آهي", rom: "THA-dh AA-hi", en: "it's cold" }]
+      },
+      {
+        tier: "beginner", title: "House & Rooms", icon: "🏠", words: [
+          { kr: "گهر", rom: "ghar", en: "house" }, { kr: "ڪمرو", rom: "KAM-ro", en: "room" },
+          { kr: "بسترو", rom: "bis-TA-ro", en: "bed" }, { kr: "غسل خانو", rom: "ghusl-khaa-NO", en: "bathroom" },
+          { kr: "بورچي خانو", rom: "bor-chi-khaa-NO", en: "kitchen" }, { kr: "دروازو", rom: "dar-WAA-zo", en: "door" }]
+      },
+      {
+        tier: "beginner", title: "School & Objects", icon: "🎒", words: [
+          { kr: "اسڪول", rom: "is-KOOL", en: "school" }, { kr: "ڪتاب", rom: "ki-TAAB", en: "book" },
+          { kr: "پينسل", rom: "PEN-sil", en: "pencil" }, { kr: "اسڪول ٿيلهو", rom: "is-KOOL THAY-lho", en: "backpack" },
+          { kr: "استاد", rom: "us-TAAD", en: "teacher" }, { kr: "شاگرد", rom: "shaa-GIRD", en: "student" }]
+      },
+
+      /* ---------------- INTERMEDIATE ---------------- */
+      {
+        tier: "intermediate", title: "Feelings & Emotions", icon: "💗", words: [
+          { kr: "خوش", rom: "khush", en: "happy" }, { kr: "ڏکويل", rom: "dha-kho-YAL", en: "sad" },
+          { kr: "ناراض", rom: "naa-RAAZ", en: "angry" }, { kr: "ٿڪل", rom: "THAK-al", en: "tired" },
+          { kr: "پرجوش", rom: "par-JOSH", en: "excited" }, { kr: "پريشان", rom: "pa-ray-SHAAN", en: "nervous" }]
+      },
+      {
+        tier: "intermediate", title: "Directions & Places", icon: "🧭", words: [
+          { kr: "کاٻي", rom: "KHAA-bi", en: "left" }, { kr: "ساڄي", rom: "SAA-ji", en: "right" },
+          { kr: "سِڌو", rom: "SI-dho", en: "straight ahead" }, { kr: "ويجهو", rom: "vay-JHO", en: "near" },
+          { kr: "پري", rom: "pa-RI", en: "far" }, { kr: "هتي", rom: "HA-ti", en: "here" }]
+      },
+      {
+        tier: "intermediate", title: "Shopping", icon: "🛍️", words: [
+          { kr: "خريد ڪرڻ", rom: "kha-REED ka-ran", en: "to buy" }, { kr: "پئسا", rom: "PAI-saa", en: "money" },
+          { kr: "مهانگو", rom: "meh-AAN-go", en: "expensive" }, { kr: "سستو", rom: "SAS-to", en: "cheap" },
+          { kr: "دڪان", rom: "du-KAAN", en: "store" }, { kr: "ادا ڪرڻ", rom: "a-DAA ka-ran", en: "to pay" }]
+      },
+      {
+        tier: "intermediate", title: "Transportation", icon: "🚌", words: [
+          { kr: "ڪار", rom: "kaar", en: "car" }, { kr: "بس", rom: "bas", en: "bus" },
+          { kr: "ريل", rom: "reyl", en: "train" }, { kr: "جهاز", rom: "ja-HAAZ", en: "airplane" },
+          { kr: "سائيڪل", rom: "SAAI-kal", en: "bicycle" }, { kr: "سفر ڪرڻ", rom: "sa-FAR ka-ran", en: "to travel" }]
+      },
+      {
+        tier: "intermediate", title: "Hobbies", icon: "🎸", words: [
+          { kr: "پڙهڻ", rom: "PARH-an", en: "to read" }, { kr: "ترڻ", rom: "TAR-an", en: "to swim" },
+          { kr: "نچڻ", rom: "NACH-an", en: "to dance" }, { kr: "ڳائڻ", rom: "GAA-an", en: "to sing" },
+          { kr: "پينٽنگ ڪرڻ", rom: "PAIN-ting ka-ran", en: "to paint" }, { kr: "شوق", rom: "shouq", en: "hobby" }]
+      },
+      {
+        tier: "intermediate", title: "Work & Jobs", icon: "💼", words: [
+          { kr: "ڪم", rom: "kam", en: "job" }, { kr: "ڊاڪٽر", rom: "DAAK-tar", en: "doctor" },
+          { kr: "انجنيئر", rom: "in-ji-NEER", en: "engineer" }, { kr: "مالڪ", rom: "MAA-lik", en: "boss" },
+          { kr: "پگهار", rom: "pa-GHAAR", en: "salary" }, { kr: "آفيس", rom: "AA-fis", en: "office" }]
+      },
+      {
+        tier: "intermediate", title: "Health & Body", icon: "🩺", words: [
+          { kr: "بيمار", rom: "bee-MAAR", en: "sick" }, { kr: "صحتمند", rom: "sih-hat-MAND", en: "healthy" },
+          { kr: "دوا", rom: "da-WAA", en: "medicine" }, { kr: "اسپتال", rom: "is-pa-TAAL", en: "hospital" },
+          { kr: "سور", rom: "sor", en: "pain" }, { kr: "آرام ڪرڻ", rom: "aa-RAAM ka-ran", en: "to rest" }]
+      },
+      {
+        tier: "intermediate", title: "Technology", icon: "📱", words: [
+          { kr: "فون", rom: "phone", en: "phone" }, { kr: "ڪمپيوٽر", rom: "kam-pyoo-tar", en: "computer" },
+          { kr: "انٽرنيٽ", rom: "in-tar-NET", en: "internet" }, { kr: "پيغام موڪلڻ", rom: "pai-GHAAM MOK-lan", en: "to text" },
+          { kr: "ايپ", rom: "app", en: "app" }, { kr: "بيٽري", rom: "BAT-ree", en: "battery" }]
+      },
+      {
+        tier: "intermediate", title: "Sports", icon: "⚽", words: [
+          { kr: "فٽبال", rom: "FOOT-baal", en: "soccer" }, { kr: "ڊوڙڻ", rom: "DHOR-an", en: "to run" },
+          { kr: "بال", rom: "baal", en: "ball" }, { kr: "ٽيم", rom: "team", en: "team" },
+          { kr: "کٽڻ", rom: "KHAT-an", en: "to win" }, { kr: "هارڻ", rom: "HAAR-an", en: "to lose" }]
+      },
+      {
+        tier: "intermediate", title: "Nature", icon: "🌳", words: [
+          { kr: "وڻ", rom: "wan", en: "tree" }, { kr: "جبل", rom: "ja-BAL", en: "mountain" },
+          { kr: "درياءُ", rom: "dar-YAA-oo", en: "river" }, { kr: "سمنڊ", rom: "sa-MUND", en: "ocean" },
+          { kr: "ٻيلو", rom: "BAY-lo", en: "forest" }, { kr: "آسمان", rom: "aas-MAAN", en: "sky" }]
+      },
+      {
+        tier: "intermediate", title: "Numbers & Time", icon: "🔟", words: [
+          { kr: "ست", rom: "sat", en: "seven" }, { kr: "اٺ", rom: "aath", en: "eight" },
+          { kr: "نو", rom: "no", en: "nine" }, { kr: "ڏهه", rom: "dhah", en: "ten" },
+          { kr: "ڪلاڪ", rom: "ka-LAAK", en: "hour" }, { kr: "منٽ", rom: "min-UT", en: "minute" }]
+      },
+      {
+        tier: "intermediate", title: "Making Plans", icon: "📅", words: [
+          { kr: "منصوبو ٺاهڻ", rom: "man-SOO-bo THAA-han", en: "to plan" }, { kr: "اڄ رات", rom: "aj raat", en: "tonight" },
+          { kr: "هفتي جو آخر", rom: "haf-ti jo AA-khir", en: "weekend" }, { kr: "ملڻ", rom: "MIL-an", en: "to meet" },
+          { kr: "شيڊول", rom: "SCHED-ule", en: "schedule" }, { kr: "واندو وقت", rom: "WAAN-dho wakht", en: "free time" }]
+      },
+      {
+        tier: "intermediate", title: "Restaurant & Ordering", icon: "🍽️", words: [
+          { kr: "مينيو", rom: "MEN-yoo", en: "menu" }, { kr: "آرڊر ڪرڻ", rom: "OR-dar ka-ran", en: "to order" },
+          { kr: "بل", rom: "bill", en: "check/bill" }, { kr: "ويٽر", rom: "WAY-tar", en: "waiter" },
+          { kr: "ميز", rom: "meyz", en: "table" }, { kr: "مزيدار", rom: "ma-ze-DAAR", en: "tasty" }]
+      },
+
+      /* ---------------- ADVANCED ---------------- */
+      {
+        tier: "advanced", title: "Connectors & Grammar", icon: "🔗", words: [
+          { kr: "پر", rom: "par", en: "but" }, { kr: "ڪيونڪه", rom: "kyoon-ke", en: "because" },
+          { kr: "تنهنڪري", rom: "tun-hun-ka-RI", en: "therefore" }, { kr: "جيتوڻيڪ", rom: "jay-to-NIK", en: "although" },
+          { kr: "۽", rom: "ain", en: "and" }, { kr: "يا", rom: "yaa", en: "or" }]
+      },
+      {
+        tier: "advanced", title: "Business Sindhi", icon: "🏢", words: [
+          { kr: "ميٽنگ", rom: "MEET-ing", en: "meeting" }, { kr: "معاهدو", rom: "mu-AA-hi-do", en: "contract" },
+          { kr: "گراهڪ", rom: "gra-HAK", en: "client" }, { kr: "آخري تاريخ", rom: "AA-kha-ri taa-REEKH", en: "deadline" },
+          { kr: "منصوبو", rom: "man-SOO-bo", en: "project" }, { kr: "ڳالهه ٻولهه", rom: "GAA-lah BO-lah", en: "negotiation" }]
+      },
+      {
+        tier: "advanced", title: "News & Media", icon: "📰", words: [
+          { kr: "خبرون", rom: "kha-ba-ROON", en: "news" }, { kr: "اخبار", rom: "akh-BAAR", en: "newspaper" },
+          { kr: "صحافي", rom: "sa-HAA-fi", en: "journalist" }, { kr: "رپورٽ ڪرڻ", rom: "re-PORT ka-ran", en: "to report" },
+          { kr: "سرخي", rom: "sur-KHI", en: "headline" }, { kr: "واقعو", rom: "waa-QI-o", en: "event" }]
+      },
+      {
+        tier: "advanced", title: "Nuanced Emotions", icon: "🌫️", words: [
+          { kr: "ياد ڪرڻ", rom: "yaad ka-ran", en: "to miss (someone)" }, { kr: "پڇتاءُ", rom: "pa-chha-TAA-oo", en: "regret" },
+          { kr: "آرام", rom: "aa-RAAM", en: "relief" }, { kr: "خواهش", rom: "khwaa-HISH", en: "longing" },
+          { kr: "اميد", rom: "u-MEED", en: "hope" }, { kr: "مايوسي", rom: "maa-yoo-SI", en: "disappointment" }]
+      },
+      {
+        tier: "advanced", title: "Idioms: Everyday Life", icon: "🫴", words: [
+          { kr: "هڪ پٿر سان ٻه پکي مارڻ", rom: "hik pa-thar saan bay pa-khi MAAR-an", en: "to kill two birds with one stone" },
+          { kr: "وڏو دل هجڻ", rom: "wa-DHO dil hi-jan", en: "to have a big heart (to be generous)" },
+          { kr: "اکيون بند ڪرڻ", rom: "a-khi-YOON band ka-ran", en: "to close one's eyes (to ignore)" },
+          { kr: "سخت محنت ڪرڻ", rom: "sakht meh-NAT ka-ran", en: "to work hard" },
+          { kr: "دل ڏکارجڻ", rom: "dil dha-KHAA-ran", en: "for one's heart to feel hurt" },
+          { kr: "اکيون کولڻ", rom: "a-khi-YOON KHOL-an", en: "to open one's eyes (to become aware)" }]
+      },
+      {
+        tier: "advanced", title: "Idioms: Wisdom & Weather", icon: "🌧️", words: [
+          { kr: "مينهن کان پوءِ سج", rom: "MAY-hn khaan po sooj", en: "sunshine after the rain" },
+          { kr: "صبر ڪاميابيءَ جي ڪنجي آهي", rom: "sabr kaa-mi-yaa-BI ji kun-JI AA-hi", en: "patience is the key to success" },
+          { kr: "تڪڙ شيطان جو ڪم آهي", rom: "ta-kar shai-TAAN jo kam AA-hi", en: "haste is the devil's work" },
+          { kr: "اتحاد ۾ طاقت آهي", rom: "it-ti-HAAD men taa-QAT AA-hi", en: "unity is strength" },
+          { kr: "وقت سون کان به قيمتي آهي", rom: "wakht son khaan bhi qi-MA-ti AA-hi", en: "time is more precious than gold" },
+          { kr: "ڦڙي ڦڙي ڍنڍ ٿئي", rom: "phu-RHI phu-RHI dhandh THI", en: "drop by drop, a pond fills up" }]
+      },
+      {
+        tier: "advanced", title: "Travel Advanced", icon: "🛂", words: [
+          { kr: "پاسپورٽ", rom: "PAAS-port", en: "passport" }, { kr: "ڪسٽم", rom: "KUS-tam", en: "customs" },
+          { kr: "سامان", rom: "saa-MAAN", en: "luggage" }, { kr: "جهاز جي دير", rom: "ja-HAAZ ji dair", en: "flight delay" },
+          { kr: "ريزرويشن", rom: "re-zer-VAY-shan", en: "reservation" }, { kr: "ويزا", rom: "VEE-zaa", en: "visa" }]
+      },
+      {
+        tier: "advanced", title: "Relationships", icon: "💌", words: [
+          { kr: "پيار", rom: "pyaar", en: "love" }, { kr: "دوستي", rom: "dos-TI", en: "friendship" },
+          { kr: "اعتماد", rom: "e-ti-MAAD", en: "trust" }, { kr: "شادي", rom: "SHAA-di", en: "marriage" },
+          { kr: "عليحدگي", rom: "a-lai-hi-DA-gi", en: "to break up" }, { kr: "خواهش ڪرڻ", rom: "khwaa-HISH ka-ran", en: "to long for" }]
+      },
+      {
+        tier: "advanced", title: "Debate & Opinions", icon: "🗣️", words: [
+          { kr: "راءِ", rom: "raa-i", en: "opinion" }, { kr: "متفق ٿيڻ", rom: "mu-TA-fiq thi-yan", en: "to agree" },
+          { kr: "اختلاف ڪرڻ", rom: "ikh-ti-LAAF ka-ran", en: "to disagree" }, { kr: "بحث", rom: "bahs", en: "argument" },
+          { kr: "نقطه نظر", rom: "NUQ-ta na-ZAR", en: "point of view" }, { kr: "قائل ڪرڻ", rom: "QAA-il ka-ran", en: "to convince" }]
+      },
+      {
+        tier: "advanced", title: "Formal Speech & Register", icon: "🎩", words: [
+          { kr: "تون", rom: "toon", en: "informal 'you'" }, { kr: "توهان", rom: "to-HAAN", en: "formal/plural 'you'" },
+          { kr: "صاحب", rom: "SAA-hib", en: "Mr. / sir" }, { kr: "بيگم", rom: "BAY-gam", en: "Mrs. / madam" },
+          { kr: "محترم", rom: "moh-ta-RAM", en: "dear (formal letter opening)" }, { kr: "والسلام", rom: "vas-sa-LAAM", en: "sincerely (formal closing)" }]
+      },
+      {
+        tier: "advanced", title: "Slang & Internet Terms", icon: "📲", words: [
+          { kr: "زبردست", rom: "zab-ar-DAST", en: "awesome" }, { kr: "واقعي", rom: "waa-QI-i", en: "really / truly" },
+          { kr: "ٺيڪ", rom: "theek", en: "OK / alright" }, { kr: "ڪا ڳالهه ناهي", rom: "ka GAA-lah NAA-hi", en: "no worries" },
+          { kr: "OK", rom: "oh-KAY", en: "OK" }, { kr: "ڪهڙو حال آهي", rom: "ka-hi-RHO haal AA-hi", en: "what's up (casual greeting)" }]
+      },
+      {
+        tier: "advanced", title: "Culture & History", icon: "🏛️", words: [
+          { kr: "اجرڪ", rom: "aj-RAK", en: "ajrak (a traditional Sindhi printed cloth)" }, { kr: "لوڪ ڪهاڻيون", rom: "lok ka-haa-ni-YOON", en: "folklore" },
+          { kr: "روايتي نچ", rom: "ri-vaa-YA-ti nach", en: "traditional dance" }, { kr: "آزادي", rom: "aa-ZAA-di", en: "independence" },
+          { kr: "ثقافت", rom: "sa-QAA-fat", en: "culture" }, { kr: "تاريخ", rom: "taa-REEKH", en: "history" }]
+      },
+      {
+        tier: "advanced", title: "Advanced Verbs", icon: "💪", words: [
+          { kr: "حاصل ڪرڻ", rom: "HAA-sil ka-ran", en: "to achieve" }, { kr: "ڪامياب ٿيڻ", rom: "kaa-mi-YAAB thi-yan", en: "to succeed" },
+          { kr: "ناڪام ٿيڻ", rom: "naa-KAAM thi-yan", en: "to fail" }, { kr: "بهتر بڻائڻ", rom: "beh-tar ba-NAA-an", en: "to improve" },
+          { kr: "جدوجهد ڪرڻ", rom: "jad-o-ja-HAD ka-ran", en: "to struggle" }, { kr: "غالب ٿيڻ", rom: "GHAA-lib thi-yan", en: "to overcome" }]
+      },
+
+      /* ---------------- FLUENT ---------------- */
+      {
+        tier: "fluent", title: "Proverbs Part 1", icon: "📜", words: [
+          { kr: "جيئن پوکبو تيئن لڻبو", rom: "ji-en pok-BO ti-en lan-BO", en: "as you sow, so shall you reap" },
+          { kr: "خالي ٿانءُ وڌيڪ آواز ڪري ٿو", rom: "khaa-LI thaan-oo va-dhi-KI aa-WAAZ ka-ri tho", en: "an empty vessel makes the most noise" },
+          { kr: "جتي ارادو آهي اتي رستو آهي", rom: "ja-TI i-RAA-do AA-hi a-TI ras-TO AA-hi", en: "where there's a will, there's a way" },
+          { kr: "گڏيل جدوجهد طاقت آهي", rom: "ga-DHIL jad-o-ja-HAD taa-QAT AA-hi", en: "collective effort is strength" },
+          { kr: "مشق ماڻهوءَ کي مڪمل بڻائي ٿي", rom: "mashq maa-hoo ki mu-KA-mal ba-NAA-i thi", en: "practice makes a person perfect" },
+          { kr: "وقت وڏو استاد آهي", rom: "wakht wa-DHO us-TAAD AA-hi", en: "time is the greatest teacher" }]
+      },
+      {
+        tier: "fluent", title: "Literary Expressions", icon: "🖋️", words: [
+          { kr: "شاعر", rom: "shaa-AIR", en: "poet" }, { kr: "شعر", rom: "sheh-AIR", en: "poem" },
+          { kr: "ڪهاڻي", rom: "ka-HAA-ni", en: "narrative / story" }, { kr: "قسمت", rom: "qis-MAT", en: "fate / destiny" },
+          { kr: "پيار جي ڪهاڻي", rom: "pyaar ji ka-HAA-ni", en: "romance" }, { kr: "استعارو", rom: "is-ti-AA-ro", en: "metaphor" }]
+      },
+      {
+        tier: "fluent", title: "Proverbs Part 2", icon: "🪞", words: [
+          { kr: "ٿورو ٿورو ڪري درياءُ ٿئي ٿو", rom: "THO-ro THO-ro ka-ri dar-YAA-oo THI tho", en: "little by little, a river forms" },
+          { kr: "خاموشي اڌ رضامندي آهي", rom: "khaa-mo-SHI adh ri-zaa-man-DI AA-hi", en: "silence is half consent" },
+          { kr: "ڪتاب کي جلد کان نه پرکيو", rom: "ki-TAAB ki jild khaan na par-KHYO", en: "don't judge a book by its cover" },
+          { kr: "پنهنجي پيرن تي پاڻ ڪهاڙي هڻڻ", rom: "pun-hin-ji pai-RAN ti paan ka-HAA-rhi ha-nan", en: "to strike one's own foot with an axe (self-sabotage)" },
+          { kr: "ڀتين کي به ڪن هوندا آهن", rom: "bhi-tin ki bhi kan HON-da AA-hin", en: "even walls have ears" },
+          { kr: "ننڍڙي غلطي وڏو مسئلو بڻجي سگهي ٿي", rom: "nin-DHRI ghal-TI wa-DHO ma-SA-lo ban-JI sa-ghi thi", en: "a small mistake can become a big problem" }]
+      },
+      {
+        tier: "fluent", title: "Political & Social Terms", icon: "🏛️", words: [
+          { kr: "سياست", rom: "si-YAA-sat", en: "politics" }, { kr: "حڪومت", rom: "hu-koo-MAT", en: "government" },
+          { kr: "چونڊون", rom: "chon-DOON", en: "elections" }, { kr: "جمهوريت", rom: "jum-hoo-ri-YAT", en: "democracy" },
+          { kr: "حق", rom: "haq", en: "rights" }, { kr: "برابري", rom: "ba-RAA-ba-ri", en: "equality" }]
+      },
+      {
+        tier: "fluent", title: "Psychology & Nuance", icon: "🧠", words: [
+          { kr: "شعور", rom: "shu-OOR", en: "consciousness" }, { kr: "لاشعور", rom: "laa-shu-OOR", en: "subconscious" },
+          { kr: "خود اعتمادي", rom: "khud e-ti-maa-DI", en: "self-confidence" }, { kr: "همدردي", rom: "ham-dar-DI", en: "empathy" },
+          { kr: "پريشاني", rom: "pa-ray-SHAA-ni", en: "anxiety" }, { kr: "برداشت", rom: "bar-DAASHT", en: "resilience" }]
+      },
+      {
+        tier: "fluent", title: "Business Negotiation", icon: "🤝", words: [
+          { kr: "پيشڪش", rom: "PESH-kash", en: "offer" }, { kr: "جوابي پيشڪش", rom: "ja-VAA-bi PESH-kash", en: "counteroffer" },
+          { kr: "سمجهوتو", rom: "sam-JHO-to", en: "compromise" }, { kr: "مفاد", rom: "ma-FAAD", en: "interests" },
+          { kr: "ڳالهه ٻولهه جو مقام", rom: "GAA-lah BO-lah jo ma-QAAM", en: "bargaining position" }, { kr: "صحيح ڪرڻ", rom: "sa-HEEH ka-ran", en: "to sign" }]
+      },
+      {
+        tier: "fluent", title: "Academic Sindhi", icon: "🎓", words: [
+          { kr: "تحقيق", rom: "tah-QEEQ", en: "research" }, { kr: "نظريو", rom: "na-za-RI-o", en: "theory" },
+          { kr: "مضمون", rom: "maz-MOON", en: "essay" }, { kr: "مفروضو", rom: "maf-ROO-zo", en: "hypothesis" },
+          { kr: "ذريعو", rom: "za-RI-o", en: "source" }, { kr: "نتيجو", rom: "na-TI-jo", en: "conclusion" }]
+      },
+      {
+        tier: "fluent", title: "Poetic & Formal Writing", icon: "🕊️", words: [
+          { kr: "بيت", rom: "bait", en: "verse" }, { kr: "قافيو", rom: "qaa-FI-o", en: "rhyme" },
+          { kr: "تشبيهه", rom: "tash-BEEH", en: "simile" }, { kr: "خوبصورتي", rom: "khoob-soor-TI", en: "beauty" },
+          { kr: "خاموشي", rom: "khaa-mo-SHI", en: "silence" }, { kr: "ابديت", rom: "a-ba-DI-yat", en: "eternity" }]
+      },
+      {
+        tier: "fluent", title: "Regional Flavor", icon: "🗺️", words: [
+          { kr: "ڪراچي", rom: "ka-RAA-chi", en: "Karachi" }, { kr: "حيدرآباد", rom: "hai-dar-aa-BAAD", en: "Hyderabad" },
+          { kr: "ڳوٺ", rom: "GOTH", en: "village" }, { kr: "سامونڊي ڪناري", rom: "saa-mon-DI ki-NAA-ri", en: "coast" },
+          { kr: "لوڪ ثقافت", rom: "lok sa-QAA-fat", en: "folk culture" }, { kr: "ميلو", rom: "MAY-lo", en: "festival / fair" }]
+      },
+      {
+        tier: "fluent", title: "Complex Grammar: Ergativity", icon: "🧩", words: [
+          { kr: "ڪرتا", rom: "kar-TAA", en: "the subject marker" }, { kr: "ڪرم", rom: "kar-AM", en: "the object marker" },
+          { kr: "ماضي جو بيان", rom: "MAA-zi jo bi-YAAN", en: "the past-tense ergative construction" }, { kr: "فعل", rom: "fe-AL", en: "verb" },
+          { kr: "اسم", rom: "ism", en: "noun" }, { kr: "صفت", rom: "si-FAT", en: "adjective" }]
+      },
+      {
+        tier: "fluent", title: "More Proverbs", icon: "📖", words: [
+          { kr: "جيڪو ٻين لاءِ کڏ کوٽي ٿو، پاڻ ئي منجهس ڪري ٿو", rom: "ji-KO bi-in laa-i khadh KHO-ti tho paan ee man-jhas ka-RI tho", en: "he who digs a pit for others falls into it himself" },
+          { kr: "جيترو کائبو اوترو بک لڳندي", rom: "ji-ta-RO khaa-i-BO o-ta-RO bhukh la-GAN-di", en: "the more you eat, the more you want" },
+          { kr: "سڀ رستا روم ڏانهن وڃن ٿا", rom: "sabh ras-TAA rom dhaan-hin va-jan thaa", en: "all roads lead to Rome" },
+          { kr: "باهه کان سواءِ دونهون نه ٿيندو آهي", rom: "baah khaan si-vaa-i doon-HOON na THIN-do AA-hi", en: "there's no smoke without fire" },
+          { kr: "آهسته پر پڪو بهتر آهي تيز پر غلط کان", rom: "AAH-is-ta par pak-KO beh-TAR AA-hi teyz par ghalat khaan", en: "slow but sure beats fast but mistaken" },
+          { kr: "مشق مهارت پيدا ڪري ٿي", rom: "mashq ma-haa-RAT pai-DAA ka-ri thi", en: "practice creates mastery" }]
+      },
+      {
+        tier: "fluent", title: "Professional Terms", icon: "⚖️", words: [
+          { kr: "وڪيل", rom: "va-KEEL", en: "lawyer" }, { kr: "عدالتي ڪاروائي", rom: "a-daa-la-ti kaar-vaa-EE", en: "court proceedings" },
+          { kr: "ذميواري", rom: "za-mi-vaa-RI", en: "responsibility" }, { kr: "قابليت", rom: "qaa-bi-li-YAT", en: "qualification" },
+          { kr: "ڪم جو تجربو", rom: "kam jo taj-RU-bo", en: "work experience" }, { kr: "سفارش", rom: "si-faa-RISH", en: "recommendation" }]
+      },
+      {
+        tier: "fluent", title: "Mastery Review", icon: "🏆", words: [
+          { kr: "تجربو", rom: "taj-RU-bo", en: "experience" }, { kr: "ڪاميابي", rom: "kaa-mi-YAA-bi", en: "success" },
+          { kr: "علم", rom: "ilm", en: "knowledge" }, { kr: "سمجهه", rom: "sam-JHAH", en: "understanding" },
+          { kr: "ترقي", rom: "ta-ra-QI", en: "progress" }, { kr: "صلاحيت", rom: "sa-laa-hi-YAT", en: "talent" }]
+      },
+    ];
+
     const LEVELS_FR = [
       /* ---------------- BEGINNER ---------------- */
       {
@@ -24998,6 +26009,9 @@
     const ALL_VOCAB_NV = LEVELS_NV.flatMap(l => l.words);
     const ALL_VOCAB_TLH = LEVELS_TLH.flatMap(l => l.words);
     const ALL_VOCAB_VAL = LEVELS_VAL.flatMap(l => l.words);
+    const ALL_VOCAB_PS = LEVELS_PS.flatMap(l => l.words);
+    const ALL_VOCAB_BAL = LEVELS_BAL.flatMap(l => l.words);
+    const ALL_VOCAB_SD = LEVELS_SD.flatMap(l => l.words);
     function activeVocabPool() {
       const lang = (state.settings && state.settings.learningLang) || 'ko';
       if (lang === 'es') return ALL_VOCAB_ES;
@@ -25064,6 +26078,9 @@
       if (lang === 'nv') return ALL_VOCAB_NV;
       if (lang === 'tlh') return ALL_VOCAB_TLH;
       if (lang === 'val') return ALL_VOCAB_VAL;
+      if (lang === 'ps') return ALL_VOCAB_PS;
+      if (lang === 'bal') return ALL_VOCAB_BAL;
+      if (lang === 'sd') return ALL_VOCAB_SD;
       return ALL_VOCAB;
     }
     function activeChatTopics() {
@@ -25132,6 +26149,9 @@
       if (lang === 'nv') return NAVAJO_CHAT_TOPICS;
       if (lang === 'tlh') return KLINGON_CHAT_TOPICS;
       if (lang === 'val') return HIGHVALYRIAN_CHAT_TOPICS;
+      if (lang === 'ps') return PASHTO_CHAT_TOPICS;
+      if (lang === 'bal') return BALOCHI_CHAT_TOPICS;
+      if (lang === 'sd') return SINDHI_CHAT_TOPICS;
       return CHAT_TOPICS;
     }
     function escapeRegex(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
@@ -25405,7 +26425,10 @@
         te: ['Telugu Practice', 'Proficiency-style test questions'],
         nv: ['Navajo Practice', 'Proficiency-style test questions'],
         tlh: ['Klingon Practice', 'Proficiency-style test questions'],
-        val: ['High Valyrian Practice', 'Proficiency-style test questions']
+        val: ['High Valyrian Practice', 'Proficiency-style test questions'],
+        ps: ['Pashto Practice', 'Proficiency-style test questions'],
+        bal: ['Balochi Practice', 'Proficiency-style test questions'],
+        sd: ['Sindhi Practice', 'Proficiency-style test questions']
       };
       const topikTitle = document.getElementById('topikCardTitle');
       if (topikTitle) {
@@ -25479,7 +26502,10 @@
         te: ['Telugu Alphabet', 'A rounded script with retroflex sounds + a quick quiz'],
         nv: ['Navajo Alphabet', 'Ejectives, tones, and the distinctive \u0142 sound + a quick quiz'],
         tlh: ['Klingon Sounds', 'tlh, Q, and capitalization rules + a quick quiz'],
-        val: ['High Valyrian Sounds', 'Long vowels and consonant clusters + a quick quiz']
+        val: ['High Valyrian Sounds', 'Long vowels and consonant clusters + a quick quiz'],
+        ps: ['Pashto Alphabet', 'Retroflex letters and the \u0161 sound + a quick quiz'],
+        bal: ['Balochi Alphabet', 'Perso-Arabic script with retroflex letters + a quick quiz'],
+        sd: ['Sindhi Alphabet', 'Implosive consonants unique to Sindhi + a quick quiz']
       };
       const alphabetTitle = document.getElementById('alphabetCardTitle');
       if (alphabetTitle) {
@@ -25553,7 +26579,10 @@
         te: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz'],
         nv: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz'],
         tlh: ['Number Chart', 'Numbers 0–1,000 + a quick quiz'],
-        val: ['Number Chart', 'Numbers 0–1,000 + a quick quiz']
+        val: ['Number Chart', 'Numbers 0–1,000 + a quick quiz'],
+        ps: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz'],
+        bal: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz'],
+        sd: ['Number Chart', 'Numbers 0–1,000,000 + a quick quiz']
       };
       const numberCardTitle = document.getElementById('numberCardTitle');
       const numberSub = document.getElementById('numberCardSub');
@@ -25619,7 +26648,10 @@
         lo: ['Verb Conjugation', 'Present, past, and future tense drills'],
         si: ['Verb Conjugation', 'Present, past, and future tense drills'],
         ta: ['Verb Conjugation', 'Present, past, and future tense drills'],
-        te: ['Verb Conjugation', 'Present, past, and future tense drills']
+        te: ['Verb Conjugation', 'Present, past, and future tense drills'],
+        ps: ['Verb Conjugation', 'Present, past, and future tense drills'],
+        bal: ['Verb Conjugation', 'Present, past, and future tense drills'],
+        sd: ['Verb Conjugation', 'Present, past, and future tense drills']
       };
       const grammarTitle = document.getElementById('grammarCardTitle');
       if (grammarTitle) {
@@ -25692,7 +26724,10 @@
         te: 'Practice the retroflex letters and rounded script by hand',
         nv: 'Practice the \u0142 sound and ejective marks by hand',
         tlh: 'Practice the tlh and Q letterforms by hand',
-        val: 'Practice long vowels like \u0233 by hand'
+        val: 'Practice long vowels like \u0233 by hand',
+        ps: 'Practice the retroflex letters by hand',
+        bal: 'Practice the retroflex letters by hand',
+        sd: 'Practice the implosive letters by hand'
       };
       const drawSub = document.getElementById('drawTraceCardSub');
       if (drawSub) drawSub.textContent = drawSubText[lang] || drawSubText.ko;
@@ -25763,6 +26798,9 @@
       if (lang === 'nv') return TIERS_NV;
       if (lang === 'tlh') return TIERS_TLH;
       if (lang === 'val') return TIERS_VAL;
+      if (lang === 'ps') return TIERS_PS;
+      if (lang === 'bal') return TIERS_BAL;
+      if (lang === 'sd') return TIERS_SD;
       return TIERS;
     }
     function activeLevels() {
@@ -25831,6 +26869,9 @@
       if (lang === 'nv') return LEVELS_NV;
       if (lang === 'tlh') return LEVELS_TLH;
       if (lang === 'val') return LEVELS_VAL;
+      if (lang === 'ps') return LEVELS_PS;
+      if (lang === 'bal') return LEVELS_BAL;
+      if (lang === 'sd') return LEVELS_SD;
       return LEVELS;
     }
 
@@ -26044,7 +27085,7 @@
       ko: 'ko-KR', es: 'es-ES', ja: 'ja-JP', en: 'en-US', zh: 'zh-CN', af: 'af-ZA', ar: 'ar-SA', am: 'am-ET', eu: 'eu-ES', bn: 'bn-BD',
       bg: 'bg-BG', fr: 'fr-FR', de: 'de-DE', it: 'it-IT', ca: 'ca-ES', yue: 'zh-HK', my: 'my-MM', hr: 'hr-HR', cs: 'cs-CZ', da: 'da-DK',
       nl: 'nl-NL', eo: 'eo', tl: 'fil-PH', fi: 'fi-FI', pt: 'pt-BR', pl: 'pl-PL', sv: 'sv-SE', ru: 'ru-RU', hi: 'hi-IN', vi: 'vi-VN',
-      tr: 'tr-TR', uk: 'uk-UA', ro: 'ro-RO', el: 'el-GR', he: 'he-IL', no: 'nb-NO', hu: 'hu-HU', id: 'id-ID', fa: 'fa-IR', is: 'is-IS', sk: 'sk-SK', sr: 'sr-RS', ms: 'ms-MY', cy: 'cy-GB', ga: 'ga-IE', gd: 'gd-GB', sw: 'sw-TZ', haw: 'haw-US', la: 'it-IT', zu: 'zu-ZA', ur: 'ur-PK', mn: 'mn-MN', ne: 'ne-NP', mr: 'mr-IN', gu: 'gu-IN', pa: 'pa-IN', th: 'th-TH', lo: 'lo-LA', km: 'km-KH', si: 'si-LK', ta: 'ta-IN', te: 'te-IN', nv: 'en-US', tlh: 'en-US', val: 'en-US'
+      tr: 'tr-TR', uk: 'uk-UA', ro: 'ro-RO', el: 'el-GR', he: 'he-IL', no: 'nb-NO', hu: 'hu-HU', id: 'id-ID', fa: 'fa-IR', is: 'is-IS', sk: 'sk-SK', sr: 'sr-RS', ms: 'ms-MY', cy: 'cy-GB', ga: 'ga-IE', gd: 'gd-GB', sw: 'sw-TZ', haw: 'haw-US', la: 'it-IT', zu: 'zu-ZA', ur: 'ur-PK', mn: 'mn-MN', ne: 'ne-NP', mr: 'mr-IN', gu: 'gu-IN', pa: 'pa-IN', th: 'th-TH', lo: 'lo-LA', km: 'km-KH', si: 'si-LK', ta: 'ta-IN', te: 'te-IN', nv: 'en-US', tlh: 'en-US', val: 'en-US', ps: 'ps-AF', bal: 'ur-PK', sd: 'sd-PK'
     };
     let ttsUnavailableNoticeShown = {};
     function speakLearning(text, onStart, onEnd) {
@@ -26373,7 +27414,7 @@
     function openHangulChart() {
       showScreen('hangul');
       const lang = (state.settings && state.settings.learningLang) || 'ko';
-      const titles = { es: '🔤 Spanish Alphabet', ja: '🔤 Hiragana Chart', en: '🔤 Irregular Verbs', zh: '🔤 Tones & Pinyin Chart', af: '🔤 Afrikaans Alphabet', ar: '🔤 Arabic Alphabet', am: '🔤 Amharic Core Characters', eu: '🔤 Basque Alphabet', bn: '🔤 Bengali Alphabet', bg: '🔤 Cyrillic Alphabet', fr: '🔤 French Alphabet', de: '🔤 German Alphabet', it: '🔤 Italian Alphabet', ca: '🔤 Catalan Alphabet', yue: '🔤 Jyutping & Tones', my: '🔤 Myanmar Script', hr: '🔤 Croatian Alphabet', cs: '🔤 Czech Alphabet', da: '🔤 Danish Alphabet', nl: '🔤 Dutch Alphabet', eo: '🔤 Esperanto Alphabet', tl: '🔤 Filipino Alphabet', fi: '🔤 Finnish Alphabet', pt: '🔤 Portuguese Alphabet', pl: '🔤 Polish Alphabet', sv: '🔤 Swedish Alphabet', ru: '🔤 Cyrillic Alphabet', hi: '🔤 Devanagari Script', vi: '🔤 Tones & Vowels', tr: '🔤 Turkish Alphabet', uk: '🔤 Ukrainian Alphabet', ro: '🔤 Romanian Alphabet', el: '🔤 Greek Alphabet', he: '🔤 Hebrew Alphabet', no: '🔤 Norwegian Alphabet', hu: '🔤 Hungarian Alphabet', id: '🔤 Indonesian Alphabet', fa: '🔤 Persian Alphabet', is: '🔤 Icelandic Alphabet', sk: '🔤 Slovak Alphabet', sr: '🔤 Cyrillic Alphabet', ms: '🔤 Malay Alphabet', cy: '🔤 Welsh Alphabet', ga: '🔤 Irish Alphabet', gd: '🔤 Scottish Gaelic Alphabet', sw: '🔤 Swahili Alphabet', haw: '🔤 Hawaiian Alphabet', la: '🔤 Latin Alphabet', zu: '🔤 Zulu Alphabet', ur: '🔤 Urdu Alphabet', mn: '🔤 Mongolian Alphabet', ne: '🔤 Nepali Alphabet', mr: '🔤 Marathi Alphabet', gu: '🔤 Gujarati Alphabet', pa: '🔤 Punjabi Alphabet', th: '🔤 Thai Alphabet', lo: '🔤 Lao Alphabet', km: '🔤 Khmer Alphabet', si: '🔤 Sinhala Alphabet', ta: '🔤 Tamil Alphabet', te: '🔤 Telugu Alphabet', nv: '🔤 Navajo Alphabet', tlh: '🔤 Klingon Sounds', val: '🔤 High Valyrian Sounds', ko: '🔤 Hangul Chart' };
+      const titles = { es: '🔤 Spanish Alphabet', ja: '🔤 Hiragana Chart', en: '🔤 Irregular Verbs', zh: '🔤 Tones & Pinyin Chart', af: '🔤 Afrikaans Alphabet', ar: '🔤 Arabic Alphabet', am: '🔤 Amharic Core Characters', eu: '🔤 Basque Alphabet', bn: '🔤 Bengali Alphabet', bg: '🔤 Cyrillic Alphabet', fr: '🔤 French Alphabet', de: '🔤 German Alphabet', it: '🔤 Italian Alphabet', ca: '🔤 Catalan Alphabet', yue: '🔤 Jyutping & Tones', my: '🔤 Myanmar Script', hr: '🔤 Croatian Alphabet', cs: '🔤 Czech Alphabet', da: '🔤 Danish Alphabet', nl: '🔤 Dutch Alphabet', eo: '🔤 Esperanto Alphabet', tl: '🔤 Filipino Alphabet', fi: '🔤 Finnish Alphabet', pt: '🔤 Portuguese Alphabet', pl: '🔤 Polish Alphabet', sv: '🔤 Swedish Alphabet', ru: '🔤 Cyrillic Alphabet', hi: '🔤 Devanagari Script', vi: '🔤 Tones & Vowels', tr: '🔤 Turkish Alphabet', uk: '🔤 Ukrainian Alphabet', ro: '🔤 Romanian Alphabet', el: '🔤 Greek Alphabet', he: '🔤 Hebrew Alphabet', no: '🔤 Norwegian Alphabet', hu: '🔤 Hungarian Alphabet', id: '🔤 Indonesian Alphabet', fa: '🔤 Persian Alphabet', is: '🔤 Icelandic Alphabet', sk: '🔤 Slovak Alphabet', sr: '🔤 Cyrillic Alphabet', ms: '🔤 Malay Alphabet', cy: '🔤 Welsh Alphabet', ga: '🔤 Irish Alphabet', gd: '🔤 Scottish Gaelic Alphabet', sw: '🔤 Swahili Alphabet', haw: '🔤 Hawaiian Alphabet', la: '🔤 Latin Alphabet', zu: '🔤 Zulu Alphabet', ur: '🔤 Urdu Alphabet', mn: '🔤 Mongolian Alphabet', ne: '🔤 Nepali Alphabet', mr: '🔤 Marathi Alphabet', gu: '🔤 Gujarati Alphabet', pa: '🔤 Punjabi Alphabet', th: '🔤 Thai Alphabet', lo: '🔤 Lao Alphabet', km: '🔤 Khmer Alphabet', si: '🔤 Sinhala Alphabet', ta: '🔤 Tamil Alphabet', te: '🔤 Telugu Alphabet', nv: '🔤 Navajo Alphabet', tlh: '🔤 Klingon Sounds', val: '🔤 High Valyrian Sounds', ps: '🔤 Pashto Alphabet', bal: '🔤 Balochi Alphabet', sd: '🔤 Sindhi Alphabet', ko: '🔤 Hangul Chart' };
       const subs = {
         es: 'Tap any letter to hear it. Learn all 27 letters and try the quiz below.',
         ja: 'Tap any character to hear it. Learn all 46 basic hiragana and try the quiz below.',
@@ -26439,6 +27480,9 @@
         nv: 'Navajo uses ejective consonants, tones, and the distinctive \u0142 sound not found in English. Tap any letter to hear it.',
         tlh: 'Klingon uses capital letters to mark distinct sounds like Q and D. Tap any to hear it, then try the quiz.',
         val: 'High Valyrian uses macrons to mark long, stressed vowels like \u0233. Tap any letter to hear it, then try the quiz.',
+        ps: 'Pashto is written right-to-left with extra letters for retroflex and unique sounds. Tap any letter to hear it.',
+        bal: 'Balochi is written right-to-left in a modified Perso-Arabic script shared with Urdu and Pashto. Tap any letter to hear it.',
+        sd: 'Sindhi is known for implosive consonants (\u1e3b, \u0684, \u0688, \u0693), unique sounds not found in Urdu. Tap any letter to hear it.',
         ko: 'Tap any letter to hear it. Learn all 40 and try the quiz below.'
       };
       document.getElementById('alphabetChartTitle').textContent = titles[lang] || titles.ko;
@@ -26451,7 +27495,7 @@
       if (wrap.dataset.built === lang) return;
       wrap.dataset.built = lang;
       wrap.innerHTML = '';
-      const chart = lang === 'es' ? SPANISH_ALPHABET : lang === 'ja' ? JAPANESE_KANA : lang === 'en' ? IRREGULAR_VERBS : lang === 'zh' ? CHINESE_TONES : lang === 'af' ? AFRIKAANS_ALPHABET : lang === 'ar' ? ARABIC_ALPHABET : lang === 'am' ? AMHARIC_ALPHABET : lang === 'eu' ? BASQUE_ALPHABET : lang === 'bn' ? BENGALI_ALPHABET : lang === 'bg' ? BULGARIAN_ALPHABET : lang === 'fr' ? FRENCH_ALPHABET : lang === 'de' ? GERMAN_ALPHABET : lang === 'it' ? ITALIAN_ALPHABET : lang === 'ca' ? CATALAN_ALPHABET : lang === 'yue' ? CANTONESE_TONES : lang === 'my' ? BURMESE_ALPHABET : lang === 'hr' ? CROATIAN_ALPHABET : lang === 'cs' ? CZECH_ALPHABET : lang === 'da' ? DANISH_ALPHABET : lang === 'nl' ? DUTCH_ALPHABET : lang === 'eo' ? ESPERANTO_ALPHABET : lang === 'tl' ? FILIPINO_ALPHABET : lang === 'fi' ? FINNISH_ALPHABET : lang === 'pt' ? PORTUGUESE_ALPHABET : lang === 'pl' ? POLISH_ALPHABET : lang === 'sv' ? SWEDISH_ALPHABET : lang === 'ru' ? RUSSIAN_ALPHABET : lang === 'hi' ? HINDI_ALPHABET : lang === 'vi' ? VIETNAMESE_TONES : lang === 'tr' ? TURKISH_ALPHABET : lang === 'uk' ? UKRAINIAN_ALPHABET : lang === 'ro' ? ROMANIAN_ALPHABET : lang === 'el' ? GREEK_ALPHABET : lang === 'he' ? HEBREW_ALPHABET : lang === 'no' ? NORWEGIAN_ALPHABET : lang === 'hu' ? HUNGARIAN_ALPHABET : lang === 'id' ? INDONESIAN_ALPHABET : lang === 'fa' ? PERSIAN_ALPHABET : lang === 'is' ? ICELANDIC_ALPHABET : lang === 'sk' ? SLOVAK_ALPHABET : lang === 'sr' ? SERBIAN_ALPHABET : lang === 'ms' ? MALAY_ALPHABET : lang === 'cy' ? WELSH_ALPHABET : lang === 'ga' ? IRISH_ALPHABET : lang === 'gd' ? SCOTTISH_GAELIC_ALPHABET : lang === 'sw' ? SWAHILI_ALPHABET : lang === 'haw' ? HAWAIIAN_ALPHABET : lang === 'la' ? LATIN_ALPHABET : lang === 'zu' ? ZULU_ALPHABET : lang === 'ur' ? URDU_ALPHABET : lang === 'mn' ? MONGOLIAN_ALPHABET : lang === 'ne' ? NEPALI_ALPHABET : lang === 'mr' ? MARATHI_ALPHABET : lang === 'gu' ? GUJARATI_ALPHABET : lang === 'pa' ? PUNJABI_ALPHABET : lang === 'th' ? THAI_ALPHABET : lang === 'lo' ? LAO_ALPHABET : lang === 'km' ? KHMER_ALPHABET : lang === 'si' ? SINHALA_ALPHABET : lang === 'ta' ? TAMIL_ALPHABET : lang === 'te' ? TELUGU_ALPHABET : lang === 'nv' ? NAVAJO_ALPHABET : lang === 'tlh' ? KLINGON_ALPHABET : lang === 'val' ? HIGHVALYRIAN_ALPHABET : HANGUL_CHART;
+      const chart = lang === 'es' ? SPANISH_ALPHABET : lang === 'ja' ? JAPANESE_KANA : lang === 'en' ? IRREGULAR_VERBS : lang === 'zh' ? CHINESE_TONES : lang === 'af' ? AFRIKAANS_ALPHABET : lang === 'ar' ? ARABIC_ALPHABET : lang === 'am' ? AMHARIC_ALPHABET : lang === 'eu' ? BASQUE_ALPHABET : lang === 'bn' ? BENGALI_ALPHABET : lang === 'bg' ? BULGARIAN_ALPHABET : lang === 'fr' ? FRENCH_ALPHABET : lang === 'de' ? GERMAN_ALPHABET : lang === 'it' ? ITALIAN_ALPHABET : lang === 'ca' ? CATALAN_ALPHABET : lang === 'yue' ? CANTONESE_TONES : lang === 'my' ? BURMESE_ALPHABET : lang === 'hr' ? CROATIAN_ALPHABET : lang === 'cs' ? CZECH_ALPHABET : lang === 'da' ? DANISH_ALPHABET : lang === 'nl' ? DUTCH_ALPHABET : lang === 'eo' ? ESPERANTO_ALPHABET : lang === 'tl' ? FILIPINO_ALPHABET : lang === 'fi' ? FINNISH_ALPHABET : lang === 'pt' ? PORTUGUESE_ALPHABET : lang === 'pl' ? POLISH_ALPHABET : lang === 'sv' ? SWEDISH_ALPHABET : lang === 'ru' ? RUSSIAN_ALPHABET : lang === 'hi' ? HINDI_ALPHABET : lang === 'vi' ? VIETNAMESE_TONES : lang === 'tr' ? TURKISH_ALPHABET : lang === 'uk' ? UKRAINIAN_ALPHABET : lang === 'ro' ? ROMANIAN_ALPHABET : lang === 'el' ? GREEK_ALPHABET : lang === 'he' ? HEBREW_ALPHABET : lang === 'no' ? NORWEGIAN_ALPHABET : lang === 'hu' ? HUNGARIAN_ALPHABET : lang === 'id' ? INDONESIAN_ALPHABET : lang === 'fa' ? PERSIAN_ALPHABET : lang === 'is' ? ICELANDIC_ALPHABET : lang === 'sk' ? SLOVAK_ALPHABET : lang === 'sr' ? SERBIAN_ALPHABET : lang === 'ms' ? MALAY_ALPHABET : lang === 'cy' ? WELSH_ALPHABET : lang === 'ga' ? IRISH_ALPHABET : lang === 'gd' ? SCOTTISH_GAELIC_ALPHABET : lang === 'sw' ? SWAHILI_ALPHABET : lang === 'haw' ? HAWAIIAN_ALPHABET : lang === 'la' ? LATIN_ALPHABET : lang === 'zu' ? ZULU_ALPHABET : lang === 'ur' ? URDU_ALPHABET : lang === 'mn' ? MONGOLIAN_ALPHABET : lang === 'ne' ? NEPALI_ALPHABET : lang === 'mr' ? MARATHI_ALPHABET : lang === 'gu' ? GUJARATI_ALPHABET : lang === 'pa' ? PUNJABI_ALPHABET : lang === 'th' ? THAI_ALPHABET : lang === 'lo' ? LAO_ALPHABET : lang === 'km' ? KHMER_ALPHABET : lang === 'si' ? SINHALA_ALPHABET : lang === 'ta' ? TAMIL_ALPHABET : lang === 'te' ? TELUGU_ALPHABET : lang === 'nv' ? NAVAJO_ALPHABET : lang === 'tlh' ? KLINGON_ALPHABET : lang === 'val' ? HIGHVALYRIAN_ALPHABET : lang === 'ps' ? PASHTO_ALPHABET : lang === 'bal' ? BALOCHI_ALPHABET : lang === 'sd' ? SINDHI_ALPHABET : HANGUL_CHART;
       chart.forEach(section => {
         const sec = document.createElement('div');
         sec.className = 'hangul-section';
@@ -26597,6 +27641,12 @@
         lastCompletedLesson = { title: "Klingon Sounds", words: ALL_KLINGON_ALPHABET.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
       } else if (lang === 'val') {
         lastCompletedLesson = { title: "High Valyrian Sounds", words: ALL_HIGHVALYRIAN_ALPHABET.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
+      } else if (lang === 'ps') {
+        lastCompletedLesson = { title: "Pashto Alphabet", words: ALL_PASHTO_ALPHABET.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
+      } else if (lang === 'bal') {
+        lastCompletedLesson = { title: "Balochi Alphabet", words: ALL_BALOCHI_ALPHABET.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
+      } else if (lang === 'sd') {
+        lastCompletedLesson = { title: "Sindhi Alphabet", words: ALL_SINDHI_ALPHABET.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
       } else {
         lastCompletedLesson = { title: "Hangul Chart", words: ALL_HANGUL_CHARS.map(c => ({ kr: c.ch, en: c.rom, rom: '' })) };
       }
@@ -26672,6 +27722,9 @@
         nv: 'Navajo numbers are built from consistent number roots. Tap any number to hear it, then try the quiz.',
         tlh: 'Klingon numbers are documented canon vocabulary and combine regularly above ten. Tap any number to hear it.',
         val: 'High Valyrian numbers combine regularly above ten, similar to Romance-language patterns. Tap any number to hear it.',
+        ps: 'Pashto numbers 20-99 are mostly irregular and usually memorized individually. Tap any number to hear it.',
+        bal: 'Balochi numbers 11-99 are mostly irregular and usually memorized individually. Tap any number to hear it.',
+        sd: 'Sindhi numbers 11-99 are mostly irregular and usually memorized individually. Tap any number to hear it.',
         ko: 'Korean has two number systems. Tap any number to hear it, then try the quiz.'
       };
       document.getElementById('numberChartTitle').textContent = titles[lang] || '🔢 Number Chart';
@@ -26684,7 +27737,7 @@
       if (wrap.dataset.built === lang) return;
       wrap.dataset.built = lang;
       wrap.innerHTML = '';
-      const chart = lang === 'es' ? SPANISH_NUMBER_CHART : lang === 'ja' ? JAPANESE_NUMBER_CHART : lang === 'en' ? CONFUSED_WORDS : lang === 'zh' ? CHINESE_NUMBER_CHART : lang === 'af' ? AFRIKAANS_NUMBER_CHART : lang === 'ar' ? ARABIC_NUMBER_CHART : lang === 'am' ? AMHARIC_NUMBER_CHART : lang === 'eu' ? BASQUE_NUMBER_CHART : lang === 'bn' ? BENGALI_NUMBER_CHART : lang === 'bg' ? BULGARIAN_NUMBER_CHART : lang === 'fr' ? FRENCH_NUMBER_CHART : lang === 'de' ? GERMAN_NUMBER_CHART : lang === 'it' ? ITALIAN_NUMBER_CHART : lang === 'ca' ? CATALAN_NUMBER_CHART : lang === 'yue' ? CANTONESE_NUMBER_CHART : lang === 'my' ? BURMESE_NUMBER_CHART : lang === 'hr' ? CROATIAN_NUMBER_CHART : lang === 'cs' ? CZECH_NUMBER_CHART : lang === 'da' ? DANISH_NUMBER_CHART : lang === 'nl' ? DUTCH_NUMBER_CHART : lang === 'eo' ? ESPERANTO_NUMBER_CHART : lang === 'tl' ? FILIPINO_NUMBER_CHART : lang === 'fi' ? FINNISH_NUMBER_CHART : lang === 'pt' ? PORTUGUESE_NUMBER_CHART : lang === 'pl' ? POLISH_NUMBER_CHART : lang === 'sv' ? SWEDISH_NUMBER_CHART : lang === 'ru' ? RUSSIAN_NUMBER_CHART : lang === 'hi' ? HINDI_NUMBER_CHART : lang === 'vi' ? VIETNAMESE_NUMBER_CHART : lang === 'tr' ? TURKISH_NUMBER_CHART : lang === 'uk' ? UKRAINIAN_NUMBER_CHART : lang === 'ro' ? ROMANIAN_NUMBER_CHART : lang === 'el' ? GREEK_NUMBER_CHART : lang === 'he' ? HEBREW_NUMBER_CHART : lang === 'no' ? NORWEGIAN_NUMBER_CHART : lang === 'hu' ? HUNGARIAN_NUMBER_CHART : lang === 'id' ? INDONESIAN_NUMBER_CHART : lang === 'fa' ? PERSIAN_NUMBER_CHART : lang === 'is' ? ICELANDIC_NUMBER_CHART : lang === 'sk' ? SLOVAK_NUMBER_CHART : lang === 'sr' ? SERBIAN_NUMBER_CHART : lang === 'ms' ? MALAY_NUMBER_CHART : lang === 'cy' ? WELSH_NUMBER_CHART : lang === 'ga' ? IRISH_NUMBER_CHART : lang === 'gd' ? SCOTTISH_GAELIC_NUMBER_CHART : lang === 'sw' ? SWAHILI_NUMBER_CHART : lang === 'haw' ? HAWAIIAN_NUMBER_CHART : lang === 'la' ? LATIN_NUMBER_CHART : lang === 'zu' ? ZULU_NUMBER_CHART : lang === 'ur' ? URDU_NUMBER_CHART : lang === 'mn' ? MONGOLIAN_NUMBER_CHART : lang === 'ne' ? NEPALI_NUMBER_CHART : lang === 'mr' ? MARATHI_NUMBER_CHART : lang === 'gu' ? GUJARATI_NUMBER_CHART : lang === 'pa' ? PUNJABI_NUMBER_CHART : lang === 'th' ? THAI_NUMBER_CHART : lang === 'lo' ? LAO_NUMBER_CHART : lang === 'km' ? KHMER_NUMBER_CHART : lang === 'si' ? SINHALA_NUMBER_CHART : lang === 'ta' ? TAMIL_NUMBER_CHART : lang === 'te' ? TELUGU_NUMBER_CHART : lang === 'nv' ? NAVAJO_NUMBER_CHART : lang === 'tlh' ? KLINGON_NUMBER_CHART : lang === 'val' ? HIGHVALYRIAN_NUMBER_CHART : NUMBER_CHART;
+      const chart = lang === 'es' ? SPANISH_NUMBER_CHART : lang === 'ja' ? JAPANESE_NUMBER_CHART : lang === 'en' ? CONFUSED_WORDS : lang === 'zh' ? CHINESE_NUMBER_CHART : lang === 'af' ? AFRIKAANS_NUMBER_CHART : lang === 'ar' ? ARABIC_NUMBER_CHART : lang === 'am' ? AMHARIC_NUMBER_CHART : lang === 'eu' ? BASQUE_NUMBER_CHART : lang === 'bn' ? BENGALI_NUMBER_CHART : lang === 'bg' ? BULGARIAN_NUMBER_CHART : lang === 'fr' ? FRENCH_NUMBER_CHART : lang === 'de' ? GERMAN_NUMBER_CHART : lang === 'it' ? ITALIAN_NUMBER_CHART : lang === 'ca' ? CATALAN_NUMBER_CHART : lang === 'yue' ? CANTONESE_NUMBER_CHART : lang === 'my' ? BURMESE_NUMBER_CHART : lang === 'hr' ? CROATIAN_NUMBER_CHART : lang === 'cs' ? CZECH_NUMBER_CHART : lang === 'da' ? DANISH_NUMBER_CHART : lang === 'nl' ? DUTCH_NUMBER_CHART : lang === 'eo' ? ESPERANTO_NUMBER_CHART : lang === 'tl' ? FILIPINO_NUMBER_CHART : lang === 'fi' ? FINNISH_NUMBER_CHART : lang === 'pt' ? PORTUGUESE_NUMBER_CHART : lang === 'pl' ? POLISH_NUMBER_CHART : lang === 'sv' ? SWEDISH_NUMBER_CHART : lang === 'ru' ? RUSSIAN_NUMBER_CHART : lang === 'hi' ? HINDI_NUMBER_CHART : lang === 'vi' ? VIETNAMESE_NUMBER_CHART : lang === 'tr' ? TURKISH_NUMBER_CHART : lang === 'uk' ? UKRAINIAN_NUMBER_CHART : lang === 'ro' ? ROMANIAN_NUMBER_CHART : lang === 'el' ? GREEK_NUMBER_CHART : lang === 'he' ? HEBREW_NUMBER_CHART : lang === 'no' ? NORWEGIAN_NUMBER_CHART : lang === 'hu' ? HUNGARIAN_NUMBER_CHART : lang === 'id' ? INDONESIAN_NUMBER_CHART : lang === 'fa' ? PERSIAN_NUMBER_CHART : lang === 'is' ? ICELANDIC_NUMBER_CHART : lang === 'sk' ? SLOVAK_NUMBER_CHART : lang === 'sr' ? SERBIAN_NUMBER_CHART : lang === 'ms' ? MALAY_NUMBER_CHART : lang === 'cy' ? WELSH_NUMBER_CHART : lang === 'ga' ? IRISH_NUMBER_CHART : lang === 'gd' ? SCOTTISH_GAELIC_NUMBER_CHART : lang === 'sw' ? SWAHILI_NUMBER_CHART : lang === 'haw' ? HAWAIIAN_NUMBER_CHART : lang === 'la' ? LATIN_NUMBER_CHART : lang === 'zu' ? ZULU_NUMBER_CHART : lang === 'ur' ? URDU_NUMBER_CHART : lang === 'mn' ? MONGOLIAN_NUMBER_CHART : lang === 'ne' ? NEPALI_NUMBER_CHART : lang === 'mr' ? MARATHI_NUMBER_CHART : lang === 'gu' ? GUJARATI_NUMBER_CHART : lang === 'pa' ? PUNJABI_NUMBER_CHART : lang === 'th' ? THAI_NUMBER_CHART : lang === 'lo' ? LAO_NUMBER_CHART : lang === 'km' ? KHMER_NUMBER_CHART : lang === 'si' ? SINHALA_NUMBER_CHART : lang === 'ta' ? TAMIL_NUMBER_CHART : lang === 'te' ? TELUGU_NUMBER_CHART : lang === 'nv' ? NAVAJO_NUMBER_CHART : lang === 'tlh' ? KLINGON_NUMBER_CHART : lang === 'val' ? HIGHVALYRIAN_NUMBER_CHART : lang === 'ps' ? PASHTO_NUMBER_CHART : lang === 'bal' ? BALOCHI_NUMBER_CHART : lang === 'sd' ? SINDHI_NUMBER_CHART : NUMBER_CHART;
       chart.forEach(section => {
         const sec = document.createElement('div');
         sec.className = 'hangul-section';
@@ -26830,6 +27883,12 @@
         lastCompletedLesson = { title: "Klingon Numbers", words: ALL_KLINGON_NUMBERS };
       } else if (lang === 'val') {
         lastCompletedLesson = { title: "High Valyrian Numbers", words: ALL_HIGHVALYRIAN_NUMBERS };
+      } else if (lang === 'ps') {
+        lastCompletedLesson = { title: "Pashto Numbers", words: ALL_PASHTO_NUMBERS };
+      } else if (lang === 'bal') {
+        lastCompletedLesson = { title: "Balochi Numbers", words: ALL_BALOCHI_NUMBERS };
+      } else if (lang === 'sd') {
+        lastCompletedLesson = { title: "Sindhi Numbers", words: ALL_SINDHI_NUMBERS };
       } else {
         lastCompletedLesson = { title: "Number Chart", words: ALL_NUMBER_ITEMS };
       }
@@ -27158,9 +28217,9 @@
     let grammarTab = 'particles';
     function openGrammar() {
       const lang = (state.settings && state.settings.learningLang) || 'ko';
-      if (lang === 'es' || lang === 'af' || lang === 'ar' || lang === 'eu' || lang === 'bn' || lang === 'bg' || lang === 'fr' || lang === 'de' || lang === 'it' || lang === 'ca' || lang === 'my' || lang === 'hr' || lang === 'cs' || lang === 'da' || lang === 'nl' || lang === 'eo' || lang === 'tl' || lang === 'fi' || lang === 'pt' || lang === 'pl' || lang === 'sv' || lang === 'ru' || lang === 'hi' || lang === 'tr' || lang === 'uk' || lang === 'ro' || lang === 'el' || lang === 'he' || lang === 'no' || lang === 'hu' || lang === 'fa' || lang === 'is' || lang === 'sk' || lang === 'sr' || lang === 'cy' || lang === 'ga' || lang === 'gd' || lang === 'sw' || lang === 'haw' || lang === 'la' || lang === 'zu' || lang === 'ur' || lang === 'mn' || lang === 'ne' || lang === 'mr' || lang === 'gu' || lang === 'pa' || lang === 'th' || lang === 'lo' || lang === 'si' || lang === 'ta' || lang === 'te') grammarTab = 'conjugation';
+      if (lang === 'es' || lang === 'af' || lang === 'ar' || lang === 'eu' || lang === 'bn' || lang === 'bg' || lang === 'fr' || lang === 'de' || lang === 'it' || lang === 'ca' || lang === 'my' || lang === 'hr' || lang === 'cs' || lang === 'da' || lang === 'nl' || lang === 'eo' || lang === 'tl' || lang === 'fi' || lang === 'pt' || lang === 'pl' || lang === 'sv' || lang === 'ru' || lang === 'hi' || lang === 'tr' || lang === 'uk' || lang === 'ro' || lang === 'el' || lang === 'he' || lang === 'no' || lang === 'hu' || lang === 'fa' || lang === 'is' || lang === 'sk' || lang === 'sr' || lang === 'cy' || lang === 'ga' || lang === 'gd' || lang === 'sw' || lang === 'haw' || lang === 'la' || lang === 'zu' || lang === 'ur' || lang === 'mn' || lang === 'ne' || lang === 'mr' || lang === 'gu' || lang === 'pa' || lang === 'th' || lang === 'lo' || lang === 'si' || lang === 'ta' || lang === 'te' || lang === 'ps' || lang === 'bal' || lang === 'sd') grammarTab = 'conjugation';
       else if (grammarTab === 'conjugation' && !VERB_CONJUGATIONS.length) grammarTab = 'particles';
-      const titles = { es: '📖 Verb Conjugation', af: '📖 Verb Conjugation', ar: '📖 Verb Conjugation', eu: '📖 Verb Conjugation', bn: '📖 Verb Conjugation', bg: '📖 Verb Conjugation', fr: '📖 Verb Conjugation', de: '📖 Verb Conjugation', it: '📖 Verb Conjugation', ca: '📖 Verb Conjugation', my: '📖 Verb Conjugation', hr: '📖 Verb Conjugation', cs: '📖 Verb Conjugation', da: '📖 Verb Conjugation', nl: '📖 Verb Conjugation', eo: '📖 Verb Conjugation', tl: '📖 Verb Conjugation', fi: '📖 Verb Conjugation', pt: '📖 Verb Conjugation', pl: '📖 Verb Conjugation', sv: '📖 Verb Conjugation', ru: '📖 Verb Conjugation', hi: '📖 Verb Conjugation', tr: '📖 Verb Conjugation', uk: '📖 Verb Conjugation', ro: '📖 Verb Conjugation', el: '📖 Verb Conjugation', he: '📖 Verb Conjugation', no: '📖 Verb Conjugation', hu: '📖 Verb Conjugation', fa: '📖 Verb Conjugation', is: '📖 Verb Conjugation', sk: '📖 Verb Conjugation', sr: '📖 Verb Conjugation', cy: '📖 Verb Conjugation', ga: '📖 Verb Conjugation', gd: '📖 Verb Conjugation', sw: '📖 Verb Conjugation', haw: '📖 Verb Conjugation', la: '📖 Verb Conjugation', zu: '📖 Verb Conjugation', ur: '📖 Verb Conjugation', mn: '📖 Verb Conjugation', ne: '📖 Verb Conjugation', mr: '📖 Verb Conjugation', gu: '📖 Verb Conjugation', pa: '📖 Verb Conjugation', th: '📖 Verb Conjugation', lo: '📖 Verb Conjugation', si: '📖 Verb Conjugation', ta: '📖 Verb Conjugation', te: '📖 Verb Conjugation' };
+      const titles = { es: '📖 Verb Conjugation', af: '📖 Verb Conjugation', ar: '📖 Verb Conjugation', eu: '📖 Verb Conjugation', bn: '📖 Verb Conjugation', bg: '📖 Verb Conjugation', fr: '📖 Verb Conjugation', de: '📖 Verb Conjugation', it: '📖 Verb Conjugation', ca: '📖 Verb Conjugation', my: '📖 Verb Conjugation', hr: '📖 Verb Conjugation', cs: '📖 Verb Conjugation', da: '📖 Verb Conjugation', nl: '📖 Verb Conjugation', eo: '📖 Verb Conjugation', tl: '📖 Verb Conjugation', fi: '📖 Verb Conjugation', pt: '📖 Verb Conjugation', pl: '📖 Verb Conjugation', sv: '📖 Verb Conjugation', ru: '📖 Verb Conjugation', hi: '📖 Verb Conjugation', tr: '📖 Verb Conjugation', uk: '📖 Verb Conjugation', ro: '📖 Verb Conjugation', el: '📖 Verb Conjugation', he: '📖 Verb Conjugation', no: '📖 Verb Conjugation', hu: '📖 Verb Conjugation', fa: '📖 Verb Conjugation', is: '📖 Verb Conjugation', sk: '📖 Verb Conjugation', sr: '📖 Verb Conjugation', cy: '📖 Verb Conjugation', ga: '📖 Verb Conjugation', gd: '📖 Verb Conjugation', sw: '📖 Verb Conjugation', haw: '📖 Verb Conjugation', la: '📖 Verb Conjugation', zu: '📖 Verb Conjugation', ur: '📖 Verb Conjugation', mn: '📖 Verb Conjugation', ne: '📖 Verb Conjugation', mr: '📖 Verb Conjugation', gu: '📖 Verb Conjugation', pa: '📖 Verb Conjugation', th: '📖 Verb Conjugation', lo: '📖 Verb Conjugation', si: '📖 Verb Conjugation', ta: '📖 Verb Conjugation', te: '📖 Verb Conjugation', ps: '📖 Verb Conjugation', bal: '📖 Verb Conjugation', sd: '📖 Verb Conjugation' };
       document.getElementById('grammarScreenTitle').textContent = titles[lang] || '📖 Grammar & Particles';
       showScreen('grammar');
       renderGrammarTabs();
@@ -27169,7 +28228,7 @@
     function renderGrammarTabs() {
       const row = document.getElementById('grammarTabRow');
       const lang = (state.settings && state.settings.learningLang) || 'ko';
-      const tabs = (lang === 'es' || lang === 'af' || lang === 'ar' || lang === 'eu' || lang === 'bn' || lang === 'bg' || lang === 'fr' || lang === 'de' || lang === 'it' || lang === 'ca' || lang === 'my' || lang === 'hr' || lang === 'cs' || lang === 'da' || lang === 'nl' || lang === 'eo' || lang === 'tl' || lang === 'fi' || lang === 'pt' || lang === 'pl' || lang === 'sv' || lang === 'ru' || lang === 'hi' || lang === 'tr' || lang === 'uk' || lang === 'ro' || lang === 'el' || lang === 'he' || lang === 'no' || lang === 'hu' || lang === 'fa' || lang === 'is' || lang === 'sk' || lang === 'sr' || lang === 'cy' || lang === 'ga' || lang === 'gd' || lang === 'sw' || lang === 'haw' || lang === 'la' || lang === 'zu' || lang === 'ur' || lang === 'mn' || lang === 'ne' || lang === 'mr' || lang === 'gu' || lang === 'pa' || lang === 'th' || lang === 'lo' || lang === 'si' || lang === 'ta' || lang === 'te')
+      const tabs = (lang === 'es' || lang === 'af' || lang === 'ar' || lang === 'eu' || lang === 'bn' || lang === 'bg' || lang === 'fr' || lang === 'de' || lang === 'it' || lang === 'ca' || lang === 'my' || lang === 'hr' || lang === 'cs' || lang === 'da' || lang === 'nl' || lang === 'eo' || lang === 'tl' || lang === 'fi' || lang === 'pt' || lang === 'pl' || lang === 'sv' || lang === 'ru' || lang === 'hi' || lang === 'tr' || lang === 'uk' || lang === 'ro' || lang === 'el' || lang === 'he' || lang === 'no' || lang === 'hu' || lang === 'fa' || lang === 'is' || lang === 'sk' || lang === 'sr' || lang === 'cy' || lang === 'ga' || lang === 'gd' || lang === 'sw' || lang === 'haw' || lang === 'la' || lang === 'zu' || lang === 'ur' || lang === 'mn' || lang === 'ne' || lang === 'mr' || lang === 'gu' || lang === 'pa' || lang === 'th' || lang === 'lo' || lang === 'si' || lang === 'ta' || lang === 'te' || lang === 'ps' || lang === 'bal' || lang === 'sd')
         ? [{ key: 'conjugation', label: 'Verbs', emoji: '🔀' }]
         : [
           { key: 'particles', label: 'Particles', emoji: '🔤' },
@@ -27204,7 +28263,7 @@
           wrap.appendChild(card);
         });
       } else if (grammarTab === 'conjugation') {
-        const verbs = lang === 'es' ? VERB_CONJUGATIONS_ES : lang === 'af' ? VERB_CONJUGATIONS_AF : lang === 'ar' ? VERB_CONJUGATIONS_AR : lang === 'eu' ? VERB_CONJUGATIONS_EU : lang === 'bn' ? VERB_CONJUGATIONS_BN : lang === 'bg' ? VERB_CONJUGATIONS_BG : lang === 'fr' ? VERB_CONJUGATIONS_FR : lang === 'de' ? VERB_CONJUGATIONS_DE : lang === 'it' ? VERB_CONJUGATIONS_IT : lang === 'ca' ? VERB_CONJUGATIONS_CA : lang === 'my' ? VERB_CONJUGATIONS_MY : lang === 'hr' ? VERB_CONJUGATIONS_HR : lang === 'cs' ? VERB_CONJUGATIONS_CS : lang === 'da' ? VERB_CONJUGATIONS_DA : lang === 'nl' ? VERB_CONJUGATIONS_NL : lang === 'eo' ? VERB_CONJUGATIONS_EO : lang === 'tl' ? VERB_CONJUGATIONS_TL : lang === 'fi' ? VERB_CONJUGATIONS_FI : lang === 'pt' ? VERB_CONJUGATIONS_PT : lang === 'pl' ? VERB_CONJUGATIONS_PL : lang === 'sv' ? VERB_CONJUGATIONS_SV : lang === 'ru' ? VERB_CONJUGATIONS_RU : lang === 'hi' ? VERB_CONJUGATIONS_HI : lang === 'tr' ? VERB_CONJUGATIONS_TR : lang === 'uk' ? VERB_CONJUGATIONS_UK : lang === 'ro' ? VERB_CONJUGATIONS_RO : lang === 'el' ? VERB_CONJUGATIONS_EL : lang === 'he' ? VERB_CONJUGATIONS_HE : lang === 'no' ? VERB_CONJUGATIONS_NO : lang === 'hu' ? VERB_CONJUGATIONS_HU : lang === 'fa' ? VERB_CONJUGATIONS_FA : lang === 'is' ? VERB_CONJUGATIONS_IS : lang === 'sk' ? VERB_CONJUGATIONS_SK : lang === 'sr' ? VERB_CONJUGATIONS_SR : lang === 'cy' ? VERB_CONJUGATIONS_CY : lang === 'ga' ? VERB_CONJUGATIONS_GA : lang === 'gd' ? VERB_CONJUGATIONS_GD : lang === 'sw' ? VERB_CONJUGATIONS_SW : lang === 'haw' ? VERB_CONJUGATIONS_HAW : lang === 'la' ? VERB_CONJUGATIONS_LA : lang === 'zu' ? VERB_CONJUGATIONS_ZU : lang === 'ur' ? VERB_CONJUGATIONS_UR : lang === 'mn' ? VERB_CONJUGATIONS_MN : lang === 'ne' ? VERB_CONJUGATIONS_NE : lang === 'mr' ? VERB_CONJUGATIONS_MR : lang === 'gu' ? VERB_CONJUGATIONS_GU : lang === 'pa' ? VERB_CONJUGATIONS_PA : lang === 'th' ? VERB_CONJUGATIONS_TH : lang === 'lo' ? VERB_CONJUGATIONS_LO : lang === 'si' ? VERB_CONJUGATIONS_SI : lang === 'ta' ? VERB_CONJUGATIONS_TA : lang === 'te' ? VERB_CONJUGATIONS_TE : VERB_CONJUGATIONS;
+        const verbs = lang === 'es' ? VERB_CONJUGATIONS_ES : lang === 'af' ? VERB_CONJUGATIONS_AF : lang === 'ar' ? VERB_CONJUGATIONS_AR : lang === 'eu' ? VERB_CONJUGATIONS_EU : lang === 'bn' ? VERB_CONJUGATIONS_BN : lang === 'bg' ? VERB_CONJUGATIONS_BG : lang === 'fr' ? VERB_CONJUGATIONS_FR : lang === 'de' ? VERB_CONJUGATIONS_DE : lang === 'it' ? VERB_CONJUGATIONS_IT : lang === 'ca' ? VERB_CONJUGATIONS_CA : lang === 'my' ? VERB_CONJUGATIONS_MY : lang === 'hr' ? VERB_CONJUGATIONS_HR : lang === 'cs' ? VERB_CONJUGATIONS_CS : lang === 'da' ? VERB_CONJUGATIONS_DA : lang === 'nl' ? VERB_CONJUGATIONS_NL : lang === 'eo' ? VERB_CONJUGATIONS_EO : lang === 'tl' ? VERB_CONJUGATIONS_TL : lang === 'fi' ? VERB_CONJUGATIONS_FI : lang === 'pt' ? VERB_CONJUGATIONS_PT : lang === 'pl' ? VERB_CONJUGATIONS_PL : lang === 'sv' ? VERB_CONJUGATIONS_SV : lang === 'ru' ? VERB_CONJUGATIONS_RU : lang === 'hi' ? VERB_CONJUGATIONS_HI : lang === 'tr' ? VERB_CONJUGATIONS_TR : lang === 'uk' ? VERB_CONJUGATIONS_UK : lang === 'ro' ? VERB_CONJUGATIONS_RO : lang === 'el' ? VERB_CONJUGATIONS_EL : lang === 'he' ? VERB_CONJUGATIONS_HE : lang === 'no' ? VERB_CONJUGATIONS_NO : lang === 'hu' ? VERB_CONJUGATIONS_HU : lang === 'fa' ? VERB_CONJUGATIONS_FA : lang === 'is' ? VERB_CONJUGATIONS_IS : lang === 'sk' ? VERB_CONJUGATIONS_SK : lang === 'sr' ? VERB_CONJUGATIONS_SR : lang === 'cy' ? VERB_CONJUGATIONS_CY : lang === 'ga' ? VERB_CONJUGATIONS_GA : lang === 'gd' ? VERB_CONJUGATIONS_GD : lang === 'sw' ? VERB_CONJUGATIONS_SW : lang === 'haw' ? VERB_CONJUGATIONS_HAW : lang === 'la' ? VERB_CONJUGATIONS_LA : lang === 'zu' ? VERB_CONJUGATIONS_ZU : lang === 'ur' ? VERB_CONJUGATIONS_UR : lang === 'mn' ? VERB_CONJUGATIONS_MN : lang === 'ne' ? VERB_CONJUGATIONS_NE : lang === 'mr' ? VERB_CONJUGATIONS_MR : lang === 'gu' ? VERB_CONJUGATIONS_GU : lang === 'pa' ? VERB_CONJUGATIONS_PA : lang === 'th' ? VERB_CONJUGATIONS_TH : lang === 'lo' ? VERB_CONJUGATIONS_LO : lang === 'si' ? VERB_CONJUGATIONS_SI : lang === 'ta' ? VERB_CONJUGATIONS_TA : lang === 'te' ? VERB_CONJUGATIONS_TE : lang === 'ps' ? VERB_CONJUGATIONS_PS : lang === 'bal' ? VERB_CONJUGATIONS_BAL : lang === 'sd' ? VERB_CONJUGATIONS_SD : VERB_CONJUGATIONS;
         verbs.forEach(v => {
           const card = document.createElement('div');
           card.className = 'scene-card';
@@ -27326,6 +28385,9 @@
       if (lang === 'nv') return STROKE_ORDER_NV;
       if (lang === 'tlh') return STROKE_ORDER_TLH;
       if (lang === 'val') return STROKE_ORDER_VAL;
+      if (lang === 'ps') return STROKE_ORDER_PS;
+      if (lang === 'bal') return STROKE_ORDER_BAL;
+      if (lang === 'sd') return STROKE_ORDER_SD;
       return STROKE_ORDER;
     }
     function activeAlphabetChars() {
@@ -27393,6 +28455,9 @@
       if (lang === 'nv') return ALL_NAVAJO_ALPHABET;
       if (lang === 'tlh') return ALL_KLINGON_ALPHABET;
       if (lang === 'val') return ALL_HIGHVALYRIAN_ALPHABET;
+      if (lang === 'ps') return ALL_PASHTO_ALPHABET;
+      if (lang === 'bal') return ALL_BALOCHI_ALPHABET;
+      if (lang === 'sd') return ALL_SINDHI_ALPHABET;
       return ALL_HANGUL_CHARS;
     }
     function openDrawTrace() {
@@ -30501,6 +31566,252 @@
       { k: ["difficult", "hard", "struggling", "stuck", "confus"], a: "Daor rhaesan! (No worries!) Long vowels and consonant clusters both take real practice, since High Valyrian was deliberately built with a rich, unfamiliar sound system. Try replaying lessons or retaking a quiz — repetition is what makes it click." },
     ];
 
+    const PASHTO_ALPHABET = [
+      {
+        title: "Common Letters", chars: [
+          { ch: "ا", rom: "alif — a/aa", sample: "اوس", hint: "the first letter, a long 'aa' sound" }, { ch: "ب", rom: "be — b", sample: "باران", hint: "as in English 'boy'" },
+          { ch: "پ", rom: "pe — p", sample: "پیسې", hint: "a letter added for Pashto/Persian, not found in Arabic" }, { ch: "ت", rom: "te — t", sample: "تاسو", hint: "a dental 't', tongue against the teeth" },
+          { ch: "ج", rom: "jeem — j", sample: "جشن", hint: "as in English 'jam'" }, { ch: "د", rom: "daal — d", sample: "دوه", hint: "a dental 'd'" },
+          { ch: "ر", rom: "re — r", sample: "روغتون", hint: "a lightly rolled/tapped 'r'" }, { ch: "س", rom: "seen — s", sample: "سلام", hint: "as in English 'sun'" },
+          { ch: "ک", rom: "kaaf — k", sample: "کور", hint: "as in English 'kite'" }, { ch: "ګ", rom: "gaaf — g", sample: "ګران", hint: "a letter added for Pashto, always hard" },
+          { ch: "ل", rom: "laam — l", sample: "لاس", hint: "as in English 'light'" }, { ch: "م", rom: "meem — m", sample: "مور", hint: "as in English 'mom'" },
+          { ch: "ن", rom: "noon — n", sample: "نوم", hint: "as in English 'name'" }, { ch: "و", rom: "waaw — w/o/u", sample: "وخت", hint: "acts as a consonant 'w' or a vowel 'o/oo' depending on position" },
+          { ch: "ه", rom: "he — h", sample: "هوا", hint: "as in English 'house'" }, { ch: "ی", rom: "ye — y/i", sample: "یو", hint: "acts as a consonant 'y' or vowel 'i/ee' depending on position" }]
+      },
+      {
+        title: "Distinctive Pashto Letters", chars: [
+          { ch: "ټ", rom: "tte — retroflex t", sample: "ټیم", hint: "curl the tongue back — a sound Pashto added for retroflex consonants" },
+          { ch: "ډ", rom: "dde — retroflex d", sample: "ډاکټر", hint: "the retroflex counterpart to ټ" },
+          { ch: "ړ", rom: "rre — retroflex r", sample: "لوړ", hint: "a curled retroflex r, unique to Pashto" },
+          { ch: "ږ", rom: "zhg — voiced fricative", sample: "غوږ", hint: "a distinctive buzzing sound found in few other languages" },
+          { ch: "ښ", rom: "khsh — voiceless fricative", sample: "ښه", hint: "a sound between 'kh' and 'sh', unique to Pashto" },
+          { ch: "ځ", rom: "dz", sample: "ځان", hint: "a combined 'dz' sound, as in English 'kids'" },
+          { ch: "څ", rom: "ts", sample: "څلور", hint: "a combined 'ts' sound, as in English 'cats'" }]
+      },
+    ];
+    const ALL_PASHTO_ALPHABET = PASHTO_ALPHABET.flatMap(s => s.chars);
+
+    const PASHTO_NUMBER_CHART = [
+      {
+        title: "Numbers 0–10", note: "Pashto numbers 11-99 are largely irregular and usually memorized individually, similar to Persian.", chars: [
+          { ch: "صفر", rom: "0 · sifar", en: "0" }, { ch: "یو", rom: "1 · yaw", en: "1" }, { ch: "دوه", rom: "2 · dwa", en: "2" },
+          { ch: "درې", rom: "3 · dray", en: "3" }, { ch: "څلور", rom: "4 · tsa-LOR", en: "4" }, { ch: "پنځه", rom: "5 · pin-DZA", en: "5" },
+          { ch: "شپږ", rom: "6 · shpudz", en: "6" }, { ch: "اووه", rom: "7 · OO-wa", en: "7" }, { ch: "اته", rom: "8 · AT-a", en: "8" },
+          { ch: "نهه", rom: "9 · NA-ha", en: "9" }, { ch: "لس", rom: "10 · las", en: "10" }]
+      },
+      {
+        title: "Teens & Tens", note: "11-19 combine with las (ten); tens above 20 are mostly irregular and learned individually.", chars: [
+          { ch: "یوولس", rom: "11 · yaw-WA-las", en: "11" }, { ch: "دولس", rom: "12 · DWA-las", en: "12" },
+          { ch: "شل", rom: "20 · shul", en: "20" }, { ch: "دیرش", rom: "30 · DEER-sh", en: "30" },
+          { ch: "پنځوس", rom: "50 · pin-DZOS", en: "50" }]
+      },
+      {
+        title: "Big Units", note: "Everything above 100 is built from these + 0-99.", chars: [
+          { ch: "سل", rom: "100 · sul", en: "100" }, { ch: "زر", rom: "1,000 · zar", en: "1,000" }, { ch: "لس لکه", rom: "1,000,000 · las LAK-a", en: "1,000,000" }]
+      },
+    ];
+    const ALL_PASHTO_NUMBERS = PASHTO_NUMBER_CHART.flatMap(s => s.chars.map(c => ({ kr: c.ch, en: c.en, rom: c.rom })));
+
+    const VERB_CONJUGATIONS_PS = [
+      { dict: "کیدل", rom: "ki-DAL", en: "to be", present: "دی", presentRom: "dai", past: "و", pastRom: "wu", future: "به وي", futureRom: "ba wee" },
+      { dict: "لرل", rom: "la-RAL", en: "to have", present: "لري", presentRom: "la-REE", past: "درلود", pastRom: "dar-LOD", future: "به لري", futureRom: "ba la-REE" },
+      { dict: "تلل", rom: "TA-lal", en: "to go", present: "ځي", presentRom: "dzee", past: "لاړ", pastRom: "laarh", future: "به ځي", futureRom: "ba dzee" },
+      { dict: "راتلل", rom: "raa-TA-lal", en: "to come", present: "راځي", presentRom: "raa-dzee", past: "راغی", pastRom: "raa-GHAI", future: "به راځي", futureRom: "ba raa-dzee" },
+      { dict: "خوړل", rom: "kho-RHAL", en: "to eat", present: "خوري", presentRom: "kho-REE", past: "وخوړل", pastRom: "wu-kho-RHAL", future: "به خوري", futureRom: "ba kho-REE" },
+      { dict: "څښل", rom: "TSA-shal", en: "to drink", present: "څښي", presentRom: "TSA-shee", past: "وڅښل", pastRom: "wu-TSA-shal", future: "به څښي", futureRom: "ba TSA-shee" },
+      { dict: "کتل", rom: "ka-TAL", en: "to see", present: "ګوري", presentRom: "gwa-REE", past: "وکتل", pastRom: "wu-ka-TAL", future: "به ګوري", futureRom: "ba gwa-REE" },
+      { dict: "لیکل", rom: "lee-KAL", en: "to write", present: "لیکي", presentRom: "lee-KEE", past: "ولیکل", pastRom: "wu-lee-KAL", future: "به لیکي", futureRom: "ba lee-KEE" },
+      { dict: "کار کول", rom: "kaar kol", en: "to work", present: "کار کوي", presentRom: "kaar ka-WEE", past: "کار وکړ", pastRom: "kaar wu-KUR", future: "به کار کوي", futureRom: "ba kaar ka-WEE" },
+      { dict: "خبرې کول", rom: "khab-a-RAY kol", en: "to speak", present: "خبرې کوي", presentRom: "khab-a-RAY ka-WEE", past: "خبرې وکړې", pastRom: "khab-a-RAY wu-KRAY", future: "به خبرې کوي", futureRom: "ba khab-a-RAY ka-WEE" },
+    ];
+
+    const STROKE_ORDER_PS = [
+      { ch: "ټ", strokes: ["Write the base shape of ت (te).", "Add a small loop above it instead of two dots — this marks the retroflex 't' sound, curling the tongue back."] },
+      { ch: "ړ", strokes: ["Write the base shape of ر (re).", "Add a small loop above it — this marks the retroflex 'r', unique to Pashto and a few neighboring languages."] },
+      { ch: "ږ", strokes: ["Write the base shape of ز (ze).", "Add three dots above it — this marks a distinctive voiced fricative sound found in few other languages."] },
+      { ch: "ښ", strokes: ["Write the base shape of ش (sheen).", "Add a dot below it — this marks a sound between 'kh' and 'sh', unique to Pashto."] },
+      { ch: "ځ", strokes: ["Write a distinctive hooked shape.", "This letter represents a combined 'dz' sound, as in English 'kids'."] },
+      { ch: "پ", strokes: ["Write the base shape of ب (be).", "Add three dots below instead of one — this letter was added specifically for Pashto and Persian, since Arabic lacks a 'p' sound."] },
+    ];
+
+    const PASHTO_CHAT_TOPICS = [
+      { k: ["سلام", "salaam", "hello", "hi "], a: "سلام (sa-LAAM) is a common informal greeting — the fuller السلام علیکم is more formal and carries religious significance." },
+      { k: ["خدای پامان", "bye", "goodbye"], a: "خدای پامان (khoo-DAI pa-MAAN, 'may God protect you') is the traditional way to say goodbye." },
+      { k: ["مننه", "thanks", "thank"], a: "مننه (ma-na-NA) means 'thank you' — ډیره مننه adds 'very much' for extra warmth." },
+      { k: ["بخښنه", "sorry", "excuse"], a: "بخښنه غواړم (bakh-shu-NA ghwaa-RAM, 'I request forgiveness') means 'I'm sorry' — غوږ راکړئ ('give me your ear') is a common way to say 'excuse me' when getting someone's attention." },
+      { k: ["ته", "تاسو", "formal", "informal", "you"], a: "Pashto distinguishes ته (informal 'you') from تاسو (formal/plural 'you') — use تاسو with elders, strangers, and in business." },
+      { k: ["script", "alphabet", "arabic script"], a: "Pashto is written in a modified Perso-Arabic script, read right to left — it adds extra letters (like ټ, ډ, ړ, ږ, ښ) for sounds not found in Arabic or Persian." },
+      { k: ["attan", "landay", "dance", "poetry"], a: "Attan is a lively traditional Pashtun dance performed in circles, often at celebrations — landay are short, powerful two-line folk poems, historically composed and shared especially by women." },
+      { k: ["heart", "hearts", "lose"], a: "You lose a heart for each wrong answer in a lesson. Run out and the lesson ends — but hearts refill over time, or go Pro for unlimited hearts." },
+      { k: ["streak", "fire"], a: "Your streak counts consecutive days you complete at least one lesson. Miss a day and it resets — try a quick lesson daily! مخکې ورشئ! (Keep going!)" },
+      { k: ["xp", "level", "points"], a: "XP is earned by finishing lessons and quizzes. It builds your Level on your Profile page — the more you practice, the higher you climb!" },
+      { k: ["pro", "premium", "upgrade", "subscription", "price", "cost"], a: "Hangul Pro unlocks unlimited hearts, every unit instantly, advanced speaking drills, deeper stats, and unlimited tutor chats. Check the Pro tab for pricing and plans!" },
+      { k: ["speak", "pronounce", "mic", "pronunciation"], a: "For speaking exercises, tap the mic and say the word naturally — the app compares what it hears to the target word. If your browser blocks the mic, check your site permissions." },
+      { k: ["difficult", "hard", "struggling", "stuck", "confus"], a: "کوم ستونزه نشته! (No problem!) A new right-to-left script and retroflex sounds both take real practice. Try replaying lessons or retaking a quiz — repetition is what makes it click." },
+    ];
+
+    const BALOCHI_ALPHABET = [
+      {
+        title: "Common Letters", chars: [
+          { ch: "ا", rom: "alif — a/aa", sample: "آپ", hint: "a long 'aa' sound with the madda mark" }, { ch: "ب", rom: "be — b", sample: "برات", hint: "as in English 'boy'" },
+          { ch: "پ", rom: "pe — p", sample: "پول", hint: "a letter used in Balochi/Persian, not found in Arabic" }, { ch: "ت", rom: "te — t", sample: "تو", hint: "a dental 't'" },
+          { ch: "ج", rom: "jeem — j", sample: "جشن", hint: "as in English 'jam'" }, { ch: "د", rom: "daal — d", sample: "دار", hint: "a dental 'd'" },
+          { ch: "ر", rom: "re — r", sample: "رود", hint: "a lightly rolled/tapped 'r'" }, { ch: "س", rom: "seen — s", sample: "سر", hint: "as in English 'sun'" },
+          { ch: "ک", rom: "kaaf — k", sample: "کورگ", hint: "as in English 'kite'" }, { ch: "گ", rom: "gaaf — g", sample: "گران", hint: "a letter used in Balochi/Persian, always hard" },
+          { ch: "ل", rom: "laam — l", sample: "لوکی", hint: "as in English 'light'" }, { ch: "م", rom: "meem — m", sample: "ماس", hint: "as in English 'mom'" },
+          { ch: "ن", rom: "noon — n", sample: "نام", hint: "as in English 'name'" }, { ch: "و", rom: "waaw — w/o/u", sample: "وخت", hint: "acts as a consonant 'w' or a vowel 'o/oo' depending on position" },
+          { ch: "ه", rom: "he — h", sample: "هوا", hint: "as in English 'house'" }, { ch: "ی", rom: "ye — y/i", sample: "یک", hint: "acts as a consonant 'y' or vowel 'i/ee' depending on position" }]
+      },
+      {
+        title: "Distinctive Balochi Letters", chars: [
+          { ch: "ٹ", rom: "tte — retroflex t", sample: "ٹیم", hint: "curl the tongue back — a sound Balochi shares with neighboring Indo-Iranian languages" },
+          { ch: "ڈ", rom: "dde — retroflex d", sample: "ڈاکتر", hint: "the retroflex counterpart to ٹ" },
+          { ch: "ڑ", rom: "rre — retroflex r", sample: "لاڑی", hint: "a flapped retroflex r" },
+          { ch: "چ", rom: "che — ch", sample: "چاپ", hint: "as in English 'chair'" }]
+      },
+    ];
+    const ALL_BALOCHI_ALPHABET = BALOCHI_ALPHABET.flatMap(s => s.chars);
+
+    const BALOCHI_NUMBER_CHART = [
+      {
+        title: "Numbers 0–10", note: "Balochi numbers 11-99 are largely irregular and usually memorized individually, similar to Persian.", chars: [
+          { ch: "صفر", rom: "0 · sifr", en: "0" }, { ch: "یک", rom: "1 · yak", en: "1" }, { ch: "دو", rom: "2 · do", en: "2" },
+          { ch: "سه", rom: "3 · seh", en: "3" }, { ch: "چار", rom: "4 · chaar", en: "4" }, { ch: "پنچ", rom: "5 · panch", en: "5" },
+          { ch: "شش", rom: "6 · shash", en: "6" }, { ch: "هپت", rom: "7 · hapt", en: "7" }, { ch: "هشت", rom: "8 · hasht", en: "8" },
+          { ch: "نُه", rom: "9 · noh", en: "9" }, { ch: "ده", rom: "10 · dah", en: "10" }]
+      },
+      {
+        title: "Teens & Tens", note: "11-19 combine with dah (ten); tens above 20 are mostly irregular and learned individually.", chars: [
+          { ch: "یازده", rom: "11 · yaaz-DAH", en: "11" }, { ch: "دوازده", rom: "12 · da-waaz-DAH", en: "12" },
+          { ch: "بیست", rom: "20 · beest", en: "20" }, { ch: "سی", rom: "30 · see", en: "30" },
+          { ch: "پنجاه", rom: "50 · pan-JAAH", en: "50" }]
+      },
+      {
+        title: "Big Units", note: "Everything above 100 is built from these + 0-99.", chars: [
+          { ch: "صد", rom: "100 · sad", en: "100" }, { ch: "هزار", rom: "1,000 · ha-ZAAR", en: "1,000" }, { ch: "ده لک", rom: "1,000,000 · dah lak", en: "1,000,000" }]
+      },
+    ];
+    const ALL_BALOCHI_NUMBERS = BALOCHI_NUMBER_CHART.flatMap(s => s.chars.map(c => ({ kr: c.ch, en: c.en, rom: c.rom })));
+
+    const VERB_CONJUGATIONS_BAL = [
+      { dict: "بیگ", rom: "bee-AG", en: "to be", present: "انت", presentRom: "ant", past: "بوت", pastRom: "boot", future: "بیت", futureRom: "beet" },
+      { dict: "هستگ", rom: "HAST-ag", en: "to have", present: "هست", presentRom: "hast", past: "هست بوت", pastRom: "hast boot", future: "هست بیت", futureRom: "hast beet" },
+      { dict: "شگ", rom: "shag", en: "to go", present: "شیت", presentRom: "sheet", past: "شوت", pastRom: "shoot", future: "شیت", futureRom: "sheet" },
+      { dict: "آگ", rom: "aag", en: "to come", present: "آیت", presentRom: "aa-YAT", past: "آت", pastRom: "aat", future: "آیت", futureRom: "aa-YAT" },
+      { dict: "وارگ", rom: "WAAR-ag", en: "to eat", present: "واریت", presentRom: "WAAR-yat", past: "وارت", pastRom: "waart", future: "واریت", futureRom: "WAAR-yat" },
+      { dict: "شمگ", rom: "SHAM-ag", en: "to drink", present: "شمیت", presentRom: "SHAM-yat", past: "شمت", pastRom: "shamt", future: "شمیت", futureRom: "SHAM-yat" },
+      { dict: "دیستگ", rom: "DEEST-ag", en: "to see", present: "دیست انت", presentRom: "deest ant", past: "دیست", pastRom: "deest", future: "دیست انت", futureRom: "deest ant" },
+      { dict: "نبشتگ", rom: "na-BISHT-ag", en: "to write", present: "نویسیت", presentRom: "na-WEES-yat", past: "نبشت", pastRom: "na-BISHT", future: "نویسیت", futureRom: "na-WEES-yat" },
+      { dict: "کار کنگ", rom: "kaar ka-NAG", en: "to work", present: "کار کنت", presentRom: "kaar ka-NANT", past: "کار کرت", pastRom: "kaar kart", future: "کار کنت", futureRom: "kaar ka-NANT" },
+      { dict: "گپ زانگ", rom: "gup ZAAN-ag", en: "to speak", present: "گپ زانت", presentRom: "gup ZAANT", past: "گپ زات", pastRom: "gup zaat", future: "گپ زانت", futureRom: "gup ZAANT" },
+    ];
+
+    const STROKE_ORDER_BAL = [
+      { ch: "ٹ", strokes: ["Write the base shape of ت (te).", "Add a small loop above it — this marks the retroflex 't' sound, curling the tongue back."] },
+      { ch: "ڑ", strokes: ["Write the base shape of ر (re).", "Add a small loop above it — a flapped retroflex r, shared with neighboring Indo-Iranian languages."] },
+      { ch: "چ", strokes: ["Write the base shape of ج (jeem).", "Add three dots above instead of one — makes a 'ch' sound, as in چاپ (a traditional dance)."] },
+      { ch: "پ", strokes: ["Write the base shape of ب (be).", "Add three dots below instead of one — this letter was added for Balochi/Persian, since Arabic lacks a 'p' sound."] },
+      { ch: "گ", strokes: ["Write the base shape of ک (kaaf).", "Add a small stroke on top — this letter was added for Balochi/Persian, giving a hard 'g' sound."] },
+    ];
+
+    const BALOCHI_CHAT_TOPICS = [
+      { k: ["سلام", "salaam", "hello", "hi "], a: "سلام (sa-LAAM) is a common, warm greeting used across the day." },
+      { k: ["خدا حافظ", "bye", "goodbye"], a: "خدا حافظ (khu-daa HAA-fiz, 'God be your protector') is the traditional way to say goodbye." },
+      { k: ["مهرباني", "thanks", "thank"], a: "مهرباني (mehr-baa-NEE) does double duty for 'thank you' and 'please' depending on context — a warm, flexible word rooted in kindness." },
+      { k: ["تو", "شما", "formal", "informal", "you"], a: "Balochi distinguishes تو (informal 'you') from شما (formal/plural 'you') — use شما with elders, strangers, and in business." },
+      { k: ["script", "alphabet", "arabic script"], a: "Balochi is written in a modified Perso-Arabic script, read right to left — it shares many letters with Urdu and Pashto, including extra retroflex consonants like ٹ, ڈ, ڑ." },
+      { k: ["chap", "dance", "poetry"], a: "Chap is a traditional Balochi dance performed in a circle, often accompanied by folk singing — Balochi oral poetry and storytelling traditions remain vibrant across Balochistan." },
+      { k: ["ergative", "case", "grammar"], a: "Like several neighboring Iranian and Indo-Aryan languages, Balochi uses ergative case-marking in past-tense transitive sentences — a grammatical feature quite different from English's subject-verb-object simplicity." },
+      { k: ["heart", "hearts", "lose"], a: "You lose a heart for each wrong answer in a lesson. Run out and the lesson ends — but hearts refill over time, or go Pro for unlimited hearts." },
+      { k: ["streak", "fire"], a: "Your streak counts consecutive days you complete at least one lesson. Miss a day and it resets — try a quick lesson daily! پیش برو! (Keep going!)" },
+      { k: ["xp", "level", "points"], a: "XP is earned by finishing lessons and quizzes. It builds your Level on your Profile page — the more you practice, the higher you climb!" },
+      { k: ["pro", "premium", "upgrade", "subscription", "price", "cost"], a: "Hangul Pro unlocks unlimited hearts, every unit instantly, advanced speaking drills, deeper stats, and unlimited tutor chats. Check the Pro tab for pricing and plans!" },
+      { k: ["speak", "pronounce", "mic", "pronunciation"], a: "For speaking exercises, tap the mic and say the word naturally — the app compares what it hears to the target word. If your browser blocks the mic, check your site permissions." },
+      { k: ["difficult", "hard", "struggling", "stuck", "confus"], a: "غم نیست! (No worries!) A new right-to-left script and retroflex sounds both take real practice. Try replaying lessons or retaking a quiz — repetition is what makes it click." },
+    ];
+
+    const SINDHI_ALPHABET = [
+      {
+        title: "Common Letters", chars: [
+          { ch: "ا", rom: "alif — a/aa", sample: "آسمان", hint: "the first letter, a long 'aa' sound with the madda mark" }, { ch: "ب", rom: "be — b", sample: "بس", hint: "as in English 'boy'" },
+          { ch: "ت", rom: "te — t", sample: "توهان", hint: "a dental 't'" }, { ch: "ج", rom: "jeem — j", sample: "جبل", hint: "as in English 'jam'" },
+          { ch: "د", rom: "daal — d", sample: "دوست", hint: "a dental 'd'" }, { ch: "ر", rom: "re — r", sample: "روٽي", hint: "a lightly rolled/tapped 'r'" },
+          { ch: "س", rom: "seen — s", sample: "سج", hint: "as in English 'sun'" }, { ch: "ڪ", rom: "kaaf — k", sample: "ڪتاب", hint: "the Sindhi form of kaaf, as in English 'kite'" },
+          { ch: "گ", rom: "gaaf — g", sample: "گهر", hint: "always a hard 'g'" }, { ch: "ل", rom: "laam — l", sample: "لذيذ", hint: "as in English 'light'" },
+          { ch: "م", rom: "meem — m", sample: "ماني", hint: "as in English 'mom'" }, { ch: "ن", rom: "noon — n", sample: "نالو", hint: "as in English 'name'" },
+          { ch: "و", rom: "waaw — w/o/u", sample: "وقت", hint: "acts as a consonant 'w' or a vowel 'o/oo' depending on position" }, { ch: "ي", rom: "ye — y/i", sample: "يا", hint: "acts as a consonant 'y' or vowel 'i/ee' depending on position" }]
+      },
+      {
+        title: "Distinctive Sindhi Letters (Implosives)", chars: [
+          { ch: "ٻ", rom: "bb — implosive b", sample: "ٻلي", hint: "a distinctive Sindhi sound made by sucking air in slightly, not found in Urdu or Arabic" },
+          { ch: "ڄ", rom: "jj — implosive j", sample: "ڄاڻ", hint: "the implosive counterpart to ج" },
+          { ch: "ڏ", rom: "dd — implosive d", sample: "ڏهه", hint: "an implosive dental sound unique to Sindhi" },
+          { ch: "ڳ", rom: "gg — implosive g", sample: "ڳوٺ", hint: "an implosive velar sound unique to Sindhi" },
+          { ch: "ٺ", rom: "tth — retroflex t", sample: "ٺيڪ", hint: "curl the tongue back for this retroflex sound" },
+          { ch: "ڻ", rom: "nn — retroflex n", sample: "ٽنگ", hint: "a retroflex 'n', distinct from the plain ن" }]
+      },
+    ];
+    const ALL_SINDHI_ALPHABET = SINDHI_ALPHABET.flatMap(s => s.chars);
+
+    const SINDHI_NUMBER_CHART = [
+      {
+        title: "Numbers 0–10", note: "Sindhi numbers 11-99 are largely irregular and usually memorized individually, similar to Urdu.", chars: [
+          { ch: "صفر", rom: "0 · SIF-ar", en: "0" }, { ch: "هڪ", rom: "1 · hik", en: "1" }, { ch: "ٻه", rom: "2 · bay", en: "2" },
+          { ch: "ٽي", rom: "3 · tay", en: "3" }, { ch: "چار", rom: "4 · chaar", en: "4" }, { ch: "پنج", rom: "5 · panj", en: "5" },
+          { ch: "ڇهه", rom: "6 · chhah", en: "6" }, { ch: "ست", rom: "7 · sat", en: "7" }, { ch: "اٺ", rom: "8 · aath", en: "8" },
+          { ch: "نو", rom: "9 · no", en: "9" }, { ch: "ڏهه", rom: "10 · dhah", en: "10" }]
+      },
+      {
+        title: "Teens & Tens", note: "11-99 mostly don't follow a predictable pattern and are learned as individual words.", chars: [
+          { ch: "يارهن", rom: "11 · yaa-RAHN", en: "11" }, { ch: "ٻارهن", rom: "12 · BAA-rahn", en: "12" },
+          { ch: "ويهه", rom: "20 · vayh", en: "20" }, { ch: "ٽيهه", rom: "30 · tayh", en: "30" },
+          { ch: "پنجاهه", rom: "50 · pan-JAAH", en: "50" }]
+      },
+      {
+        title: "Big Units", note: "Everything above 100 is built from these + 0-99.", chars: [
+          { ch: "سئو", rom: "100 · sau", en: "100" }, { ch: "هزار", rom: "1,000 · ha-ZAAR", en: "1,000" }, { ch: "لک", rom: "1,000,000 · lakh (x10)", en: "1,000,000" }]
+      },
+    ];
+    const ALL_SINDHI_NUMBERS = SINDHI_NUMBER_CHART.flatMap(s => s.chars.map(c => ({ kr: c.ch, en: c.en, rom: c.rom })));
+
+    const VERB_CONJUGATIONS_SD = [
+      { dict: "هجڻ", rom: "hi-jan", en: "to be", present: "آهي", presentRom: "AA-hi", past: "هو", pastRom: "ho", future: "هوندو", futureRom: "HON-do" },
+      { dict: "هجڻ (رکڻ)", rom: "hi-jan ra-khan", en: "to have", present: "وٽس آهي", presentRom: "va-tas AA-hi", past: "وٽس هو", pastRom: "va-tas ho", future: "وٽس هوندو", futureRom: "va-tas HON-do" },
+      { dict: "وڃڻ", rom: "va-JHAN", en: "to go", present: "ٿو وڃي", presentRom: "tho va-JHI", past: "ويو", pastRom: "vi-YO", future: "ويندو", futureRom: "vin-DO" },
+      { dict: "اچڻ", rom: "a-CHAN", en: "to come", present: "ٿو اچي", presentRom: "tho a-CHI", past: "آيو", pastRom: "AA-yo", future: "ايندو", futureRom: "AIN-do" },
+      { dict: "کائڻ", rom: "khaa-AN", en: "to eat", present: "ٿو کائي", presentRom: "tho khaa-I", past: "کاڌو", pastRom: "khaa-DHO", future: "کائيندو", futureRom: "khaa-IN-do" },
+      { dict: "پيئڻ", rom: "pay-AN", en: "to drink", present: "ٿو پيئي", presentRom: "tho pay-I", past: "پيتو", pastRom: "pay-TO", future: "پيئندو", futureRom: "pay-IN-do" },
+      { dict: "ڏسڻ", rom: "dha-SAN", en: "to see", present: "ٿو ڏسي", presentRom: "tho dha-SI", past: "ڏٺو", pastRom: "DHA-tho", future: "ڏسندو", futureRom: "dha-SAN-do" },
+      { dict: "لکڻ", rom: "LA-khan", en: "to write", present: "ٿو لکي", presentRom: "tho LA-khi", past: "لکيو", pastRom: "LA-khyo", future: "لکندو", futureRom: "LA-khan-do" },
+      { dict: "ڪم ڪرڻ", rom: "kam ka-ran", en: "to work", present: "ٿو ڪم ڪري", presentRom: "tho kam ka-RI", past: "ڪم ڪيو", pastRom: "kam ki-YO", future: "ڪم ڪندو", futureRom: "kam kan-DO" },
+      { dict: "ڳالهائڻ", rom: "gaa-LHAA-an", en: "to speak", present: "ٿو ڳالهائي", presentRom: "tho gaa-LHAA-i", past: "ڳالهايو", pastRom: "gaa-LHAA-yo", future: "ڳالهائيندو", futureRom: "gaa-lhaa-IN-do" },
+    ];
+
+    const STROKE_ORDER_SD = [
+      { ch: "ٻ", strokes: ["Write the base shape of ب (be).", "Add two dots below it instead of one — this marks a distinctive implosive 'b' sound, made by drawing air in slightly, unique to Sindhi."] },
+      { ch: "ڏ", strokes: ["Write the base shape of د (daal).", "Add a small loop — this marks an implosive dental 'd', unique to Sindhi and not found in Urdu."] },
+      { ch: "ڳ", strokes: ["Write the base shape of گ (gaaf).", "Add two dots above it — this marks an implosive velar 'g', unique to Sindhi."] },
+      { ch: "ٺ", strokes: ["Write the base shape of ت (te).", "Add a small loop above it instead of two dots — this marks the retroflex 't' sound, curling the tongue back."] },
+      { ch: "ڻ", strokes: ["Write the base shape of ن (noon).", "Add a small loop — this marks a retroflex 'n', distinct from the plain dental ن."] },
+      { ch: "ڄ", strokes: ["Write the base shape of ج (jeem).", "Add two dots above it instead of one — this marks an implosive 'j', unique to Sindhi."] },
+    ];
+
+    const SINDHI_CHAT_TOPICS = [
+      { k: ["السلام عليڪم", "assalam", "hello", "hi "], a: "السلام عليڪم (as-sa-LAAM a-LAI-kum) is a common formal greeting — a simple سلام also works in everyday, casual situations." },
+      { k: ["خدا حافظ", "bye", "goodbye"], a: "خدا حافظ (khu-daa HAA-fiz, 'God be your protector') is the traditional way to say goodbye." },
+      { k: ["مهرباني", "thanks", "thank"], a: "مهرباني (mehr-baa-NEE) means 'thank you' — ڏاڍي مهرباني adds 'very much' for extra warmth." },
+      { k: ["تون", "توهان", "formal", "informal", "you"], a: "Sindhi distinguishes تون (informal 'you') from توهان (formal/plural 'you') — use توهان with elders, strangers, and in business." },
+      { k: ["script", "alphabet", "arabic script"], a: "Sindhi is written in a modified Perso-Arabic script, read right to left — it adds extra letters (like ٻ, ڄ, ڏ, ڳ) for implosive sounds not found in Arabic, Persian, or Urdu." },
+      { k: ["implosive", "sounds", "unique letters"], a: "Sindhi is known for its implosive consonants — sounds made by drawing air inward rather than pushing it out — a distinctive feature that sets it apart from most neighboring languages." },
+      { k: ["ajrak", "sindh", "culture", "dress"], a: "Ajrak, a traditional block-printed cloth with deep red and indigo geometric patterns, is one of the most recognizable symbols of Sindhi cultural identity, often worn as a shawl or turban." },
+      { k: ["heart", "hearts", "lose"], a: "You lose a heart for each wrong answer in a lesson. Run out and the lesson ends — but hearts refill over time, or go Pro for unlimited hearts." },
+      { k: ["streak", "fire"], a: "Your streak counts consecutive days you complete at least one lesson. Miss a day and it resets — try a quick lesson daily! اڳتي وڌو! (Keep going!)" },
+      { k: ["xp", "level", "points"], a: "XP is earned by finishing lessons and quizzes. It builds your Level on your Profile page — the more you practice, the higher you climb!" },
+      { k: ["pro", "premium", "upgrade", "subscription", "price", "cost"], a: "Hangul Pro unlocks unlimited hearts, every unit instantly, advanced speaking drills, deeper stats, and unlimited tutor chats. Check the Pro tab for pricing and plans!" },
+      { k: ["speak", "pronounce", "mic", "pronunciation"], a: "For speaking exercises, tap the mic and say the word naturally — the app compares what it hears to the target word. If your browser blocks the mic, check your site permissions." },
+      { k: ["difficult", "hard", "struggling", "stuck", "confus"], a: "ڪا ڳالهه ناهي! (No problem!) The implosive sounds and right-to-left script both take real practice. Try replaying lessons or retaking a quiz — repetition is what makes it click." },
+    ];
+
     const FRENCH_ALPHABET = [
       {
         title: "Vowels", chars: [
@@ -33196,6 +34507,9 @@
           nv: "You are Han, a warm, encouraging Navajo (Din\u00e9 bizaad) tutor inside a learning app called GlobeTalk (currently teaching Navajo to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Navajo and English together — give the Navajo word or phrase, a simple pronunciation guide, and an English translation whenever relevant, so the learner sees all three. Navajo has genuinely complex polysynthetic verb morphology that doesn't map onto simple present/past/future tenses the way English does, distinctive sounds like ejectives and the \u0142 sound, and the concept of h\u00f3zh\u0173\u0301 (beauty, harmony, balance) is central to the language and worldview. Be honest about complexity where it exists rather than oversimplifying grammar that doesn't reduce neatly. You can discuss ANY Navajo word, phrase, grammar point, or cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
           tlh: "You are Han, a warm, encouraging Klingon (tlhIngan Hol) tutor inside a learning app called GlobeTalk (currently teaching Klingon to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Klingon and English together — give the Klingon word or phrase, a simple pronunciation guide, and an English translation whenever relevant, so the learner sees all three. Klingon was created by linguist Marc Okrand for Star Trek and has real, documented canon vocabulary (roughly 3,000 words) with genuine grammar rules including Object-Verb-Subject word order — but that vocabulary is deliberately limited and doesn't cover every modern abstract topic, so this course's Fluent tier is intentionally shorter, and you should never invent Klingon words that aren't canon. You can discuss ANY Klingon word, phrase, grammar point, or Star Trek cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
           val: "You are Han, a warm, encouraging High Valyrian tutor inside a learning app called GlobeTalk (currently teaching High Valyrian to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in High Valyrian and English together — give the High Valyrian word or phrase, a simple pronunciation guide, and an English translation whenever relevant, so the learner sees all three. High Valyrian was created by linguist David J. Peterson for Game of Thrones and has real published vocabulary and grammar (including noun cases and four genders) — but that vocabulary is still smaller and younger than a natural language's, so this course's Fluent tier is intentionally shorter, and you should never invent High Valyrian words that aren't from published sources. You can discuss ANY High Valyrian word, phrase, grammar point, or Game of Thrones cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
+          ps: "You are Han, a warm, encouraging Pashto tutor inside a learning app called GlobeTalk (currently teaching Pashto to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Pashto and English together — give the Pashto script, a simple pronunciation guide, and an English translation whenever relevant, so the learner sees all three. Pashto is written right-to-left in a modified Perso-Arabic script with extra retroflex letters (\u0679, \u0688, \u0691) and distinctive sounds like \u069a and \u0696, and has rich oral traditions like landay folk poetry and the Attan dance. You can discuss ANY Pashto word, phrase, grammar point, or cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
+          bal: "You are Han, a warm, encouraging Balochi tutor inside a learning app called GlobeTalk (currently teaching Balochi to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Balochi and English together — give the Balochi script, a simple pronunciation guide, and an English translation whenever relevant, so the learner sees all three. Balochi is written right-to-left in a modified Perso-Arabic script shared with Urdu and Pashto, uses ergative case-marking in past-tense transitive sentences, and has vibrant oral poetry and dance traditions like chap. You can discuss ANY Balochi word, phrase, grammar point, or cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
+          sd: "You are Han, a warm, encouraging Sindhi tutor inside a learning app called GlobeTalk (currently teaching Sindhi to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Sindhi and English together — give the Sindhi script, a simple pronunciation guide, and an English translation whenever relevant, so the learner sees all three. Sindhi is written right-to-left in a modified Perso-Arabic script and is known for implosive consonants (\u1e3b, \u0684, \u0688, \u0693) not found in Urdu or Arabic, and ajrak block-printed cloth is a major symbol of Sindhi cultural identity. You can discuss ANY Sindhi word, phrase, grammar point, or cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
           km: "You are Han, a warm, encouraging Khmer tutor inside a learning app called GlobeTalk (currently teaching Khmer to this learner). You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Khmer and English together — give the Khmer script, a simple pronunciation guide, and an English translation whenever relevant, so the learner sees all three. Khmer script has two consonant series that change how the same vowel sign is pronounced, verbs don't conjugate for tense (context and particles carry that instead), and Angkor Wat remains central to Khmer cultural identity. You can discuss ANY Khmer word, phrase, grammar point, or cultural topic, not just app mechanics. Keep answers short (2-5 sentences), warm, and beginner-friendly.",
           ko: "You are Han, a warm, encouraging Korean-language tutor inside a learning app called GlobeTalk. You are multilingual and can understand and respond in any language the learner uses, but you mainly converse in Korean and English together — give the Korean phrase, its romanization, and an English translation whenever relevant, so the learner sees all three. You can discuss ANY Korean word, phrase, grammar point, or cultural topic, not just app mechanics. When asked about a number, remember Korean has two number systems (Sino-Korean, used for money/dates/phone numbers/math, and Native Korean, used for counting objects/age, which only goes up to 99) — explain both systems for that number when the learner doesn't specify one. Keep answers short (2-5 sentences), warm, and beginner-friendly."
         };
@@ -33490,6 +34804,9 @@
         nv: "Yá'át'ééh! I'm Han — let's warm up first, then I'll quiz you in Navajo.",
         tlh: "nuqneH! I'm Han — let's warm up first, then I'll quiz you in Klingon.",
         val: "Kirimvose! I'm Han — let's warm up first, then I'll quiz you in High Valyrian.",
+        ps: "سلام! I'm Han — let's warm up first, then I'll quiz you in Pashto.",
+        bal: "سلام! I'm Han — let's warm up first, then I'll quiz you in Balochi.",
+        sd: "السلام عليڪم! I'm Han — let's warm up first, then I'll quiz you in Sindhi.",
         km: "ជំរាបសួរ! I'm Han — let's warm up first, then I'll quiz you in Khmer.",
         ko: "Hi! I'm Han — let's warm up first, then I'll quiz you."
       };
@@ -33813,7 +35130,7 @@
       nl: "Hallo", eo: "Saluton", tl: "Kumusta", fi: "Hei", pt: "Olá",
       pl: "Cześć", sv: "Hej", ru: "Привет", hi: "नमस्ते", vi: "Xin chào",
       tr: "Merhaba", uk: "Привіт", ro: "Salut", el: "Γεια σου", he: "שלום", no: "Hei",
-      hu: "Szia", id: "Halo", fa: "سلام", is: "Halló", sk: "Ahoj", sr: "Здраво", ms: "Helo", cy: "Helo", ga: "Dia duit", gd: "Halò", sw: "Habari", haw: "Aloha", la: "Salve", zu: "Sawubona", ur: "السلام علیکم", mn: "Сайн байна уу", ne: "नमस्ते", mr: "नमस्कार", gu: "નમસ્તે", pa: "ਸਤ ਸ੍ਰੀ ਅਕਾਲ", th: "สวัสดี", lo: "ສະບາຍດີ", km: "ជំរាបសួរ", si: "ආයුබෝවන්", ta: "வணக்கம்", te: "నమస్కారం", nv: "Yá'át'ééh", tlh: "nuqneH", val: "Kirimvose"
+      hu: "Szia", id: "Halo", fa: "سلام", is: "Halló", sk: "Ahoj", sr: "Здраво", ms: "Helo", cy: "Helo", ga: "Dia duit", gd: "Halò", sw: "Habari", haw: "Aloha", la: "Salve", zu: "Sawubona", ur: "السلام علیکم", mn: "Сайн байна уу", ne: "नमस्ते", mr: "नमस्कार", gu: "નમસ્તે", pa: "ਸਤ ਸ੍ਰੀ ਅਕਾਲ", th: "สวัสดี", lo: "ສະບາຍດີ", km: "ជំរាបសួរ", si: "ආයුබෝවන්", ta: "வணக்கம்", te: "నమస్కారం", nv: "Yá'át'ééh", tlh: "nuqneH", val: "Kirimvose", ps: "سلام", bal: "سلام", sd: "السلام عليڪم"
     };
     function tutorHelloFor(lang) {
       return TUTOR_HELLO[lang] || TUTOR_HELLO.ko;
@@ -33827,7 +35144,7 @@
       { code: 'am', name: 'Amharic', flag: '🇪🇹', available: true },
       { code: 'ar', name: 'Arabic', flag: '🇸🇦', available: true },
       { code: 'eu', name: 'Basque', flag: '🏴', available: true },
-      { code: 'bal', name: 'Balochi', flag: '🇵🇰', available: false },
+      { code: 'bal', name: 'Balochi', flag: '🇵🇰', available: true },
       { code: 'bn', name: 'Bengali', flag: '🇧🇩', available: true },
       { code: 'bg', name: 'Bulgarian', flag: '🇧🇬', available: true },
       { code: 'my', name: 'Burmese', flag: '🇲🇲', available: true },
@@ -33868,7 +35185,7 @@
       { code: 'ne', name: 'Nepali', flag: '🇳🇵', available: true },
       { code: 'no', name: 'Norwegian', flag: '🇳🇴', available: true },
       { code: 'fa', name: 'Persian (Farsi)', flag: '🇮🇷', available: true },
-      { code: 'ps', name: 'Pashto', flag: '🇦🇫', available: false },
+      { code: 'ps', name: 'Pashto', flag: '🇦🇫', available: true },
       { code: 'pl', name: 'Polish', flag: '🇵🇱', available: true },
       { code: 'pt', name: 'Portuguese', flag: '🇵🇹', available: true },
       { code: 'pa', name: 'Punjabi', flag: '🇮🇳', available: true },
@@ -33876,6 +35193,7 @@
       { code: 'ru', name: 'Russian', flag: '🇷🇺', available: true },
       { code: 'gd', name: 'Scottish Gaelic', flag: '🏴󠁧󠁢󠁳󠁣󠁴󠁿', available: true },
       { code: 'sr', name: 'Serbian', flag: '🇷🇸', available: true },
+      { code: 'sd', name: 'Sindhi', flag: '🇵🇰', available: true },
       { code: 'si', name: 'Sinhala', flag: '🇱🇰', available: true },
       { code: 'sk', name: 'Slovak', flag: '🇸🇰', available: true },
       { code: 'es', name: 'Spanish', flag: '🇪🇸', available: true },
@@ -34073,62 +35391,62 @@
   </script>
   <script type="module">
 
-      import {
-        currentUser,
-        getUserData
-      } from "./firebase.js";
+    import {
+      currentUser,
+      getUserData
+    } from "./firebase.js";
 
-      currentUser(async (user) => {
+    currentUser(async (user) => {
 
-        if (!user) {
+      if (!user) {
 
-          window.location.href = "signin.html";
+        window.location.href = "signin.html";
 
-          return;
+        return;
 
-        }
+      }
 
-        const profile = await getUserData(user.uid);
+      const profile = await getUserData(user.uid);
 
-        window.currentUserData = profile;
+      window.currentUserData = profile;
 
-        document.dispatchEvent(
-          new Event("userLoaded")
-        );
+      document.dispatchEvent(
+        new Event("userLoaded")
+      );
 
-      });
+    });
 
   </script>
   <script>
 
-      window.addEventListener("load", () => {
+    window.addEventListener("load", () => {
+
+      setTimeout(() => {
+
+        document.getElementById("splash").style.opacity = "0";
 
         setTimeout(() => {
 
-          document.getElementById("splash").style.opacity = "0";
+          document.getElementById("splash").remove();
 
-          setTimeout(() => {
+        }, 600);
 
-            document.getElementById("splash").remove();
+      }, 2000);
 
-          }, 600);
-
-        }, 2000);
-
-      });
+    });
 
   </script>
   <script type="module">
 
-      import { logout } from "./firebase.js";
+    import { logout } from "./firebase.js";
 
-      logoutBtn.onclick = async () => {
+    logoutBtn.onclick = async () => {
 
-        await logout();
+      await logout();
 
-        window.location.href = "signin.html";
+      window.location.href = "signin.html";
 
-      };
+    };
 
 
   </script>
